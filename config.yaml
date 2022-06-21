@@ -1,0 +1,44 @@
+baseURL: https://epsian.github.io/intro_to_data_science/
+languageCode: en-US
+defaultContentLanguage: en
+title: Intro to Data Science
+theme: hugo-theme-learn
+metaDataFormat: yaml
+defaultContentLanguageInSubdir: yes
+params:
+  author: Jared Joseph
+  customMermaidURL: https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js
+  description: Intro to Data Science Course Reader
+  disableBreadcrumb: no
+  disableLandingPageButton: yes
+  disableMermaid: no
+  disableNextPrev: no
+  editURL: https://github.com/Epsian/intro_to_data_science/content/
+  showVisitedLinks: yes
+  titleSeparator: '::'
+  themeVariant: mine
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+Languages:
+  en:
+    landingPageName: <i class='fas fa-home'></i> Home
+    landingPageURL: /en
+    languageName: English
+    menu:
+      shortcuts:
+        - identifier: ds
+          name: <i class='fab fa-fw fa-github'></i> GitHub repo
+          url: https://github.com/Epsian/intro_to_data_science
+          weight: 10
+        - identifier: hugodoc
+          name: <i class='fas fa-fw fa-bookmark'></i> Hugo Documentation
+          url: https://gohugo.io/
+          weight: 20
+        - name: <i class='fas fa-fw fa-bullhorn'></i> Credits
+          url: /credits
+          weight: 30
+    title: Documentation for Hugo Learn Theme
+    weight: 1
