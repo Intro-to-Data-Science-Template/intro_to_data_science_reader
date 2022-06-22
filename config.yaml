@@ -12,8 +12,8 @@ params:
   disableBreadcrumb: no
   disableLandingPageButton: yes
   disableMermaid: no
-  disableNextPrev: no
-  editURL: https://github.com/Epsian/intro_to_data_science/content/
+  disableNextPrev: yes
+  editURL: https://github.com/Epsian/intro_to_data_science/blob/main/content/
   showVisitedLinks: yes
   titleSeparator: '::'
   themeVariant: mine
