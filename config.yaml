@@ -37,5 +37,5 @@ Languages:
         - name: <i class='fas fa-fw fa-bullhorn'></i> Credits
           url: /credits
           weight: 30
-    title: Documentation for Hugo Learn Theme
+    #title: ""
     weight: 1
