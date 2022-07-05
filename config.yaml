@@ -1,4 +1,4 @@
-baseURL: https://epsian.github.io/intro_to_data_science/
+baseURL: https://intro-to-data-science-template.github.io/intro_to_data_science_reader/
 languageCode: en-US
 defaultContentLanguage: en
 title: Intro to Data Science
@@ -13,7 +13,7 @@ params:
   disableLandingPageButton: yes
   disableMermaid: no
   disableNextPrev: yes
-  editURL: https://github.com/Epsian/intro_to_data_science/blob/main/content/
+  editURL: https://github.com/Intro-to-Data-Science-Template/intro_to_data_science_reader/blob/main/content
   showVisitedLinks: yes
   titleSeparator: '::'
   themeVariant: mine
@@ -31,8 +31,8 @@ Languages:
     menu:
       shortcuts:
         - identifier: ds
-          name: <i class='fab fa-fw fa-github'></i> GitHub repo
-          url: https://github.com/Epsian/intro_to_data_science
+          name: <i class='fab fa-fw fa-github'></i> Class repo
+          url: https://github.com/Intro-to-Data-Science-Template
           weight: 10
         - name: <i class='fas fa-fw fa-bullhorn'></i> Credits
           url: /credits
