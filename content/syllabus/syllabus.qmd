@@ -7,7 +7,17 @@ format:
     toc: true
     output-file: "_index.en.md"
     reference-links: true
+    code-link: true
 ---
+
+```{r setup, include=FALSE}
+library(kableExtra)
+
+standards = read.csv("standards.csv", header = TRUE, stringsAsFactors = FALSE)
+standards$individual = "<i class='fas fa-check-square fa-2x' style='width: 100%; text-align: center;'></i>"
+colnames(standards) = c("Standard", "Category", "Does Not Meet Standard", "Progressing Toward Standard", "Meets Standard", "Demonstrates Mastery", "Individual Mastery")
+
+```
 
 ## Course Description
 
@@ -109,6 +119,7 @@ An important feature of mastery grading is how your understanding of a topic is 
 :::
 
 ::: {.column}
+<p style="text-align: center;">[Mean of<br>A1-A5]{.large}</p>
 <i class="fas fa-arrow-right fa-6x"></i>
 :::
 
@@ -127,6 +138,7 @@ In contrast, standards based grading is only interested in your understanding of
 :::
 
 ::: {.column}
+<p style="text-align: center;">[Max of<br>A1-A5]{.large}</p>
 <i class="fas fa-arrow-right fa-6x"></i>
 :::
 
@@ -137,33 +149,34 @@ In contrast, standards based grading is only interested in your understanding of
 ::::
 
 
-
-
-
-A standards-based grading system carries the following benefits:
+A standards-based grading system carries a number of other benefits:
 
 * Learning targets for the course are clearly defined from the outset, and every graded assignment that you receive will be directly tied to at least one standard. This should make it abundantly clear what skills and competencies I’m assessing on every single assignment. There is no “busy work” with a standards-based system.
 
-* No one assignment will make-or-break your grade. You have multiple opportunities to demonstrate fluency in a standard. This rewards students that take the time to practice and learn from their mistakes. It prioritizes student growth throughout the course of the semester and allows for us all to have off-days.
+* No one assignment will make-or-break your grade. You have multiple opportunities to demonstrate fluency in a standard. This rewards students that take the time to practice and learn from their mistakes. It prioritizes student growth throughout the course of the semester.
 
-* Assessments in a standards-based system are much clearer than in a point-based grading system. Saying that I’ve become proficient in data wrangling, joining, and visualizing means more than saying that I earned a 92.5 in my Introduction to Data Science course. Further, when approaching me about how to improve your grade in the course, we can focus our conversation more on how to deepen certain skills and competencies rather than how to hit certain numeric benchmarks.
+* Assessments in a standards-based system are much clearer than in a point-based grading system. Saying that I’ve become proficient in data wrangling, joining, and visualizing means more than saying that I earned a 92.5 in my Introduction to Data Science course.
 
 * A standards-based grading system makes it easier to monitor your progress towards a certain grade.
 
-I’m excited to pilot this system this semester as I believe it aligns with my overarching goals for the course. In this course, I find it far more important that you come away with an understanding of the concepts behind core data science strategies (along with an ability to find and interpret reference materials) than it is to demonstrate memorization of R syntax. Developing this understanding will empower you to learn and apply new data science languages on your own
-
-
-
-
-
 #### Standards
 
-| Standard | Category | Does Not Meet Standard | Meets Standard | Demonstrates Mastery |
-| -------- | -------- | ---------------------- | -------------- | -------------------- |
+The following table lists all the standards you will be evaluated on in this course. Each standard states what conditions must be met to reach a proficiency level. There are four proficiency levels for each standard, with eac h increase in level requiring more 
 
-| Aesthetics | Data Vis | Chooses visual cues and colors for purely aesthetic reasons without attention to data representation. | Chooses visual cues and colors that faithfully reflect the representation of the underlying data. | Data graphics are highly customized, and/or make use of a wide range of available geoms and color palettes. |
+Additionally, to demonstrate full mastery in a topic you must demonstrate your aptitude during an individual examination. 
 
-| Context | Produces data graphics that are is unclear, confusing, devoid of context, or impossible to understand without reading the text. | Produces data graphics with readable axis labels, units, and legends (where appropriate). | Produces striking data graphics that tell a story, reveals the data, grab interest, and have low ink density per data density. Ideally, the viewer sees themselves in the graph. |
+```{r standards_table, echo = FALSE}
+
+
+# Set colors for categories
+cat_colors = factor(standards$Category, labels = RColorBrewer::brewer.pal(length(unique(standards$Category)), name = "Set2"))
+
+knitr::kable(standards[,-2], escape = FALSE) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  column_spec(1, border_right = TRUE, bold = TRUE, background = cat_colors) %>%
+  column_spec(6, background = "#A2CD5A")
+```
+
 
 ### Smith Grade Criteria
 

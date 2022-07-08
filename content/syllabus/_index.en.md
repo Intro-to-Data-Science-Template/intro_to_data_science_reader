@@ -7,8 +7,13 @@ format:
     toc: true
     output-file: "_index.en.md"
     reference-links: true
+    code-link: true
 ---
 
+
+
+<script src="syllabus_files/libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="syllabus_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 -   [Course Description][]
@@ -134,6 +139,10 @@ An important feature of mastery grading is how your understanding of a topic is 
 
 <div class="column">
 
+<p style="text-align: center;">
+<span class="large">Mean of<br>A1-A5</span>
+</p>
+
 <i class="fas fa-arrow-right fa-6x"></i>
 
 </div>
@@ -158,6 +167,10 @@ In contrast, standards based grading is only interested in your understanding of
 
 <div class="column">
 
+<p style="text-align: center;">
+<span class="large">Max of<br>A1-A5</span>
+</p>
+
 <i class="fas fa-arrow-right fa-6x"></i>
 
 </div>
@@ -170,26 +183,100 @@ In contrast, standards based grading is only interested in your understanding of
 
 </div>
 
-A standards-based grading system carries the following benefits:
+A standards-based grading system carries a number of other benefits:
 
 -   Learning targets for the course are clearly defined from the outset, and every graded assignment that you receive will be directly tied to at least one standard. This should make it abundantly clear what skills and competencies I'm assessing on every single assignment. There is no "busy work" with a standards-based system.
 
--   No one assignment will make-or-break your grade. You have multiple opportunities to demonstrate fluency in a standard. This rewards students that take the time to practice and learn from their mistakes. It prioritizes student growth throughout the course of the semester and allows for us all to have off-days.
+-   No one assignment will make-or-break your grade. You have multiple opportunities to demonstrate fluency in a standard. This rewards students that take the time to practice and learn from their mistakes. It prioritizes student growth throughout the course of the semester.
 
--   Assessments in a standards-based system are much clearer than in a point-based grading system. Saying that I've become proficient in data wrangling, joining, and visualizing means more than saying that I earned a 92.5 in my Introduction to Data Science course. Further, when approaching me about how to improve your grade in the course, we can focus our conversation more on how to deepen certain skills and competencies rather than how to hit certain numeric benchmarks.
+-   Assessments in a standards-based system are much clearer than in a point-based grading system. Saying that I've become proficient in data wrangling, joining, and visualizing means more than saying that I earned a 92.5 in my Introduction to Data Science course.
 
 -   A standards-based grading system makes it easier to monitor your progress towards a certain grade.
 
-I'm excited to pilot this system this semester as I believe it aligns with my overarching goals for the course. In this course, I find it far more important that you come away with an understanding of the concepts behind core data science strategies (along with an ability to find and interpret reference materials) than it is to demonstrate memorization of R syntax. Developing this understanding will empower you to learn and apply new data science languages on your own
-
 #### Standards
 
-| Standard | Category | Does Not Meet Standard | Meets Standard | Demonstrates Mastery |
-|----------|----------|------------------------|----------------|----------------------|
+The following table lists all the standards you will be evaluated on in this course. Each standard states what conditions must be met to reach a proficiency level. There are four proficiency levels for each standard, with eac h increase in level requiring more
 
-Aesthetics \| Data Vis \| Chooses visual cues and colors for purely aesthetic reasons without attention to data representation. \| Chooses visual cues and colors that faithfully reflect the representation of the underlying data. \| Data graphics are highly customized, and/or make use of a wide range of available geoms and color palettes. \|
+Additionally, to demonstrate full mastery in a topic you must demonstrate your aptitude during an individual examination.
 
-Context \| Produces data graphics that are is unclear, confusing, devoid of context, or impossible to understand without reading the text. \| Produces data graphics with readable axis labels, units, and legends (where appropriate). \| Produces striking data graphics that tell a story, reveals the data, grab interest, and have low ink density per data density. Ideally, the viewer sees themselves in the graph. \|
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Standard </th>
+   <th style="text-align:left;"> Does Not Meet Standard </th>
+   <th style="text-align:left;"> Progressing Toward Standard </th>
+   <th style="text-align:left;"> Meets Standard </th>
+   <th style="text-align:left;"> Demonstrates Mastery </th>
+   <th style="text-align:left;"> Individual Mastery </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;font-weight: bold;background-color: #66C2A5 !important;border-right:1px solid;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-weight: bold;background-color: #FC8D62 !important;border-right:1px solid;"> Debugging </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-weight: bold;background-color: #FC8D62 !important;border-right:1px solid;"> Functions </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-weight: bold;background-color: #FC8D62 !important;border-right:1px solid;"> Iteration </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-weight: bold;background-color: #66C2A5 !important;border-right:1px solid;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-weight: bold;background-color: #8DA0CB !important;border-right:1px solid;"> Markdown </td>
+   <td style="text-align:left;"> Authors Markdown documents that do not compile. </td>
+   <td style="text-align:left;"> Authors Markdown documents that compile but either do not include necessary content or include unnecessary content. </td>
+   <td style="text-align:left;"> Authors Markdown documents that compile and contain all necessary content without unnecessary content. </td>
+   <td style="text-align:left;"> Authors Markdown documents that employ meaningful formatting to effectively communicate their message. Examples include but are not limited to effective cross-references, interactive elements, bespoke style customizations, accessible metadata, etc. </td>
+   <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-weight: bold;background-color: #8DA0CB !important;border-right:1px solid;"> Code Style </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-weight: bold;background-color: #8DA0CB !important;border-right:1px solid;"> Git/Github </td>
+   <td style="text-align:left;"> Does not use git for version control. </td>
+   <td style="text-align:left;"> Uses git and github for version control and can contribute to group repositories with commits, pushes, and pulls. </td>
+   <td style="text-align:left;"> Uses git and github effectively. Code commits are of appropriate size and commented well. Can branch and merge repositories while resolving any merge conflicts. </td>
+   <td style="text-align:left;"> Uses Github effectively for collaboration. Can create issues, ask for review, and merge branches in a manner suitable for a professional environment. </td>
+   <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
+  </tr>
+</tbody>
+</table>
 
 ### Smith Grade Criteria
 
