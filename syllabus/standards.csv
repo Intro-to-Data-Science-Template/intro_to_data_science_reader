@@ -1,0 +1,9 @@
+Standard,Category,Does Not Meet Standard,Progressing Toward Standard,Meets Standard,Demonstrates Mastery
+,,,,,
+Debugging,Coding,,,,
+Functions,Coding,,,,
+Iteration,Coding,,,,
+,,,,,
+Markdown,Workflow,Authors Markdown documents that do not compile.,Authors Markdown documents that compile but either do not include necessary content or include unnecessary content.,Authors Markdown documents that compile and contain all necessary content without unnecessary content.,"Authors Markdown documents that employ meaningful formatting to effectively communicate their message. Examples include but are not limited to effective cross-references, interactive elements, bespoke style customizations, accessible metadata, etc."
+Code Style,Workflow,,,,
+Git/Github,Workflow,Does not use git for version control.,"Uses git and github for version control and can contribute to group repositories with commits, pushes, and pulls.",Uses git and github effectively. Code commits are of appropriate size and commented well. Can branch and merge repositories while resolving any merge conflicts.,"Uses Github effectively for collaboration. Can create issues, ask for review, and merge branches in a manner suitable for a professional environment."
