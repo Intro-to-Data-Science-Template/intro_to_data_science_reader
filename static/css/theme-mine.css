@@ -1,3 +1,83 @@
+/* Custom */
+
+.floatright {
+	max-width: 30%;
+	width: auto\9*0.3; /* ie8 */
+	height: auto;
+	float: right;
+}
+
+.floatleft {
+	max-width: 30%;
+	width: auto\9*0.3; /* ie8 */
+	height: auto;
+	float: left;
+}
+
+.pull-up {
+	position: relative;
+	top: -20vh;
+}
+
+.headshot {
+	padding: 20px;
+	max-width: 300px;
+}
+
+div.columns{
+    display: flex;
+}
+
+div.column{
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+
+/* Question boxes */
+
+/* Stolen from 
+https://raw.githubusercontent.com/OpenIntroStat/oilabs-tidy/main/lab.css
+*/
+
+body {
+    counter-reset: li; /* initialize counter named li */
+}
+
+.question {
+    margin-left:0; /* Remove the default left margin */
+    padding-left:0; /* Remove the default left padding */
+    position:relative; /* Create a positioning context */
+    margin:0 0 10px 2em; /* Give each list item a left margin to make room for the numbers */
+    padding:10px 50px; /* Add some spacing around the content */
+    list-style:none; /* Disable the normal item numbering */
+    border-top:2px solid #002855; /* Smith blue */
+    background:rgba(49, 126, 172, 0.1);
+}
+.question:before {
+    content:"Q. " counter(li); /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
+    /* Position and style the number */
+    position:absolute;
+    top:-2px;
+    left:-2em;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    width:4em;
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right:8px;
+    padding:4px;
+    border-top:2px solid #002855; /* Smith blue */
+    color:#fff;
+    background:#002855; /* Smith blue */
+    font-weight:bold;
+    font-family:"Helvetica Neue", Arial, sans-serif;
+    text-align:center;
+}
+
+/* Hugo */
 
 :root{
     
