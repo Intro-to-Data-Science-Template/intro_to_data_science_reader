@@ -26,11 +26,14 @@
 
 div.columns{
     display: flex;
+		-webkit-flex-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
 }
 
 div.column{
     display: inline-block;
-    vertical-align: top;
+    margin: 10px;
     float: left;
 }
 
