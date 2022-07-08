@@ -124,7 +124,51 @@ Let's consider a hypothetical assignment under a traditional and standards based
 
 An important feature of mastery grading is how your understanding of a topic is totaled at the end of the semester. In traditional points style grading, an average is taken of all your assignments, and your final grade is represented by that average. This means all assignments are given equal consideration in your final grade.
 
-In contrast, standards based grading is only interested in your understanding of the material at the end of the course. This means that only your highest level of demonstrated proficiency is tallied. Functionally this means that only your best score in each proficiency is kept. This allows you to safely engage with complicated topics early on, and have opportunities to show improvement without penalization.
+<div class="columns">
+
+<div class="column">
+
+![][1]
+
+</div>
+
+<div class="column">
+
+<i class="fas fa-arrow-right fa-6x"></i>
+
+</div>
+
+<div class="column">
+
+![][2]
+
+</div>
+
+</div>
+
+In contrast, standards based grading is only interested in your understanding of the material at the end of the course. This means that only your highest level of demonstrated proficiency is tallied. Functionally this means that only your best score in each proficiency is kept; all others are effectively forgotten. This allows you to safely engage with complicated topics early on, and have opportunities to show improvement without penalization. This also means if you master a concept early on, you not need to worry about it for the remainder of the course.
+
+<div class="columns">
+
+<div class="column">
+
+![][1]
+
+</div>
+
+<div class="column">
+
+<i class="fas fa-arrow-right fa-6x"></i>
+
+</div>
+
+<div class="column">
+
+![][3]
+
+</div>
+
+</div>
 
 A standards-based grading system carries the following benefits:
 
@@ -187,3 +231,6 @@ This is a test
   [FAQ]: #faq
   [Headshot]: https://filedn.com/l7C36orhaIP0u9d6RtOoEES/jnjoseph_headshot_live.jpg?classes=floatright,inline,headshot&featherlight=false "Dr. Jared Joseph"
   [Disability Services Office]: https://www.smith.edu/about-smith/disability-services
+  [1]: assignments_plot.jpg?featherlight=false
+  [2]: final_points.jpg?featherlight=false
+  [3]: final_standards.jpg?featherlight=false
