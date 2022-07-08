@@ -5,6 +5,10 @@ title: Intro to Data Science
 theme: hugo-theme-learn
 metaDataFormat: yaml
 defaultContentLanguageInSubdir: no
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 params:
   author: Jared Joseph
   customMermaidURL: https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js
@@ -17,7 +21,7 @@ params:
   showVisitedLinks: yes
   titleSeparator: '::'
   themeVariant: mine
-  landingPageURL: /intro_to_data_science/
+  landingPageURL: /intro_to_data_science_reader/
 outputs:
   home:
     - HTML
@@ -26,7 +30,7 @@ outputs:
 Languages:
   en:
     landingPageName: <i class='fas fa-home'></i> Home
-    landingPageURL: /intro_to_data_science/
+    landingPageURL: /intro_to_data_science_reader/
     languageName: English
     menu:
       shortcuts:
