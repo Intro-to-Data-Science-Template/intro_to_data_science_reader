@@ -37,6 +37,16 @@ div.column{
     float: left;
 }
 
+/* font sizes */
+
+.colossal { font-size: 220% }
+.gargantuan { font-size: 190% }
+.huge { font-size: 160% }
+.large { font-size: 130% }
+.small { font-size: 70% }
+.tiny { font-size: 40% }
+.diminutive { font-size: 10% }
+
 /* Question boxes */
 
 /* Stolen from 
