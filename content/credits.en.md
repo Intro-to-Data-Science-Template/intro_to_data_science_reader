@@ -3,9 +3,13 @@ disableToc: true
 title: Credits
 ---
 
-## Theme
+## Content
 
-Thank you to the team that created [Hugo Learn Theme](https://learn.netlify.app/en/), the basis of this reader.
+Thank you to [Dr. Lindsay Poirier](https://www.smith.edu/academics/faculty/lindsay-poirier) and [Dr. Ben Baumner](https://www.smith.edu/academics/faculty/ben-baumer) for providing their materials as reference as I prepared this course reader.
+
+## Backend
+
+Thanks to the [Hugo](https://gohugo.io/) projects for providing the infrastructure for this site. Thank you to the team that created [Hugo Learn Theme](https://learn.netlify.app/en/), the basis of this reader.
 
 ## Packages and libraries
 * [mermaid](https://mermaid-js.github.io/) - generation of diagram and flowchart from text in a similar manner as markdown
@@ -16,9 +20,3 @@ Thank you to the team that created [Hugo Learn Theme](https://learn.netlify.app/
 * [clipboard.js](https://zenorocha.github.io/clipboard.js) - copy text to clipboard
 * [highlight.js](https://highlightjs.org) - Javascript syntax highlighter
 * [modernizr](https://modernizr.com) - A JavaScript toolkit that allows web developers to use new CSS3 and HTML5 features while maintaining a fine level of control over browsers that don't support
-
-## Tooling
-
-* [Netlify](https://www.netlify.com) - Continuous deployement and hosting of this documentation
-* [Hugo](https://gohugo.io/)
-
