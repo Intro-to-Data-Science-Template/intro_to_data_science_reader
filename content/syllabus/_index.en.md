@@ -17,31 +17,37 @@ format:
 
 
 -   [Course Description][]
--   [Course Objectives][]
 -   [Course Structure][]
 -   [Course Instructor][]
     -   [Contacting Me][]
--   [Lecture Plans][]
 -   [Course Policies][]
     -   [Required Materials][]
-    -   [Student Workload][]
     -   [Attendance][]
     -   [Academic Honesty][]
+    -   [Code of Conduct][]
     -   [Accommodation][]
 -   [Grading][]
     -   [Standards Based Grading][]
-    -   [Smith Grade Criteria][]
+    -   [Standards][]
+    -   [Final Grades][]
     -   [Late Work Policy][]
-    -   [Grade Appeals][]
 -   [FAQ][]
 
 ## Course Description
 
-Introduction to Data Science (SDS 192) aims to equip students with the knowledge and tools to understand, critically evaluate, manipulate, and explain data.
-
-## Course Objectives
+Introduction to Data Science (SDS 192) aims to equip students with the knowledge and tools to understand, critically evaluate, manipulate, and explain data. This is an introductory course, and no prior experience is necessary.[^1] Students will learn how to read and write code, but also how to create, organize, and collaborate on coding projects while critically examining the projects goals and data sources. We will be primarily use the R language, along with supplemental tools.
 
 ## Course Structure
+
+Each week will follow the same basic structure. Monday and Wednesday classes will include lectures designed to introduce new concepts. Lecture will be followed by interactive problem sets designed to reinforce those concepts through active learning. Slides from lecture will be posted online after the class. The problem sets for any class will be "due" at the start of next class period, when the answers will be released; I expect most problem sets can be completed in class the day they are given out. These problem sets do not contribute toward your final grade, and are intended to reinforce material, and help you test your own understanding.
+
+Friday classes will be devoted to lab activities, project work time, or exams. Students are expected to come to class to work on these activities. Labs will comprise of longer and more involved problem sets incorporating topics from the current and prior weeks. Students can elect to work on labs in groups of up to three people. Labs will be reviewed through GitHub Classroom where feedback will be provided. Alternatively, Friday class times can be used for in-class work on larger projects. Lastly, some Friday class periods will be used to host in-class exams.
+
+For a full list of assignments and due dates, please see the course schedule. **!!! LINK**
+
+{{% notice info %}}
+This is a 4-credit course, meaning that by federal guidelines, you should be spending about 9 hours per week on this course outside of class.
+{{% /notice %}}
 
 ## Course Instructor
 
@@ -57,22 +63,16 @@ At Smith College I am a visiting assistant professor in the Statistical & Data S
 
 {{% tab name="Slack" %}}
 
-You can send me a message on the course <a href="https://smi-sds-192-03-202301.slack.com/">Slack workspace</a>, and I will respond when I am able, typically within 24 hours during the work week. To message me, click the **+** button next to "Direct Messages" and search for my name. If you are asking a question about a lab or assignment, consider putting it in the `#help` channel instead. There is a good chance one of your classmates can answer before I can.
+You can send me a message on the course <a href="https://smi-sds-192-03-202301.slack.com/">Slack workspace</a>, and I will respond when I am able, typically within 24 hours during the work week. To message me, click the **+** button next to "Direct Messages" and search for my name. If your question is not sensitive in nature, consider putting it in the `#coding-help` or `#course-help` channel instead. There is a good chance one of your classmates will be able to answer before I can.
 
 {{% /tab %}}
 {{% tab name="Office Hours" %}}
 
-You can schedule a meeting with me on <a href="https://calendly.com/jared-joseph/30min/">Calendly</a>. Different times may have differing options for in-person/video call meetings.
+You can schedule a meeting with me on <a href="https://calendly.com/jared-joseph/30min/">Calendly</a>. Different times may have differing options for in-person/video call meetings. If you cannot find an open time slot, please message me for an appointment.
 
 {{% /tab %}}
 
 {{< /tabs >}}
-
-## Lecture Plans
-
-Each week will follow the same basic structure. Monday and Wednesday classes will include lectures designed to introduce new concepts. Lecture will be followed by interactive problem sets designed to reinforce those concepts through active learning.
-
-Friday classes will be devoted to lab activities, project work time, or exams. Students are expected to come to class to work on these activities.
 
 ## Course Policies
 
@@ -86,15 +86,9 @@ Students are required to have a working computer (preferably a laptop) and relia
 If you only have access to a Chromebook, please speak with me as soon as possible.
 {{% /notice %}}
 
-### Student Workload
-
-{{% notice info %}}
-This is a 4-credit course, meaning that by federal guidelines, you should be spending about 9 hours per week on this course outside of class.
-{{% /notice %}}
-
 ### Attendance
 
-I will not be taking attendance in this course, and you do not need to inform me when you will be absent. If you are sick, please stay home. That said, I expect students to be present when possible. It will be very difficult to keep up with course material without consistent attendance.
+I will not be taking attendance in this course, and you do not need to inform me when you will be absent. **If you are sick, please stay home.** Given the standards based grading system (discussed below), no single class, assignment, or even exam will break your grade. That said, I expect students to be present when possible. It will be very difficult to keep up with course material without consistent attendance.
 
 If you miss a class, you should contact a peer to discuss what was missed, and check the course reader website for any upcoming deadlines. I won't have the capacity this semester to re-deliver missed material in office hours.
 
@@ -102,18 +96,33 @@ If you miss a class, you should contact a peer to discuss what was missed, and c
 
 ### Academic Honesty
 
-> Smith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information, and honest and respectful use of college resources.
+Data science is inherently collaborative, so I fully expect students to collaborate with each other and reference online resources. However, all work that you submit must be your own. All students, staff, and faculty are bound by the Smith College Honor Code, which Smith has had since 1944:
+
+> Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information and honest and respectful use of college resources.<br><br>Smith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. All submitted work of any kind must be the original work of the student who must cite all the sources used in its preparation.<br><br>
+> <p style="text-align: right">
+> \~Smith Academic Honor Code
+> </p>
 
 Any cases of dishonesty or plagiarism will be reported to the Academic Honor Board. Examples of dishonesty or plagiarism include:
 
 -   Submitting work completed by another student as your own.
--   Copying and pasting words from sources without quoting and citing the author.
+-   Copying and pasting text *or code* from sources without quoting and citing the author.
 -   Paraphrasing material from another source without citing the author.
 -   Failing to cite your sources correctly.
 -   Falsifying or misrepresenting information in submitted work.
 -   Paying another student or service to complete assignments for you.
 
-#### Student Collaboration
+Learning to code is most similar to learning a new language; *you will only learn by doing*. No amount of rote copying will advance you beyond the most elementary levels of understanding. Please keep this in mind.
+
+### Code of Conduct
+
+As the instructor for this course, I am committed to making participation in this course a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, or religion. Examples of unacceptable behavior by participants in this course include the use of sexual language or imagery, derogatory comments or personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct.
+
+As the instructor I have the right and responsibility to point out and stop behavior that is not aligned to this Code of Conduct. Participants who do not follow the Code of Conduct may be reprimanded for such behavior. Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the instructor.
+
+All students and the instructor are expected to adhere to this Code of Conduct in all settings for this course: seminars, office hours, and over Slack.
+
+This Code of Conduct is adapted from the [Contributor Covenant][].
 
 ### Accommodation
 
@@ -123,9 +132,7 @@ Smith is committed to providing support services and reasonable accommodations t
 
 ### Standards Based Grading
 
-This course will be graded using a standards-based assessment system. This means that rather than assignments being graded based on the percentage of the question you answered correctly, your responses will be compared against a pre-defined set of course standards and assigned a level of proficiency. You will have multiple opportunities over the course of the semester to showcase the depth of your understanding regarding these standards.
-
-Let's consider a hypothetical assignment under a traditional and standards based grading system.
+This course will be graded using a standards-based assessment system. This means that rather than assignments being graded based on the percentage of the questions you answered correctly, your responses will be compared against a pre-defined set of course standards and assigned a level of proficiency. You will have multiple opportunities over the course of the semester to showcase the depth of your understanding regarding these standards.
 
 An important feature of mastery grading is how your understanding of a topic is totaled at the end of the semester. In traditional points style grading, an average is taken of all your assignments, and your final grade is represented by that average. This means all assignments are given equal consideration in your final grade.
 
@@ -155,7 +162,7 @@ An important feature of mastery grading is how your understanding of a topic is 
 
 </div>
 
-In contrast, standards based grading is only interested in your understanding of the material at the end of the course. This means that only your highest level of demonstrated proficiency is tallied. Functionally this means that only your best score in each proficiency is kept; all others are effectively forgotten. This allows you to safely engage with complicated topics early on, and have opportunities to show improvement without penalization. This also means if you master a concept early on, you not need to worry about it for the remainder of the course.
+In contrast, standards-based grading is only interested in your understanding of the material at the end of the course. This means that only your highest level of demonstrated proficiency is tallied. Functionally this means that only your best score in each standard is kept; all others are effectively forgotten. This allows you to safely engage with complicated topics early on, and have opportunities to show improvement without penalization. This also means if you master a concept early on, you do not need to worry about it for the remainder of the course.
 
 <div class="columns">
 
@@ -185,7 +192,7 @@ In contrast, standards based grading is only interested in your understanding of
 
 A standards-based grading system carries a number of other benefits:
 
--   Learning targets for the course are clearly defined from the outset, and every graded assignment that you receive will be directly tied to at least one standard. This should make it abundantly clear what skills and competencies I'm assessing on every single assignment. There is no "busy work" with a standards-based system.
+-   Learning targets for the course are clearly defined from the outset, and every graded assignment will be directly tied to at least one standard. This should make it abundantly clear what skills and competencies I'm assessing on every assignment. There is no "busy work" with a standards-based system.
 
 -   No one assignment will make-or-break your grade. You have multiple opportunities to demonstrate fluency in a standard. This rewards students that take the time to practice and learn from their mistakes. It prioritizes student growth throughout the course of the semester.
 
@@ -193,11 +200,15 @@ A standards-based grading system carries a number of other benefits:
 
 -   A standards-based grading system makes it easier to monitor your progress towards a certain grade.
 
-#### Standards
+### Standards
 
-The following table lists all the standards you will be evaluated on in this course. Each standard states what conditions must be met to reach a proficiency level. There are four proficiency levels for each standard, with each increase in level requiring more
+The following table lists all the standards you will be evaluated on in this course. There are 15 total standards, separated into 4 categories. Each standard states what conditions must be met to reach each proficiency level. There are four proficiency levels for each standard, each requiring more mastery of the material. These levels are inclusive, meaning to reach the 4th level, "Demonstrates Mastery" you must also meet all the requirements of level 3, "Meets Standard."
 
-Additionally, to demonstrate full mastery in a topic you must demonstrate your aptitude during an individual examination.
+You will have multiple opportunities in the course to demonstrate your understanding of each standard. Any assignment that is reviewed is an opportunity to increase your proficiency level in a standard. In addition to the four levels of proficiency, there is also an extra point available in each standard called "Individual Standard." You may fulfill this requirement only on individual exams, but only need to reach the "Meets Standard" criteria on a topic to do so.
+
+{{% notice info %}}
+You can demonstrate proficiency in any reviewed assignment, **but can only fulfill the "Individual Standard" criteria on an individual exam.**
+{{% /notice %}}
 
 <table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
  <thead>
@@ -334,17 +345,42 @@ Additionally, to demonstrate full mastery in a topic you must demonstrate your a
 </tbody>
 </table>
 
-### Smith Grade Criteria
+### Final Grades
+
+Your completion of these standards will be converted into a final letter grade using the following process. Each of the 15 standards will be converted into a three point scale, with one point available for meeting the "Individual Standard" on an exam.
+
+-   0 Points. "Does Not Meet Standard"
+-   1 Points. "Progressing Toward Standard"
+-   2 Points. "Meets Standard"
+-   3 Points. "Demonstrates Mastery"
+-   +1 Point. "Individual Standard"
+
+On this scale, there are 60 points total in the course (15 standards \* 4 possible points). I will sum the highest level of proficiency you reach in each standard over the course of the semester to arrive at your final score. For example, if someone were reach "Demonstrates Mastery" in all standards, but could never do so on an exam, they would receive 45 of 60 points (3 points \* 15 standards). Similarly, if someone reaches "Meets Standard" in all topics, including on exams, but did not demonstrate master in any topic, they would likewise receive 45 of 60 points.
+
+The summed points will be converted into letter grades using the following table.
+
+| Letter | Points |
+|--------|--------|
+| A      | 57-60  |
+| A-     | 54-56  |
+| B+     | 52-53  |
+| B      | 50-51  |
+| B-     | 48-49  |
+| C+     | 46-47  |
+| C      | 44-45  |
+| C-     | 42-43  |
+| D+     | 40-41  |
+| D      | 38-39  |
+| D-     | 37-36  |
+| F      | 0-35   |
 
 ### Late Work Policy
 
-If you do not think you will be able to turn in an assignment by the deadline, you may request an extension. To do so, please send me a message explaining why you are unable to complete the assignment in the expected time frame. **Extension requests must be made--and accepted--before the assignment due date.**
+Assignments turn in late will not be reviewed, and will not be considered for demonstrating mastery in course standards. Keep in mind that that will not hurt your eventual grade in any way, rather it simply removes one chance for you to demonstrate your knowledge of course material. If you do not think you will be able to turn in an assignment by the deadline, you may request an extension. To do so, please send me a message explaining why you are unable to complete the assignment in the expected time frame. **Extension requests must be made--and accepted--before the assignment due date.**
 
 {{% notice info %}}
 After the due date, late assignments will have their penalty waived only if there were *emergency* circumstances preventing you from turning the assignment in on time.
 {{% /notice %}}
-
-### Grade Appeals
 
 ## FAQ
 
@@ -354,25 +390,26 @@ This is a test
 
 </div>
 
+[^1]: If this is your first course in the SDS department, you will also need to enroll in SDS 100.
+
   [Course Description]: #course-description
-  [Course Objectives]: #course-objectives
   [Course Structure]: #course-structure
   [Course Instructor]: #course-instructor
   [Contacting Me]: #contacting-me
-  [Lecture Plans]: #lecture-plans
   [Course Policies]: #course-policies
   [Required Materials]: #required-materials
-  [Student Workload]: #student-workload
   [Attendance]: #attendance
   [Academic Honesty]: #academic-honesty
+  [Code of Conduct]: #code-of-conduct
   [Accommodation]: #accommodation
   [Grading]: #grading
   [Standards Based Grading]: #standards-based-grading
-  [Smith Grade Criteria]: #smith-grade-criteria
+  [Standards]: #standards
+  [Final Grades]: #final-grades
   [Late Work Policy]: #late-work-policy
-  [Grade Appeals]: #grade-appeals
   [FAQ]: #faq
   [Headshot]: https://filedn.com/l7C36orhaIP0u9d6RtOoEES/jnjoseph_headshot_live.jpg?classes=floatright,inline,headshot&featherlight=false "Dr. Jared Joseph"
+  [Contributor Covenant]: https://www.contributor-covenant.org/version/1/0/0/code-of-conduct/
   [Disability Services Office]: https://www.smith.edu/about-smith/disability-services
   [1]: assignments_plot.jpg?featherlight=false
   [2]: final_points.jpg?featherlight=false
