@@ -195,7 +195,7 @@ A standards-based grading system carries a number of other benefits:
 
 #### Standards
 
-The following table lists all the standards you will be evaluated on in this course. Each standard states what conditions must be met to reach a proficiency level. There are four proficiency levels for each standard, with eac h increase in level requiring more
+The following table lists all the standards you will be evaluated on in this course. Each standard states what conditions must be met to reach a proficiency level. There are four proficiency levels for each standard, with each increase in level requiring more
 
 Additionally, to demonstrate full mastery in a topic you must demonstrate your aptitude during an individual examination.
 
@@ -207,52 +207,108 @@ Additionally, to demonstrate full mastery in a topic you must demonstrate your a
    <th style="text-align:left;"> Progressing Toward Standard </th>
    <th style="text-align:left;"> Meets Standard </th>
    <th style="text-align:left;"> Demonstrates Mastery </th>
-   <th style="text-align:left;"> Individual Mastery </th>
+   <th style="text-align:left;"> Individual Standard </th>
   </tr>
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:left;font-weight: bold;background-color: #66C2A5 !important;border-right:1px solid;">  </td>
-   <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;font-weight: bold;background-color: #DECBE4 !important;border-right:1px solid;"> Data Importing </td>
+   <td style="text-align:left;"> Cannot import data or uses R Studio visual tools to import data. </td>
+   <td style="text-align:left;"> Manually organizes or modifies data before importing it into R. </td>
+   <td style="text-align:left;"> Can import raw data into R using the appropriate function for the data source. </td>
+   <td style="text-align:left;"> Can interface with APIs or other remote sources and import data directly into R. </td>
    <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
   </tr>
   <tr>
-   <td style="text-align:left;font-weight: bold;background-color: #FC8D62 !important;border-right:1px solid;"> Debugging </td>
-   <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;font-weight: bold;background-color: #DECBE4 !important;border-right:1px solid;"> Data Cleaning </td>
+   <td style="text-align:left;"> Cleans data in a non-programmatic way. </td>
+   <td style="text-align:left;"> Can clean data programmatically on a cell-by-cell basis to prepare it for analysis. </td>
+   <td style="text-align:left;"> Can assign the correct common data types (logical, integer, numeric, factor, and string) to loaded data and understand the uses of each. Can clean data for analysis in a vectorized way. </td>
+   <td style="text-align:left;"> Can prepare data for advanced types (dates, time series, etc.). Can prepare data from non-traditional sources such as OCR or web scraping. </td>
    <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
   </tr>
   <tr>
-   <td style="text-align:left;font-weight: bold;background-color: #FC8D62 !important;border-right:1px solid;"> Functions </td>
-   <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;font-weight: bold;background-color: #DECBE4 !important;border-right:1px solid;"> Data Reshaping </td>
+   <td style="text-align:left;"> Formats data in a non-programmatic way. </td>
+   <td style="text-align:left;"> Can derive new measures from existing data and append it to dataframes. </td>
+   <td style="text-align:left;"> Can pivot data between wide and long formats, and can explain the use case of each. </td>
+   <td style="text-align:left;"> Can transition data between data frames and lists, and explain the applications of data in a list format. </td>
    <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
   </tr>
   <tr>
-   <td style="text-align:left;font-weight: bold;background-color: #FC8D62 !important;border-right:1px solid;"> Iteration </td>
-   <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;font-weight: bold;background-color: #DECBE4 !important;border-right:1px solid;"> Data Aggregation &amp; Subsetting </td>
+   <td style="text-align:left;"> Transforms data in a non-programmatic way. </td>
+   <td style="text-align:left;"> Creates multiple copies of data in several intermediate stages of transformation that are used for different steps of analysis. </td>
+   <td style="text-align:left;"> Can combine and split data sets using the appropriate merge or subset techniques. </td>
+   <td style="text-align:left;"> Can split or merge data sets using either SQL-like calls or approximate matching. </td>
    <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
   </tr>
   <tr>
-   <td style="text-align:left;font-weight: bold;background-color: #66C2A5 !important;border-right:1px solid;">  </td>
-   <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;font-weight: bold;background-color: #FBB4AE !important;border-right:1px solid;"> Debugging </td>
+   <td style="text-align:left;"> Cannot resolve common errors. </td>
+   <td style="text-align:left;"> Can understand common error messages and their solutions. </td>
+   <td style="text-align:left;"> Uses error messages or print statements within their code to locate the causes of errors and resolve them. </td>
+   <td style="text-align:left;"> Uses R debugging tools to resolve errors in their own code or other code packages. </td>
    <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
   </tr>
   <tr>
-   <td style="text-align:left;font-weight: bold;background-color: #8DA0CB !important;border-right:1px solid;"> Markdown </td>
+   <td style="text-align:left;font-weight: bold;background-color: #FBB4AE !important;border-right:1px solid;"> Functions </td>
+   <td style="text-align:left;"> Copies-and-pastes similar code with small changes. </td>
+   <td style="text-align:left;"> Creates simple functions with consistent inputs. </td>
+   <td style="text-align:left;"> Creates simple functions that can handle novel inputs, with logic to handle the data appropriately. </td>
+   <td style="text-align:left;"> Creates complex functions that can handle arbitrary input. Includes built in error checking and warnings. </td>
+   <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-weight: bold;background-color: #FBB4AE !important;border-right:1px solid;"> Iteration </td>
+   <td style="text-align:left;"> Copies-and-pastes similar code several times within or between scripts. </td>
+   <td style="text-align:left;"> Uses for loops or apply functions to iterate through vector data to preform a single data manipulation. </td>
+   <td style="text-align:left;"> Can use either loops or apply functions to iterate over a vector of data and preform multi-step manipulations. </td>
+   <td style="text-align:left;"> Can use loops or apply functions and explain the use cases for each. Can iterate over complex data structures such as dataframes or lists. </td>
+   <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-weight: bold;background-color: #B3CDE3 !important;border-right:1px solid;"> Visualization Structure </td>
+   <td style="text-align:left;"> Selects inappropriate formats for data visualization. </td>
+   <td style="text-align:left;"> Selects sub-optimal visualization formats or uses excessive visualizations where a single one would be sufficient. </td>
+   <td style="text-align:left;"> Selects suitable formats for data visualization (bar, line, boxplot, etc.) and can explain the reasoning behind that choice. </td>
+   <td style="text-align:left;"> Effectively mixes visualization formats or isolates individual elements to clearly communicate a message. </td>
+   <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-weight: bold;background-color: #B3CDE3 !important;border-right:1px solid;"> Visualization Aesthetics </td>
+   <td style="text-align:left;"> Chooses visual cues and colors for purely aesthetic reasons without attention to data representation. </td>
+   <td style="text-align:left;"> Data visualizations attempt to represent underlying data, but use methods unsuited to the task which leave ambiguity for the viewer. </td>
+   <td style="text-align:left;"> Data visualizations use color, scale, and shapes effectively to differentiate and communicate underlying data. </td>
+   <td style="text-align:left;"> Data visualizations are highly customized with bespoke elements, such as callouts, to clearly communicate the message of the visualization. Aesthetics are sensitive to accessibility concerns. </td>
+   <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-weight: bold;background-color: #B3CDE3 !important;border-right:1px solid;"> Visualization Context </td>
+   <td style="text-align:left;"> Produces data visualizations that are unclear, confusing, devoid of context, or impossible to understand without reading the text. </td>
+   <td style="text-align:left;"> Produces data visualizations with readable axis labels, units, and legends (where appropriate). </td>
+   <td style="text-align:left;"> Produces data visualizations that are clear and understandable with minimal text captions. </td>
+   <td style="text-align:left;"> Produces data visualizations that are self-contained and can be understood on their own without textual explanation. </td>
+   <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-weight: bold;background-color: #CCEBC5 !important;border-right:1px solid;"> Data Ethics </td>
+   <td style="text-align:left;"> Does not consider or mention data ethics. </td>
+   <td style="text-align:left;"> Can articulate common pitfalls and relate them to the project at hand. </td>
+   <td style="text-align:left;"> Can raise concerns specific to the data or project. </td>
+   <td style="text-align:left;"> Considers and articulates relevant concerns related to the current project unprompted throughout the work cycle. </td>
+   <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-weight: bold;background-color: #CCEBC5 !important;border-right:1px solid;"> Data Provenance &amp; Documentation </td>
+   <td style="text-align:left;"> Does not investigate data sources prior to using. </td>
+   <td style="text-align:left;"> Confirms data types and scales using data documentation. </td>
+   <td style="text-align:left;"> Reads data documentation to understand data collection/generation and measurements. </td>
+   <td style="text-align:left;"> Either creates data documentation for used data, or includes notes in code to the data sources and explains potential pitfalls. </td>
+   <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-weight: bold;background-color: #CCEBC5 !important;border-right:1px solid;"> Markdown </td>
    <td style="text-align:left;"> Authors Markdown documents that do not compile. </td>
    <td style="text-align:left;"> Authors Markdown documents that compile but either do not include necessary content or include unnecessary content. </td>
    <td style="text-align:left;"> Authors Markdown documents that compile and contain all necessary content without unnecessary content. </td>
@@ -260,19 +316,19 @@ Additionally, to demonstrate full mastery in a topic you must demonstrate your a
    <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
   </tr>
   <tr>
-   <td style="text-align:left;font-weight: bold;background-color: #8DA0CB !important;border-right:1px solid;"> Code Style </td>
-   <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;font-weight: bold;background-color: #CCEBC5 !important;border-right:1px solid;"> Code Style </td>
+   <td style="text-align:left;"> Code style is inconsistent and/or lacks documentation. </td>
+   <td style="text-align:left;"> Code comments explain the broad strokes of intended behavior. Indentation is consistent and predictable. </td>
+   <td style="text-align:left;"> Consistently comments all code with clearly organized sections. Expected inputs and outputs are clearly explained. Breaks large code files into modular parts that can easily be called. </td>
+   <td style="text-align:left;"> Code is clearly commented, with standardized formatting and indentation. Code contains tests which will check for errors, and report those errors if they arise. </td>
    <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
   </tr>
   <tr>
-   <td style="text-align:left;font-weight: bold;background-color: #8DA0CB !important;border-right:1px solid;"> Git/Github </td>
+   <td style="text-align:left;font-weight: bold;background-color: #CCEBC5 !important;border-right:1px solid;"> Git/Github </td>
    <td style="text-align:left;"> Does not use git for version control. </td>
-   <td style="text-align:left;"> Uses git and github for version control and can contribute to group repositories with commits, pushes, and pulls. </td>
-   <td style="text-align:left;"> Uses git and github effectively. Code commits are of appropriate size and commented well. Can branch and merge repositories while resolving any merge conflicts. </td>
-   <td style="text-align:left;"> Uses Github effectively for collaboration. Can create issues, ask for review, and merge branches in a manner suitable for a professional environment. </td>
+   <td style="text-align:left;"> Uses git and GitHub for version control and can contribute to group repositories with commits, pushes, and pulls. </td>
+   <td style="text-align:left;"> Uses git and GitHub effectively. Code commits are of appropriate size and commented well. Can branch and merge repositories while resolving any merge conflicts. Does not include sensitive files in commits. </td>
+   <td style="text-align:left;"> Uses Github effectively for collaboration. Can create issues, ask for review, and merge branches in a manner suitable for a collaborative environment. </td>
    <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
   </tr>
 </tbody>

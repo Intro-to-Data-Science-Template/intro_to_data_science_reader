@@ -15,7 +15,7 @@ library(kableExtra)
 
 standards = read.csv("standards.csv", header = TRUE, stringsAsFactors = FALSE)
 standards$individual = "<i class='fas fa-check-square fa-2x' style='width: 100%; text-align: center;'></i>"
-colnames(standards) = c("Standard", "Category", "Does Not Meet Standard", "Progressing Toward Standard", "Meets Standard", "Demonstrates Mastery", "Individual Mastery")
+colnames(standards) = c("Category", "Standard", "Does Not Meet Standard", "Progressing Toward Standard", "Meets Standard", "Demonstrates Mastery", "Individual Standard")
 
 ```
 
@@ -161,17 +161,15 @@ A standards-based grading system carries a number of other benefits:
 
 #### Standards
 
-The following table lists all the standards you will be evaluated on in this course. Each standard states what conditions must be met to reach a proficiency level. There are four proficiency levels for each standard, with eac h increase in level requiring more 
+The following table lists all the standards you will be evaluated on in this course. Each standard states what conditions must be met to reach a proficiency level. There are four proficiency levels for each standard, with each increase in level requiring more 
 
 Additionally, to demonstrate full mastery in a topic you must demonstrate your aptitude during an individual examination. 
 
 ```{r standards_table, echo = FALSE}
-
-
 # Set colors for categories
-cat_colors = factor(standards$Category, labels = RColorBrewer::brewer.pal(length(unique(standards$Category)), name = "Set2"))
+cat_colors = factor(standards$Category, labels = RColorBrewer::brewer.pal(length(unique(standards$Category)), name = "Pastel1"))
 
-knitr::kable(standards[,-2], escape = FALSE) %>%
+knitr::kable(standards[,-1], escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
   column_spec(1, border_right = TRUE, bold = TRUE, background = cat_colors) %>%
   column_spec(6, background = "#A2CD5A")
