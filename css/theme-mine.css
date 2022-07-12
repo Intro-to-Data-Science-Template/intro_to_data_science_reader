@@ -24,6 +24,21 @@
 	max-width: 300px;
 }
 
+blockquote p {
+	color: #323232;
+	margin: 5px;
+	font-size: 16px;
+}
+
+blockquote {
+	font-family: Georgia, serif;
+	font-style: italic;
+	margin: 0.25em 0;
+    padding: 0.35em 40px;
+	border-left-color: #1A2D57;
+	background-color: #C7EAFC;
+}
+
 div.columns{
     display: flex;
 		-webkit-flex-align: center;
