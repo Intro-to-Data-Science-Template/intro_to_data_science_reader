@@ -31,7 +31,7 @@ Each week will follow the same basic structure. Monday and Wednesday classes wil
 
 Friday classes will be devoted to lab activities, project work time, or exams. Students are expected to come to class to work on these activities. Labs will comprise of longer and more involved problem sets incorporating topics from the current and prior weeks. Students can elect to work on labs in groups of up to three people. Labs will be reviewed through GitHub Classroom where feedback will be provided. Alternatively, Friday class times can be used for in-class work on larger projects. Lastly, some Friday class periods will be used to host in-class exams.
 
-For a full list of assignments and due dates, please see the course schedule. **!!! LINK**
+For a full list of assignments and due dates, please see the course [schedule](/intro_to_data_science_reader/#schedule).
 
 {{% notice info %}}
 This is a 4-credit course, meaning that by federal guidelines, you should be spending about 9 hours per week on this course outside of class.
@@ -43,7 +43,7 @@ This is a 4-credit course, meaning that by federal guidelines, you should be spe
 
 I am a sociologist that studies abuses of power in government. I earned my Ph.D. at the University of California, Davis in in sociology with a designated emphasis in computational social science. I combine computational methods such as social network analysis, natural language processing, geospatial analysis, and machine learning with open source and governmental data to uncover patterns of misfeasance and malfeasance by our public servants. From the political networks of politicians and prohibition gangsters to bias hidden in the text of academic recruitment, I use new methods to work on old problems of corruption and inequality.
 
-At Smith College I am a visiting assistant professor in the Statistical & Data Sciences program. I have experience working with both United States and United Kingdom governmental organizations applying machine learning to real-world problems. In the UK I worked with the national lab for data science and machine learning, the Alan Turing Institute, on early detection systems in foster care to assure children were receiving adequate services. Meanwhile in the US I worked with the Internal Revenue Service to built a machine learning system that determined the credibility incoming fraud reports. 
+At Smith College I am a visiting assistant professor in the Statistical & Data Sciences program. I have experience working with both United States and United Kingdom governmental organizations applying machine learning to real-world problems. In the UK I worked with the national lab for data science and machine learning, the Alan Turing Institute, on early detection systems in foster care to assure children were receiving adequate services. Meanwhile in the US I worked with the Internal Revenue Service to built a machine learning system that determined the credibility of incoming fraud reports. 
 
 ### Contacting Me
 

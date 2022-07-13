@@ -2,7 +2,6 @@
 pre: <b>1. </b>
 title: Syllabus
 weight: 1
-reference-location: block
 format:
   hugo:
     toc: true
@@ -34,28 +33,9 @@ format:
     -   [Late Work Policy][]
 -   [FAQ][]
 
-  [Course Description]: #course-description
-  [Course Structure]: #course-structure
-  [Course Instructor]: #course-instructor
-  [Contacting Me]: #contacting-me
-  [Course Policies]: #course-policies
-  [Required Materials]: #required-materials
-  [Attendance]: #attendance
-  [Academic Honesty]: #academic-honesty
-  [Code of Conduct]: #code-of-conduct
-  [Accommodation]: #accommodation
-  [Grading]: #grading
-  [Standards Based Grading]: #standards-based-grading
-  [Standards]: #standards
-  [Final Grades]: #final-grades
-  [Late Work Policy]: #late-work-policy
-  [FAQ]: #faq
-
 ## Course Description
 
 Introduction to Data Science (SDS 192) aims to equip students with the knowledge and tools to understand, critically evaluate, manipulate, and explain data. This is an introductory course, and no prior experience is necessary.[^1] Students will learn how to read and write code, but also how to create, organize, and collaborate on coding projects while critically examining the projects goals and data sources. We will be primarily use the R language, along with supplemental tools.
-
-[^1]: If this is your first course in the SDS department, you will also need to enroll in SDS 100.
 
 ## Course Structure
 
@@ -63,7 +43,7 @@ Each week will follow the same basic structure. Monday and Wednesday classes wil
 
 Friday classes will be devoted to lab activities, project work time, or exams. Students are expected to come to class to work on these activities. Labs will comprise of longer and more involved problem sets incorporating topics from the current and prior weeks. Students can elect to work on labs in groups of up to three people. Labs will be reviewed through GitHub Classroom where feedback will be provided. Alternatively, Friday class times can be used for in-class work on larger projects. Lastly, some Friday class periods will be used to host in-class exams.
 
-For a full list of assignments and due dates, please see the course schedule. **!!! LINK**
+For a full list of assignments and due dates, please see the course [schedule][].
 
 {{% notice info %}}
 This is a 4-credit course, meaning that by federal guidelines, you should be spending about 9 hours per week on this course outside of class.
@@ -73,11 +53,9 @@ This is a 4-credit course, meaning that by federal guidelines, you should be spe
 
 ![Headshot][]
 
-  [Headshot]: https://filedn.com/l7C36orhaIP0u9d6RtOoEES/jnjoseph_headshot_live.jpg?classes=floatright,inline,headshot&featherlight=false "Dr. Jared Joseph"
-
 I am a sociologist that studies abuses of power in government. I earned my Ph.D. at the University of California, Davis in in sociology with a designated emphasis in computational social science. I combine computational methods such as social network analysis, natural language processing, geospatial analysis, and machine learning with open source and governmental data to uncover patterns of misfeasance and malfeasance by our public servants. From the political networks of politicians and prohibition gangsters to bias hidden in the text of academic recruitment, I use new methods to work on old problems of corruption and inequality.
 
-At Smith College I am a visiting assistant professor in the Statistical & Data Sciences program. I have experience working with both United States and United Kingdom governmental organizations applying machine learning to real-world problems. In the UK I worked with the national lab for data science and machine learning, the Alan Turing Institute, on early detection systems in foster care to assure children were receiving adequate services. Meanwhile in the US I worked with the Internal Revenue Service to built a machine learning system that determined the credibility incoming fraud reports.
+At Smith College I am a visiting assistant professor in the Statistical & Data Sciences program. I have experience working with both United States and United Kingdom governmental organizations applying machine learning to real-world problems. In the UK I worked with the national lab for data science and machine learning, the Alan Turing Institute, on early detection systems in foster care to assure children were receiving adequate services. Meanwhile in the US I worked with the Internal Revenue Service to built a machine learning system that determined the credibility of incoming fraud reports.
 
 ### Contacting Me
 
@@ -148,13 +126,9 @@ All students and the instructor are expected to adhere to this Code of Conduct i
 
 This Code of Conduct is adapted from the [Contributor Covenant][].
 
-  [Contributor Covenant]: https://www.contributor-covenant.org/version/1/0/0/code-of-conduct/
-
 ### Accommodation
 
 Smith is committed to providing support services and reasonable accommodations to all students with disabilities. To request an accommodation, please register with the [Disability Services Office][] at the beginning of the semester.
-
-  [Disability Services Office]: https://www.smith.edu/about-smith/disability-services
 
 ## Grading
 
@@ -190,9 +164,6 @@ An important feature of mastery grading is how your understanding of a topic is 
 
 </div>
 
-  [1]: assignments_plot.jpg?featherlight=false
-  [2]: final_points.jpg?featherlight=false
-
 In contrast, standards-based grading is only interested in your understanding of the material at the end of the course. This means that only your highest level of demonstrated proficiency is tallied. Functionally this means that only your best score in each standard is kept; all others are effectively forgotten. This allows you to safely engage with complicated topics early on, and have opportunities to show improvement without penalization. This also means if you master a concept early on, you do not need to worry about it for the remainder of the course.
 
 <div class="columns">
@@ -220,9 +191,6 @@ In contrast, standards-based grading is only interested in your understanding of
 </div>
 
 </div>
-
-  [1]: assignments_plot.jpg?featherlight=false
-  [3]: final_standards.jpg?featherlight=false
 
 A standards-based grading system carries a number of other benefits:
 
@@ -423,3 +391,29 @@ After the due date, late assignments will have their penalty waived only if ther
 This is a test
 
 </div>
+
+[^1]: If this is your first course in the SDS department, you will also need to enroll in SDS 100.
+
+  [Course Description]: #course-description
+  [Course Structure]: #course-structure
+  [Course Instructor]: #course-instructor
+  [Contacting Me]: #contacting-me
+  [Course Policies]: #course-policies
+  [Required Materials]: #required-materials
+  [Attendance]: #attendance
+  [Academic Honesty]: #academic-honesty
+  [Code of Conduct]: #code-of-conduct
+  [Accommodation]: #accommodation
+  [Grading]: #grading
+  [Standards Based Grading]: #standards-based-grading
+  [Standards]: #standards
+  [Final Grades]: #final-grades
+  [Late Work Policy]: #late-work-policy
+  [FAQ]: #faq
+  [schedule]: /intro_to_data_science_reader/#schedule
+  [Headshot]: https://filedn.com/l7C36orhaIP0u9d6RtOoEES/jnjoseph_headshot_live.jpg?classes=floatright,inline,headshot&featherlight=false "Dr. Jared Joseph"
+  [Contributor Covenant]: https://www.contributor-covenant.org/version/1/0/0/code-of-conduct/
+  [Disability Services Office]: https://www.smith.edu/about-smith/disability-services
+  [1]: assignments_plot.jpg?featherlight=false
+  [2]: final_points.jpg?featherlight=false
+  [3]: final_standards.jpg?featherlight=false
