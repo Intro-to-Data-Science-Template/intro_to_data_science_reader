@@ -2,6 +2,7 @@
 pre: <b>1. </b>
 title: Syllabus
 weight: 1
+reference-location: block
 format:
   hugo:
     toc: true
@@ -33,9 +34,28 @@ format:
     -   [Late Work Policy][]
 -   [FAQ][]
 
+  [Course Description]: #course-description
+  [Course Structure]: #course-structure
+  [Course Instructor]: #course-instructor
+  [Contacting Me]: #contacting-me
+  [Course Policies]: #course-policies
+  [Required Materials]: #required-materials
+  [Attendance]: #attendance
+  [Academic Honesty]: #academic-honesty
+  [Code of Conduct]: #code-of-conduct
+  [Accommodation]: #accommodation
+  [Grading]: #grading
+  [Standards Based Grading]: #standards-based-grading
+  [Standards]: #standards
+  [Final Grades]: #final-grades
+  [Late Work Policy]: #late-work-policy
+  [FAQ]: #faq
+
 ## Course Description
 
 Introduction to Data Science (SDS 192) aims to equip students with the knowledge and tools to understand, critically evaluate, manipulate, and explain data. This is an introductory course, and no prior experience is necessary.[^1] Students will learn how to read and write code, but also how to create, organize, and collaborate on coding projects while critically examining the projects goals and data sources. We will be primarily use the R language, along with supplemental tools.
+
+[^1]: If this is your first course in the SDS department, you will also need to enroll in SDS 100.
 
 ## Course Structure
 
@@ -52,6 +72,8 @@ This is a 4-credit course, meaning that by federal guidelines, you should be spe
 ## Course Instructor
 
 ![Headshot][]
+
+  [Headshot]: https://filedn.com/l7C36orhaIP0u9d6RtOoEES/jnjoseph_headshot_live.jpg?classes=floatright,inline,headshot&featherlight=false "Dr. Jared Joseph"
 
 I am a sociologist that studies abuses of power in government. I earned my Ph.D. at the University of California, Davis in in sociology with a designated emphasis in computational social science. I combine computational methods such as social network analysis, natural language processing, geospatial analysis, and machine learning with open source and governmental data to uncover patterns of misfeasance and malfeasance by our public servants. From the political networks of politicians and prohibition gangsters to bias hidden in the text of academic recruitment, I use new methods to work on old problems of corruption and inequality.
 
@@ -92,7 +114,9 @@ I will not be taking attendance in this course, and you do not need to inform me
 
 If you miss a class, you should contact a peer to discuss what was missed, and check the course reader website for any upcoming deadlines. I won't have the capacity this semester to re-deliver missed material in office hours.
 
-**Make rules about missing exams**
+{{% notice info %}}
+Exams cannot be made up after the exam period has passed. If you have a known schedule conflict with an exam, please speak with me as soon as possible to arrange an alternative.
+{{% /notice %}}
 
 ### Academic Honesty
 
@@ -100,7 +124,7 @@ Data science is inherently collaborative, so I fully expect students to collabor
 
 > Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information and honest and respectful use of college resources.<br><br>Smith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. All submitted work of any kind must be the original work of the student who must cite all the sources used in its preparation.<br><br>
 > <p style="text-align: right">
-> \~Smith Academic Honor Code
+> -Smith Academic Honor Code
 > </p>
 
 Any cases of dishonesty or plagiarism will be reported to the Academic Honor Board. Examples of dishonesty or plagiarism include:
@@ -124,9 +148,13 @@ All students and the instructor are expected to adhere to this Code of Conduct i
 
 This Code of Conduct is adapted from the [Contributor Covenant][].
 
+  [Contributor Covenant]: https://www.contributor-covenant.org/version/1/0/0/code-of-conduct/
+
 ### Accommodation
 
 Smith is committed to providing support services and reasonable accommodations to all students with disabilities. To request an accommodation, please register with the [Disability Services Office][] at the beginning of the semester.
+
+  [Disability Services Office]: https://www.smith.edu/about-smith/disability-services
 
 ## Grading
 
@@ -162,6 +190,9 @@ An important feature of mastery grading is how your understanding of a topic is 
 
 </div>
 
+  [1]: assignments_plot.jpg?featherlight=false
+  [2]: final_points.jpg?featherlight=false
+
 In contrast, standards-based grading is only interested in your understanding of the material at the end of the course. This means that only your highest level of demonstrated proficiency is tallied. Functionally this means that only your best score in each standard is kept; all others are effectively forgotten. This allows you to safely engage with complicated topics early on, and have opportunities to show improvement without penalization. This also means if you master a concept early on, you do not need to worry about it for the remainder of the course.
 
 <div class="columns">
@@ -189,6 +220,9 @@ In contrast, standards-based grading is only interested in your understanding of
 </div>
 
 </div>
+
+  [1]: assignments_plot.jpg?featherlight=false
+  [3]: final_standards.jpg?featherlight=false
 
 A standards-based grading system carries a number of other benefits:
 
@@ -389,28 +423,3 @@ After the due date, late assignments will have their penalty waived only if ther
 This is a test
 
 </div>
-
-[^1]: If this is your first course in the SDS department, you will also need to enroll in SDS 100.
-
-  [Course Description]: #course-description
-  [Course Structure]: #course-structure
-  [Course Instructor]: #course-instructor
-  [Contacting Me]: #contacting-me
-  [Course Policies]: #course-policies
-  [Required Materials]: #required-materials
-  [Attendance]: #attendance
-  [Academic Honesty]: #academic-honesty
-  [Code of Conduct]: #code-of-conduct
-  [Accommodation]: #accommodation
-  [Grading]: #grading
-  [Standards Based Grading]: #standards-based-grading
-  [Standards]: #standards
-  [Final Grades]: #final-grades
-  [Late Work Policy]: #late-work-policy
-  [FAQ]: #faq
-  [Headshot]: https://filedn.com/l7C36orhaIP0u9d6RtOoEES/jnjoseph_headshot_live.jpg?classes=floatright,inline,headshot&featherlight=false "Dr. Jared Joseph"
-  [Contributor Covenant]: https://www.contributor-covenant.org/version/1/0/0/code-of-conduct/
-  [Disability Services Office]: https://www.smith.edu/about-smith/disability-services
-  [1]: assignments_plot.jpg?featherlight=false
-  [2]: final_points.jpg?featherlight=false
-  [3]: final_standards.jpg?featherlight=false

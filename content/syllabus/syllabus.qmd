@@ -78,13 +78,15 @@ I will not be taking attendance in this course, and you do not need to inform me
 
 If you miss a class, you should contact a peer to discuss what was missed, and check the course reader website for any upcoming deadlines. I won't have the capacity this semester to re-deliver missed material in office hours.
 
-**Make rules about missing exams**
+{{% notice info %}}
+Exams cannot be made up after the exam period has passed. If you have a known schedule conflict with an exam, please speak with me as soon as possible to arrange an alternative.
+{{% /notice %}}
 
 ### Academic Honesty
 
 Data science is inherently collaborative, so I fully expect students to collaborate with each other and reference online resources. However, all work that you submit must be your own. All students, staff, and faculty are bound by the Smith College Honor Code, which Smith has had since 1944:
 
-> Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information and honest and respectful use of college resources.<br><br>Smith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. All submitted work of any kind must be the original work of the student who must cite all the sources used in its preparation.<br><br><p style="text-align: right">~Smith Academic Honor Code</p>
+> Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information and honest and respectful use of college resources.<br><br>Smith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. All submitted work of any kind must be the original work of the student who must cite all the sources used in its preparation.<br><br><p style="text-align: right">-Smith Academic Honor Code</p>
 
 Any cases of dishonesty or plagiarism will be reported to the Academic Honor Board. Examples of dishonesty or plagiarism include:
 
