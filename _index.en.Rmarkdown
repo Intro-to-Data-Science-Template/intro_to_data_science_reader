@@ -2,6 +2,14 @@
 title: Intro to Data Science
 ---
 
+```{r setup, echo=FALSE, warning=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+
+library(kableExtra)
+
+schedule = read.csv("./schedule.csv", header = TRUE, stringsAsFactors = FALSE)
+```
+
 # Intro to Data Science
 
 ## Quick Links
@@ -22,7 +30,22 @@ title: Intro to Data Science
 | When  | Mondays 1:40-2:55pm; Wednesday/Friday 1:20-2:35pm |
 | Where | Stoddard G2                                       |
 
-## Introduction
+## Schedule
 
-## Instructor
+```{r schedule_table, echo=FALSE}
+# make colors for week blocks
+week_colors = factor(schedule$Week, labels = rep(RColorBrewer::brewer.pal(3, name = "Pastel2"), times = 5))
+
+# make clean df
+schedule_clean = data.frame(
+  "Week" = schedule$Week,
+  "Date" = paste0(schedule$Date, " (", schedule$Day, ")"),
+  "Topic" = ifelse(schedule$Class == "FALSE", "No Class", schedule$Topic),
+  "Due" = schedule$Due)
+
+knitr::kable(schedule_clean, escape = FALSE) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  column_spec(1, border_right = FALSE, bold = TRUE, background = week_colors) %>%
+  row_spec(which(schedule_clean$Topic == "No Class"), italic = TRUE, color = "#808080")
+```
 
