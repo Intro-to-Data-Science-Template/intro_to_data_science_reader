@@ -56,6 +56,8 @@ div.column{
 html.js.csstransforms3d.supports body section#body div.padding.highlightable div#body-inner table.table.table-striped.table-hover.table-condensed.table-responsive tbody tr td ol {
 	margin-top: 0px;
 	margin-bottom: 0px;
+	list-style-position: inside;
+	padding-left: 0;
 }
 
 /* font sizes */
