@@ -60,6 +60,17 @@ html.js.csstransforms3d.supports body section#body div.padding.highlightable div
 	padding-left: 0;
 }
 
+/* add my image captions */
+
+html.js.csstransforms3d.supports body section#body div.padding.highlightable div#body-inner figure a img {
+	margin-bottom: 0px;
+}
+
+figcaption {
+	text-align: center;
+	font-style: italic;
+}
+
 /* font sizes */
 
 .colossal { font-size: 220% }
