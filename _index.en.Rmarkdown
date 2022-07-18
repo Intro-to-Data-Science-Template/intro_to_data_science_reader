@@ -70,7 +70,7 @@ schedule$Readings = convert_schedule(schedule$Readings)
 
 ```{r schedule_table, echo=FALSE}
 # make colors for week blocks
-week_colors = factor(schedule$Week, labels = rep(RColorBrewer::brewer.pal(3, name = "Pastel2"), times = 5))
+week_colors = factor(schedule$Week, labels = rep(RColorBrewer::brewer.pal(5, name = "Pastel2"), times = 3))
 
 # make clean df
 schedule_clean = data.frame(
