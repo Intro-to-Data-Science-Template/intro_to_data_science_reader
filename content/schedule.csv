@@ -1,7 +1,7 @@
 Week,Class,Date,Day,Topic,Readings,Due
 1,FALSE,9/5/2022,Mon,,,
 1,1,9/7/2022,Wed,Introduction,,
-1,2,9/9/2022,Fri,What is Data?,"<a href=""/intro_to_data_science_reader/syllabus/"">Class Syllabus</a>","<a href=""https://docs.google.com/forms/d/e/1FAIpQLSfzRweef4yf5jbMT0eoU5lFSPJo3iZAVZ46-qX4m2rCnBzbSw/viewform?usp=sf_link"">Welcome Survey</a>;<a href=""https://docs.google.com/forms/d/e/1FAIpQLSeVYP1QSdPFXi9PSyjvbDcs-mZnzHT498x94h-dAdTBj25Tng/viewform?usp=sf_link"">Data Survey</a>;Install <a href=""https://slack.com/"">Slack</a> and join <a href=""https://smi-sds-192-03-202301.slack.com/"">class workspace</a>"
+1,2,9/9/2022,Fri,What is Data?,[Class Syllabus](/intro_to_data_science_reader/syllabus/),[Welcome Survey](https://docs.google.com/forms/d/e/1FAIpQLSfzRweef4yf5jbMT0eoU5lFSPJo3iZAVZ46-qX4m2rCnBzbSw/viewform?usp=sf_link);[Data Survey](https://docs.google.com/forms/d/e/1FAIpQLSeVYP1QSdPFXi9PSyjvbDcs-mZnzHT498x94h-dAdTBj25Tng/viewform?usp=sf_link);Install [Slack](https://slack.com/) and join the [class workspace](https://smi-sds-192-03-202301.slack.com/)
 2,3,9/12/2022,Mon,Install Day,,
 2,4,9/14/2022,Wed,Intro to R/R Studio,,All Software Installed
 2,5,9/16/2022,Fri,LAB,,

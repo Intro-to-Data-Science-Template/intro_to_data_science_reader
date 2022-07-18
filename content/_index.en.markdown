@@ -56,12 +56,15 @@ title: Intro to Data Science
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #B3E2CD !important;"> 1 </td>
    <td style="text-align:left;"> 9/9/2022 (Fri) </td>
-   <td style="text-align:left;"> What is Data Science? </td>
-   <td style="text-align:left;"> <ol><li><a href="/intro_to_data_science_reader/syllabus/">Class Syllabus</a></li></ol> </td>
+   <td style="text-align:left;"> What is Data? </td>
+   <td style="text-align:left;"> <ol><li>
+<a href="/intro_to_data_science_reader/syllabus/">Class Syllabus</a>
+</li></ol> </td>
    <td style="text-align:left;"> <ol>
 <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfzRweef4yf5jbMT0eoU5lFSPJo3iZAVZ46-qX4m2rCnBzbSw/viewform?usp=sf_link">Welcome Survey</a></li>
 <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeVYP1QSdPFXi9PSyjvbDcs-mZnzHT498x94h-dAdTBj25Tng/viewform?usp=sf_link">Data Survey</a></li>
-<li>Install <a href="https://slack.com/">Slack</a> and join class workspace</li>
+<li>Install <a href="https://slack.com/">Slack</a> and join the <a href="https://smi-sds-192-03-202301.slack.com/">class workspace</a>
+</li>
 </ol> </td>
   </tr>
   <tr>
@@ -76,7 +79,8 @@ title: Intro to Data Science
    <td style="text-align:left;"> 9/14/2022 (Wed) </td>
    <td style="text-align:left;"> Intro to R/R Studio </td>
    <td style="text-align:left;">  </td>
-   <td style="text-align:left;"> <ol><li>All Software Installed</li></ol> </td>
+   <td style="text-align:left;"> <ol><li>All Software Installed
+</li></ol> </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #FDCDAC !important;"> 2 </td>
