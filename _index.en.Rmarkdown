@@ -7,7 +7,43 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 
 library(kableExtra)
 
+# reach schedule csv
 schedule = read.csv("./schedule.csv", header = TRUE, stringsAsFactors = FALSE)
+
+## render lists and markdown
+convert_schedule = function(column){
+  
+  # convert markdown to html
+  html_ver = sapply(column, FUN = function(text){markdown::renderMarkdown(text = text)}, simplify = TRUE)
+  
+  # split readings/due into lists
+  split_list = strsplit(html_ver, split = ";", fixed = TRUE)
+  
+  out = sapply(split_list, FUN = function(day){
+    # add list items
+    combined = paste0("<li>", day, "</li>", collapse = "")
+    # add list div
+    listed = paste0("<ol>", combined, "</ol>")
+    # clean empty
+    clean = ifelse(listed == "<ol><li></li></ol>", "", listed)
+    
+    # return
+    return(clean)
+    
+  })
+  
+  # remove newlines
+  out = stringr::str_remove(out, "<p>")
+  out = stringr::str_remove(out, "</p>")
+  
+  # return
+  return(out)
+}
+
+# convert
+schedule$Due = convert_schedule(schedule$Due)
+schedule$Readings = convert_schedule(schedule$Readings)
+
 ```
 
 # Intro to Data Science
@@ -41,6 +77,7 @@ schedule_clean = data.frame(
   "Week" = schedule$Week,
   "Date" = paste0(schedule$Date, " (", schedule$Day, ")"),
   "Topic" = ifelse(schedule$Class == "FALSE", "No Class", schedule$Topic),
+  "Readings" = schedule$Readings,
   "Due" = schedule$Due)
 
 knitr::kable(schedule_clean, escape = FALSE) %>%
