@@ -28,6 +28,8 @@ title: Intro to Data Science
 
 ## Schedule
 
+Below is the tentative schedule for the course. While we will try to keep to this schedule, unanticipated situations (and mountain day) may require us to adjust. Each row is a class meeting, with the readings and assignments due on that day listed. 
+
 <table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
  <thead>
   <tr>
