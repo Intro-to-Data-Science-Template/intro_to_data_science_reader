@@ -46,7 +46,7 @@ Friday classes will be devoted to lab activities, project work time, or exams. S
 For a full list of assignments and due dates, please see the course [schedule][].
 
 {{% notice info %}}
-This is a 4-credit course, meaning that by federal guidelines, you should be spending about 9 hours per week on this course outside of class.
+This is a 4-credit course, meaning that by federal guidelines, you should be spending 12 hours total per week on this course. That means you should be spending 8.25 hours (12 hours - 3.75 hours/week of in-class instruction) on this course per week outside of class.
 {{% /notice %}}
 
 ## Course Instructor
@@ -136,7 +136,7 @@ Smith is committed to providing support services and reasonable accommodations t
 
 This course will be graded using a standards-based assessment system. This means that rather than assignments being graded based on the percentage of the questions you answered correctly, your responses will be compared against a pre-defined set of course standards and assigned a level of proficiency. You will have multiple opportunities over the course of the semester to showcase the depth of your understanding regarding these standards.
 
-An important feature of mastery grading is how your understanding of a topic is totaled at the end of the semester. In traditional points style grading, an average is taken of all your assignments, and your final grade is represented by that average. This means all assignments are given equal consideration in your final grade.
+An important feature of standards based grading is how your understanding of a topic is totaled at the end of the semester. In traditional points style grading, an average is taken of all your assignments, and your final grade is represented by that average. This means all assignments are given equal consideration in your final grade.
 
 <div class="columns">
 
@@ -164,7 +164,7 @@ An important feature of mastery grading is how your understanding of a topic is 
 
 </div>
 
-In contrast, standards-based grading is only interested in your understanding of the material at the end of the course. This means that only your highest level of demonstrated proficiency is tallied. Functionally this means that only your best score is kept; all others are effectively forgotten. This allows you to safely engage with complicated topics early on, and have opportunities to show improvement without penalization. This also means if you master a concept early on, you do not need to worry about it for the remainder of the course.
+In contrast, standards-based grading is only interested in your understanding of the material at the end of the course. This means that only your highest level of demonstrated proficiency is tallied. Functionally this means that only your best score is kept; all others are effectively forgotten. This allows you to safely engage with complicated topics early on, and have opportunities to show improvement without penalization. This also means if you understand a concept early on, you do not need to worry about it for the remainder of the course.
 
 <div class="columns">
 
@@ -201,7 +201,7 @@ A standards-based grading system carries a number of other benefits:
 
 ### Standards
 
-The following table lists all the standards you will be evaluated on in this course. There are 15 total standards, separated into 4 categories. Each standard states what conditions must be met to reach each proficiency level. There are four proficiency levels for each standard, each requiring more mastery of the material. These levels are inclusive, meaning to reach the 4th level, "Demonstrates Mastery" you must also meet all the requirements of level 3, "Meets Standard."
+The following table lists all the standards you will be evaluated on in this course. There are 15 total standards, separated into 4 categories. Each standard states what conditions must be met to reach each proficiency level. There are four proficiency levels for each standard, each requiring more complete understanding of the material. These levels are inclusive, meaning to reach the 4th level, "Demonstrates Proficiency" you must also meet all the requirements of level 3, "Meets Standard."
 
 You will have multiple opportunities in the course to demonstrate your understanding of each standard. Any assignment that is reviewed is an opportunity to increase your proficiency level in a standard. In addition to the four levels of proficiency, there is also an extra point available in each standard called "Individual Standard." You may fulfill this requirement only on individual exams, but only need to reach the "Meets Standard" criteria on a topic to do so.
 
@@ -216,7 +216,7 @@ You can demonstrate proficiency in any reviewed assignment, **but can only fulfi
    <th style="text-align:left;"> Does Not Meet Standard </th>
    <th style="text-align:left;"> Progressing Toward Standard </th>
    <th style="text-align:left;"> Meets Standard </th>
-   <th style="text-align:left;"> Demonstrates Mastery </th>
+   <th style="text-align:left;"> Demonstrates Proficiency </th>
    <th style="text-align:left;"> Individual Standard </th>
   </tr>
  </thead>
@@ -351,10 +351,10 @@ Your completion of these standards will be converted into a final letter grade u
 -   0 Points. "Does Not Meet Standard"
 -   1 Points. "Progressing Toward Standard"
 -   2 Points. "Meets Standard"
--   3 Points. "Demonstrates Mastery"
+-   3 Points. "Demonstrates Proficiency"
 -   +1 Point. "Individual Standard"
 
-On this scale, there are 60 points total in the course (15 standards \* 4 possible points). I will sum the highest level of proficiency you reach in each standard over the course of the semester to arrive at your final score. For example, if someone were to reach "Demonstrates Mastery" in all standards, but could never do so on an exam, they would receive 45 of 60 points (3 points \* 15 standards). Similarly, if someone reaches "Meets Standard" in all topics, including on exams, but did not demonstrate mastery in any topic, they would likewise receive 45 of 60 points.
+On this scale, there are 60 points total in the course (15 standards \* 4 possible points). I will sum the highest level of proficiency you reach in each standard over the course of the semester to arrive at your final score. For example, if someone were to reach "Demonstrates Proficiency" in all standards, but could never do so on an exam, they would receive 45 of 60 points (3 points \* 15 standards). Similarly, if someone reaches "Meets Standard" in all topics, including on exams, but did not demonstrate proficiency in any topic, they would likewise receive 45 of 60 points.
 
 The summed points will be converted into letter grades using the following table.
 
