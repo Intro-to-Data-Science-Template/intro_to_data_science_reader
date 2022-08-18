@@ -10,4 +10,4 @@ format:
     code-link: true
 ---
 
-{{% children description = "true" %}}
+{{% children description = "true" style = "li" %}}
