@@ -15,7 +15,7 @@ library(kableExtra)
 
 standards = read.csv("standards.csv", header = TRUE, stringsAsFactors = FALSE)
 standards$individual = "<i class='fas fa-check-square fa-2x' style='width: 100%; text-align: center;'></i>"
-colnames(standards) = c("Category", "Standard", "Does Not Meet Standard", "Progressing Toward Standard", "Meets Standard", "Demonstrates Proficiency", "Individual Standard")
+colnames(standards) = c("Category", "Standard", "Does Not Meet Standard", "Progressing Toward Standard", "Meets Standard", "Exceeds Standard", "Individual Standard")
 
 ```
 
@@ -27,9 +27,9 @@ Introduction to Data Science (SDS 192) aims to equip students with the knowledge
 
 ## Course Structure
 
-Each week will follow the same basic structure. Monday and Wednesday classes will include lectures to introduce new concepts. Lecture will be followed by interactive problem sets designed to reinforce those concepts through active learning. Slides from lecture will be posted online after the class. The problem sets for any class will be "due" at the start of next class period when the answers will be released; I expect most problem sets can be completed in class the day they are given out. These problem sets do not contribute toward your grade. They are intended to reinforce material, and help you test your own understanding.
+Each week will follow the same basic structure. Monday and Wednesday classes will include lectures to introduce new concepts. Lecture will be followed by interactive problem sets designed to reinforce those concepts through active learning. Slides from lecture will be posted online after the class. The problem sets for any class will be "due" at the start of next class period when the answers will be released; I expect most problem sets can be completed in class the day they are given out. These problem sets do not contribute toward your grade. They are intended to reinforce material and help you test your own understanding.
 
-Friday classes will be devoted to lab activities, project work time, or exams. Students are expected to come to class to work on these activities. Labs will comprise of longer and more involved problem sets incorporating topics from the current and prior weeks. Students will work on labs in groups of two to four people. Labs will be reviewed through GitHub Classroom where feedback will be provided. Alternatively, Friday class times can be used for in-class work on larger projects or in-class exams.
+Friday classes will be devoted to lab activities or project work time. Students are expected to come to class to work on these activities. Labs will comprise of longer and more involved problem sets incorporating topics from the current and prior weeks. Students will work on labs in groups of two to four people. Labs will be reviewed through GitHub Classroom where feedback will be provided.
 
 For a full list of assignments and due dates, please see the course [schedule](/intro_to_data_science_reader/#schedule).
 
@@ -39,7 +39,7 @@ This is a 4-credit course, meaning that by federal guidelines, you should be spe
 
 ## Course Instructor
 
-![Headshot](https://filedn.com/l7C36orhaIP0u9d6RtOoEES/jnjoseph_headshot_live.jpg?classes=floatright,inline,headshot&featherlight=false "Dr. Jared Joseph")
+![](https://filedn.com/l7C36orhaIP0u9d6RtOoEES/jnjoseph_headshot_live.jpg?classes=floatright,inline,headshot&featherlight=false "Dr. Jared Joseph")
 
 I am a sociologist that studies abuses of power in government. I earned my Ph.D. at the University of California, Davis in in sociology with a designated emphasis in computational social science. I combine computational methods such as social network analysis, natural language processing, geospatial analysis, and machine learning with open source and governmental data to uncover patterns of misfeasance and malfeasance by our public servants. From the political networks of politicians and prohibition gangsters to bias hidden in the text of academic recruitment, I use new methods to work on old problems of corruption and inequality.
 
@@ -50,12 +50,18 @@ At Smith College I am a visiting assistant professor in the Statistical & Data S
 {{< tabs >}}
 {{% tab name="Slack" %}}
 
-You can send me a message on the course <a href="https://smi-sds-192-03-202301.slack.com/">Slack workspace</a>, and I will respond when I am able, typically within 24 hours during the work week. To message me, click the **+** button next to "Direct Messages" and search for my name. If your question is not sensitive in nature, consider putting it in the `#coding-help` or `#course-help` channel instead. There is a good chance one of your classmates will be able to answer before I can.
+You can send me a message on the course <a href="https://smi-sds-192-03-202301.slack.com/">Slack workspace</a>, and I will respond when I am able, typically within 24 hours *during the work week*. To message me, click the **+** button next to "Direct Messages" and search for my name.
+
+If your question is not sensitive in nature, consider putting it in the `#coding-help` or `#course-help` channel instead. There is a good chance one of your classmates will be able to answer before I can.
+
+Slack questions should be brief or administrative in nature, for more in-depth questions and troubleshooting, please attend office hours instead.
 
 {{% /tab %}}
 {{% tab name="Office Hours" %}}
 
-You can schedule a meeting with me on <a href="https://calendly.com/jared-joseph/30min/">Calendly</a>. Different times may have differing options for in-person/video call meetings. If you cannot find an open time slot, please message me for an appointment.
+You can schedule a meeting with me on <a href="https://calendly.com/jared-joseph/office-hours">Calendly</a>. You may also try to drop in, however priority will always be given to those who made an appointment.
+
+Different times may have differing options for in-person/video call meetings. If you cannot find an open time slot, please message me for an appointment and I will attempt to find a time that works for both of us.
  
 {{% /tab %}}
 {{< /tabs >}}
@@ -74,12 +80,12 @@ If you only have access to a Chromebook, please speak with me as soon as possibl
 
 ### Attendance
 
-I will not be taking attendance in this course, and you do not need to inform me when you will be absent. **If you are sick, please stay home.** Given the standards based grading system (discussed below), no single class, assignment, or even exam will negatively impact your grade. That said, I expect students to be present when possible. It will be very difficult to keep up with course material without consistent attendance.
+I will not be taking attendance in this course, and you do not need to inform me when you will be absent. **If you are sick, please stay home.** Given the standards based grading system (discussed below), no single class, assignment, or even quiz will negatively impact your grade. That said, I expect students to be present when possible. It will be very difficult to keep up with course material without consistent attendance.
 
 If you miss a class, you should contact a peer to discuss what was missed, and check the course reader website for any upcoming deadlines. I won't have the capacity this semester to re-deliver missed material in office hours.
 
 {{% notice info %}}
-Exams cannot be made up after the exam period has passed. If you have a known schedule conflict with an exam, please speak with me as soon as possible to arrange an alternative.
+Quizzes cannot be made up after the open period has passed. If you have a known schedule conflict with a quiz, please speak with me as soon as possible to arrange an alternative.
 {{% /notice %}}
 
 ### Academic Honesty
@@ -111,7 +117,7 @@ This Code of Conduct is adapted from the [Contributor Covenant](https://www.cont
 
 ### Accommodation
 
-Smith is committed to providing support services and reasonable accommodations to all students with disabilities. To request an accommodation, please register with the [Disability Services Office](https://www.smith.edu/about-smith/disability-services) at the beginning of the semester.
+Smith College is committed to providing support services and reasonable accommodations to all students with disabilities. To request an accommodation, please register with the [Disability Services Office](https://www.smith.edu/about-smith/disability-services) at the beginning of the semester.
 
 ## Grading
 
@@ -163,15 +169,16 @@ A standards-based grading system carries a number of other benefits:
 * No one assignment will make-or-break your grade. You have multiple opportunities to demonstrate fluency in a standard. This rewards students that take the time to practice and learn from their mistakes. It prioritizes student growth throughout the course of the semester.
 * Assessments in a standards-based system are much clearer than in a point-based grading system. Saying that I’ve become proficient in data wrangling, joining, and visualizing means more than saying that I earned a 92.5 in my Introduction to Data Science course.
 * A standards-based grading system makes it easier to monitor your progress towards a certain grade.
+* There is no competition and no curve in a standards based system; others doing well will never curve the overall grade against you. The only person you are ever compared with is your past self. Help each other often and freely.
 
 ### Standards
 
-The following table lists all the standards you will be evaluated on in this course. There are 15 total standards, separated into 4 categories. Each standard states what conditions must be met to reach each proficiency level. There are four proficiency levels for each standard, each requiring more complete understanding of the material. These levels are inclusive, meaning to reach the 4th level, "Demonstrates Proficiency" you must also meet all the requirements of level 3, "Meets Standard."
+The following table lists all the standards you will be evaluated on in this course. There are 15 total standards, separated into 4 categories. Each standard states what conditions must be met to reach each proficiency level. There are four proficiency levels for each standard, each requiring more complete understanding of the material. These levels are inclusive, meaning to reach the 4th level, "Exceeds Standard" you must also meet all the requirements of level 3, "Meets Standard."
 
-You will have multiple opportunities in the course to demonstrate your understanding of each standard. Any assignment that is reviewed is an opportunity to increase your proficiency level in a standard. In addition to the four levels of proficiency, there is also an extra point available in each standard called "Individual Standard." You may fulfill this requirement only on individual exams, but only need to reach the "Meets Standard" criteria on a topic to do so.
+You will have multiple opportunities in the course to demonstrate your understanding of each standard. Any assignment that is reviewed is an opportunity to increase your proficiency level in a standard. In addition to the four levels of proficiency, there is also an extra point available in each standard called "Individual Standard." You may fulfill this requirement only quizzes, but only need to reach the "Meets Standard" criteria on a standard to do so.
 
 {{% notice info %}}
-You can demonstrate proficiency in any reviewed assignment, **but can only fulfill the "Individual Standard" criteria on an individual exam.**
+You can demonstrate proficiency in any reviewed assignment, **but can only fulfill the "Individual Standard" criteria on a quiz.**
 {{% /notice %}}
 
 ```{r standards_table, echo = FALSE}
@@ -186,15 +193,15 @@ knitr::kable(standards[,-1], escape = FALSE) %>%
 
 ### Final Grades
 
-Your completion of these standards will be converted into a final letter grade using the following process. Each of the 15 standards will be converted into a three point scale, with one point available for meeting the "Individual Standard" on an exam.
+Your completion of these standards will be converted into a final letter grade using the following process. Each of the 12 standards will be converted into a four point scale, with one point available for meeting the "Individual Standard" on a quiz.
 
-* 0 Points. "Does Not Meet Standard"
-* 1 Points. "Progressing Toward Standard"
-* 2 Points. "Meets Standard"
-* 3 Points. "Demonstrates Proficiency"
+* 1 Point. "Does Not Meet Standard"
+* 2 Points. "Progressing Toward Standard"
+* 3 Points. "Meets Standard"
+* 4 Points. "Exceeds Standard"
 * +1 Point. "Individual Standard"
 
-On this scale, there are 60 points total in the course (15 standards * 4 possible points). I will sum the highest level of proficiency you reach in each standard over the course of the semester to arrive at your final score. For example, if someone were to reach "Demonstrates Proficiency" in all standards, but could never do so on an exam, they would receive 45 of 60 points (3 points * 15 standards). Similarly, if someone reaches "Meets Standard" in all topics, including on exams, but did not demonstrate proficiency in any topic, they would likewise receive 45 of 60 points.
+On this scale, there are 60 points total in the course (12 standards * 5 possible points). I will sum the highest level of proficiency you reach in each standard over the course of the semester to arrive at your final score. For example, if someone were to reach "Exceeds Standard" in all standards, but could never do so on a quiz, they would receive 48 of 60 points (4 points * 12 standards). Similarly, if someone reaches "Meets Standard" in all topics, including on quizzes, but did not exceed the standard in any topic, they would likewise receive 48 of 60 points.
 
 The summed points will be converted into letter grades using the following table. 
 
@@ -210,7 +217,7 @@ The summed points will be converted into letter grades using the following table
 | C-     	| 42-43  	|
 | D+     	| 40-41  	|
 | D      	| 38-39  	|
-| D-     	| 37-36  	|
+| D-     	| 36-37  	|
 | F      	| 0-35   	|
 
 ### Late Work Policy
