@@ -80,7 +80,9 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:right;font-weight: bold;background-color: #FDCDAC !important;"> 2 </td>
    <td style="text-align:left;"> 9/14/2022 (Wed) </td>
    <td style="text-align:left;"> Intro to R/R Studio </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>
+<a href="https://rafalab.github.io/dsbook/r-basics.html#r-basics">Irizarry, R. A. (2019). Chapter 2 R basics | Introduction to Data Science.</a>
+</li></ol> </td>
    <td style="text-align:left;"> <ol><li>All Software Installed
 </li></ol> </td>
   </tr>
@@ -94,14 +96,16 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 3 </td>
    <td style="text-align:left;"> 9/19/2022 (Mon) </td>
-   <td style="text-align:left;"> Markdown/Quatro </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> Intro to git/GitHub </td>
+   <td style="text-align:left;"> <ol><li>
+<a href="https://search-ebscohost-com.libproxy.smith.edu/login.aspx?direct=true&amp;AuthType=ip,sso&amp;db=asn&amp;AN=129302223&amp;site=ehost-live&amp;custid=s8897501">Bryan, J. (2018). Excuse Me, Do You Have a Moment to Talk About Version Control? American Statistician, 72(1), 20&lt;96&gt;27.</a>
+</li></ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 3 </td>
    <td style="text-align:left;"> 9/21/2022 (Wed) </td>
-   <td style="text-align:left;"> Intro to git/GitHub </td>
+   <td style="text-align:left;"> Exploratory Data Analyses </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
@@ -115,35 +119,37 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #F4CAE4 !important;"> 4 </td>
    <td style="text-align:left;"> 9/26/2022 (Mon) </td>
-   <td style="text-align:left;"> Exploratory Data Analysis </td>
+   <td style="text-align:left;"> Tidy Data/Long-Wide </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #F4CAE4 !important;"> 4 </td>
    <td style="text-align:left;"> 9/28/2022 (Wed) </td>
-   <td style="text-align:left;"> Base R Plotting </td>
+   <td style="text-align:left;"> Aggregation and Merging </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #F4CAE4 !important;"> 4 </td>
    <td style="text-align:left;"> 9/30/2022 (Fri) </td>
-   <td style="text-align:left;"> LAB </td>
+   <td style="text-align:left;"> LAB/Quiz 1 Open </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #E6F5C9 !important;"> 5 </td>
    <td style="text-align:left;"> 10/3/2022 (Mon) </td>
-   <td style="text-align:left;"> Data Wrangling 1 </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> Advanced Plotting </td>
+   <td style="text-align:left;"> <ol><li>
+<a href="https://medium.economist.com/mistakes-weve-drawn-a-few-8cdd8a42d368">Leo, S. (2019, March 27). Mistakes, weve drawn a few. Medium.</a>
+</li></ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #E6F5C9 !important;"> 5 </td>
    <td style="text-align:left;"> 10/5/2022 (Wed) </td>
-   <td style="text-align:left;"> Data Wrangling 2 </td>
+   <td style="text-align:left;"> Interactive Plotting </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
@@ -152,7 +158,8 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> 10/7/2022 (Fri) </td>
    <td style="text-align:left;"> LAB </td>
    <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>Quiz 1
+</li></ol> </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #B3E2CD !important;font-style: italic;color: #808080 !important;"> 6 </td>
@@ -171,14 +178,14 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #B3E2CD !important;"> 6 </td>
    <td style="text-align:left;"> 10/14/2022 (Fri) </td>
-   <td style="text-align:left;"> Exam/Major Project 1 </td>
+   <td style="text-align:left;"> Major Project 1 </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #FDCDAC !important;"> 7 </td>
    <td style="text-align:left;"> 10/17/2022 (Mon) </td>
-   <td style="text-align:left;"> Advanced Plotting </td>
+   <td style="text-align:left;"> R Debugging Tools </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
@@ -200,20 +207,24 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 8 </td>
    <td style="text-align:left;"> 10/24/2022 (Mon) </td>
    <td style="text-align:left;"> Iteration </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol>
+<li><a href="https://r4ds.had.co.nz/iteration.html">Wickham, H., &amp; Grolemund, G. (2017). 21 Iteration. In R for Data Science. O'</a></li>
+<li>Reilly.
+</li>
+</ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 8 </td>
    <td style="text-align:left;"> 10/26/2022 (Wed) </td>
-   <td style="text-align:left;"> R Debugging Tools </td>
+   <td style="text-align:left;"> Parallelization </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 8 </td>
    <td style="text-align:left;"> 10/28/2022 (Fri) </td>
-   <td style="text-align:left;"> LAB </td>
+   <td style="text-align:left;"> LAB/Quiz 2 Open </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
@@ -236,7 +247,8 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> 11/4/2022 (Fri) </td>
    <td style="text-align:left;"> LAB </td>
    <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>Quiz 2
+</li></ol> </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #E6F5C9 !important;"> 10 </td>
@@ -255,7 +267,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #E6F5C9 !important;"> 10 </td>
    <td style="text-align:left;"> 11/11/2022 (Fri) </td>
-   <td style="text-align:left;"> Exam/Major Project 2 </td>
+   <td style="text-align:left;"> Major Project 2 </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
@@ -276,7 +288,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #B3E2CD !important;"> 11 </td>
    <td style="text-align:left;"> 11/18/2022 (Fri) </td>
-   <td style="text-align:left;"> LAB </td>
+   <td style="text-align:left;"> LAB/Quiz 3 Open </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
@@ -299,7 +311,8 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;font-style: italic;color: #808080 !important;"> 11/25/2022 (Fri) </td>
    <td style="text-align:left;font-style: italic;color: #808080 !important;"> No Class </td>
    <td style="text-align:left;font-style: italic;color: #808080 !important;">  </td>
-   <td style="text-align:left;font-style: italic;color: #808080 !important;">  </td>
+   <td style="text-align:left;font-style: italic;color: #808080 !important;"> <ol><li>Quiz 3
+</li></ol> </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 13 </td>
@@ -319,7 +332,9 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 13 </td>
    <td style="text-align:left;"> 12/2/2022 (Fri) </td>
    <td style="text-align:left;"> Geospatial Data </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>
+<a href="https://mdsr-book.github.io/mdsr2e/ch-spatial.html">Baumer, B. S., Kaplan, D. T., &amp; Horton, N. J. (2021). Chapter 17 Working with geospatial data. In Modern Data Science with R. Chapman and Hall.</a>
+</li></ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
@@ -339,7 +354,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #F4CAE4 !important;"> 14 </td>
    <td style="text-align:left;"> 12/9/2022 (Fri) </td>
-   <td style="text-align:left;"> Finals Work </td>
+   <td style="text-align:left;"> Finals Work/Quiz 4 Open </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
@@ -348,8 +363,13 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> 12/12/2022 (Mon) </td>
    <td style="text-align:left;"> Finals Presentations/aRt Gallery </td>
    <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>Quiz 4
+</li></ol> </td>
   </tr>
 </tbody>
 </table>
+
+markdown::markdownToHTML(text = "[Wickham, H., & Grolemund, G. (2017). 21 Iteration. In R for Data Science. O'Reilly.](https://r4ds.had.co.nz/iteration.html)")
+
+
 

@@ -15,9 +15,12 @@ convert_schedule = function(column){
   
   # convert markdown to html
   html_ver = sapply(column, FUN = function(text){markdown::renderMarkdown(text = text)}, simplify = TRUE)
+
+  # fix ampersands
+  fix_amp = sapply(html_ver, FUN = function(string){stringr::str_replace_all(string, "&amp;", "&")})
   
   # split readings/due into lists
-  split_list = strsplit(html_ver, split = ";", fixed = TRUE)
+  split_list = strsplit(fix_amp, split = ";", fixed = TRUE)
   
   out = sapply(split_list, FUN = function(day){
     # add list items
@@ -87,4 +90,8 @@ knitr::kable(schedule_clean, escape = FALSE) %>%
   column_spec(1, border_right = FALSE, bold = TRUE, background = week_colors) %>%
   row_spec(which(schedule_clean$Topic == "No Class"), italic = TRUE, color = "#808080")
 ```
+
+markdown::markdownToHTML(text = "[Wickham, H., & Grolemund, G. (2017). 21 Iteration. In R for Data Science. O'Reilly.](https://r4ds.had.co.nz/iteration.html)")
+
+
 
