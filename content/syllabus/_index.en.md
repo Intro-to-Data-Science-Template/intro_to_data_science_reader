@@ -368,7 +368,9 @@ After the due date, late assignments will only be reviewed if there were *emerge
 
 <div class="question">
 
-This is a test
+Q: So if I reach "Exceeds Standard" and fulfill the individual standard on a quiz for a topic early in the semester, I can just skip those questions for the rest of the class?
+
+A: Theoretically yes, but I would recommend you answer all questions to make sure you're not letting your knowledge slip.
 
 </div>
 
