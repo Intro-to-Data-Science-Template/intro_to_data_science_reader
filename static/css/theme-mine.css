@@ -71,6 +71,14 @@ figcaption {
 	font-style: italic;
 }
 
+dl {
+	font-weight: bold;
+}
+
+dd {
+	font-weight: normal;
+}
+
 /* font sizes */
 
 .colossal { font-size: 220% }
