@@ -188,6 +188,7 @@ cat_colors = factor(standards$Category, labels = RColorBrewer::brewer.pal(length
 knitr::kable(standards[,-1], escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
   column_spec(1, border_right = TRUE, bold = TRUE, background = cat_colors) %>%
+  column_spec(5, border_right = TRUE) %>%
   column_spec(6, background = "#A2CD5A")
 ```
 
