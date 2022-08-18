@@ -98,7 +98,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> 9/19/2022 (Mon) </td>
    <td style="text-align:left;"> Intro to git/GitHub </td>
    <td style="text-align:left;"> <ol><li>
-<a href="https://search-ebscohost-com.libproxy.smith.edu/login.aspx?direct=true&amp;AuthType=ip,sso&amp;db=asn&amp;AN=129302223&amp;site=ehost-live&amp;custid=s8897501">Bryan, J. (2018). Excuse Me, Do You Have a Moment to Talk About Version Control? American Statistician, 72(1), 20&lt;96&gt;27.</a>
+<a href="https://search-ebscohost-com.libproxy.smith.edu/login.aspx?direct=true&amp;AuthType=ip,sso&amp;db=asn&amp;AN=129302223&amp;site=ehost-live&amp;custid=s8897501">Bryan, J. (2018). Excuse Me, Do You Have a Moment to Talk About Version Control? American Statistician, 72(1), 20-27.</a>
 </li></ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
@@ -207,11 +207,9 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 8 </td>
    <td style="text-align:left;"> 10/24/2022 (Mon) </td>
    <td style="text-align:left;"> Iteration </td>
-   <td style="text-align:left;"> <ol>
-<li><a href="https://r4ds.had.co.nz/iteration.html">Wickham, H., &amp; Grolemund, G. (2017). 21 Iteration. In R for Data Science. O'</a></li>
-<li>Reilly.
-</li>
-</ol> </td>
+   <td style="text-align:left;"> <ol><li>
+<a href="https://r4ds.had.co.nz/iteration.html">Wickham, H., &amp; Grolemund, G. (2017). 21 Iteration. In R for Data Science. O'Reilly.</a>
+</li></ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
@@ -368,8 +366,5 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   </tr>
 </tbody>
 </table>
-
-markdown::markdownToHTML(text = "[Wickham, H., & Grolemund, G. (2017). 21 Iteration. In R for Data Science. O'Reilly.](https://r4ds.had.co.nz/iteration.html)")
-
 
 
