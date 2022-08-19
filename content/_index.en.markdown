@@ -59,9 +59,12 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:right;font-weight: bold;background-color: #B3E2CD !important;"> 1 </td>
    <td style="text-align:left;"> 9/9/2022 (Fri) </td>
    <td style="text-align:left;"> What is Data? </td>
-   <td style="text-align:left;"> <ol><li>
-<a href="/intro_to_data_science_reader/syllabus/">Class Syllabus</a>
-</li></ol> </td>
+   <td style="text-align:left;"> <ol>
+<li><a href="/intro_to_data_science_reader/syllabus/">Class Syllabus</a></li>
+<li>
+<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2474112">Kitchin, R., &amp; Lauriault, T. P. (2018). Toward Critical Data Studies: Charting and Unpacking Data Assemblages and Their Work. in J. Thatcher, J. Eckert, &amp; A. Shears (Eds.), Thinking Big Data in Geography: New Regimes, New Research (pp. 3&lt;96&gt;20). University of Nebraska Press.</a>
+</li>
+</ol> </td>
    <td style="text-align:left;"> <ol>
 <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfzRweef4yf5jbMT0eoU5lFSPJo3iZAVZ46-qX4m2rCnBzbSw/viewform?usp=sf_link">Welcome Survey</a></li>
 <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeVYP1QSdPFXi9PSyjvbDcs-mZnzHT498x94h-dAdTBj25Tng/viewform?usp=sf_link">Data Survey</a></li>
@@ -81,7 +84,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> 9/14/2022 (Wed) </td>
    <td style="text-align:left;"> Intro to R/R Studio </td>
    <td style="text-align:left;"> <ol><li>
-<a href="https://rafalab.github.io/dsbook/r-basics.html#r-basics">Irizarry, R. A. (2019). Chapter 2 R basics | Introduction to Data Science.</a>
+<a href="https://rafalab.github.io/dsbook/r-basics.html#r-basics">Irizarry, R. A. (2022). Chapter 2 R basics | Introduction to Data Science. In Introduction to Data Science.</a>
 </li></ol> </td>
    <td style="text-align:left;"> <ol><li>All Software Installed
 </li></ol> </td>
@@ -100,13 +103,26 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> <ol><li>
 <a href="https://search-ebscohost-com.libproxy.smith.edu/login.aspx?direct=true&amp;AuthType=ip,sso&amp;db=asn&amp;AN=129302223&amp;site=ehost-live&amp;custid=s8897501">Bryan, J. (2018). Excuse Me, Do You Have a Moment to Talk About Version Control? American Statistician, 72(1), 20-27.</a>
 </li></ol> </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>
+<a href="/intro_to_data_science_reader/labs/0_problem_solving/">Problem solving lab</a>
+</li></ol> </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 3 </td>
    <td style="text-align:left;"> 9/21/2022 (Wed) </td>
    <td style="text-align:left;"> Exploratory Data Analyses </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol>
+<li><a href="https://search-ebscohost-com.libproxy.smith.edu/login.aspx?direct=true&amp;AuthType=ip,sso&amp;db=nlebk&amp;AN=1944722&amp;site=ehost-live&amp;custid=s8897501&amp;ebv=EB&amp;ppid=pp_3"><strong>[PAGES 3-12]</strong> Grant, R. (2019). Why visualize? in Data Visualization: Charts, Maps, and Interactive Graphics. Chapman and Hall/CRC. </a></li>
+<li><a href="https://www.data-to-viz.com/caveat/pie.html">Holtz, Y., &amp; Healy, C. (2018). The issue with pie chart in From data to Viz.</a></li>
+<li><a href="https://www.data-to-viz.com/graph/venn.html">Holtz, Y., &amp; Healy, C. (2018). Venn Diagram in From data to Viz.</a></li>
+<li><a href="https://www.data-to-viz.com/graph/line.html">Holtz, Y., &amp; Healy, C. (2018). Line chart in From data to Viz.</a></li>
+<li><a href="https://www.data-to-viz.com/graph/barplot.html">Holtz, Y., &amp; Healy, C. (2018). Barplot in From data to Viz.</a></li>
+<li><a href="https://www.data-to-viz.com/graph/scatter.html">Holtz, Y., &amp; Healy, C. (2018). Scatter plot in From data to Viz.</a></li>
+<li><a href="https://www.data-to-viz.com/graph/histogram.html">Holtz, Y., &amp; Healy, C. (2018). Histogram in From data to Viz.</a></li>
+<li>
+<a href="https://www.data-to-viz.com/caveat/boxplot.html">Holtz, Y., &amp; Healy, C. (2018). The Boxplot and its pitfalls in From data to Viz.</a>
+</li>
+</ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
@@ -141,16 +157,22 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:right;font-weight: bold;background-color: #E6F5C9 !important;"> 5 </td>
    <td style="text-align:left;"> 10/3/2022 (Mon) </td>
    <td style="text-align:left;"> Advanced Plotting </td>
-   <td style="text-align:left;"> <ol><li>
+   <td style="text-align:left;"> <ol>
+<li><a href="https://ucdavisdatalab.github.io/workshop_data_viz_principles/principles-of-visual-perception.html">Reynolds, P. (2021). 5 Principles of Visual Perception in Principles of Data Visualization.</a></li>
+<li><a href="https://rafalab.github.io/dsbook/ggplot2.html">Irizarry, R. A. (2022). Chapter 8 ggplot2 | Introduction to Data Science. In Introduction to Data Science.</a></li>
+<li>
 <a href="https://medium.economist.com/mistakes-weve-drawn-a-few-8cdd8a42d368">Leo, S. (2019, March 27). Mistakes, weve drawn a few. Medium.</a>
-</li></ol> </td>
+</li>
+</ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #E6F5C9 !important;"> 5 </td>
    <td style="text-align:left;"> 10/5/2022 (Wed) </td>
    <td style="text-align:left;"> Interactive Plotting </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>
+<a href="https://www.tylervigen.com/spurious-correlations">Scroll through Spurious Correlations</a>
+</li></ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
