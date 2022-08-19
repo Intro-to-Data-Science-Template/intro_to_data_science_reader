@@ -170,9 +170,13 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:right;font-weight: bold;background-color: #E6F5C9 !important;"> 5 </td>
    <td style="text-align:left;"> 10/5/2022 (Wed) </td>
    <td style="text-align:left;"> Interactive Plotting </td>
-   <td style="text-align:left;"> <ol><li>
-<a href="https://www.tylervigen.com/spurious-correlations">Scroll through Spurious Correlations</a>
-</li></ol> </td>
+   <td style="text-align:left;"> <ol>
+<li><a href="https://www.tylervigen.com/spurious-correlations">Scroll through Spurious Correlations</a></li>
+<li><a href="https://plotly-r.com/preface.html">Sievert, C. (2019). 1 Preface. In Interactive web-based data visualization with R, plotly, and shiny.</a></li>
+<li>
+<a href="https://r-graph-gallery.com/interactive-charts.html">Holtz, Y. (2018). Interactive charts | the R Graph Gallery.</a>
+</li>
+</ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
@@ -200,22 +204,24 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #B3E2CD !important;"> 6 </td>
    <td style="text-align:left;"> 10/14/2022 (Fri) </td>
-   <td style="text-align:left;"> Major Project 1 </td>
+   <td style="text-align:left;"> Project 1 </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #FDCDAC !important;"> 7 </td>
    <td style="text-align:left;"> 10/17/2022 (Mon) </td>
-   <td style="text-align:left;"> R Debugging Tools </td>
+   <td style="text-align:left;"> Functions </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #FDCDAC !important;"> 7 </td>
    <td style="text-align:left;"> 10/19/2022 (Wed) </td>
-   <td style="text-align:left;"> Functions </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> R Debugging Tools </td>
+   <td style="text-align:left;"> <ol><li>
+<a href="https://modernstatisticswithr.com/errorchapter.html">Thulin, M. (2021). 11 Debugging. In Modern Statistics with R.</a>
+</li></ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
@@ -246,7 +252,8 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> 10/28/2022 (Fri) </td>
    <td style="text-align:left;"> LAB/Quiz 2 Open </td>
    <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>Project 1
+</li></ol> </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #F4CAE4 !important;"> 9 </td>
@@ -287,7 +294,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #E6F5C9 !important;"> 10 </td>
    <td style="text-align:left;"> 11/11/2022 (Fri) </td>
-   <td style="text-align:left;"> Major Project 2 </td>
+   <td style="text-align:left;"> Project 2 </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
@@ -317,7 +324,8 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> 11/21/2022 (Mon) </td>
    <td style="text-align:left;"> SQL </td>
    <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>Project 2
+</li></ol> </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #FDCDAC !important;font-style: italic;color: #808080 !important;"> 12 </td>
@@ -337,21 +345,21 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 13 </td>
    <td style="text-align:left;"> 11/28/2022 (Mon) </td>
-   <td style="text-align:left;"> Text as Data </td>
+   <td style="text-align:left;"> Finals Planning </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 13 </td>
    <td style="text-align:left;"> 11/30/2022 (Wed) </td>
-   <td style="text-align:left;"> Networks as Data </td>
+   <td style="text-align:left;"> Text as Data </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 13 </td>
    <td style="text-align:left;"> 12/2/2022 (Fri) </td>
-   <td style="text-align:left;"> Geospatial Data </td>
+   <td style="text-align:left;"> Geospatial Data/Quiz 4 Open </td>
    <td style="text-align:left;"> <ol><li>
 <a href="https://mdsr-book.github.io/mdsr2e/ch-spatial.html">Baumer, B. S., Kaplan, D. T., &amp; Horton, N. J. (2021). Chapter 17 Working with geospatial data. In Modern Data Science with R. Chapman and Hall.</a>
 </li></ol> </td>
@@ -360,31 +368,31 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #F4CAE4 !important;"> 14 </td>
    <td style="text-align:left;"> 12/5/2022 (Mon) </td>
-   <td style="text-align:left;"> Finals Planning/Lessons Learned </td>
+   <td style="text-align:left;"> Networks as Data </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #F4CAE4 !important;"> 14 </td>
    <td style="text-align:left;"> 12/7/2022 (Wed) </td>
-   <td style="text-align:left;"> Mountain Day Saftey Net/Flex </td>
+   <td style="text-align:left;"> Mountain Day Saftey Net/Lessons Learned </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #F4CAE4 !important;"> 14 </td>
    <td style="text-align:left;"> 12/9/2022 (Fri) </td>
-   <td style="text-align:left;"> Finals Work/Quiz 4 Open </td>
+   <td style="text-align:left;"> Finals Work </td>
    <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>Quiz 4
+</li></ol> </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #E6F5C9 !important;"> 15 </td>
    <td style="text-align:left;"> 12/12/2022 (Mon) </td>
    <td style="text-align:left;"> Finals Presentations/aRt Gallery </td>
    <td style="text-align:left;">  </td>
-   <td style="text-align:left;"> <ol><li>Quiz 4
-</li></ol> </td>
+   <td style="text-align:left;">  </td>
   </tr>
 </tbody>
 </table>
