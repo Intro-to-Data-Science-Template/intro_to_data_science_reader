@@ -54,14 +54,16 @@ You can send me a message on the course <a href="https://smi-sds-192-03-202301.s
 
 If your question is not sensitive in nature, consider putting it in the `#coding-help` or `#course-help` channel instead. There is a good chance one of your classmates will be able to answer before I can.
 
-Slack questions should be brief or administrative in nature, for more in-depth questions and troubleshooting, please attend office hours instead.
+Slack questions should be brief or administrative in nature, for more in-depth questions and troubleshooting please attend office hours instead.
 
 {{% /tab %}}
 {{% tab name="Office Hours" %}}
 
-You can schedule a meeting with me on <a href="https://calendly.com/jared-joseph/office-hours">Calendly</a>. You may also try to drop in, however priority will always be given to those who made an appointment.
+You can schedule a meeting with me on <a href="https://calendly.com/jared-joseph/office-hours">Calendly</a>. You may also try to drop in, however priority will always be given to those who made an appointment. You are encouraged to set up group appointments if several people have a similar question.
 
-Different times may have differing options for in-person/video call meetings. If you cannot find an open time slot, please message me for an appointment and I will attempt to find a time that works for both of us.
+If you are coming to office hours with a coding question, make sure you have the code ready *at the start of your appointment*. We don't want to spend the first several minutes waiting for your computer to boot up and getting your project open.
+
+If you cannot find an open time slot, please message me for an appointment and I will attempt to find a time that works for both of us.
  
 {{% /tab %}}
 {{< /tabs >}}
@@ -90,7 +92,9 @@ Quizzes cannot be made up after the open period has passed. If you have a known 
 
 ### Academic Honesty
 
-Data science is inherently collaborative, so I fully expect students to collaborate with each other and reference online resources. However, all work that you submit must be your own. All students, staff, and faculty are bound by the Smith College Honor Code, which Smith has had since 1944:
+Data science is inherently collaborative, so I fully expect students to collaborate with each other. Ask questions on slack, create study groups, and share helpful resources you find. **The only avenue in which collaboration is not allowed is on quizzes.**
+
+However, all work that you submit must be your own. All students, staff, and faculty are bound by the Smith College Honor Code, which Smith has had since 1944:
 
 > Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information and honest and respectful use of college resources.<br><br>Smith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. All submitted work of any kind must be the original work of the student who must cite all the sources used in its preparation.<br><br><p style="text-align: right">-Smith Academic Honor Code</p>
 
@@ -105,13 +109,11 @@ Any cases of dishonesty or plagiarism will be reported to the Academic Honor Boa
 
 Learning to code is most similar to learning a new language; *you will only learn by doing*. No amount of rote copying will advance you beyond the most elementary levels of understanding. Please keep this in mind.
 
+If someone else helps you understand a concept better, give them a nod in the `#shoutouts` channel on slack.
+
 ### Code of Conduct
 
-As participants in this course we are committed to making participation a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, or religion. Examples of unacceptable behavior by participants in this course include the use of sexual language or imagery, derogatory comments or personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct.
-
-As the instructor I have the right and responsibility to point out and stop behavior that is not aligned to this Code of Conduct. Participants who do not follow the Code of Conduct may be reprimanded for such behavior. Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the instructor.
-
-All students and the instructor are expected to adhere to this Code of Conduct in all settings for this course: seminars, office hours, and over Slack.
+>As participants in this course we are committed to making participation a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, or religion. Examples of unacceptable behavior by participants in this course include the use of sexual language or imagery, derogatory comments or personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct.<br><br> As the instructor I have the right and responsibility to point out and stop behavior that is not aligned to this Code of Conduct. Participants who do not follow the Code of Conduct may be reprimanded for such behavior. Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the instructor.<br><br>All students and the instructor are expected to adhere to this Code of Conduct in all settings for this course: seminars, office hours, and over Slack.
 
 This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org/version/1/0/0/code-of-conduct/).
 
