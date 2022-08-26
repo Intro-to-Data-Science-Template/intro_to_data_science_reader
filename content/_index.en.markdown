@@ -10,12 +10,13 @@ title: Intro to Data Science
 
 ## Quick Links
 
-| Resource Link                                                	| Description                                                                           	|
-|-------------------------------------------------------------	|----------------------------------------------------------------------------------------	|
-| [Syllabus]({{%relref "syllabus/" %}})                       	| Quick access to all important course information.                                      	|
-| [Moodle](https://moodle.smith.edu/course/view.php?id=44991) 	| Grades and quizzes will be available on the course Moodle. 	|
-| [Slack](https://smi-sds-192-03-202301.slack.com)              | Main communication channel for the course.                                              |
-| [Spinelli Center](https://www.smith.edu/qlc/tutoring.html)  	| The Spinelli Center offers drop-in tutoring hours in Sabin-Reed 301 or on Zoom.        	|
+| Resource Link                                                	  | Description                                                                           	|
+|-------------------------------------------------------------	  |----------------------------------------------------------------------------------------	|
+| [Syllabus]({{%relref "syllabus/" %}})                       	  | Quick access to all important course information.                                      	|
+| [Moodle](https://moodle.smith.edu/course/view.php?id=44991) 	  | Grades and quizzes will be available on the course Moodle. 	                            |
+| [Slack](https://smi-sds-192-03-202301.slack.com)                | Main communication channel for the course.                                              |
+| [Perusall](https://moodle.smith.edu/mod/lti/view.php?id=922532) | Perusall page for course readings                                                       |
+| [Spinelli Center](https://www.smith.edu/qlc/tutoring.html)  	  | The Spinelli Center offers drop-in tutoring hours in Sabin-Reed 301 or on Zoom.        	|
 
 ## Overview
 
@@ -143,7 +144,9 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:right;font-weight: bold;background-color: #F4CAE4 !important;"> 4 </td>
    <td style="text-align:left;"> 9/28/2022 (Wed) </td>
    <td style="text-align:left;"> Aggregation and Merging </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>
+<a href="https://papers.ssrn.com/abstract=1450006"><strong>[PAGES 1701-1731]</strong> Ohm, P. (2009). Broken Promises of Privacy: Responding to the Surprising Failure of Anonymization (SSRN Scholarly Paper No. 1450006).</a>
+</li></ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
@@ -172,6 +175,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> Interactive Plotting </td>
    <td style="text-align:left;"> <ol>
 <li><a href="https://www.tylervigen.com/spurious-correlations">Scroll through Spurious Correlations</a></li>
+<li><a href="https://guns.periscopic.com/">Explore U.S. Gun Deaths</a></li>
 <li><a href="https://plotly-r.com/preface.html">Sievert, C. (2019). 1 Preface. In Interactive web-based data visualization with R, plotly, and shiny.</a></li>
 <li>
 <a href="https://r-graph-gallery.com/interactive-charts.html">Holtz, Y. (2018). Interactive charts | the R Graph Gallery.</a>
@@ -197,8 +201,10 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #B3E2CD !important;"> 6 </td>
    <td style="text-align:left;"> 10/12/2022 (Wed) </td>
-   <td style="text-align:left;"> Recap </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> Data Science Ethics </td>
+   <td style="text-align:left;"> <ol><li>
+<a href="https://mdsr-book.github.io/mdsr2e/ch-ethics.html">Baumer, B. S., Kaplan, D. T., &amp; Horton, N. J. (2021). Chapter 8 Data science ethics. In Modern Data Science with R. CNC Press.</a>
+</li></ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
@@ -360,9 +366,13 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 13 </td>
    <td style="text-align:left;"> 12/2/2022 (Fri) </td>
    <td style="text-align:left;"> Geospatial Data/Quiz 4 Open </td>
-   <td style="text-align:left;"> <ol><li>
-<a href="https://mdsr-book.github.io/mdsr2e/ch-spatial.html">Baumer, B. S., Kaplan, D. T., &amp; Horton, N. J. (2021). Chapter 17 Working with geospatial data. In Modern Data Science with R. Chapman and Hall.</a>
-</li></ol> </td>
+   <td style="text-align:left;"> <ol>
+<li><a href="https://mdsr-book.github.io/mdsr2e/ch-spatial.html">Baumer, B. S., Kaplan, D. T., &amp; Horton, N. J. (2021). Chapter 17 Working with geospatial data. In Modern Data Science with R. CNC Press.</a></li>
+<li><a href="https://doi.org/10.1038/srep01376">de Montjoye, Y.-A., Hidalgo, C. A., Verleysen, M., &amp; Blondel, V. D. (2013). Unique in the Crowd: The privacy bounds of human mobility. Scientific Reports, 3(1), 1376.</a></li>
+<li>
+<a href="https://open.lib.umn.edu/mapping/chapter/7-lying-with-maps/">Deluca, E., &amp; Nelson, S. (2017). 7. Lying With Maps. In Mapping, Society, and Technology. University of Minnesota Libraries Publishing. </a>
+</li>
+</ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
