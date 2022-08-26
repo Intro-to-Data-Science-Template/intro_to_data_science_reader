@@ -27,7 +27,7 @@ format:
     -   [Code of Conduct][]
     -   [Accommodation][]
 -   [Grading][]
-    -   [Standards Based Grading][]
+    -   [Standards-Based Grading][]
     -   [Standards][]
     -   [Final Grades][]
     -   [Late Work Policy][]
@@ -35,27 +35,27 @@ format:
 
 ## Course Description
 
-Introduction to Data Science (SDS 192) aims to equip students with the knowledge and tools to understand, critically evaluate, manipulate, and explain data. This is an introductory course, and no prior experience is necessary.[^1] Students will learn how to read and write code, but also how to create, organize, and collaborate on coding projects while critically examining the projects goals and data sources. We will be primarily use the R language, along with supplemental tools.
+Introduction to Data Science (SDS 192) aims to equip students with the knowledge and tools to understand, critically evaluate, manipulate, and explain data. This is an introductory course, and no prior experience is necessary[^1]. Students will learn how to read and write code, but also how to create, organize, and collaborate on coding projects while critically examining the projects goals and data sources. We will be primarily using the R language, along with supplemental tools.
 
 ## Course Structure
 
-Each week will follow the same basic structure. Monday and Wednesday classes will include lectures to introduce new concepts. Lecture will be followed by interactive problem sets designed to reinforce those concepts through active learning. Slides from lecture will be posted online after the class. The problem sets for any class will be "due" at the start of next class period when the answers will be released; I expect most problem sets can be completed in class the day they are given out. These problem sets do not contribute toward your grade. They are intended to reinforce material and help you test your own understanding.
+Each week follows the same basic structure. Monday and Wednesday classes include lectures to introduce new concepts. Each lecture is followed by interactive problem sets designed to reinforce concepts through active learning. Slides from lecture will be posted online after class. The problem sets for any class are "due" at the start of the next class period when the answers will be released; most problem sets can be completed in class. In-class problem sets do not contribute toward your grade. They are intended to reinforce material and help you test your own understanding.
 
-Friday classes will be devoted to lab activities or project work time. Students are expected to come to class to work on these activities. Labs will comprise of longer and more involved problem sets incorporating topics from the current and prior weeks. Students will work on labs in groups of two to four people. Labs will be reviewed through GitHub Classroom where feedback will be provided.
+Friday classes are devoted to lab activities or project work time. Students are expected to come to class for these activities. Labs include more involved problem sets that incorporate topics from the current and prior weeks. Students work on labs in groups of two to four people. Labs are reviewed through GitHub Classroom where feedback is provided.
 
 For a full list of assignments and due dates, please see the course [schedule][].
 
 {{% notice info %}}
-This is a 4-credit course, meaning that by federal guidelines, you should be spending 12 hours total per week on this course. That means you should be spending 8.25 hours (12 hours - 3.75 hours/week of in-class instruction) on this course per week outside of class.
+This is a 4-credit course. You should be spending 12-hours total per week on this course. Expect to spend around 8.25 hours (12 hours - 3.75 hours/week of in-class instruction) on class material per week outside of class.
 {{% /notice %}}
 
 ## Course Instructor
 
 ![][1]
 
-I am a sociologist that studies abuses of power in government. I earned my Ph.D. at the University of California, Davis in in sociology with a designated emphasis in computational social science. I combine computational methods such as social network analysis, natural language processing, geospatial analysis, and machine learning with open source and governmental data to uncover patterns of misfeasance and malfeasance by our public servants. From the political networks of politicians and prohibition gangsters to bias hidden in the text of academic recruitment, I use new methods to work on old problems of corruption and inequality.
+I am a sociologist that studies abuses of power in government. I earned my Ph.D. at the University of California, Davis in in sociology with a designated emphasis in computational social science. I combine computational methods such as social network analysis, natural language processing, geospatial analysis, and machine learning with open source and governmental data to uncover patterns of malfeasance and misfeasance by our public servants. From the political networks of politicians and prohibition gangsters to bias hidden in the text of academic recruitment, I use new methods to work on old problems of corruption and inequality.
 
-At Smith College I am a visiting assistant professor in the Statistical & Data Sciences program. I have experience working with both United States and United Kingdom governmental organizations applying machine learning to real-world problems. In the UK I worked with the national lab for data science and machine learning, the Alan Turing Institute, on early detection systems in foster care to assure children were receiving adequate services. Meanwhile in the US I worked with the Internal Revenue Service to built a machine learning system that determined the credibility of incoming fraud reports.
+I am a visiting assistant professor in the Statistical & Data Sciences (SDS) program. I have experience working with both United States and United Kingdom governmental organizations applying machine learning to real-world problems. In the UK, I worked with the national lab for data science and machine learning, the Alan Turing Institute, on early-detection systems in foster care to assure children are receiving adequate services. Meanwhile in the US I worked with the Internal Revenue Service to build a machine learning system that determined the credibility of incoming fraud reports.
 
 ### Contacting Me
 
@@ -67,16 +67,16 @@ You can send me a message on the course <a href="https://smi-sds-192-03-202301.s
 
 If your question is not sensitive in nature, consider putting it in the `#coding-help` or `#course-help` channel instead. There is a good chance one of your classmates will be able to answer before I can.
 
-Slack questions should be brief or administrative in nature, for more in-depth questions and troubleshooting please attend office hours instead.
+Slack questions should be brief or administrative in nature. For more in-depth questions and troubleshooting please attend office hours.
 
 {{% /tab %}}
 {{% tab name="Office Hours" %}}
 
-You can schedule a meeting with me on <a href="https://calendly.com/jared-joseph/office-hours">Calendly</a>. You may also try to drop in, however priority will always be given to those who made an appointment. You are encouraged to set up group appointments if several people have a similar question.
+You can schedule a meeting with me on <a href="https://calendly.com/jared-joseph/office-hours">Calendly</a>. Drop-ins are welcome, but priority is given to those who make an appointment. Group appointments, to address a similar question, are welcome.
 
-If you are coming to office hours with a coding question, make sure you have the code ready *at the start of your appointment*. We don't want to spend the first several minutes waiting for your computer to boot up and getting your project open.
+If you are coming to office hours with a coding question, make sure you have the code ready *at the start of your appointment*. Have your computer booted up and your project open.
 
-If you cannot find an open time slot, please message me for an appointment and I will attempt to find a time that works for both of us.
+If you cannot find an open time slot, please message me for an appointment. I will attempt to find a time that works for both of us.
 
 {{% /tab %}}
 
@@ -86,9 +86,9 @@ If you cannot find an open time slot, please message me for an appointment and I
 
 ### Required Materials
 
-Students are not expected to buy any materials for this course. Data science is built on free and open collaboration, and there is no shortage of high quality learning material available. This reader, as well as all assignments, will likewise be freely available for all into the foreseeable future.
+Students are not expected to buy any materials for this course. Data science is built on free and open collaboration. There is no shortage of high-quality learning material available. This reader, as well as all assignments, are currently available for free.
 
-Students are required to have a working computer (preferably a laptop) and reliable internet connection for this course. Any reasonably recent computer should be sufficient, with the notable exception of Chromebooks. Chromebooks lack access to the majority of the tools used by data scientists, and thus it will be difficult to complete course assignments with one.
+Students are required to have a working computer (preferably a laptop) and reliable internet connection for this course. Any recent computer should be sufficient, with the notable exception of Chromebooks. Chromebooks lack access to the majority of the tools used by data scientists.
 
 {{% notice warning %}}
 If you only have access to a Chromebook, please speak with me as soon as possible.
@@ -96,19 +96,19 @@ If you only have access to a Chromebook, please speak with me as soon as possibl
 
 ### Attendance
 
-I will not be taking attendance in this course, and you do not need to inform me when you will be absent. **If you are sick, please stay home.** Given the standards based grading system (discussed below), no single class, assignment, or even quiz will negatively impact your grade. That said, I expect students to be present when possible. It will be very difficult to keep up with course material without consistent attendance.
+I will not be taking attendance in this course, and you do not need to inform me when you will be absent. **If you are sick, please stay home.** Given the standards-based grading system (discussed below), no single class, assignment, or even quiz will negatively impact your grade. That said, it will be very difficult to keep up with course material without consistent attendance.
 
-If you miss a class, you should contact a peer to discuss what was missed, and check the course reader website for any upcoming deadlines. I won't have the capacity this semester to re-deliver missed material in office hours.
+If you miss a class, you should contact a peer to discuss what was missed, and check the course reader website for any upcoming deadlines. I won't have the capacity to re-deliver missed material in office hours.
 
 {{% notice info %}}
-Quizzes cannot be made up after the open period has passed. If you have a known schedule conflict with a quiz, please speak with me as soon as possible to arrange an alternative.
+Quizzes cannot be made up after the open period has passed. If you have a known scheduling conflict with a quiz, please speak with me as soon as possible to arrange an alternative time.
 {{% /notice %}}
 
 ### Academic Honesty
 
-Data science is inherently collaborative, so I fully expect students to collaborate with each other. Ask questions on slack, create study groups, and share helpful resources you find. **The only avenue in which collaboration is not allowed is on quizzes.**
+Data science is inherently collaborative, so I fully expect students to collaborate. You are encouraged to work together on most assignments---ask questions on Slack, create study groups, and share helpful resources you find. However, anything you submit must be your own work. You need to be the person who writes the text and/or code. Multiple students should not submit identical work. **Please note: The only avenue in which collaboration is not allowed is on quizzes.**
 
-However, all work that you submit must be your own. All students, staff, and faculty are bound by the Smith College Honor Code, which Smith has had since 1944:
+All students, staff, and faculty are bound by the Smith College Honor Code:
 
 > Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information and honest and respectful use of college resources.<br><br>Smith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. All submitted work of any kind must be the original work of the student who must cite all the sources used in its preparation.<br><br>
 > <p style="text-align: right">
@@ -124,27 +124,27 @@ Any cases of dishonesty or plagiarism will be reported to the Academic Honor Boa
 -   Falsifying or misrepresenting information in submitted work.
 -   Paying another student or service to complete assignments for you.
 
-Learning to code is most similar to learning a new language; *you will only learn by doing*. No amount of rote copying will advance you beyond the most elementary levels of understanding. Please keep this in mind.
+Learning to code is similar to learning a new language; *you will only learn by doing*. No amount of rote copying will advance you beyond the most elementary levels of understanding. Please keep this in mind.
 
-If someone else helps you understand a concept better, give them a nod in the `#shoutouts` channel on slack.
+If someone else helps you understand a concept better, give them a nod in the `#shoutouts` channel on Slack.
 
 ### Code of Conduct
 
-> As participants in this course we are committed to making participation a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, or religion. Examples of unacceptable behavior by participants in this course include the use of sexual language or imagery, derogatory comments or personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct.<br><br> As the instructor I have the right and responsibility to point out and stop behavior that is not aligned to this Code of Conduct. Participants who do not follow the Code of Conduct may be reprimanded for such behavior. Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the instructor.<br><br>All students and the instructor are expected to adhere to this Code of Conduct in all settings for this course: seminars, office hours, and over Slack.
+> As participants in this course we are committed to making participation a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, or religion. Examples of unacceptable behavior by participants in this course include the use of sexual language or imagery, derogatory comments or personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct.<br><br> As the instructor I have the right and responsibility to point out and stop behavior that is not aligned with this Code of Conduct. Participants who do not follow the Code of Conduct may be reprimanded for such behavior. Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the instructor.<br><br>All students and the instructor are expected to adhere to this Code of Conduct in all settings for this course: seminars, office hours, and over Slack.
 
 This Code of Conduct is adapted from the [Contributor Covenant][].
 
 ### Accommodation
 
-Smith College is committed to providing support services and reasonable accommodations to all students with disabilities. To request an accommodation, please register with the [Disability Services Office][] at the beginning of the semester.
+Smith College is committed to providing support services and reasonable accommodations to all students with disabilities. To request an accommodation, please register with the [Office of Disability Services Office (ODS)][] at the beginning of the semester.
 
 ## Grading
 
-### Standards Based Grading
+### Standards-Based Grading
 
-This course will be graded using a standards-based assessment system. This means that rather than assignments being graded based on the percentage of the questions you answered correctly, your responses will be compared against a pre-defined set of course standards and assigned a level of proficiency. You will have multiple opportunities over the course of the semester to showcase the depth of your understanding regarding these standards.
+This course will be graded using a standards-based grading system. Rather than tallying up the percentage of questions you answer correctly, I assess your responses by using a pre-defined set of course standards and then assign a level of proficiency. Throughout the semester, this course offers multiple opportunities to showcase the depth of your understanding in light of these standards.
 
-An important feature of standards based grading is how your understanding of a topic is totaled at the end of the semester. In traditional points style grading, an average is taken of all your assignments, and your final grade is represented by that average. This means all assignments are given equal consideration in your final grade.
+In traditional points-style grading, an average is taken of all your assignments, and your final grade is based on that average. This means all assignments are given equal consideration in your final grade.
 
 <div class="columns">
 
@@ -172,7 +172,7 @@ An important feature of standards based grading is how your understanding of a t
 
 </div>
 
-In contrast, standards-based grading is only interested in your understanding of the material at the end of the course. This means that only your highest level of demonstrated proficiency is tallied. Functionally this means that only your best score is kept; all others are effectively forgotten. This allows you to safely engage with complicated topics early on, and have opportunities to show improvement without penalization. This also means if you understand a concept early on, you do not need to worry about it for the remainder of the course.
+In contrast, standards-based grading is focused on your progression through the course. Functionally, only your best score for each standard is kept. All others are effectively forgotten. The hope is that without the worry of "getting a bad grade" when you are new to a concept, you will feel free to safely engage with complicated topics early on, make mistakes, and have opportunities to show improvement without penalization.
 
 <div class="columns">
 
@@ -202,17 +202,17 @@ In contrast, standards-based grading is only interested in your understanding of
 
 A standards-based grading system carries a number of other benefits:
 
--   Learning targets for the course are clearly defined from the outset, and every graded assignment will be directly tied to at least one standard. This should make it abundantly clear what skills and competencies I'm assessing on every assignment. There is no "busy work" with a standards-based system.
--   No one assignment will make-or-break your grade. You have multiple opportunities to demonstrate fluency in a standard. This rewards students that take the time to practice and learn from their mistakes. It prioritizes student growth throughout the course of the semester.
+-   Learning targets for the course are clearly defined from the outset. Every graded assignment is directly tied to at least one standard. There is no "busy work" with a standards-based system.
+-   No single assignment will make-or-break your grade. You have multiple opportunities to demonstrate fluency in a standard. This rewards students that take the time to practice and learn from their mistakes. It prioritizes student growth throughout the course of the semester.
 -   Assessments in a standards-based system are much clearer than in a point-based grading system. Saying that I've become proficient in data wrangling, joining, and visualizing means more than saying that I earned a 92.5 in my Introduction to Data Science course.
--   A standards-based grading system makes it easier to monitor your progress towards a certain grade.
--   There is no competition and no curve in a standards based system; others doing well will never curve the overall grade against you. The only person you are ever compared with is your past self. Help each other often and freely.
+-   A standards-based grading system makes it easier to monitor your own progress towards a certain grade.
+-   There is no competition and no curve in a standards-based system. The only person you are ever compared with is your past self. Help each other often and freely.
 
 ### Standards
 
-The following table lists all the standards you will be evaluated on in this course. There are 15 total standards, separated into 4 categories. Each standard states what conditions must be met to reach each proficiency level. There are four proficiency levels for each standard, each requiring more complete understanding of the material. These levels are inclusive, meaning to reach the 4th level, "Exceeds Standard" you must also meet all the requirements of level 3, "Meets Standard."
+The following table lists all the standards you are evaluated on in this course. There are 15 total standards, separated into 4 categories. Each standard states what conditions must be met to reach each proficiency level. There are four proficiency levels for each standard, each requiring more complete understanding of the material. These levels are inclusive, meaning to reach the 4th level, "Exceeds Standard" you must also meet all the requirements of level 3, "Meets Standard."
 
-You will have multiple opportunities in the course to demonstrate your understanding of each standard. Any assignment that is reviewed is an opportunity to increase your proficiency level in a standard. In addition to the four levels of proficiency, there is also an extra point available in each standard called "Individual Standard." You may fulfill this requirement only quizzes, but only need to reach the "Meets Standard" criteria on a standard to do so.
+You will have multiple opportunities to demonstrate your understanding of each standard. Any assignment that is reviewed is an opportunity to increase your proficiency level in a standard. In addition to the four levels of proficiency, there is also an extra point available in each standard called "Individual Standard." You may fulfill this requirement only on quizzes, but only need to reach the "Meets Standard" criteria on a standard to do so.
 
 {{% notice info %}}
 You can demonstrate proficiency in any reviewed assignment, **but can only fulfill the "Individual Standard" criteria on a quiz.**
@@ -331,7 +331,7 @@ You can demonstrate proficiency in any reviewed assignment, **but can only fulfi
 
 ### Final Grades
 
-Your completion of these standards will be converted into a final letter grade using the following process. Each of the 12 standards will be converted into a four point scale, with one point available for meeting the "Individual Standard" on a quiz.
+Your completion of these standards are converted into a final letter grade using the following process. Each of the 12 standards will be converted into a four-point scale, with one point available for meeting the "Individual Standard" on a quiz.
 
 -   1 Point. "Does Not Meet Standard"
 -   2 Points. "Progressing Toward Standard"
@@ -339,7 +339,7 @@ Your completion of these standards will be converted into a final letter grade u
 -   4 Points. "Exceeds Standard"
 -   +1 Point. "Individual Standard"
 
-On this scale, there are 60 points total in the course (12 standards \* 5 possible points). I will sum the highest level of proficiency you reach in each standard over the course of the semester to arrive at your final score. For example, if someone were to reach "Exceeds Standard" in all standards, but could never do so on a quiz, they would receive 48 of 60 points (4 points \* 12 standards). Similarly, if someone reaches "Meets Standard" in all topics, including on quizzes, but did not exceed the standard in any topic, they would likewise receive 48 of 60 points.
+On this scale, there are 60 points total in the course (12 standards \* 5 possible points). I sum the highest level of proficiency you reach in each standard over the course of the semester to arrive at your final score. For example, if someone were to reach "Exceeds Standard" in all standards, but could never do so on a quiz, they would receive 48 of 60 points (4 points \* 12 standards). Similarly, if someone reaches "Meets Standard" in all topics, including on quizzes, but did not reach "Exceeds Standard" in any topic, they would likewise receive 48 of 60 points.
 
 The summed points will be converted into letter grades using the following table.
 
@@ -360,10 +360,10 @@ The summed points will be converted into letter grades using the following table
 
 ### Late Work Policy
 
-Assignments turned in late will not be reviewed, and will not be considered for demonstrating proficiency in course standards. Keep in mind missing an assignment will not hurt your grade in any way, rather it simply removes one chance for you to demonstrate your knowledge of course material. If you do not think you will be able to turn in an assignment by the deadline, you may request an extension. To do so, please send me a message explaining why you are unable to complete the assignment in the expected time frame. **Extension requests must be made--and accepted--before the assignment due date.**
+Assignments turned in late will not be reviewed, and will not be considered for demonstrating proficiency in course standards. Keep in mind, missing an assignment will not hurt your grade, but does remove one chance for you to demonstrate your knowledge of course material. If you do not think you will be able to turn in an assignment by the deadline, you may request an extension. To do so, please send me a message explaining why you are unable to complete the assignment in the expected time frame. **Extension requests must be made--and accepted--before the assignment due date.**
 
 {{% notice info %}}
-After the due date, late assignments will only be reviewed if there were *emergency* circumstances preventing you from turning the assignment in on time.
+After the due date, late assignments are only reviewed if there are *emergency* circumstances preventing you from turning the assignment in on time.
 {{% /notice %}}
 
 ## FAQ
@@ -376,7 +376,7 @@ A: Theoretically yes, but I would recommend you answer all questions to make sur
 
 </div>
 
-[^1]: If this is your first course in the SDS department, you will also need to enroll in SDS 100.
+[^1]: If this is your first course in the SDS department, you also need to enroll in SDS 100.
 
   [Course Description]: #course-description
   [Course Structure]: #course-structure
@@ -389,7 +389,7 @@ A: Theoretically yes, but I would recommend you answer all questions to make sur
   [Code of Conduct]: #code-of-conduct
   [Accommodation]: #accommodation
   [Grading]: #grading
-  [Standards Based Grading]: #standards-based-grading
+  [Standards-Based Grading]: #standards-based-grading
   [Standards]: #standards
   [Final Grades]: #final-grades
   [Late Work Policy]: #late-work-policy
@@ -397,7 +397,7 @@ A: Theoretically yes, but I would recommend you answer all questions to make sur
   [schedule]: /intro_to_data_science_reader/#schedule
   [1]: https://filedn.com/l7C36orhaIP0u9d6RtOoEES/jnjoseph_headshot_live.jpg?classes=floatright,inline,headshot&featherlight=false "Dr. Jared Joseph"
   [Contributor Covenant]: https://www.contributor-covenant.org/version/1/0/0/code-of-conduct/
-  [Disability Services Office]: https://www.smith.edu/about-smith/disability-services
+  [Office of Disability Services Office (ODS)]: https://www.smith.edu/about-smith/disability-services
   [2]: assignments_plot.jpg?featherlight=false
   [3]: final_points.jpg?featherlight=false
   [4]: final_standards.jpg?featherlight=false
