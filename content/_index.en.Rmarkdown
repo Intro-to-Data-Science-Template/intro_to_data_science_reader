@@ -55,12 +55,13 @@ schedule$Readings = convert_schedule(schedule$Readings)
 
 ## Quick Links
 
-| Resource Link                                                	| Description                                                                           	|
-|-------------------------------------------------------------	|----------------------------------------------------------------------------------------	|
-| [Syllabus]({{%relref "syllabus/" %}})                       	| Quick access to all important course information.                                      	|
-| [Moodle](https://moodle.smith.edu/course/view.php?id=44991) 	| Grades and quizzes will be available on the course Moodle. 	|
-| [Slack](https://smi-sds-192-03-202301.slack.com)              | Main communication channel for the course.                                              |
-| [Spinelli Center](https://www.smith.edu/qlc/tutoring.html)  	| The Spinelli Center offers drop-in tutoring hours in Sabin-Reed 301 or on Zoom.        	|
+| Resource Link                                                	  | Description                                                                           	|
+|-------------------------------------------------------------	  |----------------------------------------------------------------------------------------	|
+| [Syllabus]({{%relref "syllabus/" %}})                       	  | Quick access to all important course information.                                      	|
+| [Moodle](https://moodle.smith.edu/course/view.php?id=44991) 	  | Grades and quizzes will be available on the course Moodle. 	                            |
+| [Slack](https://smi-sds-192-03-202301.slack.com)                | Main communication channel for the course.                                              |
+| [Perusall](https://moodle.smith.edu/mod/lti/view.php?id=922532) | Perusall page for course readings                                                       |
+| [Spinelli Center](https://www.smith.edu/qlc/tutoring.html)  	  | The Spinelli Center offers drop-in tutoring hours in Sabin-Reed 301 or on Zoom.        	|
 
 ## Overview
 
