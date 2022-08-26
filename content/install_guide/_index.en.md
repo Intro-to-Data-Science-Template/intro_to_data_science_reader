@@ -1,6 +1,6 @@
 ---
 pre: <b>2. </b>
-title: "Install Guide"
+title: "Install Guides"
 weight: 2
 format:
   hugo:
@@ -12,4 +12,4 @@ format:
 
 
 
-This is a test
+{{% children description = "false" %}}
