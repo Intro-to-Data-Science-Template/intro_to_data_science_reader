@@ -4,13 +4,17 @@ title: "git/GitHub"
 weight: 1
 format:
   hugo:
-    toc: false
+    toc: true
     output-file: "_index.en.md"
     reference-links: true
     code-link: true
 ---
 
 
+
+-   [Overview][]
+-   [git on Windows][]
+-   [git on Mac][]
 
 ## Overview
 
@@ -61,16 +65,71 @@ You will see a screen like the one below asking you to "Select Components." Leav
 
 ![][8]
 
-The next screen will ask you to "Select a Start Menu Folder." Keep the default value of Git and hit **Next**.
+The next screen will ask you to pick a "default editor, click the drop down box and select"Use the Nano editor by default." The press **Next**.
 
 ![][9]
 
-<div class="aside">
+On the next screen, it will ask to override the default "branch name." Select the "Override the default branch name for new repositories" option, and in the text box type "main." Press **Next**.
 
-Thanks to the [UC Davis DataLab][] for being the basis of this guide.
+![][10]
 
-</div>
+The next screen will ask you if you want to adjust your path environment. Leave the default of "Git from the command line and also from 3rd-party software." Press **Next**.
 
+![][11]
+
+On the next screen, keep the default option of "Use bundled OpenSSH." Press **Next**
+
+![][12]
+
+On the next screen, keep the default option of "Use the OpenSSL library." Press **Next**.
+
+![][13]
+
+Leave the default "Checkout Windows-style, commit Unix-style line endings" selected on the next page and hit **Next**:
+
+![][14]
+
+Keep the default "Use MinTTY (the default terminal of MSYS2)" selected on the "Configuring the terminal emulator to use with Git Bash" window and hit **Next**:
+
+![][15]
+
+Keep the default value of "Default (fast-forward or merge)" on the "Choose the default behavior of 'git pull'" page and hit **Next**:
+
+![][16]
+
+Keep the default value of "Git Credential Manager Core" on the "Choose a credential helper" page and hit **Next**:
+
+![][17]
+
+Keep the default values on the "Configuration extra options" page by keeping "Enable file system caching" checked and "Enable symbolic links" unchecked and then hit **Next**:
+
+![][18]
+
+Make sure that no options are checked in the "Configuring experimental options" page and hit **Install**:
+
+![][19]
+
+After you hit this **Install** button as per above, you will see an install progress screen like the one below:
+
+![][20]
+
+When the install is complete, a new, "Completing the Git Setup Wizard" window like the one below will appear:
+
+![][21]
+
+Make sure that all of the options on this window are unchecked as in the image below and then hit the **Finish** button:
+
+![][22]
+
+This will complete your installation process.
+
+## git on Mac
+
+Thanks to the [UC Davis DataLab's Install Guide][] for providing the basis of this guide.
+
+  [Overview]: #overview
+  [git on Windows]: #git-on-windows
+  [git on Mac]: #git-on-mac
   [1]: ./img/win_git_install_1_browser.jpg "New web browser window"
   [https://git-scm/com/downloads]: https://git-scm.com/downloads
   [2]: ./img/win_git_install_2_git_page.jpg "git website"
@@ -80,5 +139,18 @@ Thanks to the [UC Davis DataLab][] for being the basis of this guide.
   [6]: ./img/win_git_install_6_license.jpg "git license agreement"
   [7]: ./img/win_git_install_7_install_location.jpg "git location selection"
   [8]: ./img/win_git_install_9_checked_components.jpg "git component selection"
-  [9]: ./img/win_git_install_10_start_menu.jpg "git start menu shortcut"
-  [UC Davis DataLab]: https://datalab.ucdavis.edu/install-guide/
+  [9]: ./img/nano.jpg "use nano as editor"
+  [10]: ./img/main_branch.jpg "rename the deault branch"
+  [11]: ./img/git_path.jpg "default path selection"
+  [12]: ./img/ssh.jpg "use bundled ssh"
+  [13]: ./img/openssl.jpg "use openssl"
+  [14]: ./img/win_git_install_15_line_ending.png "git line end options"
+  [15]: ./img/win_git_install_16_terminal_emulator.png "git bash options"
+  [16]: ./img/win_git_install_17_git_pull.png "git pull options"
+  [17]: img/win_git_install_18_credential_helper.png "git credential options"
+  [18]: img/win_git_install_19_extra_options.png "git extra options"
+  [19]: img/win_git_install_20_experimental_options.png "git experimental options"
+  [20]: img/win_git_install_21_install_progress.png "git installing"
+  [21]: img/win_git_install_22_install_complete.png "git completion window"
+  [22]: img/win_git_install_23_deslect_and_finish.png "git completion window with unchecked View Release Notes"
+  [UC Davis DataLab's Install Guide]: https://datalab.ucdavis.edu/install-guide/
