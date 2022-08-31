@@ -63,7 +63,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> <ol>
 <li><a href="/intro_to_data_science_reader/syllabus/">Class Syllabus</a></li>
 <li>
-<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2474112">Kitchin, R., &amp; Lauriault, T. P. (2018). Toward Critical Data Studies: Charting and Unpacking Data Assemblages and Their Work. in J. Thatcher, J. Eckert, &amp; A. Shears (Eds.), Thinking Big Data in Geography: New Regimes, New Research (pp. 3&lt;96&gt;20). University of Nebraska Press.</a>
+<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2474112">Kitchin, R., &amp; Lauriault, T. P. (2018). Toward Critical Data Studies: Charting and Unpacking Data Assemblages and Their Work. in J. Thatcher, J. Eckert, &amp; A. Shears (Eds.), Thinking Big Data in Geography: New Regimes, New Research (pp. 3-20). University of Nebraska Press.</a>
 </li>
 </ol> </td>
    <td style="text-align:left;"> <ol>
@@ -93,7 +93,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #FDCDAC !important;"> 2 </td>
    <td style="text-align:left;"> 9/16/2022 (Fri) </td>
-   <td style="text-align:left;"> LAB </td>
+   <td style="text-align:left;"> LAB 1 </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
@@ -104,9 +104,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> <ol><li>
 <a href="https://search-ebscohost-com.libproxy.smith.edu/login.aspx?direct=true&amp;AuthType=ip,sso&amp;db=asn&amp;AN=129302223&amp;site=ehost-live&amp;custid=s8897501">Bryan, J. (2018). Excuse Me, Do You Have a Moment to Talk About Version Control? American Statistician, 72(1), 20-27.</a>
 </li></ol> </td>
-   <td style="text-align:left;"> <ol><li>
-<a href="/intro_to_data_science_reader/labs/0_problem_solving/">Problem solving lab</a>
-</li></ol> </td>
+   <td style="text-align:left;">  </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 3 </td>
@@ -125,12 +123,17 @@ Below is the tentative schedule for the course. While we will try to keep to thi
 <a href="https://www.data-to-viz.com/caveat/boxplot.html">Holtz, Y., &amp; Healy, C. (2018). The Boxplot and its pitfalls in From data to Viz.</a>
 </li>
 </ol> </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol>
+<li>Lab 1</li>
+<li>
+<a href="/intro_to_data_science_reader/labs/0_problem_solving/">Problem solving lab</a>
+</li>
+</ol> </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 3 </td>
    <td style="text-align:left;"> 9/23/2022 (Fri) </td>
-   <td style="text-align:left;"> LAB </td>
+   <td style="text-align:left;"> LAB 2 </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
@@ -153,12 +156,13 @@ Below is the tentative schedule for the course. While we will try to keep to thi
 <a href="https://papers.ssrn.com/abstract=1450006"><strong>[PAGES 1701-1731]</strong> Ohm, P. (2009). Broken Promises of Privacy: Responding to the Surprising Failure of Anonymization (SSRN Scholarly Paper No. 1450006).</a>
 </li>
 </ol> </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>Lab 2
+</li></ol> </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #F4CAE4 !important;"> 4 </td>
    <td style="text-align:left;"> 9/30/2022 (Fri) </td>
-   <td style="text-align:left;"> LAB/Quiz 1 Open </td>
+   <td style="text-align:left;"> LAB 3/Quiz 1 Open </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
@@ -187,12 +191,13 @@ Below is the tentative schedule for the course. While we will try to keep to thi
 <a href="https://r-graph-gallery.com/interactive-charts.html">Holtz, Y. (2018). Interactive charts | the R Graph Gallery.</a>
 </li>
 </ol> </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>Lab 3
+</li></ol> </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #E6F5C9 !important;"> 5 </td>
    <td style="text-align:left;"> 10/7/2022 (Fri) </td>
-   <td style="text-align:left;"> LAB </td>
+   <td style="text-align:left;"> LAB 4 </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;"> <ol><li>Quiz 1
 </li></ol> </td>
@@ -211,7 +216,8 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> <ol><li>
 <a href="https://mdsr-book.github.io/mdsr2e/ch-ethics.html">Baumer, B. S., Kaplan, D. T., &amp; Horton, N. J. (2021). Chapter 8 Data science ethics. In Modern Data Science with R. CNC Press.</a>
 </li></ol> </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>Lab 4
+</li></ol> </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #B3E2CD !important;"> 6 </td>
@@ -241,7 +247,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #FDCDAC !important;"> 7 </td>
    <td style="text-align:left;"> 10/21/2022 (Fri) </td>
-   <td style="text-align:left;"> LAB </td>
+   <td style="text-align:left;"> LAB 5 </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
@@ -261,12 +267,13 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> <ol><li>
 <a href="https://bookdown.org/rdpeng/rprogdatascience/parallel-computation.html">Peng, R. D. (2022). 22 Parallel Computation. In R Programming for Data Science.</a>
 </li></ol> </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>Lab 5
+</li></ol> </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 8 </td>
    <td style="text-align:left;"> 10/28/2022 (Fri) </td>
-   <td style="text-align:left;"> LAB/Quiz 2 Open </td>
+   <td style="text-align:left;"> LAB 6/Quiz 2 Open </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;"> <ol><li>Project 1
 </li></ol> </td>
@@ -285,12 +292,13 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> 11/2/2022 (Wed) </td>
    <td style="text-align:left;"> Advanced git/GitHub </td>
    <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>Lab 6
+</li></ol> </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #F4CAE4 !important;"> 9 </td>
    <td style="text-align:left;"> 11/4/2022 (Fri) </td>
-   <td style="text-align:left;"> LAB </td>
+   <td style="text-align:left;"> LAB 7 </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;"> <ol><li>Quiz 2
 </li></ol> </td>
@@ -312,7 +320,8 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> 11/9/2022 (Wed) </td>
    <td style="text-align:left;"> Recap </td>
    <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>Lab 7
+</li></ol> </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #E6F5C9 !important;"> 10 </td>
@@ -335,7 +344,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> <ol>
 <li><a href="https://rafalab.github.io/dsbook/web-scraping.html">Irizarry, R. A. (2022). Chapter 24 Web scraping. In Introduction to Data Science.</a></li>
 <li>
-<a href="https://doi.org/10.1007/s10676-010-9227-5">Zimmer, M. (2010). &lt;93&gt;But the data is already public&lt;94&gt;: On the ethics of research in Facebook. Ethics and Information Technology, 12(4), 313&lt;96&gt;325.</a>
+<a href="https://doi.org/10.1007/s10676-010-9227-5">Zimmer, M. (2010). 'But the data is already public': On the ethics of research in Facebook. Ethics and Information Technology, 12(4), 313&lt;96&gt;325.</a>
 </li>
 </ol> </td>
    <td style="text-align:left;">  </td>
@@ -343,7 +352,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #B3E2CD !important;"> 11 </td>
    <td style="text-align:left;"> 11/18/2022 (Fri) </td>
-   <td style="text-align:left;"> LAB/Quiz 3 Open </td>
+   <td style="text-align:left;"> LAB 8/Quiz 3 Open </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
@@ -360,7 +369,8 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;font-style: italic;color: #808080 !important;"> 11/23/2022 (Wed) </td>
    <td style="text-align:left;font-style: italic;color: #808080 !important;"> No Class </td>
    <td style="text-align:left;font-style: italic;color: #808080 !important;">  </td>
-   <td style="text-align:left;font-style: italic;color: #808080 !important;">  </td>
+   <td style="text-align:left;font-style: italic;color: #808080 !important;"> <ol><li>Lab 8
+</li></ol> </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #FDCDAC !important;font-style: italic;color: #808080 !important;"> 12 </td>
