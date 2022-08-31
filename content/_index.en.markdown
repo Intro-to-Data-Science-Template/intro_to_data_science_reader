@@ -113,6 +113,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> 9/21/2022 (Wed) </td>
    <td style="text-align:left;"> Exploratory Data Analyses </td>
    <td style="text-align:left;"> <ol>
+<li><a href="https://rafalab.github.io/dsbook/robust-summaries.html">Irizarry, R. A. (2022). Chapter 12 Robust summaries. In Introduction to Data Science.</a></li>
 <li><a href="https://search-ebscohost-com.libproxy.smith.edu/login.aspx?direct=true&amp;AuthType=ip,sso&amp;db=nlebk&amp;AN=1944722&amp;site=ehost-live&amp;custid=s8897501&amp;ebv=EB&amp;ppid=pp_3"><strong>[PAGES 3-12]</strong> Grant, R. (2019). Why visualize? in Data Visualization: Charts, Maps, and Interactive Graphics. Chapman and Hall/CRC. </a></li>
 <li><a href="https://www.data-to-viz.com/caveat/pie.html">Holtz, Y., &amp; Healy, C. (2018). The issue with pie chart in From data to Viz.</a></li>
 <li><a href="https://www.data-to-viz.com/graph/venn.html">Holtz, Y., &amp; Healy, C. (2018). Venn Diagram in From data to Viz.</a></li>
@@ -137,16 +138,21 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:right;font-weight: bold;background-color: #F4CAE4 !important;"> 4 </td>
    <td style="text-align:left;"> 9/26/2022 (Mon) </td>
    <td style="text-align:left;"> Tidy Data/Long-Wide </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>
+<a href="https://mdsr-book.github.io/mdsr2e/ch-dataII.html"><strong>[Section 6.1-6.3]</strong> Baumer, B. S., Kaplan, D. T., &amp; Horton, N. J. (2021). Chapter 6 Tidy data. In Modern Data Science with R. CNC Press.</a>
+</li></ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #F4CAE4 !important;"> 4 </td>
    <td style="text-align:left;"> 9/28/2022 (Wed) </td>
    <td style="text-align:left;"> Aggregation and Merging </td>
-   <td style="text-align:left;"> <ol><li>
+   <td style="text-align:left;"> <ol>
+<li><a href="https://moderndive.com/3-wrangling.html">Ismay, C., &amp; Kim, A. Y. (2022). Chapter 3 Data Wrangling. In Statistical Inference via Data Science. CNC Press.</a></li>
+<li>
 <a href="https://papers.ssrn.com/abstract=1450006"><strong>[PAGES 1701-1731]</strong> Ohm, P. (2009). Broken Promises of Privacy: Responding to the Surprising Failure of Anonymization (SSRN Scholarly Paper No. 1450006).</a>
-</li></ol> </td>
+</li>
+</ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
@@ -218,7 +224,9 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:right;font-weight: bold;background-color: #FDCDAC !important;"> 7 </td>
    <td style="text-align:left;"> 10/17/2022 (Mon) </td>
    <td style="text-align:left;"> Functions </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>
+<a href="https://r4ds.had.co.nz/functions.html">Grolemund, G., &amp; Wickham, H. (2017). 19 Functions. In R for Data Science. O&lt;92&gt;Reilly.</a>
+</li></ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
@@ -226,7 +234,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> 10/19/2022 (Wed) </td>
    <td style="text-align:left;"> R Debugging Tools </td>
    <td style="text-align:left;"> <ol><li>
-<a href="https://modernstatisticswithr.com/errorchapter.html">Thulin, M. (2021). 11 Debugging. In Modern Statistics with R.</a>
+<a href="https://rstats.wtf/debugging-r-code.html">Bryan, J., &amp; Hester, J. (2021). Chapter 11 Debugging R code. In What They Forgot to Teach You About R.</a>
 </li></ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
@@ -250,7 +258,9 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 8 </td>
    <td style="text-align:left;"> 10/26/2022 (Wed) </td>
    <td style="text-align:left;"> Parallelization </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>
+<a href="https://bookdown.org/rdpeng/rprogdatascience/parallel-computation.html">Peng, R. D. (2022). 22 Parallel Computation. In R Programming for Data Science.</a>
+</li></ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
@@ -265,7 +275,9 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:right;font-weight: bold;background-color: #F4CAE4 !important;"> 9 </td>
    <td style="text-align:left;"> 10/31/2022 (Mon) </td>
    <td style="text-align:left;"> Bash </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>
+<a href="https://rafalab.github.io/dsbook/unix.html">Irizarry, R. A. (2022). Chapter 39 Organizing with Unix. In Introduction to Data Science.</a>
+</li></ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
@@ -287,7 +299,12 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:right;font-weight: bold;background-color: #E6F5C9 !important;"> 10 </td>
    <td style="text-align:left;"> 11/7/2022 (Mon) </td>
    <td style="text-align:left;"> Data Cleaning </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol>
+<li><a href="https://cran.r-project.org/doc/contrib/de_Jonge+van_der_Loo-Introduction_to_data_cleaning_with_R.pdf">de Jonge, E., &amp; van der Loo, M. (2013). An introduction to data cleaning with R.</a></li>
+<li>
+<a href="https://multimedia.journalism.berkeley.edu/tutorials/openrefine/">Rue, J., &amp; Hernandez, R. K. (2019). Using OpenRefine to Clean Your Data. Berkeley Advanced Media Institute.</a>
+</li>
+</ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
@@ -315,7 +332,12 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:right;font-weight: bold;background-color: #B3E2CD !important;"> 11 </td>
    <td style="text-align:left;"> 11/16/2022 (Wed) </td>
    <td style="text-align:left;"> Web Scraping </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol>
+<li><a href="https://rafalab.github.io/dsbook/web-scraping.html">Irizarry, R. A. (2022). Chapter 24 Web scraping. In Introduction to Data Science.</a></li>
+<li>
+<a href="https://doi.org/10.1007/s10676-010-9227-5">Zimmer, M. (2010). &lt;93&gt;But the data is already public&lt;94&gt;: On the ethics of research in Facebook. Ethics and Information Technology, 12(4), 313&lt;96&gt;325.</a>
+</li>
+</ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
@@ -359,7 +381,12 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 13 </td>
    <td style="text-align:left;"> 11/30/2022 (Wed) </td>
    <td style="text-align:left;"> Text as Data </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol>
+<li><a href="https://m-clark.github.io/text-analysis-with-R/">Clark, M. (2018). String Theory. In An Introduction to Text Processing and Analysis with R.</a></li>
+<li>
+<a href="https://bookdown.org/rdpeng/rprogdatascience/regular-expressions.html">Peng, R. D. (2022). 17 Regular Expressions. In R Programming for Data Science.</a>
+</li>
+</ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
@@ -379,7 +406,9 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:right;font-weight: bold;background-color: #F4CAE4 !important;"> 14 </td>
    <td style="text-align:left;"> 12/5/2022 (Mon) </td>
    <td style="text-align:left;"> Networks as Data </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>
+<a href=""><strong>[Chapters 1-2]</strong> Kadushin, C. (2012). Understanding Social Networks: Theories, Concepts, and Findings. Oxford University Press.</a>
+</li></ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>

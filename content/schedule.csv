@@ -1,7 +1,7 @@
 Week,Class,Date,Day,Topic,Readings,Due,Resources
 1,FALSE,9/5/2022,Mon,,,,
 1,1,9/7/2022,Wed,Introduction,,,
-1,2,9/9/2022,Fri,What is Data?,"[Class Syllabus](/intro_to_data_science_reader/syllabus/);[Kitchin, R., & Lauriault, T. P. (2018). Toward Critical Data Studies: Charting and Unpacking Data Assemblages and Their Work. in J. Thatcher, J. Eckert, & A. Shears (Eds.), Thinking Big Data in Geography: New Regimes, New Research (pp. 3–20). University of Nebraska Press.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2474112)",[Welcome Survey](https://docs.google.com/forms/d/e/1FAIpQLSfzRweef4yf5jbMT0eoU5lFSPJo3iZAVZ46-qX4m2rCnBzbSw/viewform?usp=sf_link);[Data Survey](https://docs.google.com/forms/d/e/1FAIpQLSeVYP1QSdPFXi9PSyjvbDcs-mZnzHT498x94h-dAdTBj25Tng/viewform?usp=sf_link);Install [Slack](https://slack.com/) and join the [class workspace](https://smi-sds-192-03-202301.slack.com/),
+1,2,9/9/2022,Fri,What is Data?,"[Class Syllabus](/intro_to_data_science_reader/syllabus/);[Kitchin, R., & Lauriault, T. P. (2018). Toward Critical Data Studies: Charting and Unpacking Data Assemblages and Their Work. in J. Thatcher, J. Eckert, & A. Shears (Eds.), Thinking Big Data in Geography: New Regimes, New Research (pp. 3-20). University of Nebraska Press.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2474112)",[Welcome Survey](https://docs.google.com/forms/d/e/1FAIpQLSfzRweef4yf5jbMT0eoU5lFSPJo3iZAVZ46-qX4m2rCnBzbSw/viewform?usp=sf_link);[Data Survey](https://docs.google.com/forms/d/e/1FAIpQLSeVYP1QSdPFXi9PSyjvbDcs-mZnzHT498x94h-dAdTBj25Tng/viewform?usp=sf_link);Install [Slack](https://slack.com/) and join the [class workspace](https://smi-sds-192-03-202301.slack.com/),
 2,3,9/12/2022,Mon,Install Day,,,
 2,4,9/14/2022,Wed,Intro to R/R Studio,"[Irizarry, R. A. (2022). Chapter 2 R basics | Introduction to Data Science. In Introduction to Data Science.](https://rafalab.github.io/dsbook/r-basics.html#r-basics)",All Software Installed,
 2,5,9/16/2022,Fri,LAB,,,
@@ -30,7 +30,7 @@ Week,Class,Date,Day,Topic,Readings,Due,Resources
 10,27,11/9/2022,Wed,Recap,,,
 10,28,11/11/2022,Fri,Project 2,,,
 11,29,11/14/2022,Mon,Remote Servers & APIs,,,
-11,30,11/16/2022,Wed,Web Scraping,"[Irizarry, R. A. (2022). Chapter 24 Web scraping. In Introduction to Data Science.](https://rafalab.github.io/dsbook/web-scraping.html);[Zimmer, M. (2010). “But the data is already public”: On the ethics of research in Facebook. Ethics and Information Technology, 12(4), 313–325.](https://doi.org/10.1007/s10676-010-9227-5)",,
+11,30,11/16/2022,Wed,Web Scraping,"[Irizarry, R. A. (2022). Chapter 24 Web scraping. In Introduction to Data Science.](https://rafalab.github.io/dsbook/web-scraping.html);[Zimmer, M. (2010). 'But the data is already public': On the ethics of research in Facebook. Ethics and Information Technology, 12(4), 313–325.](https://doi.org/10.1007/s10676-010-9227-5)",,
 11,31,11/18/2022,Fri,LAB/Quiz 3 Open,,,
 12,31,11/21/2022,Mon,SQL,,Project 2,
 12,FALSE,11/23/2022,Wed,,,,
