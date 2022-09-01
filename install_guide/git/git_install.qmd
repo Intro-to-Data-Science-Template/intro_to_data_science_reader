@@ -125,9 +125,36 @@ This will complete your installation process.
 
 ## git on Mac
 
-Navigate to the following Git download URL in your browser [https://git-scm/com/downloads](https://git-scm.com/downloads){rel="noopener noreferrer" target="_blank"}.
+To install git on a Mac, first open the launchpad by pressing `F4` or by making a pinch motion on the track pad with three fingers and your thumb. 
 
-![](./img/win_git_install_2_git_page.jpg "git website") 
+![](img/01.png "mac launchpad")
+
+A terminal window will open up, showing your account name and then a `$`, with a flashing cursor afterwards. You will enter text here to issue commands.
+
+![](img/02.png "mac terminal")
+
+Enter type in the word `git` and press enter.
+
+![](img/03.png "git in terminal")
+
+A window will pop up, asking if you want to install "developer tools." Click **Install**.
+
+![](img/04.png "mac developer tools")
+
+A prompt will appear asking you to agree to the license agreement, click **Agree**.
+
+![](img/05.png "license agreement")
+
+The software will then start installing. It will take a few minutes to finish. When it is done you will see the following window. Click **Done**.
+
+![](img/06.png "done window")
+
+To make sure eveything is installed correctly, go back to the terminal window and enter `git` once again. You should see a long printout that looks similar to the following. If you do, everything worked!
+
+![](img/07.png "git help file")
+
+Next we will need to set up some options.
+
 
 
 
