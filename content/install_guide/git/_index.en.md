@@ -176,7 +176,7 @@ Lastly, copy the following and press enter, changing the email to your email add
 ![][35]
 
 {{% notice note %}}
-Thanks to the [UC Davis DataLab's Install Guide][] for providing a portion of this guide.
+Thanks to the <a href="https://datalab.ucdavis.edu/install-guide/">UC Davis DataLab's Install Guide</a> for providing a portion of this guide.
 {{% /notice %}}
 
   [Overview]: #overview
@@ -218,4 +218,3 @@ Thanks to the [UC Davis DataLab's Install Guide][] for providing a portion of th
   [33]: img/08.png "default branch name"
   [34]: img/09.png "default user name"
   [35]: img/10.png "default user email"
-  [UC Davis DataLab's Install Guide]: https://datalab.ucdavis.edu/install-guide/
