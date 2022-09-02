@@ -1,7 +1,7 @@
 ---
-pre: <b>1. </b>
+pre: <b>2. </b>
 title: "git/GitHub"
-weight: 1
+weight: 2
 format:
   hugo:
     toc: true
@@ -121,11 +121,63 @@ Make sure that all of the options on this window are unchecked as in the image b
 
 ![][22]
 
-This will complete your installation process.
+This will complete your installation process. Now we need to configure some settings. Right click on your desktop, and click on "Git Bash here." A black terminal window will open.
+
+![][23]
+
+Click on the window, and then copy the following and press enter, changing "Jane Doe" to your name. You must put your name in quotes. `git config --global user.name "Jane Doe"`
+
+![][24]
+
+Lastly, copy the following and press enter, changing the email to your email address. `git config --global user.email jdoe@example.com`
+
+![][25]
 
 ## git on Mac
 
-Thanks to the [UC Davis DataLab's Install Guide][] for providing the basis of this guide.
+To install git on a Mac, first open the launchpad by pressing `F4` or by making a pinch motion on the track pad with three fingers and your thumb.
+
+![][26]
+
+A terminal window will open up, showing your account name and then a `$`, with a flashing cursor afterwards. You will enter text here to issue commands.
+
+![][27]
+
+Enter type in the word `git` and press enter.
+
+![][28]
+
+A window will pop up, asking if you want to install "developer tools." Click **Install**.
+
+![][29]
+
+A prompt will appear asking you to agree to the license agreement, click **Agree**.
+
+![][30]
+
+The software will then start installing. It will take a few minutes to finish. When it is done you will see the following window. Click **Done**.
+
+![][31]
+
+To make sure eveything is installed correctly, go back to the terminal window and enter `git` once again. You should see a long printout that looks similar to the following. If you do, everything worked!
+
+![][32]
+
+Next we will need to set up some options. Fist, copy the following into the terminal and press enter to change the default branch name: `git config --global init.defaultBranch main`
+
+![][33]
+
+Next, copy the following and press enter, changing "Jane Doe" to your name. You must put your name in quotes. `git config --global user.name "Jane Doe"`
+
+![][34]
+
+Lastly, copy the following and press enter, changing the email to your email address. `git config --global user.email jdoe@example.com`
+
+![][35]
+
+{{% notice note %}}
+Thanks to the [UC Davis DataLab's Install Guide][] for providing a portion of this guide.
+{{% /notice %}}
 
   [Overview]: #overview
   [git on Windows]: #git-on-windows
@@ -153,4 +205,17 @@ Thanks to the [UC Davis DataLab's Install Guide][] for providing the basis of th
   [20]: img/win_git_install_21_install_progress.png "git installing"
   [21]: img/win_git_install_22_install_complete.png "git completion window"
   [22]: img/win_git_install_23_deslect_and_finish.png "git completion window with unchecked View Release Notes"
+  [23]: img/win_git_setup_1.jpg "open git bash"
+  [24]: img/win_git_setup_2.jpg "default user name"
+  [25]: img/win_git_setup_3.jpg "default user email"
+  [26]: img/01.png "mac launchpad"
+  [27]: img/02.png "mac terminal"
+  [28]: img/03.png "git in terminal"
+  [29]: img/04.png "mac developer tools"
+  [30]: img/05.png "license agreement"
+  [31]: img/06.png "done window"
+  [32]: img/07.png "git help file"
+  [33]: img/08.png "default branch name"
+  [34]: img/09.png "default user name"
+  [35]: img/10.png "default user email"
   [UC Davis DataLab's Install Guide]: https://datalab.ucdavis.edu/install-guide/

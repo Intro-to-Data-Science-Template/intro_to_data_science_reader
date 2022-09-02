@@ -1,7 +1,7 @@
 ---
-pre: <b>1. </b>
+pre: <b>2. </b>
 title: "git/GitHub"
-weight: 1
+weight: 2
 format:
   hugo:
     toc: true
@@ -121,7 +121,17 @@ Make sure that all of the options on this window are unchecked as in the image b
 
 ![](img/win_git_install_23_deslect_and_finish.png "git completion window with unchecked View Release Notes")
 
-This will complete your installation process.
+This will complete your installation process. Now we need to configure some settings. Right click on your desktop, and click on "Git Bash here." A black terminal window will open.
+
+![](img/win_git_setup_1.jpg "open git bash")
+
+Click on the window, and then copy the following and press enter, changing "Jane Doe" to your name. You must put your name in quotes. `git config --global user.name "Jane Doe"`
+
+![](img/win_git_setup_2.jpg "default user name")
+
+Lastly, copy the following and press enter, changing the email to your email address. `git config --global user.email jdoe@example.com`
+
+![](img/win_git_setup_3.jpg "default user email")
 
 ## git on Mac
 
@@ -153,10 +163,19 @@ To make sure eveything is installed correctly, go back to the terminal window an
 
 ![](img/07.png "git help file")
 
-Next we will need to set up some options.
+Next we will need to set up some options. Fist, copy the following into the terminal and press enter to change the default branch name: `git config --global init.defaultBranch main`
 
+![](img/08.png "default branch name")
 
+Next, copy the following and press enter, changing "Jane Doe" to your name. You must put your name in quotes. `git config --global user.name "Jane Doe"`
 
+![](img/09.png "default user name")
 
+Lastly, copy the following and press enter, changing the email to your email address. `git config --global user.email jdoe@example.com`
 
-Thanks to the [UC Davis DataLab's Install Guide](https://datalab.ucdavis.edu/install-guide/) for providing the basis of this guide.
+![](img/10.png "default user email")
+
+{{% notice note %}}
+Thanks to the [UC Davis DataLab's Install Guide](https://datalab.ucdavis.edu/install-guide/) for providing a portion of this guide.
+{{% /notice %}}
+
