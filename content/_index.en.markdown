@@ -230,9 +230,12 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:right;font-weight: bold;background-color: #FDCDAC !important;"> 7 </td>
    <td style="text-align:left;"> 10/17/2022 (Mon) </td>
    <td style="text-align:left;"> Functions </td>
-   <td style="text-align:left;"> <ol><li>
-<a href="https://r4ds.had.co.nz/functions.html">Grolemund, G., &amp; Wickham, H. (2017). 19 Functions. In R for Data Science. O&lt;92&gt;Reilly.</a>
-</li></ol> </td>
+   <td style="text-align:left;"> <ol>
+<li><a href="https://r4ds.had.co.nz/functions.html">Grolemund, G., &amp; Wickham, H. (2017). 19 Functions. In R for Data Science. O'Reilly.</a></li>
+<li>
+<a href="/intro_to_data_science_reader/hidden/radiation_vid/">Kyle Hill (Director). (2022, August 31). How history's worst software error weaponized a radiation machine.</a>
+</li>
+</ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
@@ -291,7 +294,13 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:right;font-weight: bold;background-color: #F4CAE4 !important;"> 9 </td>
    <td style="text-align:left;"> 11/2/2022 (Wed) </td>
    <td style="text-align:left;"> Advanced git/GitHub </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol>
+<li><a href="https://the-turing-way.netlify.app/reproducible-research/vcs/vcs-git-branches.html">Turing Way Community. (2022). Git Branches. In The Turing Way: A handbook for reproducible, ethical and collaborative research. Zenodo.</a></li>
+<li><a href="https://the-turing-way.netlify.app/reproducible-research/vcs/vcs-git-merge.html">Turing Way Community. (2022). Merging Branches in Git. In The Turing Way: A handbook for reproducible, ethical and collaborative research. Zenodo.</a></li>
+<li>
+<a href="https://the-turing-way.netlify.app/reproducible-research/vcs/vcs-git-compare.html">Turing Way Community. (2022). Retrieving and Comparing Versions. In The Turing Way: A handbook for reproducible, ethical and collaborative research. Zenodo.</a>
+</li>
+</ol> </td>
    <td style="text-align:left;"> <ol><li>Lab 6
 </li></ol> </td>
   </tr>
