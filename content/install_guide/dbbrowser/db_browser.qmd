@@ -1,0 +1,61 @@
+---
+pre: <b>3. </b>
+title: "DB rowser"
+weight: 3
+format:
+  hugo:
+    toc: true
+    output-file: "_index.en.md"
+    reference-links: true
+    code-link: true
+---
+
+```{r setup, include=FALSE}
+
+```
+
+## Overview
+
+[DB Browser](https://sqlitebrowser.org/){rel="noopener noreferrer" target="_blank"} is an ultra lightweight viewer for SQLite databases. It is made to allow those familiar with spreadsheets to work more easily with the common SQLite format. However, that is all that it does; you cannot use it on other database types.
+
+## DB Browser on Windows
+
+First head to the [DB Browser download page](https://sqlitebrowser.org/dl/), and select the version that matches your system. On Windows this is most likely the 64-bit standard installer.
+
+![](img/win_dbb_1.jpg "DB browser download page")
+
+Once the download has finished, start the installer from the browser or your download location.
+
+![](img/win_dbb_2.jpg  "DB browser download finished in web browser")
+
+Once you have started the installer, press the `Next` button to continue.
+
+![](img/win_dbb_3.jpg "DB browser install wizard")
+
+On the next screen, accept the license agreement and press `Next`. The following page will ask you if you would like to place shortcuts anywhere. Desktop will place icons on your desktop, while Program Menu will add options to your right click menu. You can choose to have these if you wish, I will not. Press `Next` once you have decided.
+
+![](img/win_dbb_4.jpg "DB browser shortcut options")
+
+On the following screen, you will be asked to select what components you want to install and where. You can safely keep the defaults and continue. Press `Install` on the following page.
+
+![](img/win_dbb_5.jpg "DB browser components options")
+
+One the installation is complete, you can press `Finish` to close the installer!
+
+## DB Browser on Mac
+
+First head to the [DB Browser download page](https://sqlitebrowser.org/dl/), and select the version that matches your system. There should only be one for Macs.
+
+![](img/mac_1.jpg "DB browser download page mac")
+
+Once the download has finished, launch the installer. You will most likely see an alert from your browser.
+
+![](img/mac_2.png "mac installer")
+
+To finish installing, drag the DB Browser icon into your apps folder.
+
+![](img/mac_3.png "installing db browser")
+
+{{% notice note %}}
+Thanks to the <a href="https://datalab.ucdavis.edu/install-guide/">UC Davis DataLab's Install Guide</a> for providing a portion of this guide.
+{{% /notice %}}
