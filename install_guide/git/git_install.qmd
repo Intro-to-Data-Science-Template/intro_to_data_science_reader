@@ -176,6 +176,6 @@ Lastly, copy the following and press enter, changing the email to your email add
 ![](img/10.png "default user email")
 
 {{% notice note %}}
-Thanks to the [UC Davis DataLab's Install Guide](https://datalab.ucdavis.edu/install-guide/) for providing a portion of this guide.
+Thanks to the <a href="https://datalab.ucdavis.edu/install-guide/">UC Davis DataLab's Install Guide</a> for providing a portion of this guide.
 {{% /notice %}}
 
