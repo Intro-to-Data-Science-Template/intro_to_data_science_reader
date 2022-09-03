@@ -20,6 +20,8 @@ format:
 
 **git** is a tool for version control and collaboration. It is *the* tool used by data science teams big and small to keep track of code. Think of it like track changes in Word or Google docs, but for code files.
 
+**You will also need an account on Github**. [Please create one here][].
+
 ## git on Windows
 
 Follow these step-by-step instructions if you're installing Git on a Windows machine:
@@ -182,6 +184,7 @@ Thanks to the <a href="https://datalab.ucdavis.edu/install-guide/">UC Davis Data
   [Overview]: #overview
   [git on Windows]: #git-on-windows
   [git on Mac]: #git-on-mac
+  [Please create one here]: https://github.com/
   [1]: ./img/win_git_install_1_browser.jpg "New web browser window"
   [https://git-scm/com/downloads]: https://git-scm.com/downloads
   [2]: ./img/win_git_install_2_git_page.jpg "git website"
