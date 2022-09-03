@@ -18,6 +18,8 @@ format:
 
 **git** is a tool for version control and collaboration. It is *the* tool used by data science teams big and small to keep track of code. Think of it like track changes in Word or Google docs, but for code files. 
 
+**You will also need an account on Github**. [Please create one here](https://github.com/).
+
 ## git on Windows
 
 Follow these step-by-step instructions if you're installing Git on a Windows machine:
