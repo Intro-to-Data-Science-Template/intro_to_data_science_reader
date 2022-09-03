@@ -243,7 +243,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> 10/19/2022 (Wed) </td>
    <td style="text-align:left;"> R Debugging Tools </td>
    <td style="text-align:left;"> <ol><li>
-<a href="https://rstats.wtf/debugging-r-code.html">Bryan, J., &amp; Hester, J. (2021). Chapter 11 Debugging R code. In What They Forgot to Teach You About R.</a>
+<a href="https://moodle.smith.edu/mod/lti/view.php?id=935554">Bryan, J., &amp; Hester, J. (2021). Chapter 11 Debugging R code. In What They Forgot to Teach You About R.</a>
 </li></ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
@@ -268,7 +268,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> 10/26/2022 (Wed) </td>
    <td style="text-align:left;"> Parallelization </td>
    <td style="text-align:left;"> <ol><li>
-<a href="https://moodle.smith.edu/mod/lti/view.php?id=935416">Peng, R. D. (2022). 22 Parallel Computation. In R Programming for Data Science.</a>
+<a href="https://moodle.smith.edu/mod/lti/view.php?id=935416">Peng, R. D. (2022). 24 Parallel Computation. In R Programming for Data Science.</a>
 </li></ol> </td>
    <td style="text-align:left;"> <ol><li>Lab 5
 </li></ol> </td>
@@ -286,7 +286,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> 10/31/2022 (Mon) </td>
    <td style="text-align:left;"> Bash </td>
    <td style="text-align:left;"> <ol><li>
-<a href="https://rafalab.github.io/dsbook/unix.html">Irizarry, R. A. (2022). Chapter 39 Organizing with Unix. In Introduction to Data Science.</a>
+<a href="https://moodle.smith.edu/mod/lti/view.php?id=935528">Irizarry, R. A. (2022). Chapter 39 Organizing with Unix. In Introduction to Data Science.</a>
 </li></ol> </td>
    <td style="text-align:left;">  </td>
   </tr>
@@ -295,10 +295,10 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> 11/2/2022 (Wed) </td>
    <td style="text-align:left;"> Advanced git/GitHub </td>
    <td style="text-align:left;"> <ol>
-<li><a href="https://the-turing-way.netlify.app/reproducible-research/vcs/vcs-git-branches.html">Turing Way Community. (2022). Git Branches. In The Turing Way: A handbook for reproducible, ethical and collaborative research. Zenodo.</a></li>
-<li><a href="https://the-turing-way.netlify.app/reproducible-research/vcs/vcs-git-merge.html">Turing Way Community. (2022). Merging Branches in Git. In The Turing Way: A handbook for reproducible, ethical and collaborative research. Zenodo.</a></li>
+<li><a href="https://moodle.smith.edu/mod/lti/view.php?id=935674">Turing Way Community. (2022). Git Branches. In The Turing Way: A handbook for reproducible, ethical and collaborative research. Zenodo.</a></li>
+<li><a href="https://moodle.smith.edu/mod/lti/view.php?id=935673">Turing Way Community. (2022). Merging Branches in Git. In The Turing Way: A handbook for reproducible, ethical and collaborative research. Zenodo.</a></li>
 <li>
-<a href="https://the-turing-way.netlify.app/reproducible-research/vcs/vcs-git-compare.html">Turing Way Community. (2022). Retrieving and Comparing Versions. In The Turing Way: A handbook for reproducible, ethical and collaborative research. Zenodo.</a>
+<a href="https://moodle.smith.edu/mod/lti/view.php?id=935672">Turing Way Community. (2022). Retrieving and Comparing Versions. In The Turing Way: A handbook for reproducible, ethical and collaborative research. Zenodo.</a>
 </li>
 </ol> </td>
    <td style="text-align:left;"> <ol><li>Lab 6
@@ -345,9 +345,9 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> 11/14/2022 (Mon) </td>
    <td style="text-align:left;"> Web Scraping </td>
    <td style="text-align:left;"> <ol>
-<li><a href="https://rafalab.github.io/dsbook/web-scraping.html">Irizarry, R. A. (2022). Chapter 24 Web scraping. In Introduction to Data Science.</a></li>
+<li><a href="https://moodle.smith.edu/mod/lti/view.php?id=935529">Irizarry, R. A. (2022). Chapter 24 Web scraping. In Introduction to Data Science.</a></li>
 <li>
-<a href="https://doi.org/10.1007/s10676-010-9227-5">Zimmer, M. (2010). 'But the data is already public': On the ethics of research in Facebook. Ethics and Information Technology, 12(4), 313&lt;96&gt;325.</a>
+<a href="https://moodle.smith.edu/mod/lti/view.php?id=935530">Zimmer, M. (2010). 'But the data is already public': On the ethics of research in Facebook. Ethics and Information Technology, 12(4), 313&lt;96&gt;325.</a>
 </li>
 </ol> </td>
    <td style="text-align:left;">  </td>
@@ -404,9 +404,9 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> 11/30/2022 (Wed) </td>
    <td style="text-align:left;"> Text as Data </td>
    <td style="text-align:left;"> <ol>
-<li><a href="https://m-clark.github.io/text-analysis-with-R/">Clark, M. (2018). String Theory. In An Introduction to Text Processing and Analysis with R.</a></li>
+<li><a href="https://moodle.smith.edu/mod/lti/view.php?id=935782">Clark, M. (2018). String Theory. In An Introduction to Text Processing and Analysis with R.</a></li>
 <li>
-<a href="https://bookdown.org/rdpeng/rprogdatascience/regular-expressions.html">Peng, R. D. (2022). 17 Regular Expressions. In R Programming for Data Science.</a>
+<a href="https://moodle.smith.edu/mod/lti/view.php?id=935683">Peng, R. D. (2022). 17 Regular Expressions. In R Programming for Data Science.</a>
 </li>
 </ol> </td>
    <td style="text-align:left;">  </td>
@@ -428,10 +428,10 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> 12/5/2022 (Mon) </td>
    <td style="text-align:left;"> Geospatial Data </td>
    <td style="text-align:left;"> <ol>
-<li><a href="https://mdsr-book.github.io/mdsr2e/ch-spatial.html">Baumer, B. S., Kaplan, D. T., &amp; Horton, N. J. (2021). Chapter 17 Working with geospatial data. In Modern Data Science with R. CNC Press.</a></li>
-<li><a href="https://doi.org/10.1038/srep01376">de Montjoye, Y.-A., Hidalgo, C. A., Verleysen, M., &amp; Blondel, V. D. (2013). Unique in the Crowd: The privacy bounds of human mobility. Scientific Reports, 3(1), 1376.</a></li>
+<li><a href="https://moodle.smith.edu/mod/lti/view.php?id=935560">Baumer, B. S., Kaplan, D. T., &amp; Horton, N. J. (2021). Chapter 17 Working with geospatial data. In Modern Data Science with R. CNC Press.</a></li>
+<li><a href="https://moodle.smith.edu/mod/lti/view.php?id=935556">de Montjoye, Y.-A., Hidalgo, C. A., Verleysen, M., &amp; Blondel, V. D. (2013). Unique in the Crowd: The privacy bounds of human mobility. Scientific Reports, 3(1), 1376.</a></li>
 <li>
-<a href="https://open.lib.umn.edu/mapping/chapter/7-lying-with-maps/">Deluca, E., &amp; Nelson, S. (2017). 7. Lying With Maps. In Mapping, Society, and Technology. University of Minnesota Libraries Publishing. </a>
+<a href="https://moodle.smith.edu/mod/lti/view.php?id=935555">Deluca, E., &amp; Nelson, S. (2017). 7. Lying With Maps. In Mapping, Society, and Technology. University of Minnesota Libraries Publishing. </a>
 </li>
 </ol> </td>
    <td style="text-align:left;">  </td>
