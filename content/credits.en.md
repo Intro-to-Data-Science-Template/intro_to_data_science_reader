@@ -7,6 +7,8 @@ title: Credits
 
 Thank you to [Dr. Lindsay Poirier](https://www.smith.edu/academics/faculty/lindsay-poirier) and [Dr. Ben Baumner](https://www.smith.edu/academics/faculty/ben-baumer) for providing their materials as reference as I prepared this course reader.
 
+Thanks to the [UC Davis DataLab](https://datalab.ucdavis.edu/) for providing materials for the install guides.
+
 ## Backend
 
 Thanks to the [Hugo](https://gohugo.io/) projects for providing the infrastructure for this site. Thank you to the team that created [Hugo Learn Theme](https://learn.netlify.app/en/), the basis of this reader.
