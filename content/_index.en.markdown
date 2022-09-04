@@ -83,7 +83,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #FDCDAC !important;"> 2 </td>
    <td style="text-align:left;"> 9/14/2022 (Wed) </td>
-   <td style="text-align:left;"> Intro to R/R Studio </td>
+   <td style="text-align:left;"> Intro to R/R Studio (Posit) </td>
    <td style="text-align:left;"> <ol><li>
 <a href="https://moodle.smith.edu/mod/lti/view.php?id=935420">Irizarry, R. A. (2022). Chapter 2 R basics | Introduction to Data Science. In Introduction to Data Science.</a>
 </li></ol> </td>
@@ -320,7 +320,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
 <li><a href="https://moodle.smith.edu/mod/lti/view.php?id=935408">de Jonge, E., &amp; van der Loo, M. (2013). An introduction to data cleaning with R.</a></li>
 <li><a href="https://moodle.smith.edu/mod/lti/view.php?id=935409">Rue, J., &amp; Hernandez, R. K. (2019). Using OpenRefine to Clean Your Data. Berkeley Advanced Media Institute.</a></li>
 <li>
-<a href="https://moodle.smith.edu/mod/lti/view.php?id=934901">Farivar, C. (2016, August 10). Kansas couple sues IP mapping firm for turning their life into a &lt;93&gt;digital hell.&lt;94&gt; Ars Technica.</a>
+<a href="https://moodle.smith.edu/mod/lti/view.php?id=934901">Farivar, C. (2016, August 10). Kansas couple sues IP mapping firm for turning their life into a 'digital hell.' Ars Technica.</a>
 </li>
 </ol> </td>
    <td style="text-align:left;">  </td>
@@ -347,7 +347,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> <ol>
 <li><a href="https://moodle.smith.edu/mod/lti/view.php?id=935529">Irizarry, R. A. (2022). Chapter 24 Web scraping. In Introduction to Data Science.</a></li>
 <li>
-<a href="https://moodle.smith.edu/mod/lti/view.php?id=935530">Zimmer, M. (2010). 'But the data is already public': On the ethics of research in Facebook. Ethics and Information Technology, 12(4), 313&lt;96&gt;325.</a>
+<a href="https://moodle.smith.edu/mod/lti/view.php?id=935530">Zimmer, M. (2010). 'But the data is already public': On the ethics of research in Facebook. Ethics and Information Technology, 12(4), 313-325.</a>
 </li>
 </ol> </td>
    <td style="text-align:left;">  </td>
@@ -418,7 +418,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> <ol>
 <li><a href="https://moodle.smith.edu/mod/lti/view.php?id=935411"><strong>[Chapters 1-2]</strong> Kadushin, C. (2012). Understanding Social Networks: Theories, Concepts, and Findings. Oxford University Press.</a></li>
 <li>
-<a href="https://moodle.smith.edu/mod/lti/view.php?id=934891">Berman, G. (2021, November 31). &lt;93&gt;Violence Is Contagious&lt;94&gt;: A Conversation with Andrew Papachristos. Harry Frank Guggenheim Foundation.</a>
+<a href="https://moodle.smith.edu/mod/lti/view.php?id=934891">Berman, G. (2021, November 31). 'Violence Is Contagious': A Conversation with Andrew Papachristos. Harry Frank Guggenheim Foundation.</a>
 </li>
 </ol> </td>
    <td style="text-align:left;">  </td>
