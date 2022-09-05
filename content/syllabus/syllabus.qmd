@@ -90,6 +90,10 @@ If you miss a class, you should contact a peer to discuss what was missed, and c
 Quizzes cannot be made up after the open period has passed. If you have a known scheduling conflict with a quiz, please speak with me as soon as possible to arrange an alternative time.
 {{% /notice %}}
 
+Please see the SDS department's official policy regarding remote learning:
+
+>In keeping with Smith’s core identity and mission as an in-person, residential college, the Program in Statistical & Data Sciences affirms College policy (as articulated by Provost Michael Thurston and Dean of the College Alex Keller) that students will attend class in person. As such, SDS courses will not provide options for remote attendance. Students who have been determined to require a remote attendance accommodation by the Office of Disability Services will be the only exceptions to this policy. As with any other kind of accommodations under the Americans with Disabilities Act (ADA), please notify your instructor during the first week of classes to schedule a meeting with them to discuss how we can work with you to provide the most accessible course possible. 
+
 ### Academic Honesty
 
 Data science is inherently collaborative, so I fully expect students to collaborate. You are encouraged to work together on most assignments—ask questions on Slack, create study groups, and share helpful resources you find. However, anything you submit must be your own work. You need to be the person who writes the text and/or code. Multiple students should not submit identical work. **Please note: The only avenue in which collaboration is not allowed is on quizzes.**
