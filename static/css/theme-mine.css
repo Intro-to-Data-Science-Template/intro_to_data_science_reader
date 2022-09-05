@@ -96,7 +96,7 @@ https://raw.githubusercontent.com/OpenIntroStat/oilabs-tidy/main/lab.css
 */
 
 body {
-    counter-reset: li; /* initialize counter named li */
+    counter-reset: q-li; /* initialize counter named q-li */
 }
 
 .question {
@@ -110,8 +110,8 @@ body {
     background:rgba(49, 126, 172, 0.1);
 }
 .question:before {
-    content:"Q. " counter(li); /* Use the counter as content */
-    counter-increment:li; /* Increment the counter by 1 */
+    content:"Q. " counter(q-li); /* Use the counter as content */
+    counter-increment:q-li; /* Increment the counter by 1 */
     /* Position and style the number */
     position:absolute;
     top:-2px;
@@ -127,6 +127,49 @@ body {
     border-top:2px solid #002855; /* Smith blue */
     color:#fff;
     background:#002855; /* Smith blue */
+    font-weight:bold;
+    font-family:"Helvetica Neue", Arial, sans-serif;
+    text-align:center;
+}
+
+/* answer boxes */
+
+/* Stolen from 
+https://raw.githubusercontent.com/OpenIntroStat/oilabs-tidy/main/lab.css
+*/
+
+body {
+    counter-reset: a-li; /* initialize counter named a-li */
+}
+
+.answer {
+    margin-left:0; /* Remove the default left margin */
+    padding-left:0; /* Remove the default left padding */
+    position:relative; /* Create a positioning context */
+    margin:0 0 10px 2em; /* Give each list item a left margin to make room for the numbers */
+    padding:10px 50px; /* Add some spacing around the content */
+    list-style:none; /* Disable the normal item numbering */
+    border-top:2px solid #FBB040; /* Smith blue */
+    background:rgba(49, 126, 172, 0.1);
+}
+.answer:before {
+    content:"A. " counter(a-li); /* Use the counter as content */
+    counter-increment:a-li; /* Increment the counter by 1 */
+    /* Position and style the number */
+    position:absolute;
+    top:-2px;
+    left:-2em;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    width:4em;
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right:8px;
+    padding:4px;
+    border-top:2px solid #FBB040; /* Smith blue */
+    color:#fff;
+    background:#FBB040; /* Smith blue */
     font-weight:bold;
     font-family:"Helvetica Neue", Arial, sans-serif;
     text-align:center;
