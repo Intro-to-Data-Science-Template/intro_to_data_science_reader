@@ -183,7 +183,7 @@ The Code button (for a single line of code) and Code Block button (for multiple 
 
 > **Exercise 2**
 >
-> Copy and paste one line of code from this lab **as a threaded comment** on the Slack message I posted on September 7, 2022. Be sure the text is formatted as code.
+> Copy and paste one line of code from this lab **as a threaded comment** on the Slack message I posted in slack under the `coding-help` channel. Be sure the text is formatted as code.
 
 </div>
 
