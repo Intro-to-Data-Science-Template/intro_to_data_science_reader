@@ -397,7 +397,8 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> 11/28/2022 (Mon) </td>
    <td style="text-align:left;"> Finals Planning </td>
    <td style="text-align:left;">  </td>
-   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> <ol><li>Final Project Ideas
+</li></ol> </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 13 </td>
