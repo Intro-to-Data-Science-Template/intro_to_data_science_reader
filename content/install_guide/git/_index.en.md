@@ -161,7 +161,7 @@ The software will then start installing. It will take a few minutes to finish. W
 
 ![][31]
 
-To make sure everything is installed correctly, go back to the terminal window and enter `git --version`. You should see a message that says "git version <NUMBERS>". If you, you can move on.
+To make sure everything is installed correctly, go back to the terminal window and enter `git --version`. You should see a message that says `git version <NUMBERS>`. If you do, you can move on.
 
 Next we will need to set up some options. Fist, copy the following into the terminal and press enter to change the default branch name: `git config --global init.defaultBranch main`
 
