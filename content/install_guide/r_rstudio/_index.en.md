@@ -23,7 +23,7 @@ You should have gotten R and R studio install on the first data of SDS 100. If y
 
 ## Common Settings
 
-There are a few settings I reccomend changing in R studio to make the process of working with it a little easier. In the top bar, click on **Tools \> Global Options** and modify the following.
+There are a few settings I recommend changing in R studio to make the process of working with it a little easier. In the top bar, click on **Tools \> Global Options** and modify the following.
 
 1.  Under **General \> Basic \> Workspace**, disable "Restore .RData into workspace at startup."
 2.  Under **General \> Basic \> Workspace**, set "Save workspace to .RData on exit" to **Never**.
@@ -34,7 +34,7 @@ There are a few settings I reccomend changing in R studio to make the process of
 7.  Under **R Markdown \> Basic**, disable "Show output inline for all R Markdown documents."
 8.  Under **R Markdown \> Visual**, disable "Use visual editor by default for new documents."
 9.  Under **Appearance**, pick a theme you like!
-10. \[WIN ONLY\] Under **Terminal \> General **, set "New terminals open with" to "Bash" (You can only do this after you complete the install guide 7: Windows Subsystem for Linux)
+10. \[WIN ONLY\] Under <b>Terminal \> General</b>, set "New terminals open with" to "Bash" (You can only do this after you complete the install guide 7: Windows Subsystem for Linux)
 
   [Overview]: #overview
   [Common Settings]: #common-settings
