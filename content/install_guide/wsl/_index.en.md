@@ -1,7 +1,7 @@
 ---
-pre: <b>6. </b>
+pre: <b>7. </b>
 title: "[WIN ONLY] Windows Subsystem for Linux"
-weight: 6
+weight: 7
 format:
   hugo:
     toc: true
@@ -79,6 +79,10 @@ In the start menu, search for and run `Ubuntu`.
 ![][10]
 
 If a terminal window opens, you should be good to go!
+
+{{% notice warning %}}
+This creates an entirely new operating system on your machine. Thus, things like your git configuration and SSH key for Github will not carry over! You will need to configure git again, and create a new SSH key for this operating system.
+{{% /notice %}}
 
 {{% notice note %}}
 Thanks to the <a href="https://datalab.ucdavis.edu/install-guide/">UC Davis DataLab's Install Guide</a> for providing a portion of this guide.

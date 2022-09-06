@@ -1,6 +1,6 @@
 ---
 pre: <b>2. </b>
-title: "git/GitHub"
+title: "git"
 weight: 2
 format:
   hugo:
