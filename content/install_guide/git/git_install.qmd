@@ -123,7 +123,7 @@ Make sure that all of the options on this window are unchecked as in the image b
 
 ![](img/win_git_install_23_deslect_and_finish.png "git completion window with unchecked View Release Notes")
 
-This will complete your installation process. Now we need to configure some settings. Right click on your desktop, and click on "Git Bash here." A black terminal window will open.
+This will complete your installation process. Type in `git --version` to check if everything was installed correctly. If you see `git version <NUMBERS>` you're all set. Now we need to configure some settings. Right click on your desktop, and click on "Git Bash here." A black terminal window will open.
 
 ![](img/win_git_setup_1.jpg "open git bash")
 
@@ -161,9 +161,7 @@ The software will then start installing. It will take a few minutes to finish. W
 
 ![](img/06.png "done window")
 
-To make sure eveything is installed correctly, go back to the terminal window and enter `git` once again. You should see a long printout that looks similar to the following. If you do, everything worked!
-
-![](img/07.png "git help file")
+To make sure everything is installed correctly, go back to the terminal window and enter `git --version`. You should see a message that says "git version <NUMBERS>". If you, you can move on.
 
 Next we will need to set up some options. Fist, copy the following into the terminal and press enter to change the default branch name: `git config --global init.defaultBranch main`
 

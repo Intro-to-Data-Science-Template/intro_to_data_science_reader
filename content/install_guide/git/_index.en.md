@@ -123,7 +123,7 @@ Make sure that all of the options on this window are unchecked as in the image b
 
 ![][22]
 
-This will complete your installation process. Now we need to configure some settings. Right click on your desktop, and click on "Git Bash here." A black terminal window will open.
+This will complete your installation process. Type in `git --version` to check if everything was installed correctly. If you see `git version <NUMBERS>` you're all set. Now we need to configure some settings. Right click on your desktop, and click on "Git Bash here." A black terminal window will open.
 
 ![][23]
 
@@ -161,21 +161,19 @@ The software will then start installing. It will take a few minutes to finish. W
 
 ![][31]
 
-To make sure eveything is installed correctly, go back to the terminal window and enter `git` once again. You should see a long printout that looks similar to the following. If you do, everything worked!
-
-![][32]
+To make sure everything is installed correctly, go back to the terminal window and enter `git --version`. You should see a message that says "git version <NUMBERS>". If you, you can move on.
 
 Next we will need to set up some options. Fist, copy the following into the terminal and press enter to change the default branch name: `git config --global init.defaultBranch main`
 
-![][33]
+![][32]
 
 Next, copy the following and press enter, changing "Jane Doe" to your name. You must put your name in quotes. `git config --global user.name "Jane Doe"`
 
-![][34]
+![][33]
 
 Lastly, copy the following and press enter, changing the email to your email address. `git config --global user.email jdoe@example.com`
 
-![][35]
+![][34]
 
 {{% notice note %}}
 Thanks to the <a href="https://datalab.ucdavis.edu/install-guide/">UC Davis DataLab's Install Guide</a> for providing a portion of this guide.
@@ -217,7 +215,6 @@ Thanks to the <a href="https://datalab.ucdavis.edu/install-guide/">UC Davis Data
   [29]: img/04.png "mac developer tools"
   [30]: img/05.png "license agreement"
   [31]: img/06.png "done window"
-  [32]: img/07.png "git help file"
-  [33]: img/08.png "default branch name"
-  [34]: img/09.png "default user name"
-  [35]: img/10.png "default user email"
+  [32]: img/08.png "default branch name"
+  [33]: img/09.png "default user name"
+  [34]: img/10.png "default user email"
