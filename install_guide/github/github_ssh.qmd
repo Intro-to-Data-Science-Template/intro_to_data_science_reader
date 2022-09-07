@@ -38,6 +38,10 @@ Creating a new SSH key will invalidate all the places your current SSH key is us
 
 **SSH Keys** are a way to identify your computer when accessing external resources. Think about it like a password for your computer to log in by itself. The first thing we need to do is create an SSH key for your computer. Open up R Studio, and click on the **Terminal** tab in the bottom left pane. Copy the following, enter your correct email, and press enter to create a key: `ssh-keygen -t ed25519 -C "your_email@example.com"`
 
+{{% notice info %}}
+The terminal will look slightly different in my pictures, but the process is the same in the R Studio terminal.
+{{% /notice %}}
+
 ![](img/03.png)
 
 It will ask where you want to save the key. Accept the defaults by pressing **Enter**.
