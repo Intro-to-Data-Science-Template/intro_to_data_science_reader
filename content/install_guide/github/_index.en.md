@@ -62,7 +62,7 @@ Next, type `cd` and press enter, followed by `cat .ssh/id_ed25519.pub`. It will 
 
 ![][7]
 
-We will not return to [github.com][Github] and login.
+We will now return to [github.com][Github] and login.
 
 ![][8]
 
