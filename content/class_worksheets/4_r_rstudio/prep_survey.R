@@ -19,5 +19,7 @@ survey$pineapple_pizza = as.logical(survey$pineapple_pizza)
 survey$nerd = as.logical(survey$nerd)
 survey$hotdog = as.logical(survey$hotdog)
 
+survey$other_classes = NA
+survey$major = NA
 
 write.csv(survey, "./content/class_worksheets/4_r_rstudio/data/survey_data.csv", row.names = FALSE)
