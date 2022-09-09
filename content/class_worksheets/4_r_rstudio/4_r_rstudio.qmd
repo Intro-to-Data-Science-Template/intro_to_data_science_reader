@@ -219,7 +219,9 @@ Another way to subset is by making comparisons. Say we wanted to see the rows in
 
 Now that we know the type of the `b_month` column, we can use that to subset the data. Where before we were just taking whole sections of the dataframe, now we are going to be asking for specific parts that match certain **conditions**, thus this is called **conditional sub-setting**. We define these conditions using **comparison operators**.
 
-For now, we want to get the data only for those rows *such that* `b_month` is `May`. We can do that using the double equal sign **comparison operator** in R, `==`. You can use `==` in many circumstances, and it will always test if one thing is equal to another. For example, try executing the following in the console:
+#### Comparison
+
+For now, we want to get the data only for those rows *such that* `b_month` is `May`. We can do that using the double equal sign **comparison operator** in R, `==`. **Comparison operators** all compare one thing against another, and tell you if that comparison is `TRUE` or `FALSE`. The **Equal operator**, `==`, will test if one thing, or vector of things, is equal to another. For example, try executing the following in the console:
 
 * `1 == 1`
 * `1 == 2`
@@ -239,3 +241,6 @@ The most common conditionals include:
 * `>=` - Greater than or equal to
 * `<` - Less than
 * `<=` - Less than or equal to
+
+#### Logical
+
