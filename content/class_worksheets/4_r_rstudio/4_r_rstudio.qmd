@@ -145,6 +145,8 @@ You can learn more about `read.csv` by opening the help file using `?read.csv`.
 survey = read.csv("https://raw.githubusercontent.com/Intro-to-Data-Science-Template/intro_to_data_science_reader/main/content/class_worksheets/4_r_rstudio/data/survey_data.csv")
 ```
 
+#### Exploration
+
 Let's start by looking at the survey. You can do this by going over to the **Environment** tab in the upper right pane in R Studio. Click on the **survey** object you see there. This will open a viewer for you to look at the data. Can you find yourself?
 
 We can also use some functions to get a summary. Start by entering `str(survey)` into the console. `str()` stands for *Structure*, and gives us an overview of dataframe objects. We can see how many **obs** or observations there are (rows) as well as how many **variables** there are (columns). It then lists all the variables, what type they are, and a preview of the contents.
@@ -163,6 +165,10 @@ cat("
 :::
 ")
 ```
+
+Another good tool for starting to understand a dataframe is the `head()` function. `head()` will display the first handful of rows for you in the console so you can see what they look like. There is also the companion function of `tail()`, but that is used less often. Try both on our `survey` data before moving on.
+
+#### Subsetting
 
 One of the most important skills you will develop in R is how to work with dataframes, and how to **subset** them, or select only the content from them that you want. The two basic ways to do this is with the dollar sign `$` and with square brackets `[ ]`. The `$` lets you ask for specific columns from a dataframe. For example, if I wanted the column of just the average hours of sleep from our class, I could call ask for the `hours_sleep` column from the `survey` dataframe by entering `survey$hours_sleep`. Try that now. You should get back a vector of that single column. The same format will work to call any column by name.
 
@@ -201,7 +207,35 @@ cat("
 
 You can also use the square brackets to ask for full columns, like `$`. Simply put the name of the column (in quotes!) in place of the column number, for example `survey[ , "hours_sleep"]`. Whenever you want everything, you can just leave a blank space. You can even get whole rows this way, but that isn't used as often; like this `survey[1, ]`.
 
+A good way to work out how to use square brackets is the phrase "such that." For example, if I wanted "`survey` data *such that* it included rows 1, 2, and 5, and column 'hours sleep,'" that would translate to `survey[c(1, 2, 5), "hours_sleep"]`.
+
 ::: {.best}
 Always use the names of columns when using square brackets if possible. Columns may move what spot they are in, so calling them by number position can be dangerous. R will return whatever is in that position, regardless of what you want! But it will always find the column with the same name, no matter what spot it is in.
 :::
 
+### 6. Conditionals
+
+Another way to subset is by making comparisons. Say we wanted to see the rows in our data *only* for people whose birthday is in May. If we go look at our `survey` data in the viewer by clicking on it in the **environment** pane again, we can see the variable `b_month` has months in it. Let's test the type of that column using `class(survey$b_month)`
+
+Now that we know the type of the `b_month` column, we can use that to subset the data. Where before we were just taking whole sections of the dataframe, now we are going to be asking for specific parts that match certain **conditions**, thus this is called **conditional sub-setting**. We define these conditions using **comparison operators**.
+
+For now, we want to get the data only for those rows *such that* `b_month` is `May`. We can do that using the double equal sign **comparison operator** in R, `==`. You can use `==` in many circumstances, and it will always test if one thing is equal to another. For example, try executing the following in the console:
+
+* `1 == 1`
+* `1 == 2`
+* `1 == c(1, 2, 1)`
+
+Now, let's apply that same idea to our `b_month` column. Try executing `survey$b_month == "May"`. This will take our `b_month` column, and test the condition that the values in `b_month` are equal to "May." Note that capitalization matters! This get's us halfway to our goal of seeing the data only for rows where `b_month` is `May`, but it's not quite what we want. We now have a vector of `TRUE` and `FALSE` for `b_month`, now we want to use that to actually subset our data.
+
+We are going to ask R for our `survey` data, *such that* we only see the rows there `b_month` is equal to `May`, including all columns. We can do that using `survey[survey$b_month == "May", ]`.
+
+There are several other common **comparison operators**, one of the most important being `!=`, which stands for **not equal to**. Try running `survey[survey$b_month != "May", ]`, what does it return? Do you understand why?
+
+The most common conditionals include:
+
+* `==` - Equal to
+* `!=` - Not equal to
+* `>` - Greater than
+* `>=` - Greater than or equal to
+* `<` - Less than
+* `<=` - Less than or equal to
