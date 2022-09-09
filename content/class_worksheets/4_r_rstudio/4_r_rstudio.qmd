@@ -202,6 +202,6 @@ cat("
 You can also use the square brackets to ask for full columns, like `$`. Simply put the name of the column (in quotes!) in place of the column number, for example `survey[ , "hours_sleep"]`. Whenever you want everything, you can just leave a blank space. You can even get whole rows this way, but that isn't used as often; like this `survey[1, ]`.
 
 ::: {.best}
-Always use the names of columns when using square brackets is possible. Columns may move what spot they are in, so calling them by number position can be dangerous. R will return whatever is in that position, regardless of what you want! But it will always find the column with the same name, no matter what spot it is in.
+Always use the names of columns when using square brackets if possible. Columns may move what spot they are in, so calling them by number position can be dangerous. R will return whatever is in that position, regardless of what you want! But it will always find the column with the same name, no matter what spot it is in.
 :::
 
