@@ -84,6 +84,14 @@ Try this:
 
 `mean(c(1, 5, 10))`
 
+You can ask for only part of a vector by using the square brackets `[ ]`. Say you had a vector called `example_vector`, which contained `c(1, 3, 5, 7, 9, 11)`. If I wanted the numbers in the first, third, and fifth slots, I could ask R for `example_vector[c(1, 3, 5)]`
+
+<div class="question">
+
+Create a vector called `example_vector` containing `c(1, 3, 5, 7, 9, 11)`, and then get the values in the fourth, fifth, and sixth position.
+
+</div>
+
 ### 3. Objects
 
 You don't have to type out your vector every time you want to use it, you can save it to an **object** using an **assignment**. Try typing `letter_vec <-  c("a", "b", "c")` and pressing enter. You should see `letter_vec` appear in your **environment** tab on the upper right. Type `letter_vec` into the console and press enter. We see the same data as if we had just entered `c("a", "b", "c")` again, because that is what we saved inside the `letter_vec` **object**.
@@ -178,13 +186,33 @@ Always use the names of columns when using square brackets if possible. Columns 
 
 </div>
 
+#### Adding to Dataframes
+
+You can add to dataframes using the same tools to subset from them. Rather than describing where to take data from, you'll now be describing where the new data goes.
+
+Say we wanted to add a new column to our `survey` dataframe. First, we would need some new data to add that is of equal length to the number of cases (rows) in the dataframe. We have 15 rows, so we need a vector of data of the same length, so one value will fit into each row of the dataframe. Let's make a new vector of letters of the proper length.
+
+`letters` is a pre-built object in R, meaning it is always there in the background; you can see it by typing `letters` into the console. Let's use our new sub-setting skills to get enough letters to fit our dataframe. We can do this by creating a new object, `new_column_vector`, and assigning the appropriate number of letters, in our case 15; we can even let R pick the right number using the `nrow()` function! Try this: `new_column_vector <- letters[1:nrow(survey)]`. You may have noticed a shortcut I used here. If I want some numbers that are all next to each other, like 1-2-3 or 9-10-11, I can use a colon `:` to say "from this number to this number." So `1:10` is the same thing as `c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)`; handy!
+
+Now that we've got our vector, we can add it to our dataframe! All you have to do is tell R what you want the new column to be called, and what to put in it. It looks like this: `survey$COLUMN_NAME <- STUFF_TO_PUT_IN_COLUMN`.
+
+<div class="question">
+
+Put our `new_column_vector` in our `survey` dataframe, calling the new column `alphabet`.
+
+</div>
+
+Now if we inspect out dataframe by clicking on it in the environment pane, we should be able to scroll all the way to the right and see our new column!
+
 ### 6. Conditionals
 
 Another way to subset is by making comparisons. Say we wanted to see the rows in our data *only* for people whose birthday is in May. If we go look at our `survey` data in the viewer by clicking on it in the **environment** pane again, we can see the variable `b_month` has months in it. Let's test the type of that column using `class(survey$b_month)`
 
 Now that we know the type of the `b_month` column, we can use that to subset the data. Where before we were just taking whole sections of the dataframe, now we are going to be asking for specific parts that match certain **conditions**, thus this is called **conditional sub-setting**. We define these conditions using **comparison operators**.
 
-For now, we want to get the data only for those rows *such that* `b_month` is `May`. We can do that using the double equal sign **comparison operator** in R, `==`. You can use `==` in many circumstances, and it will always test if one thing is equal to another. For example, try executing the following in the console:
+#### Comparison
+
+For now, we want to get the data only for those rows *such that* `b_month` is `May`. We can do that using the double equal sign **comparison operator** in R, `==`. **Comparison operators** all compare one thing against another, and tell you if that comparison is `TRUE` or `FALSE`. The **Equal operator**, `==`, will test if one thing, or vector of things, is equal to another. For example, try executing the following in the console:
 
 -   `1 == 1`
 -   `1 == 2`
