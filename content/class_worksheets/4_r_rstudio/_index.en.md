@@ -74,7 +74,7 @@ Really take the time to think over these results, especially the third one.
 
 <div class="question">
 
-Explain the results of `5 + c(10, 20, 30)` and `c(1, 5, 10) + c(2, 4, 8)`. What is being done to each vector to see the results we are seeing?
+Explain the results of `5 + c(10, 20, 30)` and `c(1, 5, 10) + c(2, 4, 8)`. What is being done to each vector that would cause the results we are seeing?
 
 </div>
 
@@ -83,14 +83,6 @@ Some functionalities of R only make sense on a vector, for example, taking the `
 Try this:
 
 `mean(c(1, 5, 10))`
-
-You can ask for only part of a vector by using the square brackets `[ ]`. Say you had a vector called `example_vector`, which contained `c(1, 3, 5, 7, 9, 11)`. If I wanted the numbers in the first, third, and fifth slots, I could ask R for `example_vector[c(1, 3, 5)]`
-
-<div class="question">
-
-Create a vector called `example_vector` containing `c(1, 3, 5, 7, 9, 11)`, and then get the values in the fourth, fifth, and sixth position.
-
-</div>
 
 ### 3. Objects
 
@@ -106,6 +98,14 @@ We can now start to do things to the object we created. Try using `class()` and 
 
 You can use vectors with each other as well. Try the following: `number_vec + number_vec`
 
+You can ask for only part of a vector by using the square brackets `[ ]`. Say we wanted the numbers in the first, third, and fifth positions of our `letter_vec` object. I could ask R for `number_vec[c(1, 3)]`, and get back `c("a", "c")`.
+
+<div class="question">
+
+Create a vector called `example_vector` containing `c(1, 3, 5, 7, 9, 11)`, and then get the values in the fourth, fifth, and sixth position.
+
+</div>
+
 ### 4. NAs
 
 `NA`s are missing values. They cause a lot of problems, and are very common. A good portion of the work of data scientists is know how to work around missing values. Let's re-do some of our earlier examples to to get a handle on `NA`s.
@@ -120,7 +120,7 @@ It will return another `NA`. Why? Because we don't know what the value of 1 plus
 
 We can get the results for known values, but the unknown will stay unknown. This is true if something uses all elements of a vector, like `mean()`. Try: `mean(c(NA, 5, 10))`. Everything turns into an `NA`, because without knowing all the numbers, we can't be certain what the mean would be.
 
-`NA`s do count as an element in a vector though, as we can see if we run `length(c(1, 2, 3))` and `length(c(NA, 2, 3))`
+`NA`s do count as an element in a vector though, as we can see if we run `length(c(1, 2, 3))` and `length(c(NA, 2, 3))`. Put simply, `NA`s exist, we just don't know what they are.
 
 <div class="question">
 
@@ -164,7 +164,7 @@ Using the `$` and the `mean()`, find the average hours of sleep our class gets p
 
 </div>
 
-Another way to subset dataframes with with square brackets `[ ]`. Imaging a dataframe is like a map with a grid. You can find any spot on that map by finding the intersection of the grid coordinates. The same is true of a dataframe. For example, if I wanted the value in the third row and second column in our survey dataframe (NA), I could ask for it by entering `survey[*row*, *column*]` or `survey[3, 2]`.
+Another way to subset dataframes with with square brackets `[ ]`. Imaging a dataframe is like a map with a grid. You can find any spot on that map by finding the intersection of the grid coordinates. The same is true of a dataframe. For example, if I wanted the value in the third row and fourth column in our survey dataframe (it contains the value 27), I could ask for it by entering `survey[*row*, *column*]` or `survey[3, 4]`.
 
 <div class="question">
 
