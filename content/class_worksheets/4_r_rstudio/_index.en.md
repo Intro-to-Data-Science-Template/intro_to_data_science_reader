@@ -98,7 +98,7 @@ We can now start to do things to the object we created. Try using `class()` and 
 
 You can use vectors with each other as well. Try the following: `number_vec + number_vec`
 
-You can ask for only part of a vector by using the square brackets `[ ]`. Say we wanted the numbers in the first, third, and fifth positions of our `letter_vec` object. I could ask R for `number_vec[c(1, 3)]`, and get back `c("a", "c")`.
+You can ask for only part of a vector by using the square brackets `[ ]`. Say we wanted the letters in the first, third, and fifth positions of our `letter_vec` object. I could ask R for `letter_vec[c(1, 3)]`, and get back `c("a", "c")`.
 
 <div class="question">
 
