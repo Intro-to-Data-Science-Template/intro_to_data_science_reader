@@ -94,7 +94,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #FDCDAC !important;"> 2 </td>
    <td style="text-align:left;"> 9/16/2022 (Fri) </td>
-   <td style="text-align:left;"> Problem solving mini-lab &amp; LAB 1 </td>
+   <td style="text-align:left;"> Lab 0 &amp; LAB 1 </td>
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
@@ -125,7 +125,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
 </li>
 </ol> </td>
    <td style="text-align:left;"> <ol>
-<li><a href="/intro_to_data_science_reader/labs/0_problem_solving/">Problem solving mini-lab</a></li>
+<li>Lab 0</li>
 <li>Lab 1
 </li>
 </ol> </td>
