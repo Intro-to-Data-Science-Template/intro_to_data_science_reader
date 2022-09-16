@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jared Joseph">
+
+<title>Lab 1. Fundamental R Coding</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="lab-1-r-coding_files/libs/clipboard/clipboard.min.js"></script>
+<script src="lab-1-r-coding_files/libs/quarto-html/quarto.js"></script>
+<script src="lab-1-r-coding_files/libs/quarto-html/popper.min.js"></script>
+<script src="lab-1-r-coding_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="lab-1-r-coding_files/libs/quarto-html/anchor.min.js"></script>
+<link href="lab-1-r-coding_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="lab-1-r-coding_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="lab-1-r-coding_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="lab-1-r-coding_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="lab-1-r-coding_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lab 1. Fundamental R Coding</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jared Joseph </p>
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Click here to access the lab on Github Classroom: <a href="https://classroom.github.com/a/zwOsnirp">Github Classroom Assignment for Lab 1: R Coding</a></p>
+<p>This lab will provide an opportunity to practice fundamental R coding skills with real-world data. We will be looking at data from the United Nations (UN) <a href="https://population.un.org/wpp/">World Population Prospects 2022</a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, which for 27 years has been providing population estimates for countries around the world. This year their estimates span 237 countries, with historical data from 1950-2022, and projections out to 2100. Such population estimates play a crucial function in many long-term planning activities. This includes projects such as predicting and preparing for climate crises, anticipating global health needs, and even projecting targets for business expansion.</p>
+<p>This lab marks your first step into understanding the world through your own data analyses. The first step is often the hardest. But by the end of this lab you will already have more data skills than the vast majority of the population. With this, take your first step towards understanding, and through understanding towards change.</p>
+</section>
+<section id="understanding-the-data-source" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-the-data-source">Understanding the Data Source</h2>
+<p>Before we start to work with the data, we need to understand it. What do all of the <strong>variables</strong> (columns) mean? Let’s start by looking at the data itself. In this project <strong>repo (repository/folder)</strong>, navigate to the “data” folder, and open the file named “WPP2022_Demographic_Indicators_Medium.csv”. This is the raw data file from the United Nations. There are a lot of numbers here, and some of the variable names are nonsense. What does “LE15” even mean?!</p>
+<p>This is where <strong>data documentation</strong> comes in. It is all the meta-data about the data you are looking at. It often explains how the data was made, and what all the data means. Open the file named “WPP2022_Demographic_Indicators_notes.csv” to start looking at some documentation. This file explains what each of the main data columns mean in terms of what is measured, and the units they are measured in. For example, the aforementioned “LE15” stands for “Life Expectancy at Age 15, both sexes,” and is measured in years. That means in the data file, for row 2 and column LE15, for the whole world in 1950, a person at 15 years old had a life expectancy of <code>47.0395</code> years.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Using the “WPP2022_Demographic_Indicators_notes.csv” file, what variable corresponds to “median age”?</p>
+<p><em>REPLACE THIS TEXT WITH YOR ANSWER</em></p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Using the data from “WPP2022_Demographic_Indicators_Medium.csv,” what was the median age in the United States in 2020?</p>
+<p><em>REPLACE THIS TEXT WITH YOR ANSWER</em></p>
+<p>Using the same data, what was the median age in Japan in 2020?</p>
+<p><em>REPLACE THIS TEXT WITH YOR ANSWER</em></p>
+</div>
+</div>
+<p>We can also look into the sources of the data compiled by the UN. You can find that in the file called “WPP2022_F02_METADATA.XLSX.” The UN relies on a lot of different sources. This can result in impressive looking results, but may hide some issues.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Thinking generally, what problems do you think may arise when combining so many different data sets? What problems can occur?</p>
+<p><em>REPLACE THIS TEXT WITH YOR ANSWER</em></p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 4
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>More generally, what, if any, problems do you see with how the data is defined? Do you agree with the definitions of all the viaralbes? Is there anything you think is missing?</p>
+<p><em>REPLACE THIS TEXT WITH YOR ANSWER</em></p>
+</div>
+</div>
+</section>
+<section id="loading-in-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="loading-in-the-data">Loading in the Data</h2>
+<p>Now that we have an idea of what the data is, let’s work on getting it into R. Using a function we learned this week, read the dataframe in the data folder of this project into R.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We saw the function to read in data using a web URL in the problem sets, but it works with files on your computer too! Local files (on your computer) can also benefit from auto-complete. Start typing the name of the file in quotes within the function as an argument, and press the TAB key. You should get some suggestions.</p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 5
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Read in the UN data file, assigning it to an object called <code>un_pop</code>.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&lt;REPLACE THIS COMMENT WITH YOR ANSWER&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="understanding-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-the-data">Understanding the Data</h2>
+<p>Now that we have our UN Data in R, let’s start to explore it a bit.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 6
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use a function to examine the dimensions of the <code>un_pop</code> dataframe and get the type for each of the variables.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&lt;REPLACE THIS COMMENT WITH YOR ANSWER&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 7
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Open the <code>un_pop</code> dataframe in a viewer window and scroll through it. How are the rows organized? What sort of groupings do you see?</p>
+</div>
+</div>
+</section>
+<section id="learning-from-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="learning-from-the-data">Learning from the Data</h2>
+<p>Now that we have the data loaded into R, let’s see what we can learn from this data.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 8
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Across all recorded years, for the whole world, what is the mean “Life Expectancy at Birth, both sexes”?</p>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You may have a problem with only getting an <code>NA</code> here, check the help file of your function to see if there are any <strong>arguments</strong> that have to do with <code>NA</code>s.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&lt;REPLACE THIS COMMENT WITH YOR ANSWER&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 9
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Across all recorded years, what is the mean “Life Expectancy at Birth, both sexes” for just the United States of America?</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&lt;REPLACE THIS COMMENT WITH YOR ANSWER&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 10
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Across all recorded years, what is the mean “Life Expectancy at Birth, both sexes” for just Japan?</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&lt;REPLACE THIS COMMENT WITH YOR ANSWER&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 11
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Create a new dataframe called <code>pre_40_mort</code>, which is a subset of <code>un_pop</code> containing the columns for “Location”, “Time”, “Mortality before Age 40, both sexes”, “Male mortality before Age 40”, and “Female mortality before Age 40”.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&lt;REPLACE THIS COMMENT WITH YOR ANSWER&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 12
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Create a new column called <code>mort_diff</code> in our <code>pre_40_mort</code> dataframe which finds the difference between “Male mortality before Age 40” and “Female mortality before Age 40”.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&lt;REPLACE THIS COMMENT WITH YOR ANSWER&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 13
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Interpret the results in our new <code>mort_diff</code> column. What do those numbers mean?</p>
+<p><em>REPLACE THIS TEXT WITH YOR ANSWER</em></p>
+</div>
+</div>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+CHALLANGE QUESTION
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Calculate the difference between the mean “Net Number of Migrants” for the United States of America and Canada for the years 2000-2010.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&lt;REPLACE THIS COMMENT WITH YOR ANSWER&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It is not required, but your code will be a bit easier if you understand <a href="https://towardsdatascience.com/the-complete-guide-to-logical-operators-in-r-9eacb5fd9abd">Logical Operators</a>, specifically the <code>&amp;</code> sign.</p>
+</div>
+</div>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1" role="doc-endnote"><p>United Nations, Department of Economic and Social Affairs, Population Division (2022). World Population Prospects 2022, Online Edition.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

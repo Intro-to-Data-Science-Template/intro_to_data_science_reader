@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jared Joseph &amp; Lindsay Poirier">
+
+<title>Lab 0. Problem Solving Mini-Lab</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="lab_0_files/libs/clipboard/clipboard.min.js"></script>
+<script src="lab_0_files/libs/quarto-html/quarto.js"></script>
+<script src="lab_0_files/libs/quarto-html/popper.min.js"></script>
+<script src="lab_0_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="lab_0_files/libs/quarto-html/anchor.min.js"></script>
+<link href="lab_0_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="lab_0_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="lab_0_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="lab_0_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="lab_0_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lab 0. Problem Solving Mini-Lab</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jared Joseph &amp; Lindsay Poirier </p>
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This lab is based on SDS professor Dr.&nbsp;Lindsay Poirier’s <a href="https://sds-192-intro-fall22.github.io/sds-192-public-website-quarto/problem-solving.html">problem solving lab</a>.</p>
+</div>
+</div>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>This lab will introduce you to resources and techniques for problem solving in <code>R</code>. You should reference this lab often throughout the semester for reminders on best practices for addressing errors and getting help.</p>
+<p>Click here to access the lab on Github Classroom: <a href="https://moodle.smith.edu/mod/url/view.php?id=941581">Github Classroom Assignment for Lab 0: Problem Solving Mini-Lab</a></p>
+<section id="learning-goals" class="level3">
+<h3 class="anchored" data-anchor-id="learning-goals">Learning Goals</h3>
+<ul>
+<li>Interpret error messages in <code>R</code></li>
+<li>Read <code>R</code> cheatsheets</li>
+<li>Access <code>R</code> help pages</li>
+<li>Reference Stack Overflow and other online resources for help</li>
+</ul>
+</section>
+</section>
+<section id="interpreting-error-messages" class="level2">
+<h2 class="anchored" data-anchor-id="interpreting-error-messages">Interpreting Error Messages</h2>
+<p><code>R</code> has several ways to communicate with us, the most common of which being error messages. Error messages appear when something doesn’t work as anticipated. It is tempting to see them as denoting failure, but that is not the case. Error messages are a way for R to alert us to potential problems; the real danger comes where R <em>does not</em> tell us when something goes wrong.</p>
+<p>First, it’s important to make some distinctions between the kinds of messages that <code>R</code> presents to us when attempting to run code:</p>
+<dl>
+<dt>Errors</dt>
+<dd>
+<p>Terminate a process that we are trying to run in <code>R</code>. They arise when it is not possible for <code>R</code> to continue evaluating a function. Like when we try to add letters together.</p>
+</dd>
+<dt>Warnings</dt>
+<dd>
+<p>Don’t terminate a process but are meant to warn us that there may be an issue with our code and its output. They arise when <code>R</code> recognizes potential problems with the code we’ve supplied.</p>
+</dd>
+<dt>Messages</dt>
+<dd>
+<p>Also don’t terminate a process and don’t necessarily indicate a problem but simply provide us with more potentially helpful information about the code we’ve supplied.</p>
+</dd>
+</dl>
+<p>Check out the differences between an error and a warning in <code>R</code> by reviewing the output in the Console when you run the following code chunks.</p>
+<section id="error-in-r" class="level4">
+<h4 class="anchored" data-anchor-id="error-in-r">Error in <code>R</code></h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="st">"3"</span>, <span class="st">"4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in sum("3", "4"): invalid 'type' (character) of argument</code></pre>
+</div>
+</div>
+</section>
+<section id="warning-in-r" class="level4">
+<h4 class="anchored" data-anchor-id="warning-in-r">Warning in <code>R</code></h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>vector1 <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>vector2 <span class="ot">&lt;-</span> <span class="dv">3</span><span class="sc">:</span><span class="dv">6</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>vector1 <span class="sc">+</span> vector2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in vector1 + vector2: longer object length is not a multiple of shorter
+object length</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  4  6  8 10  8</code></pre>
+</div>
+</div>
+<p>So what should you do when you get an error message? How should you interpret it? Luckily, there are some clues and standardized components of the message the indicate why <code>R</code> can’t execute the code. Consider the following error message that you received when running the code above:</p>
+<p>Error in sum(“3”, “4”) : invalid ‘type’ (character) of argument</p>
+<p>There are three things we should pay attention to in this message:</p>
+<ol type="1">
+<li>The word “Error” indicates that this code <strong>did not</strong> run.</li>
+<li>The text immediately after the word “in” tells us which specific function did not run.</li>
+<li>The text after the colon gives us clues as <em>why</em> the code did not run.</li>
+</ol>
+<p>Reviewing the error above, I can guess that there was a problem with the argument that I supplied to the <code>sum()</code> function, and specifically that I supplied a function of the wrong type.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Exercise 1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Run the codes below and check out the error messages. Review the code to fix each of the errors. Note that each subsequent code chunk relies on the previous code chunk, so you will need to fix the errors in order and run the chunks in order.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create three vectors</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span>, <span class="st">"e"</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error: &lt;text&gt;:2:7: unexpected ','
+1: # Create three vectors
+2: a &lt;- 1,
+         ^</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the values in the vector a</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>a_added <span class="ot">&lt;-</span> <span class="fu">add</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in add(a): could not find function "add"</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Multiply the previous output by 3</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>three_times_a_added <span class="ot">&lt;-</span> added_a <span class="sc">*</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in eval(expr, envir, enclos): object 'added_a' not found</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dataframe with col1 and col2</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">col1 =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">col2 =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error: &lt;text&gt;:4:3: unexpected symbol
+3:   col1 = c(1, 2, 3)
+4:   col2
+     ^</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a new column to df</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>col3 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in df$col3 &lt;- c(TRUE, FALSE): object of type 'closure' is not subsettable</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="preparing-to-get-help" class="level2">
+<h2 class="anchored" data-anchor-id="preparing-to-get-help">Preparing to Get Help</h2>
+<p>When we do get errors in our code and need to ask for help in interpreting them, it’s important to provide collaborators with the information they need to help us. Sometimes when teaching <code>R</code> I will hear things like: “My code doesn’t work!” or “I’m stuck and don’t know what to do,” and it can be challenging to suss out the root of the issue without more information. Here are some strategies for describing issues you are having with your code:</p>
+<ol type="1">
+<li><p>Reference line numbers. Notice the left side of this document has a series of numbers listed vertically next to each line? These are known as line numbers. Oftentimes, if you are having an issue with your code and ask me to review it, I will say something like: “Check out line 53.” By this I mean that you should scroll the document to the 53rd line. You can similarly tell me or your peers which line of your code you are struggling with.</p></li>
+<li><p>Compose good reproducible examples. A good reproducible example includes all of the lines of code that we need to reproduce an output on our own machines. This means that if you create a vector in a previous code snippet and then supply it as an argument in another code snippet, you are going to want to make sure that both of these lines of code appear in your reproducible example.</p></li>
+<li><p>Use the code and code block buttons in Slack to share example code. First, when we copy and paste code from RStudio into programs like Slack and email, we can’t see the output. Second, certain characters like quotation marks and apostrophes are treated differently across these programs. For example, run the code chunk below and check out the output in your Console. The first line of code I typed directly into RStudio. The second I copied over from Slack.</p></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># typed directly into RStudio</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">toupper</span>(<span class="st">"apple"</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># copied from Slack</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">toupper</span>(“apple”)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error: &lt;text&gt;:4:9: unexpected input
+3: # copied from Slack
+4: toupper(“
+           ^</code></pre>
+</div>
+</div>
+<p>Notice the slight differences in the quotation marks? <code>R</code> recognizes the first but doesn’t recognize the second, even though I used the same keyboard key to create both. This is due to the fact that these two systems use different character encodings.</p>
+<p>The Code button (for a single line of code) and Code Block button (for multiple lines of code) in Slack are useful tools for composing code and avoiding character encoding issues. If you click these buttons when typing a Slack message, you can enter code in the red outlined box that appears, and this will easily copy to RStudio. I will ask you to always use these features when copying code this semester.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In Slack, you can also wrap text backticks (` `) to have it output in a single-line code block, and three backticks (``` ```) to have it output as a multi-line code block.</p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Exercise 2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Copy and paste one line of code from this lab <strong>as a threaded comment</strong> on the Slack message I posted in slack under the <code>coding-help</code> channel. Be sure the text is formatted as code.</p>
+</div>
+</div>
+</section>
+<section id="referencing-resources" class="level1">
+<h1>Referencing Resources</h1>
+<p>As I’ve mentioned in class before, I don’t expect you to come away from this class memorizing every function that we discuss and all of their parameters. There are a number of resources available to help you recall how certain functions work.</p>
+<section id="help-pages" class="level2">
+<h2 class="anchored" data-anchor-id="help-pages">Help pages</h2>
+<p>One resource we’ve already discussed are the <code>R</code> help pages. I tend to use the help pages when I know the function I need to use, but can’t remember how to apply it or what its parameters are. Help pages typically include a description of the function, its arguments, details about the function, the values it produces, a list of related functions, and examples of its use. We can access the help pages for a function by typing the name of the function with a question mark in front of it into our Console (e.g.&nbsp;<code>?log</code> or <code>?sum</code>). Some help pages are well-written and include helpful examples, while others are spotty and don’t include many examples.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Exercise 3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Access the help pages for the function <code>sort()</code>. Write code below to sort the vector <code>a</code> (which you created in an earlier step) in decreasing order.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write code here. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="cheatsheets" class="level2">
+<h2 class="anchored" data-anchor-id="cheatsheets">Cheatsheets</h2>
+<p>The <code>R</code> community has developed a series of cheatsheets that list the functions made available through a particular package and their arguments. I tend to use cheatsheets when I know what I need to do to a dataset in R, but I can’t recall the function that enables me to do it.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Exercise 4
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Navigate to <a href="https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf">this cheatsheet</a> for base <code>R</code>. Imagine we collected the temperature of our home each day for the past ten days (see code below). Let’s say we wanted to find how each day ranked from coolest to hottest. For instance, I wanted to know the ranking for day 1 vs.&nbsp;day 2 vs.&nbsp;day 3, and so on. Using the cheatsheet, find the function that will allow you to generate a ranking of each day’s temperature. Search the help pages for this function to determine how to randomly rank two days with the same temperature. Write a comment to yourself describing how this function is different than sorting the data.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a vector of temperatures</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>temps_to_factor <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">68</span>, <span class="dv">70</span>, <span class="dv">78</span>, <span class="dv">75</span>, <span class="dv">69</span>, <span class="dv">80</span>, <span class="dv">66</span>, <span class="dv">66</span>, <span class="dv">79</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Write code below to rank the days with random ties</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace this line with a comment to yourself (starting a line in a code block or script file makes it a comment) describing how this function is different than sorting the data. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="searching-the-web" class="level1">
+<h1>Searching the Web</h1>
+<p>I encourage you to search the web when you get errors in your code. Others have likely experienced that error before and gotten help from communities of data analysts and programmers. However, you should <strong>never copy and paste code directly from Stack Overflow</strong>. This violates the course policies on Academic Honesty. Instead you should use these resources to take notes and learn how to improve and revise code. Any time you reference Stack Overflow or any other Web resource to help you figure out an answer to a problem, you should cite that resource in your code. Here is how you would cite that post in APA format:</p>
+<blockquote class="blockquote">
+<p>Username. (Year, Month Date). <em>Title of page (Question/Topic)</em>. Stack Overflow. URL</p>
+</blockquote>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Exercise 5
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Add a comment to the code chunk above, citing <a href="https://stackoverflow.com/questions/54017285/difference-between-sort-rank-and-order">this Stack Overflow</a> post. Be sure to cite the post properly. You can read through the post to double check your answers.</p>
+</div>
+</div>
+</section>
+<section id="turning-in-this-lab" class="level1">
+<h1>Turning in this Lab</h1>
+<p>You did it! Now to turn it in. We will be using github classrooms for assignments in this class. TO “turn in” this assignment, all you need to do is save this document, commit it with git, and push it back to the Github repo you pulled it from.</p>
+<ol type="1">
+<li>First make sure you’ve saved this file.</li>
+<li>In the bar above this editor, hit the <strong>Render</strong> button. Check out the output to see what you’ve made!</li>
+<li>In the upper right pane, go to the <strong>Git</strong> tab.</li>
+<li>Check the box next to this document (lab_0.qmd).</li>
+<li>Press the <strong>Commit</strong> button.</li>
+<li>Enter a commit message, and press <strong>Commit</strong>.</li>
+<li>Press the <strong>Push</strong> button to send it back to Github.</li>
+</ol>
+<p>All done! You can repeat this process if you want to make any changes before the due date.</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
