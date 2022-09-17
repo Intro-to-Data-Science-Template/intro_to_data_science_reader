@@ -20,7 +20,8 @@ format:
     -   [2. Your First Commit][]
     -   [3. Making a Change][]
     -   [4. Adding More Files][]
-    -   [5. Time Travel for Beginners][]
+    -   [5. Breaking Things][]
+    -   [6. Time Travel for Beginners][]
 
 ## Overview
 
@@ -115,7 +116,7 @@ Create one last script called `octocat_count.R`. In this script, copy the follow
 
 Save this file and commit it. We now have a toy example of a fairly common data science workflow; get the data, inspect the data, and perform analyses on the data.
 
-### 5. Time Travel for Beginners
+### 5. Breaking Things
 
 Now that we have out mini data science workflow, we can start to modify it. Start by opening `octocat_load.R`. We can replace the `readLines` function to load the local version of octocat, because we no longer need to grab it from the internet. Replace:
 
@@ -127,17 +128,29 @@ With
 
 Save the file and commit the changes.
 
-Say we want to quickly modify our octocat art by adding an extra line for a caption. Add a new line to the end of the octocat vector by typing the following in the console:
+Say we want to quickly modify our octocat art by adding an extra line for a caption. Create a new script called `octocat_modify.R` and add the following code to it:
+
+    # to add a caption to octocat
+
+    octocat = readLines("./octocat.txt")
 
     octocat = c(octocat, "ASCII Art of the Octocat Mascot for Github")
 
-We use `c()` here to combine octocat with our caption, and then assign it back to our `octocat` object. Let's save out updated version using the following in the console:
-
     writeChar(octocat, "./octocat.txt")
+
+Save the file, execute it, and commit it. We use `c()` here to combine octocat with our caption, and then assign it back to our `octocat` object.
 
 Great, now we have out data updated, let's open up our `octocat_print.R` and run it again to see our beautiful art again.
 
-Ugh, oh. It doesn't work anymore. You may have noticed we used the wrong function to save out modified `octocat` object (we used `writeChar` rather than `writeLines`). That's fine, we can load the data in again in our `octocat_load.R` script... but we can't because we changed that script to use out local copy which we just broke.
+Uh-oh. It doesn't work anymore. You may have noticed we used the wrong function to save out modified `octocat` object (we used `writeChar` rather than `writeLines`). That's fine, we can load the data in again in our `octocat_load.R` script... but we can't because we changed that script to use out local copy which we just broke.
+
+Time to power up the time machine.
+
+### 6. Time Travel for Beginners
+
+In the git pane, click on the "History" button to open up the git timeline. The history window is broken in to to main parts. At the top you have your git timeline, which shows all of your commits in this project. The timeline shows you commit messages, the author of those commits, when the commit happened, and an "SHA" which you can think of as a unique ID for that commit. On the bottom is the **diff** or "difference" window. It will show you what files were changed in that commit, and *how* they changes. Sections in green were added, while sections in red were removed.
+
+Find the commit in the timeline where we changed `octocat_load.R`. Inside the **diff** window, on the box labeled `octocat_load.R`, click on the "View file @ \########" button in the upper right of the box. This will open the file as it was when you committed it. Use this to fix our current script.
 
   [Overview]: #overview
   [Problem Sets]: #problem-sets
@@ -145,4 +158,5 @@ Ugh, oh. It doesn't work anymore. You may have noticed we used the wrong functio
   [2. Your First Commit]: #your-first-commit
   [3. Making a Change]: #making-a-change
   [4. Adding More Files]: #adding-more-files
-  [5. Time Travel for Beginners]: #time-travel-for-beginners
+  [5. Breaking Things]: #breaking-things
+  [6. Time Travel for Beginners]: #time-travel-for-beginners
