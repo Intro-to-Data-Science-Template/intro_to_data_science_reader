@@ -87,7 +87,7 @@ writeLines(octocat, "./octocat.txt")
 
 `readLines` works like `read.csv` in that it is a function to load data into R. Instead of loading CSVs though, it loads text files. Execute this code and then commit the `octocat_load.R`, but *not* the newly created `octocat.txt` file.
 
-Create another new R script called `octocat_print.R`. Inside this file, copy the following code and copy the following into it:
+Create another new R script called `octocat_print.R`. Inside this file, copy the following code into it:
 
 ```
 # to load the local octocat data and print it
@@ -139,11 +139,11 @@ octocat = c(octocat, "ASCII Art of the Octocat Mascot for Github")
 writeChar(octocat, "./octocat.txt")
 ```
 
-Save the file, execute it, and commit it. We use `c()` here to combine octocat with our caption, and then assign it back to our `octocat` object.
+We use `c()` here to combine octocat with our caption, and then assign it back to our `octocat` object. Save the file, execute it, and commit it.
 
 Great, now we have out data updated, let's open up our `octocat_print.R` and run it again to see our beautiful art again.
 
-Uh-oh. It doesn't work anymore. You may have noticed we used the wrong function to save out modified `octocat` object (we used `writeChar` rather than `writeLines`). That's fine, we can load the data in again in our `octocat_load.R` script... but we can't because we changed that script to use out local copy which we just broke.
+Uh-oh. It doesn't work anymore. You may have noticed we used the wrong function to save out modified `octocat` object (we used `writeChar` rather than `writeLines`). That's fine, we can load the data in again in our `octocat_load.R` script... but we can't because we changed that script to use the local copy which we just broke.
 
 Time to power up the time machine. 
 
@@ -151,7 +151,7 @@ Time to power up the time machine.
 
 In the git pane, click on the "History" button to open up the git timeline. The history window is broken in to to main parts. At the top you have your git timeline, which shows all of your commits in this project. The timeline shows you commit messages, the author of those commits, when the commit happened, and an "SHA" which you can think of as a unique ID for that commit. On the bottom is the **diff** or "difference" window. It will show you what files were changed in that commit, and *how* they changes. Sections in green were added, while sections in red were removed.
 
-Find the commit in the timeline where we changed `octocat_load.R`. Inside the **diff** window, on the box labeled `octocat_load.R`, click on the "View file @ ########" button in the upper right of the box. This will open the file as it was when you committed it. Use this to fix our current script.
+Find the commit in the timeline where we changed `octocat_load.R`. Inside the **diff** window, on the box labeled `octocat_load.R`, click on the "View file @ ########" button in the upper right of the box. This will open the file as it was when you committed it. Use this to fix our `octocat_load.R` script, and save an working copy of `octocat.txt` again.
 
 
 
