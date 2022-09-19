@@ -22,6 +22,8 @@ format:
     -   [4. Adding More Files][]
     -   [5. Breaking Things][]
     -   [6. Time Travel for Beginners][]
+    -   [7. To the Cloud][]
+    -   [8. Conflict][]
 
 ## Overview
 
@@ -152,6 +154,42 @@ In the git pane, click on the "History" button to open up the git timeline. The 
 
 Find the commit in the timeline where we changed `octocat_load.R`. Inside the **diff** window, on the box labeled `octocat_load.R`, click on the "View file @ \########" button in the upper right of the box. This will open the file as it was when you committed it. Use this to fix our `octocat_load.R` script, and save an working copy of `octocat.txt` again.
 
+### 7. To the Cloud
+
+Now we're going to go over how to set our new repo up on Github. Head to <https://github.com/> and in the left hand side bar, click on the green "New" button. This will take us to the screen to create a new repo. Enter a name under "Repository name" and then scroll to the bottom of the page and click "Create repository."
+
+You will now see a page called "Quick Setup." Look at the second box that says "...or push an existing repository from the command line." We are going to use these commands to link our local repo with the one on Github. In R Studio, look at the lower left console pane, and click on the "Terminal" tab. Enter the three lines of code from Github into the terminal one by one. They should look like this (**but use the ones from Github, not these!**):
+
+    git remote add origin git@github.com:<REPO-DETAILS>
+    git branch -M main
+    git push -u origin main
+
+Once you have done that, right click or command click anywhere on R Studio and select "Reload." The screen will go blank a moment and return. When it does, go look at the git pane in the upper right. You will notice you now have the option to click on the "Pull" and "Push" buttons. Click "Push" now, wait for the process to finish, then refresh the page for your new repo on github. You should see your files there!
+
+### 8. Conflict
+
+So far so good, but sometimes things go awry. On Github, click on the `octocat_count.R` script to be taken to its page. In the toolbar above the code, on the right hand side, you will see a pencil icon. Click that to edit the file. Add a new comment to the second line that says:
+
+    # Conflict!
+
+Scroll to the bottom of the page and click "Commit Changes." Now, in R Studio, open up `octocat_count.R` and on line 2 there, add a comment that says:
+
+    # It happens.
+
+Save the file and commit it using the git pane.
+
+Now, press the "Pull" button in the git pane. This time an error will pop up saying you have a conflict. A conflict happens whenever git can't reconcile the differences between two versions of the same file, so it will ask you to resolve the conflict. In R Studio, around line 2 in `octocat_count.R`, you should now see the following:
+
+    <<<<<<< HEAD
+    # it happens
+    =======
+    # Conflict!
+    >>>>>>> <NUMBERS AND LETTERS>
+
+This is git pointing out where the two versions of the file are different. All the differences will exist between the two rows of arrows, the `<<<<<<<` and `>>>>>>>`. The line of equal signs, `=======`, separates the two versions.
+
+To resolve this, we need to pick which version we want to keep. For now, edit this area, so only the comments that says `# Conflict!` remains. That means you should also delete the `<<<<<<< HEAD`, equal signs, and `>>>>>>> <NUMBERS AND LETTERS>`. Save the file and commit it again. After you commit the changes, press the "Push" button to update github.
+
   [Overview]: #overview
   [Problem Sets]: #problem-sets
   [1. Make a New Repository]: #make-a-new-repository
@@ -160,3 +198,5 @@ Find the commit in the timeline where we changed `octocat_load.R`. Inside the **
   [4. Adding More Files]: #adding-more-files
   [5. Breaking Things]: #breaking-things
   [6. Time Travel for Beginners]: #time-travel-for-beginners
+  [7. To the Cloud]: #to-the-cloud
+  [8. Conflict]: #conflict
