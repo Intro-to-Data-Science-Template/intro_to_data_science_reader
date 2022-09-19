@@ -78,6 +78,14 @@ Explain the results of `5 + c(10, 20, 30)` and `c(1, 5, 10) + c(2, 4, 8)`. What 
 
 </div>
 
+<div class="answer">
+
+In the first example (`5 + c(10, 20, 30)`) five is being added to each element of the vector.
+
+In the second example (`c(1, 5, 10) + c(2, 4, 8)`) each element of the vector is being added with the element in the same position of the other vector.
+
+</div>
+
 Some functionalities of R only make sense on a vector, for example, taking the `mean()` or average. It would be pointless to take the average of one number!
 
 Try this:
@@ -94,6 +102,12 @@ Create a vector called `number_vec` of 10 numbers. The numbers can be any you li
 
 </div>
 
+<div class="answer">
+
+number_vec \<- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+</div>
+
 We can now start to do things to the object we created. Try using `class()` and `length()` on our `letter_vec` and `number_vec` objects.
 
 You can use vectors with each other as well. Try the following: `number_vec + number_vec`
@@ -103,6 +117,14 @@ You can ask for only part of a vector by using the square brackets `[ ]`. Say we
 <div class="question">
 
 Create a vector called `example_vector` containing `c(1, 3, 5, 7, 9, 11)`, and then get the values in the fourth, fifth, and sixth position.
+
+</div>
+
+<div class="answer">
+
+example_vector \<- c(1, 3, 5, 7, 9, 11)
+
+example_vector\[c(4, 5, 6)\]
 
 </div>
 
@@ -125,6 +147,12 @@ We can get the results for known values, but the unknown will stay unknown. This
 <div class="question">
 
 Imagine you are collecting data by asking people questions on a survey. When would you want to write down `NA`? Is there a difference between `NA` and someone responding "I don't know"?
+
+</div>
+
+<div class="answer">
+
+An `NA` is meant to represent *missing* data. For example, if you handed out a survey, and someone returned it to you without an answer. If someone wrote 'I don't know' that *is* an answer in itself, and thus not an `NA`.
 
 </div>
 
@@ -152,6 +180,15 @@ How many variables are there of each type in the survey dataframe?
 
 </div>
 
+<div class="answer">
+
+-   Logical: 6
+-   Integer: 3
+-   Numeric: 0
+-   Character: 14
+
+</div>
+
 Another good tool for starting to understand a dataframe is the `head()` function. `head()` will display the first handful of rows for you in the console so you can see what they look like. There is also the companion function of `tail()`, but that is used less often. Try both on our `survey` data before moving on.
 
 #### Subsetting
@@ -164,6 +201,12 @@ Using the `$` and the `mean()`, find the average hours of sleep our class gets p
 
 </div>
 
+<div class="answer">
+
+`mean(survey$hours_sleep)`
+
+</div>
+
 Another way to subset dataframes with with square brackets `[ ]`. Imaging a dataframe is like a map with a grid. You can find any spot on that map by finding the intersection of the grid coordinates. The same is true of a dataframe. For example, if I wanted the value in the third row and fourth column in our survey dataframe (it contains the value 27), I could ask for it by entering `survey[*row*, *column*]` or `survey[3, 4]`.
 
 <div class="question">
@@ -173,6 +216,14 @@ Get the values of each of the following:
 -   Row 5, column 5
 -   Row 2, column 20
 -   Row 13, column 11
+
+</div>
+
+<div class="answer">
+
+-   survey\[5,5\] = `r survey[5,5]`
+-   survey\[2,20\] = `r survey[2,20]`
+-   survey\[13,11\] = `r survey[13,11]`
 
 </div>
 
@@ -199,6 +250,12 @@ Now that we've got our vector, we can add it to our dataframe! All you have to d
 <div class="question">
 
 Put our `new_column_vector` in our `survey` dataframe, calling the new column `alphabet`.
+
+</div>
+
+<div class="answer">
+
+survey\$alphabet \<- new_column_vector
 
 </div>
 
