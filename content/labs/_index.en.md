@@ -16,6 +16,8 @@ All labs will be turned in through Github Classroom. You will set up your studen
 
 -   [Lab 0: Problem Solving Mini-Lab][]
 -   [Lab 1: R Coding][]
+-   [Lab 2: Exploratory Data Analyses (EDA)][]
 
   [Lab 0: Problem Solving Mini-Lab]: /intro_to_data_science_reader/labs/lab_0/lab_0.html
   [Lab 1: R Coding]: /intro_to_data_science_reader/labs/lab_1/lab-1-r-coding.html
+  [Lab 2: Exploratory Data Analyses (EDA)]: /intro_to_data_science_reader/labs/lab_2/lab-2-eda.html
