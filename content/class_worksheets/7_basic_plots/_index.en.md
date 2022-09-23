@@ -67,6 +67,12 @@ How many missing values are there in the `bill_length_mm` variable?
 
 </div>
 
+<div class="answer">
+
+2 `NA`s
+
+</div>
+
 If we wanted to get some information about one particular column in our data, we could also use the `summary()` function. `summary()` is a very versatile function in R, whose behavior changes depending on what you give it as an argument. For now, let's try it on a numeric vector like `penguins$bill_depth_mm` using `summary(penguins$bill_depth_mm)`. The result is called a "five-number summary" (even though there are six numbers here).
 
 The five-number summary includes the following (and the mean, because it's useful):
@@ -84,6 +90,12 @@ Use `summary()` on the `flipper_length_mm` column. What is the 1st quartile?
 
 </div>
 
+<div class="answer">
+
+summary(penguins\$flipper_length_mm)
+
+</div>
+
 ### 3. Tables
 
 The `table()` function is a super simple yet effective way of understanding your data set. It simply counts how many of each category exists in your data, and reports that back to you. For example, if you run:
@@ -97,6 +109,12 @@ It will tell you how many of our cases (rows) appeared on each island in the dat
 <div class="question">
 
 What is the resulting table telling us? Explain what the 0s in this table mean.
+
+</div>
+
+<div class="answer">
+
+This table shows how many penguins of each species were seen on each island. The 0s mean there were no penguins of that type seen on those islands.
 
 </div>
 
@@ -121,6 +139,12 @@ This question may be tricky. Why do we need to give `barplot()` the output from 
 
 </div>
 
+<div class="answer">
+
+This table shows how many penguins of each species were seen on each island. The 0s mean there were no penguins of that type seen on those islands.
+
+</div>
+
 #### Histogram
 
 Histograms are like bar plots, but for variables that are **continuous**, meaning there are no boundaries between them; this pretty much always means numeric data. Where barplots look at distinct categories, histograms look at numbers. Make a histogram of the `body_mass_g` variable using `hist(penguins$body_mass_g)`.
@@ -137,6 +161,12 @@ Run the following three commands. What is the difference in the plots they produ
 
 </div>
 
+<div class="answer">
+
+The number of breaks determines the number of bins. More bins seperate the body mass into smaller categories for plotting.
+
+</div>
+
 #### Scatter Plot
 
 A scatter plot is used to look at two **continuous** variables and compare them to each other, often to look for relationships. One relationship that may make sense in between `body_mass_g` and `bill_length_mm`; in other words, do larger penguins have longer bills? We can find out using the following:
@@ -148,6 +178,12 @@ Here we see `bill_length_mm` on the X axis, and `body_mass_g` on the Y axis. Eac
 <div class="question">
 
 Make a scatter plot looking at the relationship between `body_mass_g` and `flipper_length_mm`.
+
+</div>
+
+<div class="answer">
+
+plot(penguins$flipper_length_mm, penguins$body_mass_g)
 
 </div>
 
@@ -180,6 +216,10 @@ The last of the big five plot types is the box plot. The box plot is essentially
 <div class="question">
 
 Compare the results of `summary()` and `boxplot()` above. How do each of the components of a box plot align with the five-number summary (the mean isn't plotted).
+
+</div>
+
+<div class="answer">
 
 </div>
 
