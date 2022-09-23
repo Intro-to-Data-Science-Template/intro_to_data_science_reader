@@ -302,7 +302,7 @@ You can demonstrate proficiency in any reviewed assignment, **but can only fulfi
    <td style="text-align:left;font-weight: bold;background-color: #B3CDE3 !important;border-right:1px solid;"> Visualization Context </td>
    <td style="text-align:left;"> Produces data visualizations that are unclear, confusing, devoid of context, or impossible to understand without reading the text. </td>
    <td style="text-align:left;"> Produces data visualizations with readable axis labels, units, and legends (where appropriate). </td>
-   <td style="text-align:left;"> Produces data visualizations that are clear and understandable with minimal text captions. </td>
+   <td style="text-align:left;"> Produces data visualizations that are clear and understandable with minimal textual explanation. </td>
    <td style="text-align:left;border-right:1px solid;"> Produces data visualizations that are self-contained and can be understood on their own without textual explanation. </td>
    <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
   </tr>
