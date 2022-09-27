@@ -1,0 +1,236 @@
+---
+pre: <b>9/28. </b>
+title: "Aggregation and Merging Worksheet"
+weight: 10
+summary: "How to aggregate within datasets and merge across them."
+format:
+    hugo:
+      toc: true
+      output-file: "_index.en.md"
+      reference-links: true
+      code-link: true
+      
+---
+
+```{r, include=FALSE}
+answers = FALSE
+```
+
+```{r setup, include=FALSE}
+# Set knitr options
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, out.width = "70%", fig.align = "center")
+
+# Load packages
+# No packages needed, but you will need knitr (part of R markdown)
+```
+
+## Overview
+
+Aside from sub-setting, aggregating and merging data many be the most common task of a data scientist.
+
+## Problem Sets
+
+### 1. Aggregation using `group_by()` and `summarise()`
+
+Often times we want to know how different categories in our data compare to each other. This comparison let's us get a sense if one group is in some way different than others, and potentially make decisions based on that difference. For a simple example, lets look at our class survey data.
+
+```{r}
+survey = read.csv("https://raw.githubusercontent.com/Intro-to-Data-Science-Template/intro_to_data_science_reader/main/content/class_worksheets/4_r_rstudio/data/survey_data.csv")
+```
+
+If we `skim()` our data, we have quite a few variables we could group our cases by to make comparisons.
+
+```{r}
+library(skimr)
+
+skim(survey)
+```
+
+For now, let us explore if there is any difference between those that do and do not categorize a hot dog as a sandwich, given it nearly evenly splits the class. We ca do this using the `group_by()` function. In essence, we want to group our data by `TRUE` and `FALSE` in our `hotdog` column, and then perform some other analysis. We can direct that analysis using the `summarise()` function. For example:
+
+```{r}
+library(dplyr)
+
+survey |>
+  group_by(hotdog) |>
+  summarise(sleep = mean(hours_sleep))
+```
+
+In this example, we take our `survey` data, pipe it to `group_by()` where we specific we want to group by hotdog status, then pipe that grouped data to `summarize()` where we say we want the mean of our `hours_sleep` column in an output called `sleep`. We can see in our example that those that do not consider a hot dog a sandwich, at least in our class, manage to get slightly more sleep on average. 
+
+::: {.question}
+Try copying the format from our example, but group by birthday month, and get both the mean of `hours_sleep` and a table of `nerd`. Do you see any concerns with the output?
+:::
+
+```{r, include=answers, results='asis', echo=FALSE}
+cat("
+::: {.answer}
+survey |>
+  group_by(b_month) |>
+  summarise(
+    sleep = mean(hours_sleep),
+    nerd = table(nerd))
+
+We have so many groups, that many most likely only have one member anyway, so no real use grouping.
+:::
+")
+```
+
+### 2. Binding Dataframes
+
+To start, let's load in some data to practice our merging. Execute the following to create several dataframes we will use to practice.
+
+```{r}
+source("https://raw.githubusercontent.com/Epsian/table_join_lecture/main/src/2_merge_examples.R")
+```
+
+#### Join Vertically using `rbind`
+
+If you have two dataframes and want to combine them, you need to decide what direction you want to combine them in. If you would like to combine them vertically, or stack the rows on top of each other, you can use `rbind` or *row bind*. `rbind` is helpful if you have two dataframes with the same columns, and you want to combine the cases (rows). However, it will not work if the columns are different. `rbind` accepts an arbitrary number of dataframes, here we use two: `upper_rbind_df` and `lower_rbind_df`.
+
+```{r, eval=FALSE}
+rbind_outcome = rbind(upper_rbind_df, lower_rbind_df) 
+```
+
+```{r, fig.cap="`rbind` example 1", fig.alt="Two dataframes that merge well bertically using the rbind function", echo = FALSE}
+knitr::include_graphics("./img/1_1_rbind.png")
+```
+
+::: {.question}
+Try using `rbind` to combine our new `outcome` dataframe with `upper_rbind_df` again. Why does this work?
+:::
+
+```{r, include=answers, results='asis', echo=FALSE}
+cat("
+::: {.answer}
+Both of the dataframes still have the same columns. Even if rows are repeated, they can still stack vertically.
+:::
+")
+```
+
+#### Join Horizontally using `cbind`
+
+If you would like to combine two dataframes horizontally, so that you add more columns on to a dataframe, you can use `cbind` or *column bind*. The `cbind` function takes an arbitrary number of dataframes as it's arguments.
+
+```{r, eval=FALSE}
+cbind_outcome = cbind(left_cbind_df, right_cbind_df) 
+```
+
+```{r, fig.cap="`cbind` example 1", fig.alt="Two dataframes that merge well horizontally using the cbind function", echo = FALSE}
+knitr::include_graphics("./img/1_2_cbind.png")
+```
+
+We can see out new `outcome` dataframe was created as expected. This method can work, but you must be very confident about the structure of your data.
+
+::: {.question}
+Try using `cbind` to combine `left_cbind_df` with our `rbind_outcome` dataframe from above. What happens? Why is the result bad?
+:::
+
+```{r, include=answers, results='asis', echo=FALSE}
+cat("
+::: {.answer}
+cbind(left_cbind_df, rbind_outcome)
+
+It works, but produces a result we might not expect with repeated rows data.
+:::
+")
+```
+
+### 3. Merging Dataframes
+
+`cbind` may work in some situations, but is very "brittle" -- or easy to break -- with any changes to the data. A more reliable method of merging makes use of a common *key* between two sources of data. Think of a *key* like a luggage tag on a suitcase: it's a small bit of information that clearly links to things, even if they are separated. In terms of data, a *key* can be anything, like a numerical ID or a string, but they must always be unique. Joins that use the key method will be familiar to anyone who has used SQL in the past, as they follow the same naming convention as in that language.
+
+#### Inner Join
+
+An *inner join* tries to join two sets of data using a common *key*, keeping only the data that exists in both of the original data sets. This is commonly illustrated using a venn diagram similar to the one below. Only the area highlighted with green will be included in the output.
+
+```{r, fig.cap = "Inner Join - Venn Diagram", fig.alt = "A venn diagram with circles labeled data 1 and data 2. The intersection of them is highlighted with the text 'inner join'", echo = FALSE}
+knitr::include_graphics("./img/2_1_inner.png")
+```
+
+In the context of our data, it might look something like the following if we use hometown as our key. We can use the following code to do an *inner merge* using dplyr's `inner_join()` function. `inner_join()` requires three arguments, `x` and `y`, which are the dataframes we would like to merge, and `by` which is the key we would like to join by. We will be using `left_merge_df` and `right_merge_df`, and asking R to use `hometown` as the key to join by.
+
+```{r, eval=FALSE}
+library(dplyr)
+
+inner_outcome = inner_join(x = left_merge_df, y = right_merge_df, by = "hometown") 
+```
+
+```{r, fig.cap = "Inner Join - Example Data", fig.alt = "Two dataframes being joined by common hometowns, removing cases where there is no hometown match", echo = FALSE}
+knitr::include_graphics("./img/2_2_inner.png")
+```
+
+Everything seems in order. We can see that when using an *inner join*, cases where **both** dataframes have a single row with our key will be matched and joined into a single output dataframe. However, if there are rows in **either** data frame without a match, those rows will be dropped from our data.
+
+::: {.question}
+Create a new dataframe using `rbind()` called `double_left` which binds two copies of `left_merge_df` on top of each other. Then perform an inner join with this new `double_left` and `right_merge_df`. What happens? What was the problem here?
+:::
+
+```{r, include=answers, results='asis', echo=FALSE}
+cat("
+::: {.answer}
+double_left = rbind(left_merge_df, left_merge_df)
+inner_join(x = double_left, y = right_merge_df, by = 'hometown') 
+
+The matches are performed multiple times. This essentially doubles our data set, which can cause big problems later.
+:::
+")
+```
+
+#### Outer Join
+
+An *Outer Join* is the opposite of an *inner join*. Rather than just looking for those rows which have a *key* in common, it will join every row, regardless of the *keys*, inserting blank values where there is no match. You can get a sense of this merge with the venn diagram below, where the green indicates good matches, while the orange indicates partial matches.
+
+```{r, fig.cap = "Outer Join - Venn Diagram", fig.alt = "A venn diagram with circles labeled data 1 and data 2. The intersection of them is highlighted in green, while the edges are highlighted in orange", echo = FALSE}
+knitr::include_graphics("./img/3_1_outer.png")
+```
+
+In the context of our data, an *outer join* may look something like the following, again using hometown as our key. The code for an *outer join* using dplyr is `full_join()`.
+
+```{r, eval=FALSE}
+full_outcome = full_join(x = left_merge_df, y = right_merge_df, by = "hometown")
+```
+
+```{r, fig.cap = "Outer Join - Example Data", fig.alt = "Two dataframes being joined by common hometowns, adding rows for cases with no matches, but introducing NAs", echo = FALSE}
+knitr::include_graphics("./img/3_2_outer.png")
+```
+
+In this example, we see that an *outer join* will keep all available cases, but we introduce `NA` values into the resulting dataframe where no match could be made. This may or may not be an issue depending on what your next steps are.
+
+#### Left Join
+
+A *left join* allows you to pick one of the two dataframes you are joining and prioritize it. It essentially takes all of the cases in the dataframe on the 'left' side, and searches in 'right' dataframe to join what it can. Keeping with the venn diagram representations, it would look like the following:
+
+```{r, fig.cap = "Left Join - Venn Diagram", fig.alt = "A venn diagram with circles labeled data 1 and data 2. All of the data 1 circle is highlighted, but only the part od data 2 that intersects data 1 is highlighted", echo = FALSE}
+knitr::include_graphics("./img/4_1_left.png")
+```
+
+Using our example data, a *left join* would look like this. The R code is similar to the previous examples, in this case it is `left_join()`. Recall that in the function call, `x` is the first dataframe, or the "left" one.
+
+```{r, eval=FALSE}
+left_outcome = left_join(x = left_merge_df, y = right_merge_df, by = "hometown") 
+```
+
+```{r, fig.cap = "Left Join - Example Data", fig.alt = "Two dataframes being joined by common hometowns, keeping all of the left dataframe data, and adding the right dataframe data when available", echo = FALSE}
+knitr::include_graphics("./img/4_2_left.png")
+```
+
+We can see that while all of the data from our 'left' side is preserved, unmatched data on the 'right' is discarded. You can also technically do a *right join* using `right_join()`, which will do the same thing with sides reversed, but moving your prioritized data set to the left is more common.
+
+::: {.question}
+Try performing a right merge which creates the same outcome as our left merge above. Describe the differences. Why are these differences present?
+:::
+
+```{r, include=answers, results='asis', echo=FALSE}
+cat("
+::: {.answer}
+right_outcome = right_join(x = left_merge_df, y = right_merge_df, by = 'hometown') 
+:::
+")
+```
+
+
+
+
+
+
