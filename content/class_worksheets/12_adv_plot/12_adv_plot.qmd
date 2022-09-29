@@ -1,0 +1,29 @@
+---
+pre: <b>10/3. </b>
+title: "Advanced Plotting"
+weight: 10
+summary: "How to make our plots actually look nice."
+format:
+    hugo:
+      toc: true
+      output-file: "_index.en.md"
+      reference-links: true
+      code-link: true
+      
+---
+
+```{r, include=FALSE}
+answers = FALSE
+```
+
+## Overview
+
+Visualizing data is very important for understanding that data. All sorts of otherwise unknown patterns can slip by if we don't take the time to look at our data. For example:
+
+![Datasaurus - Alberto Cairo](img/datasaurus.png)
+
+While the Datasaurus is fun, it is also a cautionary tale. Along the top of the plot there are various numerical representations of the data, all of which look completely normal! Such oddities can easily slip past us without proper visualization.
+
+Visualization also serve another crucial purpose; to communicate our findings with other people. Dealing with and understanding data is an acquired skill, one you're already more familiar with than the vast majority of people. Visualizations often allow u to communicate data meaning with people who are not as well acquanted with data.
+
+## Problem Sets
