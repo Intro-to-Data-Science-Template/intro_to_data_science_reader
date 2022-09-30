@@ -24,6 +24,73 @@ Visualizing data is very important for understanding that data. All sorts of oth
 
 While the Datasaurus is fun, it is also a cautionary tale. Along the top of the plot there are various numerical representations of the data, all of which look completely normal! Such oddities can easily slip past us without proper visualization.
 
-Visualization also serve another crucial purpose; to communicate our findings with other people. Dealing with and understanding data is an acquired skill, one you're already more familiar with than the vast majority of people. Visualizations often allow u to communicate data meaning with people who are not as well acquanted with data.
+Visualization also serves another crucial purpose; to communicate our findings with other people. Dealing with and understanding data is an acquired skill, one you're already more familiar with than the vast majority of people. Visualizations often allow you to quickly communicate your findings with people who are not as well acquainted with data.
+
+Today we will be learning some more advanced plotting tools. While we will often rely on the 5 canonical plots we learned before, a lot can be done to spruce them up. We will primarily be using the `ggplot2` package for this task. While it is very powerful, it takes more effort to make even a simple ggplot. That effort is often worth it however if the intent is to share your visualization.
+
+I highly recommend you open up the [ggplot2 cheatsheet](https://www.rstudio.org/links/data_visualization_cheat_sheet) while you work.
+
+## The Data
+
+Load in the data for today by running the following:
+
+```{r}
+nbi_hampshire = read.csv("https://raw.githubusercontent.com/Intro-to-Data-Science-Template/intro_to_data_science_reader/main/content/class_worksheets/12_adv_plot/data/nbi_hampshire.csv")
+```
+
+Today we will be using data from the 2022 [National Bridge Inventory Dataset](https://www.fhwa.dot.gov/bridge/nbi/ascii.cfm). Specifically, we will be looking at vehicle bridges in Hampshire county (where we are). We’re going to look at what kinds of variables might contribute to poor bridge conditions, where there are poor bridge conditions, and which entities are responsible for maintaining them. The [data documentation](https://www.fhwa.dot.gov/bridge/mtguide.pdf) for this dataset is quite thick, so I will provide you with a data dictionary for today.
+
+STRUCTURE_NUMBER_008
+:   Unique ID for the bridge
+
+COUNTY_CODE_003_L
+:   Name of the county where the bridge is located
+
+
+ROUTE_PREFIX_005B_L
+:   Route signing prefix for the inventory route
+
+MAINTENANCE_021_L
+:   The actual name(s) of the agency(s) responsible for the maintenance of the structure
+
+YEAR_BUILT_027
+:   The year of construction of the structure
+
+ADT_029
+:   The average daily traffic volume for the inventory route based on most recent available data
+
+STRUCTURE_KIND_043A_L
+:   The kind of material and/or design of the structure
+
+STRUCTURAL_EVAL_067
+:   A rating of the structural evaluation of the bridge based on inspections of its main structures, substructures, and/or its load ratings
+
+BRIDGE_IMP_COST_094
+:   Estimated costs for bridge improvements
 
 ## Problem Sets
+
+### 1. Install Esquisse
+
+Today we will be using a package called `esquisse` to help us make our plots. It provides an interactive interface to put together the basic components of our plots. It is not perfect, and cannot be used to create a fully realized visualization, but it can often do the first 50% for you pretty quickly. Install it using the following:
+
+```{r}
+install.packages("esquisse")
+```
+
+{{% notice info %}}
+You will need to fully close R Studio and restart it after installing `esquisse`. This is so the addin functionality can work.
+{{% /notice %}}
+
+### 2. Learning the Esquisse UI
+
+Once you have restarted R Studio and re-loaded the data, we can start using using `esquisse` to build draft plots. Start the UI by going to the **Addins** menu at the top of R Studio and clicking on the **'ggplot2' builder** option under `esquisse`.
+
+![](img/esquisse_1.png)
+
+`esquisse` will load for a second, and then ask you to select a data source. Pick our `nbi_hampshire` dataframe and click **Import Data**.
+
+![](img/esquisse_2.png)
+
+
+
