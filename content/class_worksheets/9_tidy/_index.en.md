@@ -51,6 +51,16 @@ If seen in a cell from a dataframe, are the following examples of "tidy" data? R
 
 </div>
 
+<div class="answer">
+
+1.  TRUE
+2.  FALSE. It is mixing two distinct pieces of information: how many things there were and what those things were.
+3.  TRUE
+4.  FALSE. It contains two pieces of data, a start year and an end year. If this was the difference between those two years, it would be tidy.
+5.  FALSE. It contains a definition of the data, and the data itself. If we want this data to be about names, it should be in a NAME column.
+
+</div>
+
 ### 2. Re-Coding Data Types
 
 When we re-code data, we don't actually change the data; for example, we may re-code a variable that is initially `0` and `1` to `TRUE` and `FALSE`. Both of these represent the same thing, but R is better able to work on this `logical` data type if it is actually a `logical` in R, rather than a `numeric` representation.
@@ -85,6 +95,21 @@ Try re-coding the following two vectors using each of the `as.XXXX()` functions 
 
 -   `test_vec_1 <- c("1", "5", "45", "22", "99", "45")`
 -   `test_vec_2 <- c(TRUE, FALSE, TRUE, TRUE, FALSE)`
+
+</div>
+
+<div class="answer">
+
+-   tect_vec_1
+    -   `as.character()` - Nothing happens. It's already a character.
+    -   `as.factor()` - Turns the characters into a factor
+    -   `as.numeric()` - Turns our numbers into a proper numeric vector
+    -   `as.logical()` - R dosn't know how to turn these characters into logical
+-   test_vec_2
+    -   `as.character()` - Changes our `TRUE`s and `FALSE`s into the WORD 'TRUE' and 'FALSE'
+    -   `as.factor()` - Turns the logicals into a factor, they no longer mean `TRUE` and `FALSE`, just categories with those names
+    -   `as.numeric()` - `TRUE` and `FALSE` are often coded as 1 and 0, so R knows how to make that change
+    -   `as.logical()` - Nothing happens.
 
 </div>
 
@@ -170,6 +195,12 @@ Now we've re-coded some data, but still have our original!
 <div class="question">
 
 Create a new column in our `survey` dataframe called `hotdog_text`, re-coding the `hotdog` column to: "I think a hot dog is a sandwich" for `TRUE` and "I do not think a hot dog is a sandwich" for `FALSE`.
+
+</div>
+
+<div class="answer">
+
+survey$hotdog_text = ifelse(survey$fict == TRUE, 'I think a hot dog is a sandwich', 'I do not think a hot dog is a sandwich')
 
 </div>
 

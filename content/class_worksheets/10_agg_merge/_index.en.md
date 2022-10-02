@@ -132,6 +132,14 @@ Try copying the format from our example, but group by birthday month, and get bo
 
 </div>
 
+survey \|\>
+group_by(b_month) \|\>
+summarise(
+sleep = mean(hours_sleep),
+nerd = table(nerd))
+
+We have so many groups, that many most likely only have one member anyway, so no real use grouping.
+
 ### 2. Binding Dataframes
 
 To start, let's load in some data to practice our merging. Execute the following to create several dataframes we will use to practice.
@@ -159,6 +167,8 @@ Try using `rbind` to combine our new `outcome` dataframe with `upper_rbind_df` a
 
 </div>
 
+Both of the dataframes still have the same columns. Even if rows are repeated, they can still stack vertically.
+
 #### Join Horizontally using `cbind`
 
 If you would like to combine two dataframes horizontally, so that you add more columns on to a dataframe, you can use `cbind` or *column bind*. The `cbind` function takes an arbitrary number of dataframes as it's arguments.
@@ -179,6 +189,10 @@ We can see out new `outcome` dataframe was created as expected. This method can 
 Try using `cbind` to combine `left_cbind_df` with our `rbind_outcome` dataframe from above. What happens? Why is the result bad?
 
 </div>
+
+cbind(left_cbind_df, rbind_outcome)
+
+It works, but produces a result we might not expect with repeated rows data.
 
 ### 3. Merging Dataframes
 
@@ -213,6 +227,11 @@ Everything seems in order. We can see that when using an *inner join*, cases whe
 Create a new dataframe using `rbind()` called `double_left` which binds two copies of `left_merge_df` on top of each other. Then perform an inner join with this new `double_left` and `right_merge_df`. What happens? What was the problem here?
 
 </div>
+
+double_left = rbind(left_merge_df, left_merge_df)
+inner_join(x = double_left, y = right_merge_df, by = 'hometown')
+
+The matches are performed multiple times. This essentially doubles our data set, which can cause big problems later.
 
 #### Outer Join
 
@@ -263,6 +282,8 @@ We can see that while all of the data from our 'left' side is preserved, unmatch
 Try performing a right merge which creates the same outcome as our left merge above. Describe the differences. Why are these differences present?
 
 </div>
+
+right_outcome = right_join(x = left_merge_df, y = right_merge_df, by = 'hometown')
 
   [Overview]: #overview
   [Problem Sets]: #problem-sets
