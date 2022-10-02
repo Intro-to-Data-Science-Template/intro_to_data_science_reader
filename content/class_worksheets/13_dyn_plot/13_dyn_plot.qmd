@@ -1,0 +1,29 @@
+---
+pre: <b>10/5. </b>
+title: "Dynamic Plotting"
+weight: 13
+summary: "How to elevate your plots."
+format:
+    hugo:
+      toc: true
+      output-file: "_index.en.md"
+      reference-links: true
+      code-link: true
+      
+---
+
+```{r, include=FALSE}
+answers = FALSE
+
+library(ggplot2)
+```
+
+## Overview
+
+
+## The Data
+
+
+## Problem Sets
+
+### 1. 
