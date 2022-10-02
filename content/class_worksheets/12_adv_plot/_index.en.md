@@ -1,7 +1,7 @@
 ---
 pre: <b>10/3. </b>
 title: "Advanced Plotting"
-weight: 10
+weight: 12
 summary: "How to make our plots actually look nice."
 format:
     hugo:
@@ -19,6 +19,8 @@ format:
 -   [Problem Sets][]
     -   [1. Install Esquisse][]
     -   [2. Learning the Esquisse UI][]
+    -   [3. Your First ggplot][]
+    -   [4. ggplot2 Code][]
 
 ## Overview
 
@@ -99,11 +101,85 @@ After you have imported your data, you will be taken to the plot builder. I have
 
 ![][3]
 
+### 3. Your First ggplot
+
+Open up the plot builder, and import the `nbi_hampshire` dataframe. For our first variable, click and drag `YEAR_BUILT_027` into the "X" elements box. This will put `YEAR_BUILT_027` on our X axis. Next, click and drag `STRUCTURAL_EVAL_067` into the "Y" element box to place in on the Y axis. In a moment the plot preview area should update, creating a scatter plot.
+
+![][4]
+
+You can continue adding variables to elements to further develop the plot.
+
+<div class="question">
+
+Click and drag the `ROUTE_PREFIX_005B_L` variable into the "color" element. How does this change the plot?
+
+</div>
+
+Once you have added the new element, click on the plot type window next to the variables. In the menu that pops up, select "Jitter." A jitter-ed scatter plot adds a little random noise to the dot locations so that multiple dots that are in the same spot can be seen.
+
+![][5]
+
+Once that is done, look toward the bottom of the plot builder at the options menus. In the "Labels & Title" menu, add a title, labels for the X and Y axes, and a label for the colors.
+
+![][6]
+
+You can add further refinements if you would like. Once you are done, go to the last option menu that says "Code." Open that menu to see the `ggplot2` code creating your plot! Copy the code and paste it into a script to continue working on it.
+
+![][7]
+
+### 4. ggplot2 Code
+
+`esquisse` is a helpful shortcut in getting started, but you will almost always need to do some fine-tuning of the resulting code. The first step of that however is understanding all the component parts.
+
+`ggplot` builds plots in layers. It combines those layers using a (completely unique, not used for anything else) syntax which uses the `+` sign to combine layers. The most common layers are as follows, and you should be able to see them in your `esquisse` output.
+
+`ggplot(<DATA>) +`
+:   Here is where you define the dataframe you are working with. You can use the column names from this dataframe in the rest of the ggplot code without using the dataframe name and `$`.
+
+`aes(x = <VARIABLE>, y = <VARIABLE>, color = <VARIABLE>) +`
+:   The `aes()` or "aesthetic mappings" tell ggplot what variables belong where. These are the elements boxes we see in `esquisse`. You can either define the `aes` alone, in which case it will use the same variables for all layers of the plot. Alternatively, you can define the `aes` for a specific `geom_XXXX()` layer as we will see next.
+
+`geom_jitter(size = <VALUE>) +`
+:   Next up comes out `geom_XXXX()` layers. One geom defines one type of plot to layer on. For example, here we have a `geom_jitter()` which adds a jittered scattered plot layer. We could also use a `geom_bar()` for a bar plot, a `geom_histogram()` for a histogram, etc. We could define `aes` inside a geom if we wanted, instead of outside like we did before, in which case the data would *only apply for that layer*. We could thus theoretically layer on multiple datasets in one plot.
+
+`labs() +`
+:   The `labs()` function lets us add labels, titles, and captions to our plot. You will usually at least want to add the `title = <CHARACTER>`, `x = <CHARACTER>`, and `y = <CHARACTER>` arguments.
+
+`theme_minimal()`
+:   ggplot has a number of pre-defined themes you can use. You can find the one you like most, but I typically use `theme_minimal()` as it cuts away everything that isn't useful.
+
+All of these elements build up to something that will look about like this:
+
+``` r
+ggplot(nbi_hampshire) +
+  aes(
+    x = YEAR_BUILT_027,
+    y = STRUCTURAL_EVAL_067,
+    color = ROUTE_PREFIX_005B_L
+  ) +
+  geom_jitter(size = 1.5) +
+  labs(title = "Vehicle Bridges in Hampshire County",
+       x = "Year",
+       y = "Structural Evaluation Score",
+       color = "Type") +
+  theme_minimal()
+```
+
+<img src="12_adv_plot_files/figure-gfm/unnamed-chunk-5-1.png" width="768" />
+
+<div class="question">
+
+Create a box plot using ggplot/esquisse which shows `STRUCTURAL_EVAL_067` by `MAINTENANCE_021_L`.
+
+</div>
+
   [Overview]: #overview
   [The Data]: #the-data
   [Problem Sets]: #problem-sets
   [1. Install Esquisse]: #install-esquisse
   [2. Learning the Esquisse UI]: #learning-the-esquisse-ui
+  [3. Your First ggplot]: #your-first-ggplot
+  [4. ggplot2 Code]: #ggplot2-code
   [Datasaurus - Alberto Cairo]: img/datasaurus.png
   [ggplot2 cheatsheet]: https://www.rstudio.org/links/data_visualization_cheat_sheet
   [National Bridge Inventory Dataset]: https://www.fhwa.dot.gov/bridge/nbi/ascii.cfm
@@ -111,3 +187,7 @@ After you have imported your data, you will be taken to the plot builder. I have
   [1]: img/esquisse_1.png
   [2]: img/esquisse_2.png
   [3]: img/esquisse_3.png
+  [4]: img/esquisse_4.png
+  [5]: img/esquisse_5.png
+  [6]: img/esquisse_6.png
+  [7]: img/esquisse_7.png
