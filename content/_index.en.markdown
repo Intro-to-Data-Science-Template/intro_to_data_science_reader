@@ -182,7 +182,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #E6F5C9 !important;"> 5 </td>
    <td style="text-align:left;"> 10/5/2022 (Wed) </td>
-   <td style="text-align:left;"> Interactive Plotting </td>
+   <td style="text-align:left;"> Dynamic Plotting </td>
    <td style="text-align:left;"> <ol>
 <li><a href="https://www.tylervigen.com/spurious-correlations">Scroll through Spurious Correlations</a></li>
 <li><a href="https://guns.periscopic.com/">Explore U.S. Gun Deaths</a></li>
