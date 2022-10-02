@@ -41,7 +41,7 @@ I highly recommend you open up the [ggplot2 cheatsheet][] while you work.
 Load in the data for today by running the following:
 
 ``` r
-nbi_hampshire = read.csv("https://raw.githubusercontent.com/Intro-to-Data-Science-Template/intro_to_data_science_reader/adv_plot/content/class_worksheets/12_adv_plot/data/nbi_hampshire.csv")
+nbi_hampshire = read.csv("https://raw.githubusercontent.com/Intro-to-Data-Science-Template/intro_to_data_science_reader/main/content/class_worksheets/12_adv_plot/data/nbi_hampshire.csv")
 ```
 
 Today we will be using data from the 2022 [National Bridge Inventory Dataset][]. Specifically, we will be looking at vehicle bridges in Hampshire county (where we are). We're going to look at what kinds of variables might contribute to poor bridge conditions, where there are poor bridge conditions, and which entities are responsible for maintaining them. The [data documentation][] for this dataset is quite thick, so I will provide you with a data dictionary for today.
