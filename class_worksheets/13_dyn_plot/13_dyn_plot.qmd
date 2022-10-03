@@ -1,0 +1,325 @@
+---
+pre: <b>10/5. </b>
+title: "Dynamic Plotting"
+weight: 13
+summary: "How to elevate your plots."
+format:
+    hugo:
+      toc: true
+      output-file: "_index.en.md"
+      reference-links: true
+      code-link: true
+      
+---
+
+```{r, include=FALSE}
+answers = FALSE
+
+library(ggplot2)
+```
+
+## Overview
+
+We have now learned how to make some nicer looking plots, but there is still room for improvement. All plots should tell a story, and you can use specific elements to really draw a viewers attention to that story. Today I'll be showing a few tools to do that. You won't need everything you see today for every plot, but they are important tools to have in your toolbox. Note that while I will be using a scatter plot throughout the worksheet today, the same tricks can be applied to any kind of plot.
+
+## The Data
+
+Today we will be using data from the Environmental Protection Agency (EPA) [Fuel Economy data](https://fueleconomy.gov/). It comes with the `ggplot2` package, and we can load it into the environment using the following (only *after* you have loaded `ggplot2`):
+
+```{r}
+library(ggplot2)
+
+mpg = data.frame(mpg)
+```
+
+Here is a rundown of what the variables are:
+
+manufacturer
+:   manufacturer name
+
+model
+:   model name
+
+displ
+:   engine displacement, in liters
+
+year
+:   year of manufacture
+
+cyl
+:   number of cylinders
+
+trans
+:   type of transmission
+
+drv
+:   the type of drive train, where f = front-wheel drive, r = rear wheel drive, 4 = 4wd
+
+cty
+:   city miles per gallon
+
+hwy
+:   highway miles per gallon
+
+fl
+:   fuel type
+
+class
+:   "type" of car
+
+## Problem Sets
+
+### 0. Make a Plot
+
+Before we start making a fancy plot, we need a basic plot. I will provide the code for one here so everyone is starting from the same place.
+
+```{r}
+ggplot(mpg) +
+  aes(x = displ, y = hwy) +
+  geom_point(size = 1.5) +
+  labs(
+    x = "Engine Displacement",
+    y = "Highway MPG",
+    title = "Highway MPG by Engine Size",
+    caption = "Source: https://fueleconomy.gov/"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold"))
+```
+
+::: {.question}
+We will be modifying this plot for the remainder of the worksheet. Make sure you understand all the parts! 
+:::
+
+### 1. Adding Labels to a ggplot
+
+In plot terminology, labels are text we add to a plot to explain some element; we add labels to the axes for example. We can also add labels to the data itself if it will help us tell our story. It's easy to go too far though, so this is often used sparingly.
+
+There are several methods to add labels, but I'm going to show you the most general one. We start by adding a new column to our dataframe, which we'll call `labels`.
+
+::: {.question}
+Add a new `labels` column to our `mpg` dataframe. For now, just copy the `model` column.
+:::
+
+```{r, include=answers, results='asis', echo=FALSE}
+cat("
+::: {.answer}
+mpg$labels = mpg$model
+:::
+")
+```
+
+Let's see how we can incorporate these labels. 
+
+::: {.question}
+Modify the plot above by adding a new argument to the `aes()` function called `label`, and provide it our new `labels` column. Then, add a new gemom, `geom_label()`, to the ggplot code. In the text geom, include the argument `vjust = -1` to move the labels a bit so they aren't right on top of our points (which makes them hard to read).
+:::
+
+```{r, include=answers, results='asis', echo=FALSE}
+cat('
+::: {.answer}
+ggplot(mpg) +
+  aes(x = displ, y = hwy, label = labels) +
+  geom_point(size = 1.5) +
+  labs(
+    x = "Engine Displacement",
+    y = "Highway MPG",
+    title = "Highway MPG by Engine Size",
+    caption = "Source: https://fueleconomy.gov/"
+  ) +
+  geom_label(vjust = -1) +
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold"))
+:::
+')
+```
+
+If all went according to plan, we should have labels! Not the nicest to look at though. We need to be selective about where we add our labels. Let's cut back a bit.
+
+::: {.question}
+Fill the `lables` column with `NA`s. Then, use sub-setting to add a label only for rows where the `class` is "midsize."
+:::
+
+```{r, include=answers, results='asis', echo=FALSE}
+cat('
+::: {.answer}
+mpg$labels = NA
+
+mpg$labels = ifelse(mpg$class == "midsize", "Midsize", NA)
+:::
+')
+```
+
+### 2. Isolating Elements
+
+We're getting closer. Adding text to a plot can he helpful, but only for a small handful of points. If we want to highlight a whole group of points, some other method is typically more helpful. Let's try using color to highlight our midsize cars. We can do this by adding another layer on top of our current points, but only for those we want to highlight.
+
+First we need to remove the `label` argument and text geom we added in the last section. Next, I add a new `geom_point()` below the one we already have. I'm going to highlight the cars in the data where the model is a "corvette" (a famous sports car). I also added a subtitle to explain the highlights. You can see the results below:
+
+```{r}
+ggplot(mpg) +
+  aes(x = displ, y = hwy) +
+  geom_point(size = 1.5) +
+  # This geom is new, and let's us highlight specific points
+  geom_point(data = mpg[mpg$model == "corvette",], aes(x = displ, y = hwy), color = "red", size = 3) +
+  labs(
+    x = "Engine Displacement",
+    y = "Highway MPG",
+    title = "Highway MPG by Engine Size",
+    # add subtitle to explain highlights
+    subtitle = "Corvettes Highlighted in Red",
+    caption = "Source: https://fueleconomy.gov/"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold"))
+```
+
+Now our plot highlights the corvettes in our data with a specific color! Let's go one step further and add a call-out for those highlights. Where before we were adding labels to specific data points, we can also arbitrarily add text as a new layer in ggplot using the `annotate()` function like the following:
+
+```{r}
+ggplot(mpg) +
+  aes(x = displ, y = hwy) +
+  geom_point(size = 1.5) +
+  # This geom is new, and let's us highlight specific points
+  geom_point(data = mpg[mpg$model == "corvette",], aes(x = displ, y = hwy), color = "red", size = 3) +
+  labs(
+    x = "Engine Displacement",
+    y = "Highway MPG",
+    title = "Highway MPG by Engine Size",
+    # add subtitle to explain highlights
+    subtitle = "Corvettes Highlighted in Red",
+    caption = "Source: https://fueleconomy.gov/"
+  ) +
+  # add annotation
+  annotate(geom = "label", x = 6.25, y = 28, label = "Corvettes", color = "red") +
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold"))
+```
+
+Such call-outs can be a great way to help tell the story in your data. In this case we are showing how most cars follow a common trend, except these very high powered and unusual sports cars.
+
+::: {.question}
+Modify the code above to highlight and annotate another model of car. 
+:::
+
+```{r, include=answers, results='asis', echo=FALSE}
+cat('
+::: {.answer}
+Varies.
+:::
+')
+```
+
+### 3. Make it Interactive
+
+Making an interactive plot can be a complex task, and often requires a mix of data science and web development skills. We are going to be taking the easier route and relying on our new-found ggplot capabilities. Using the `plotly` package in R, we can quickly turn ggplots into interactive versions of themselves. 
+
+First we will need to install `plotly`:
+
+```{r eval=FALSE}
+install.packages("plotly")
+```
+
+After that we can load in in using `library()`:
+
+```{r}
+library(plotly)
+```
+
+`plotly` relies on the same layer-based logic as ggplot, but is slightly different. It is completely possible to build a `plotly` plot from scratch like a `ggplot`. For example:
+
+```{r}
+plot_ly(mpg, type = "scatter", mode = "markers") |>
+  add_markers(x = mpg$displ, y = mpg$hwy) |>
+  layout(title = "Highway MPG by Engine Size",
+         xaxis = list(title = "Engine Displacement"),
+         yaxis = list(title = "Highway MPG"))
+```
+
+However, it also has a very helpful function called `ggplotly()` which we can wrap around our ggplot to convert it automatically:
+
+```{r}
+mpg_ggplot = ggplot(mpg) +
+  aes(x = displ, y = hwy) +
+  geom_point(size = 1.5) +
+  labs(
+    x = "Engine Displacement",
+    y = "Highway MPG",
+    title = "Highway MPG by Engine Size",
+    caption = "Source: https://fueleconomy.gov/"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold"))
+
+ggplotly(mpg_ggplot)
+```
+
+Ta-Da! Quick and easy interactive plot. By default we can hover over the data points to get a readout of where the points sit on our X and Y axis. We can also add custom information using a little trickery. We can add a fake aesthetic in our `aes()` call to "text" and write a custom message for our pop-ups. This will rely on some information about working with text and HTML that we won't cover until later, but I want you to know it is possible.
+
+```{r}
+mpg_ggplot = ggplot(mpg) +
+  aes(x = displ, y = hwy,
+      text = paste0("CAR INFO:</br></br>",
+                    "Engine Displacement: ", displ,
+                    "</br>Highway MPG: ", hwy,
+                    "</br>Model: ", model)
+      ) +
+  geom_point(size = 1.5) +
+  labs(
+    x = "Engine Displacement",
+    y = "Highway MPG",
+    title = "Highway MPG by Engine Size",
+    caption = "Source: https://fueleconomy.gov/"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold"))
+
+ggplotly(mpg_ggplot, tooltip = "text")
+```
+
+That's handy. The same process can work for most plot types we have covered so far in class.
+
+::: {.question}
+Use the `ggplotly()` function to make your own custom plot from above (with the new highlights on some class of car) interactive!
+:::
+
+```{r, include=answers, results='asis', echo=FALSE}
+cat('
+::: {.answer}
+Varies.
+:::
+')
+```
+
+### 4. Make it Accessible
+
+The last thing I want us to think about regarding out plots is accessibility. Accessibility broadly is an area of study dedicated to making sure people of all different abilities can equally access your content. Many people make it their whole career to study good accessibility practices (like our own [Dr. Cao](https://www.smith.edu/academics/faculty/shiya-cao) in SDS!). Today I will just give you a few things to keep in mind while making your plots.
+
+#### Color Blindness
+
+First is to be aware of your color choices. There are many different ways in which your colors you choose may be difficult for some people to interpret. We want to make sure our color palette is as clear as possible for everyone. A tool I like to help with this is [Viz Palette](https://projects.susielu.com/viz-palette). It will help you build a color palette, and then see what it would look like if you had various difficulties seeing color. 
+
+#### Resolution
+
+Not only do high resolution plots look better, they are also easier to understand for people with vision difficulties. There are some tricks in R for getting nice crisp plots. The first is to export them in a "vector" rather than "raster" format. A vector format essentially converts your plot into a long formula which a computer can use to draw the plot no matter what size it is. This is compared to a raster format which has a certain number of pixels, or dots, and it can never be any larger than that.
+
+There aren't many tricks for this, aside from this: when possible, export your plots as an SVG or PDF file. These are both options when you click the "Export" button in the plots pane to the right. Just know that sometimes whatever service you are using won't accept them, and you'll need to use something else.
+
+#### Alt Text
+
+Whenever you are working online, it is possible to include certain metadata along with your plots. One of the most important you can include is called "Alt Text." This text is typically a description of whatever the thing is it is attached to. This alt text is used by software called screen readers, which will use the text to describe the thing to someone who cannot see the screen at all.
+
+Whenever you are authoring a R Markdown or quarto document, you can include alt text for the images you include. For example, you can include an image using the following syntax:
+
+```
+![Cpation for image](./path/to/imag.svg "Alt text that describes the image")
+```
+
+For example, try hovering your mouse over this plot for a few seconds:
+
+```
+![Alt Text Example](img/alt_text.png "This plot shows engine displacement on the X axis compared against the highway miles per gallon on the Y axis. Corvette cars are outliers wither higer miles per gallon despire their larg engines")
+```
+
+![Alt Text Example](img/alt_text.png "This plot shows engine displacement on the X axis compared against the highway miles per gallon on the Y axis. Corvette cars are outliers wither higer miles per gallon despire their larg engines.")
+
