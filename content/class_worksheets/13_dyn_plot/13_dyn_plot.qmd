@@ -21,9 +21,159 @@ library(ggplot2)
 ## Overview
 
 
+
+
 ## The Data
 
+Today we will be using data from the Environmental Protection Agency (EPA) [Fuel Economy data](https://fueleconomy.gov/). It comes with the `ggplot2` package, and we can load it into the environment using the following (only *after* you have loaded `ggplot2`):
+
+```{r}
+library(ggplot2)
+
+mpg = data.frame(mpg)
+```
+
+Here is a rundown of what the variables are:
+
+manufacturer
+:   manufacturer name
+
+model
+:   model name
+
+displ
+:   engine displacement, in liters
+
+year
+:   year of manufacture
+
+cyl
+:   number of cylinders
+
+trans
+:   type of transmission
+
+drv
+:   the type of drive train, where f = front-wheel drive, r = rear wheel drive, 4 = 4wd
+
+cty
+:   city miles per gallon
+
+hwy
+:   highway miles per gallon
+
+fl
+:   fuel type
+
+class
+:   "type" of car
 
 ## Problem Sets
 
-### 1. 
+### 0. Make a Plot
+
+Before we start making a fancy plot, we need a basic plot. I will provide the code for one here so everyone is starting from the same place.
+
+```{r}
+ggplot(mpg) +
+  aes(x = displ, y = hwy) +
+  geom_jitter(size = 1.5) +
+  labs(
+    x = "Engine Displacement",
+    y = "Highway MPG",
+    title = "Highway MPG by Engine Size",
+    caption = "Source: https://fueleconomy.gov/"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold"))
+```
+
+::: {.question}
+We will be modifying this plot for the remainder of the worksheet. Make sure you understand all the parts! 
+:::
+
+### 1. Adding Labels to a ggplot
+
+In plot terminology, labels are text we add to a plot to explain some element; we add labels to the axes for example. We can also add labels to the data itself if it will help us tell our story. It's easy to go too far though, so this is often used sparingly.
+
+There are several methods to add labels, but I'm going to show you the most general one. We start by adding a new column to our dataframe, which we'll call `labels`.
+
+::: {.question}
+Add a new `labels` column to our `mpg` dataframe. For now, just copy the `model` column
+:::
+
+```{r, include=answers, results='asis', echo=FALSE}
+cat("
+::: {.answer}
+mpg$labels = mpg$model
+:::
+")
+```
+
+Let's see how we can incorporate these labels. 
+
+::: {.question}
+Modify the plot above by adding a new argument to the `aes()` function called `label`, and provide it our new `labels` column. Then, add a new gemom, `geom_text()`, to the ggplot code.
+:::
+
+```{r, include=answers, results='asis', echo=FALSE}
+cat('
+::: {.answer}
+ggplot(mpg) +
+  aes(x = displ, y = hwy, label = labels) +
+  geom_jitter(size = 1.5) +
+  labs(
+    x = "Engine Displacement",
+    y = "Highway MPG",
+    title = "Highway MPG by Engine Size",
+    caption = "Source: https://fueleconomy.gov/"
+  ) +
+  geom_text(vjust=-1) +
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold"))
+:::
+')
+```
+
+Well, it worked! Not the nicest to look at though. We need to be selective about where we add our labels. Let's cut back a bit.
+
+::: {.question}
+
+:::
+
+```{r, include=answers, results='asis', echo=FALSE}
+cat('
+::: {.answer}
+
+:::
+')
+```
+
+
+
+
+
+
+
+### 2. Isolating Elements
+
+
+
+
+
+### 3. Make it Interactive
+
+
+
+
+### 4. Make it Accessible
+
+
+
+
+
+
+
+
+
+
