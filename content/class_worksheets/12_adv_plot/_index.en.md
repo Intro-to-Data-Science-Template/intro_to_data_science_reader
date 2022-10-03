@@ -9,7 +9,7 @@ format:
       output-file: "_index.en.md"
       reference-links: true
       code-link: true
-      
+self-contained: true
 ---
 
 
