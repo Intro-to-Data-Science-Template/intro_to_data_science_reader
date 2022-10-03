@@ -153,7 +153,7 @@ You can add further refinements if you would like. Once you are done, go to the 
 
 All of these elements build up to something that will look about like this:
 
-```{r}
+```{r eval=FALSE}
 ggplot(nbi_hampshire) +
   aes(
     x = YEAR_BUILT_027,
@@ -167,6 +167,8 @@ ggplot(nbi_hampshire) +
        color = "Type") +
   theme_minimal()
 ```
+
+![](img/final_plot.svg)
 
 ::: {.question}
 Create a box plot using ggplot/esquisse which shows `STRUCTURAL_EVAL_067` by `MAINTENANCE_021_L`.

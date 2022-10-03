@@ -165,7 +165,7 @@ ggplot(nbi_hampshire) +
   theme_minimal()
 ```
 
-<img src="12_adv_plot_files/figure-gfm/unnamed-chunk-5-1.png" width="768" />
+![][8]
 
 <div class="question">
 
@@ -191,3 +191,4 @@ Create a box plot using ggplot/esquisse which shows `STRUCTURAL_EVAL_067` by `MA
   [5]: img/esquisse_5.png
   [6]: img/esquisse_6.png
   [7]: img/esquisse_7.png
+  [8]: img/final_plot.svg
