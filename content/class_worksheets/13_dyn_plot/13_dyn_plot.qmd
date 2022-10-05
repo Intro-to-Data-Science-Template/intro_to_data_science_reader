@@ -232,7 +232,7 @@ install.packages("plotly")
 
 After that we can load in in using `library()`:
 
-```{r}
+```{r message=FALSE}
 library(plotly)
 ```
 
@@ -341,3 +341,6 @@ For example, try hovering your mouse over this plot for a few seconds:
 
 ![Alt Text Example](img/alt_text.png "This plot shows engine displacement on the X axis compared against the highway miles per gallon on the Y axis. Corvette cars are outliers wither higer miles per gallon despire their larg engines.")
 
+### 5. Try Something New
+
+For the last part of this worksheet, take a look at our `mpg` dataframe and pick some aspect of it you would like to visualize. I encourage you to look at [From Data to Vis](https://www.data-to-viz.com/) and use the decicion tree there to help pick what plot type fits the data. Once you have decided on a plot type, click on its icon, read through its desciprtion, and then scroll down to the "R Graph Gallery" to see some ways you can make it in R. If you feel it is a good fit for the data, try to make one! If not, go back and pick a different type.

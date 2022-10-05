@@ -22,6 +22,7 @@ format:
     -   [2. Isolating Elements][]
     -   [3. Make it Interactive][]
     -   [4. Make it Accessible][]
+    -   [5. Try Something New][]
 
 ## Overview
 
@@ -208,21 +209,6 @@ After that we can load in in using `library()`:
 library(plotly)
 ```
 
-
-    Attaching package: 'plotly'
-
-    The following object is masked from 'package:ggplot2':
-
-        last_plot
-
-    The following object is masked from 'package:stats':
-
-        filter
-
-    The following object is masked from 'package:graphics':
-
-        layout
-
 `plotly` relies on the same layer-based logic as ggplot, but is slightly different. It is completely possible to build a `plotly` plot from scratch like a `ggplot`. For example:
 
 ``` r
@@ -318,6 +304,10 @@ For example, try hovering your mouse over this plot for a few seconds:
 
 ![Alt Text Example][]
 
+### 5. Try Something New
+
+For the last part of this worksheet, take a look at our `mpg` dataframe and pick some aspect of it you would like to visualize. I encourage you to look at [From Data to Vis][] and use the decicion tree there to help pick what plot type fits the data. Once you have decided on a plot type, click on its icon, read through its desciprtion, and then scroll down to the "R Graph Gallery" to see some ways you can make it in R. If you feel it is a good fit for the data, try to make one! If not, go back and pick a different type.
+
   [Overview]: #overview
   [The Data]: #the-data
   [Problem Sets]: #problem-sets
@@ -326,6 +316,7 @@ For example, try hovering your mouse over this plot for a few seconds:
   [2. Isolating Elements]: #isolating-elements
   [3. Make it Interactive]: #make-it-interactive
   [4. Make it Accessible]: #make-it-accessible
+  [5. Try Something New]: #try-something-new
   [Fuel Economy data]: https://fueleconomy.gov/
   [1]: img/basic_plot.png "A scatterplot of engine displacement and highway MPG, showing a trend of larger engines getting fewer MPG."
   [2]: img/isolate.png "Same plot as above but with some outliers (corvettes) highlighted in red."
@@ -333,3 +324,4 @@ For example, try hovering your mouse over this plot for a few seconds:
   [Dr. Cao]: https://www.smith.edu/academics/faculty/shiya-cao
   [Viz Palette]: https://projects.susielu.com/viz-palette
   [Alt Text Example]: img/alt_text.png "This plot shows engine displacement on the X axis compared against the highway miles per gallon on the Y axis. Corvette cars are outliers wither higer miles per gallon despire their larg engines."
+  [From Data to Vis]: https://www.data-to-viz.com/
