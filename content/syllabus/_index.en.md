@@ -239,7 +239,7 @@ You can demonstrate proficiency in any reviewed assignment, **but can only fulfi
    <td style="text-align:left;"> Cannot import data or uses R Studio visual tools to import data. </td>
    <td style="text-align:left;"> Manually organizes or modifies data before importing it into R. </td>
    <td style="text-align:left;"> Can import raw data into R using the appropriate function for the data source. </td>
-   <td style="text-align:left;border-right:1px solid;"> Can interface with APIs or other remote sources and import data directly into R. </td>
+   <td style="text-align:left;border-right:1px solid;"> Can author API calls or use other remote sources and import data directly into R. </td>
    <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
   </tr>
   <tr>
