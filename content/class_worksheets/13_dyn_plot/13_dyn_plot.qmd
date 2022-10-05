@@ -73,7 +73,7 @@ class
 
 Before we start making a fancy plot, we need a basic plot. I will provide the code for one here so everyone is starting from the same place.
 
-```{r}
+```{r eval=FALSE}
 ggplot(mpg) +
   aes(x = displ, y = hwy) +
   geom_point(size = 1.5) +
@@ -86,6 +86,8 @@ ggplot(mpg) +
   theme_minimal() +
   theme(plot.title = element_text(face = "bold"))
 ```
+
+![](img/basic_plot.png "A scatterplot of engine displacement and highway MPG, showing a trend of larger engines getting fewer MPG.")
 
 ::: {.question}
 We will be modifying this plot for the remainder of the worksheet. Make sure you understand all the parts! 
@@ -156,7 +158,7 @@ We're getting closer. Adding text to a plot can he helpful, but only for a small
 
 First we need to remove the `label` argument and text geom we added in the last section. Next, I add a new `geom_point()` below the one we already have. I'm going to highlight the cars in the data where the model is a "corvette" (a famous sports car). I also added a subtitle to explain the highlights. You can see the results below:
 
-```{r}
+```{r eval=FALSE}
 ggplot(mpg) +
   aes(x = displ, y = hwy) +
   geom_point(size = 1.5) +
@@ -174,9 +176,11 @@ ggplot(mpg) +
   theme(plot.title = element_text(face = "bold"))
 ```
 
+![](img/isolate.png "Same plot as above but with some outliers (corvettes) highlighted in red.")
+
 Now our plot highlights the corvettes in our data with a specific color! Let's go one step further and add a call-out for those highlights. Where before we were adding labels to specific data points, we can also arbitrarily add text as a new layer in ggplot using the `annotate()` function like the following:
 
-```{r}
+```{r eval=FALSE}
 ggplot(mpg) +
   aes(x = displ, y = hwy) +
   geom_point(size = 1.5) +
@@ -195,6 +199,8 @@ ggplot(mpg) +
   theme_minimal() +
   theme(plot.title = element_text(face = "bold"))
 ```
+
+![](img/isolate_label.png "Same as above with text label for corvettes.")
 
 Such call-outs can be a great way to help tell the story in your data. In this case we are showing how most cars follow a common trend, except these very high powered and unusual sports cars.
 
@@ -216,7 +222,7 @@ Making an interactive plot can be a complex task, and often requires a mix of da
 
 First we will need to install `plotly`:
 
-```{r eval=FALSE}
+```{r eval=FALSE, message=FALSE}
 install.packages("plotly")
 ```
 
@@ -228,7 +234,7 @@ library(plotly)
 
 `plotly` relies on the same layer-based logic as ggplot, but is slightly different. It is completely possible to build a `plotly` plot from scratch like a `ggplot`. For example:
 
-```{r}
+```{r eval=FALSE}
 plot_ly(mpg, type = "scatter", mode = "markers") |>
   add_markers(x = mpg$displ, y = mpg$hwy) |>
   layout(title = "Highway MPG by Engine Size",
@@ -236,9 +242,11 @@ plot_ly(mpg, type = "scatter", mode = "markers") |>
          yaxis = list(title = "Highway MPG"))
 ```
 
+ <iframe src="./img/plotly1.html" style="height: 400px; width: 700px; resize: both; overflow: auto;" title="interactive plot"></iframe> 
+
 However, it also has a very helpful function called `ggplotly()` which we can wrap around our ggplot to convert it automatically:
 
-```{r}
+```{r eval=FALSE}
 mpg_ggplot = ggplot(mpg) +
   aes(x = displ, y = hwy) +
   geom_point(size = 1.5) +
@@ -254,9 +262,11 @@ mpg_ggplot = ggplot(mpg) +
 ggplotly(mpg_ggplot)
 ```
 
+ <iframe src="./img/plotly2.html" style="height: 400px; width: 700px; resize: both; overflow: auto;" title="interactive plot"></iframe>
+
 Ta-Da! Quick and easy interactive plot. By default we can hover over the data points to get a readout of where the points sit on our X and Y axis. We can also add custom information using a little trickery. We can add a fake aesthetic in our `aes()` call to "text" and write a custom message for our pop-ups. This will rely on some information about working with text and HTML that we won't cover until later, but I want you to know it is possible.
 
-```{r}
+```{r eval=FALSE}
 mpg_ggplot = ggplot(mpg) +
   aes(x = displ, y = hwy,
       text = paste0("CAR INFO:</br></br>",
@@ -276,6 +286,8 @@ mpg_ggplot = ggplot(mpg) +
 
 ggplotly(mpg_ggplot, tooltip = "text")
 ```
+
+ <iframe src="./img/plotly3.html" style="height: 400px; width: 700px; resize: both; overflow: auto;" title="interactive plot"></iframe>
 
 That's handy. The same process can work for most plot types we have covered so far in class.
 
