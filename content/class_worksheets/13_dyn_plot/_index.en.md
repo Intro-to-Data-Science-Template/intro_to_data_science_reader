@@ -113,6 +113,12 @@ Add a new `labels` column to our `mpg` dataframe. For now, just copy the `model`
 
 </div>
 
+<div class="answer">
+
+mpg$labels = mpg$model
+
+</div>
+
 Let's see how we can incorporate these labels.
 
 <div class="question">
@@ -121,11 +127,36 @@ Modify the plot above by adding a new argument to the `aes()` function called `l
 
 </div>
 
+<div class="answer">
+
+ggplot(mpg) +
+aes(x = displ, y = hwy, label = labels) +
+geom_point(size = 1.5) +
+labs(
+x = "Engine Displacement",
+y = "Highway MPG",
+title = "Highway MPG by Engine Size",
+caption = "Source: https://fueleconomy.gov/"
+) +
+geom_label(vjust = -1) +
+theme_minimal() +
+theme(plot.title = element_text(face = "bold"))
+
+</div>
+
 If all went according to plan, we should have labels! Not the nicest to look at though. We need to be selective about where we add our labels. Let's cut back a bit.
 
 <div class="question">
 
 Fill the `lables` column with `NA`s. Then, use sub-setting to add a label only for rows where the `class` is "midsize."
+
+</div>
+
+<div class="answer">
+
+mpg\$labels = NA
+
+mpg$labels = ifelse(mpg$class == "midsize", "Midsize", NA)
 
 </div>
 
@@ -190,6 +221,12 @@ Such call-outs can be a great way to help tell the story in your data. In this c
 <div class="question">
 
 Modify the code above to highlight and annotate another model of car.
+
+</div>
+
+<div class="answer">
+
+Varies.
 
 </div>
 
@@ -271,6 +308,12 @@ That's handy. The same process can work for most plot types we have covered so f
 <div class="question">
 
 Use the `ggplotly()` function to make your own custom plot from above (with the new highlights on some class of car) interactive!
+
+</div>
+
+<div class="answer">
+
+Varies.
 
 </div>
 

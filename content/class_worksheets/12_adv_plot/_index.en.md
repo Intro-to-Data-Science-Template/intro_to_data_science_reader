@@ -21,6 +21,7 @@ self-contained: true
     -   [2. Learning the Esquisse UI][]
     -   [3. Your First ggplot][]
     -   [4. ggplot2 Code][]
+-   [Something like][]
 
 ## Overview
 
@@ -115,6 +116,12 @@ Click and drag the `ROUTE_PREFIX_005B_L` variable into the "color" element. How 
 
 </div>
 
+<div class="answer">
+
+Adds route type as color to the dots in the scatterplot.
+
+</div>
+
 Once you have added the new element, click on the plot type window next to the variables. In the menu that pops up, select "Jitter." A jitter-ed scatter plot adds a little random noise to the dot locations so that multiple dots that are in the same spot can be seen.
 
 ![][5]
@@ -173,6 +180,17 @@ Create a box plot using ggplot/esquisse which shows `STRUCTURAL_EVAL_067` by `MA
 
 </div>
 
+<div class="answer">
+
+# Something like
+
+ggplot(nbi_hampshire) +
+aes(x = MAINTENANCE_021_L, y = STRUCTURAL_EVAL_067) +
+geom_boxplot(fill = '\#112446') +
+theme_minimal()
+
+</div>
+
   [Overview]: #overview
   [The Data]: #the-data
   [Problem Sets]: #problem-sets
@@ -180,6 +198,7 @@ Create a box plot using ggplot/esquisse which shows `STRUCTURAL_EVAL_067` by `MA
   [2. Learning the Esquisse UI]: #learning-the-esquisse-ui
   [3. Your First ggplot]: #your-first-ggplot
   [4. ggplot2 Code]: #ggplot2-code
+  [Something like]: #something-like
   [Datasaurus - Alberto Cairo]: img/datasaurus.png
   [ggplot2 cheatsheet]: https://www.rstudio.org/links/data_visualization_cheat_sheet
   [National Bridge Inventory Dataset]: https://www.fhwa.dot.gov/bridge/nbi/ascii.cfm
