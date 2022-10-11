@@ -13,7 +13,7 @@ self-contained: true
 ---
 
 ```{r, include=FALSE}
-answers = FALSE
+answers = TRUE
 
 library(ggplot2)
 ```
