@@ -45,7 +45,7 @@ All of the data (aside from the shop data) are exported from the museum's Google
 
 ## Technical Details
 
-You have 2 weeks (until start of class 10/28) to work on this project, including one full day of class time (10/14). You have full freedom to make the project as simple or intricate as you desire. Your final submission should include the following:
+You have 2 weeks (until start of class 10/28) to work on this project, including one full day of class time (10/14). You have full freedom to make the project as simple or intricate as you desire. Each member of the team must make *at least one* data visualization. You can also create tables or other summaries to help explain the data to the reader. Your final submission should include the following:
 
 **In your team Github repo:**
 
