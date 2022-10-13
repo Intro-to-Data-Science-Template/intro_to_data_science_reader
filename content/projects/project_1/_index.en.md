@@ -24,6 +24,8 @@ format:
 
 The [Smith College Museum of Art (SCMA)][] staff want to better understand how people use the museum website. Project 1 will focus on real SCMA data spanning from July 2021 to June 2022. Your goal is to create a portfolio of data visualizations which help communicate the usage patterns of the SCMA website to museum staff. You can think of this project as a formalized exploratory data analysis. At the end of Project 1, your visualizations and accompanying reports will be given to the museum staff for them to learn from!
 
+[Click here for the Github Classroom Assignment for Project 1.][]
+
 ## Project Description
 
 Project 1 will be completed in self-organized teams of 3 to 4. Each member will be creating their own visualizations, but each visualization from the team will be combined into one portfolio. You should not expect the museum staff to be familiar with data, and should explain things in such a way that anyone could understand.
@@ -81,6 +83,7 @@ The team will share one github repo. This repo should include all of your code. 
   [Tips for Success]: #tips-for-success
   [1]: img/scma.png "Smith College Museum of Art banner"
   [Smith College Museum of Art (SCMA)]: https://scma.smith.edu/
+  [Click here for the Github Classroom Assignment for Project 1.]: https://moodle.smith.edu/mod/url/view.php?id=955112
   [Google analytics here]: https://support.google.com/analytics
   [You can find the data files hosted on the course Moodle here]: https://moodle.smith.edu/mod/resource/view.php?id=954407
   [standards matrix]: https://intro-to-data-science-template.github.io/intro_to_data_science_reader/syllabus/#standards
