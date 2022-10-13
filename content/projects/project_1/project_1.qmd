@@ -53,12 +53,12 @@ You have 2 weeks (until start of class 10/28) to work on this project, including
 
 **Through Moodle:**
 
-* A word doc/pdf explaining your contributions to the project containing:
+* A word pdf (there is a template in the docs folder) explaining your contributions to the project containing:
   + A 1-2 paragraph summary of how you contributed to your team
   + A list of each standard (per the course syllabus) you *individually* worked with in this project
   + A justification for each standard describing what proficiency level you demonstrated *per the text in the [standards matrix](https://intro-to-data-science-template.github.io/intro_to_data_science_reader/syllabus/#standards)* 
 
-The portfolio should be created using Quarto in R studio. I recommend you output to a PDF if you have only static visualizations, or html if your visualizations are interactive; you can choose other formats if they work better for your project.
+The team portfolio should be created using Quarto in R studio. I recommend you output to a PDF if you have only static visualizations, or html if your visualizations are interactive; you can choose other formats if they work better for your project. You will commit your rendered report in the `docs/` directory of this project.
 
 The team will share one github repo. This repo should include all of your code. **I recommend creating your visualizations in separate files, and then combining them in your quarto portfolio document as a separate step.**
 
