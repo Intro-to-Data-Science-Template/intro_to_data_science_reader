@@ -2,7 +2,7 @@
 pre: <b>Project 1. </b>
 title: "Smith College Museum of Art"
 weight: 1
-summary: ""
+summary: "Project 1: Exploratory data analyses for the Smith College Museum of Art."
 format:
     hugo:
       toc: true
