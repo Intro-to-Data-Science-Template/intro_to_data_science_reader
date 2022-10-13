@@ -51,7 +51,7 @@ You have 2 weeks (until start of class 10/28) to work on this project, including
   + A textual explanation of what your summaries/tables/visualization mean
   + A summary explanation of what lessons can be learned from your portfolio as a whole
 
-**Through Moodle:**
+**Through Moodle ([Turn in here](https://moodle.smith.edu/mod/assign/view.php?id=955241)):**
 
 * A word pdf (there is a template in the docs folder) explaining your contributions to the project containing:
   + A 1-2 paragraph summary of how you contributed to your team

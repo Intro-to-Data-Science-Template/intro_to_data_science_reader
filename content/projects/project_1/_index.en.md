@@ -58,7 +58,7 @@ You have 2 weeks (until start of class 10/28) to work on this project, including
     -   A textual explanation of what your summaries/tables/visualization mean
     -   A summary explanation of what lessons can be learned from your portfolio as a whole
 
-**Through Moodle:**
+**Through Moodle ([Turn in here][]):**
 
 -   A word pdf (there is a template in the docs folder) explaining your contributions to the project containing:
     -   A 1-2 paragraph summary of how you contributed to your team
@@ -86,4 +86,5 @@ The team will share one github repo. This repo should include all of your code. 
   [Click here for the Github Classroom Assignment for Project 1.]: https://moodle.smith.edu/mod/url/view.php?id=955112
   [Google analytics here]: https://support.google.com/analytics
   [You can find the data files hosted on the course Moodle here]: https://moodle.smith.edu/mod/resource/view.php?id=954407
+  [Turn in here]: https://moodle.smith.edu/mod/assign/view.php?id=955241
   [standards matrix]: https://intro-to-data-science-template.github.io/intro_to_data_science_reader/syllabus/#standards
