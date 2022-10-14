@@ -459,6 +459,14 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
+  <tr>
+   <td style="text-align:right;font-weight: bold;background-color: #E6F5C9 !important;font-style: italic;color: #808080 !important;"> 15 </td>
+   <td style="text-align:left;font-style: italic;color: #808080 !important;"> 12/14/2022 (Wed) </td>
+   <td style="text-align:left;font-style: italic;color: #808080 !important;"> No Class </td>
+   <td style="text-align:left;font-style: italic;color: #808080 !important;">  </td>
+   <td style="text-align:left;font-style: italic;color: #808080 !important;"> <ol><li>Final Project Materials
+</li></ol> </td>
+  </tr>
 </tbody>
 </table>
 

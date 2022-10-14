@@ -1,7 +1,7 @@
 ---
-pre: <b>6. </b>
-title: Slides
-weight: 6
+pre: <b>5. </b>
+title: Projects
+weight: 5
 format:
   hugo:
     toc: true
@@ -10,4 +10,4 @@ format:
     code-link: true
 ---
 
-{{% attachments title="Lecture Slides" style="grey" / %}}
+{{% children description = "true" style = "li" %}}
