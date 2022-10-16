@@ -241,7 +241,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #FDCDAC !important;"> 7 </td>
    <td style="text-align:left;"> 10/19/2022 (Wed) </td>
-   <td style="text-align:left;"> R Debugging Tools </td>
+   <td style="text-align:left;"> R Debugging &amp; Conditions </td>
    <td style="text-align:left;"> <ol><li>
 <a href="https://moodle.smith.edu/mod/lti/view.php?id=935554">Bryan, J., &amp; Hester, J. (2021). Chapter 11 Debugging R code. In What They Forgot to Teach You About R.</a>
 </li></ol> </td>

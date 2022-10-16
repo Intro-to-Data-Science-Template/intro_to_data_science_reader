@@ -18,7 +18,7 @@ Week,Class,Date,Day,Topic,Readings,Due,Resources
 6,15,10/12/2022,Wed,Data Science Ethics,"[Baumer, B. S., Kaplan, D. T., & Horton, N. J. (2021). Chapter 8 Data science ethics. In Modern Data Science with R. CNC Press.](https://moodle.smith.edu/mod/lti/view.php?id=935413)",Lab 4,
 6,16,10/14/2022,Fri,Project 1,,,
 7,17,10/17/2022,Mon,Functions,"[Grolemund, G., & Wickham, H. (2017). 19 Functions. In R for Data Science. O'Reilly.](https://moodle.smith.edu/mod/lti/view.php?id=935412);[Kyle Hill (Director). (2022, August 31). How history's worst software error weaponized a radiation machine.](/intro_to_data_science_reader/hidden/radiation_vid/)",,
-7,18,10/19/2022,Wed,R Debugging Tools,"[Bryan, J., & Hester, J. (2021). Chapter 11 Debugging R code. In What They Forgot to Teach You About R.](https://moodle.smith.edu/mod/lti/view.php?id=935554)",,
+7,18,10/19/2022,Wed,R Debugging & Conditions,"[Bryan, J., & Hester, J. (2021). Chapter 11 Debugging R code. In What They Forgot to Teach You About R.](https://moodle.smith.edu/mod/lti/view.php?id=935554)",,
 7,19,10/21/2022,Fri,LAB 5,,,
 8,20,10/24/2022,Mon,Iteration,"[Wickham, H., & Grolemund, G. (2017). 21 Iteration. In R for Data Science. O'Reilly.](https://moodle.smith.edu/mod/lti/view.php?id=935418)",,
 8,21,10/26/2022,Wed,Parallelization,"[Peng, R. D. (2022). 24 Parallel Computation. In R Programming for Data Science.](https://moodle.smith.edu/mod/lti/view.php?id=935416)",Lab 5,
