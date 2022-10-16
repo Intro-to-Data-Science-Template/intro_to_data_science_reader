@@ -456,23 +456,35 @@ Our new `pet_split` function works! It will create a new dataframe we can combin
 Take some time to study the above function. Make sure you understand all of the steps it is taking, and how it produces the output that it does.
 :::
 
-## Solving an *Abstract* Problem
+## Try it Yourself
 
+Let's try creating a function on your own now. 
 
+::: {.question}
+Create a function that will intake a **ROW** from the `survey` dataframe, and output a number showing how many total `NA`s there were in there row. The `is.na()` function will come in handy here. An example input and output should look like:
 
-argument for colum prefix
+```{r eval=FALSE}
+total_na(survey_row = survey[1,])
 
+OUTPUT: 2
+```
 
+:::
 
-## Functions that "Think"
+```{r, include=answers, results='asis', echo=FALSE}
+cat("
+::: {.answer}
+total_na = function(survey_row) {
+  
+  # get the sum of NAs
+  output = sum(is.na(survey_row))
+  
+  # output
+  return(output)
+}
 
+total_na(survey_row = survey[1,])
+:::
+")
+```
 
-
-
-
-
-
-break days by commas
-
-
-break anything by commas
