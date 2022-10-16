@@ -259,6 +259,78 @@ To resolve our "other" issue, we will need to take another approach. First, we'l
 work_pets = survey$pets
 ```
 
+Next, we will look through that copy, and remove everything that fits into one of our other categories using `gsub()`, or "general substitution." `gsub()` is similar to `grepl()` in that it asks for a pattern to look for and where to look for it, but also asks what to substitute for that pattern. Let's look at the following example. Here I ask `gsub()` to look in our `work_pets` vector, find all the times "dog" appears, and to replace it with "", or nothing.
+
+```{r}
+gsub(pattern = "dog", work_pets, replacement = "", ignore.case = TRUE)
+```
+
+We can see in the output that now all the instances of "dog" have been removed. We will repeat this process for each of our known categories, each time saving our results back to `work_pets`. We will also remove commas, and use `trimws()`, or "trim white space," to delete extra spaces from the start and end of our characters.
+
+```{r}
+work_pets = gsub(pattern = "dog", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "cat", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "fish", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "bird", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "reptile", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "rock", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "none", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = ",", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = trimws(work_pets)
+
+work_pets
+```
+
+If we look at `work_pets` now, all that is left are things not in our pets categories. We can now either turn this into a logical, or assign these values to our new `other` column in `pet_output`. I'll do the latter. I'll also convert our blanks into proper `NA`s.
+
+```{r}
+pet_output$other = work_pets
+pet_output[pet_output$other == "", "other"] = NA
+```
+
+If we look at out `pet_output` dataframe now, we can see we have a column for each pet type, a `TRUE` or `FALSE` for each known pet, and the text for other pets. All in all, the code to do this looks like:
+
+```{r}
+# create an empty dataframe for our intended output
+pet_output = data.frame(
+  "id" = 1:15,
+  "dog" = NA,
+  "cat" = NA,
+  "fish" = NA,
+  "bird" = NA,
+  "reptile" = NA,
+  "rock" = NA,
+  "none" = NA,
+  "other" = NA)
+
+# get a binary for each known pet type
+pet_output$dog = grepl(pattern = "dog", x = survey$pets, ignore.case = TRUE)
+pet_output$cat = grepl(pattern = "cat", x = survey$pets, ignore.case = TRUE)
+pet_output$fish = grepl(pattern = "fish", x = survey$pets, ignore.case = TRUE)
+pet_output$bird = grepl(pattern = "bird", x = survey$pets, ignore.case = TRUE)
+pet_output$reptile = grepl(pattern = "reptile", x = survey$pets, ignore.case = TRUE)
+pet_output$rock = grepl(pattern = "rock", x = survey$pets, ignore.case = TRUE)
+pet_output$none = grepl(pattern = "none", x = survey$pets, ignore.case = TRUE)
+
+# remove all known pets and clean remaining text
+work_pets = gsub(pattern = "dog", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "cat", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "fish", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "bird", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "reptile", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "rock", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "none", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = ",", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = trimws(work_pets)
+
+# Fill in "other"
+pet_output$other = work_pets
+# Turn blanks into NAs
+pet_output[pet_output$other == "", "other"] = NA
+```
+
+
+
 
 ## Solving an *Abstract* Problem
 
