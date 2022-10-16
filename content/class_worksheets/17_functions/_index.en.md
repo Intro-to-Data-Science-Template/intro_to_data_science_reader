@@ -18,8 +18,8 @@ format:
 -   [The Data][]
 -   [Functions Under the Hood][]
 -   [Solving a Problem][]
--   [Solving an *Abstract* Problem][]
--   [Functions that "Think"][]
+-   [Make it General][]
+-   [Try it Yourself][]
 
 ## Overview
 
@@ -196,17 +196,19 @@ The first step of creating a good function is clearly defining the key component
 
 When I am creating a function, I typically write the code to do what I want first, and then convert it into a function. Let's write some code to create our output dataframe, and then we can work to fill it. I want to stress that this is *one* way to go about solving this problem. There are plenty of other valid options.
 
-First, we'll create a new dataframe with a column for each of our possible pets.I'll fill the dataframe with `NA`s for now.
+First, we'll create a new dataframe with a column for each of our possible pets, and a row for all 15 of our cases. I'll fill the dataframe with `NA`s for now.
 
 ``` r
-pet_output = data.frame("dog" = NA,
-                        "cat" = NA,
-                        "fish" = NA,
-                        "bird" = NA,
-                        "reptile" = NA,
-                        "rock" = NA,
-                        "none" = NA,
-                        "other" = NA)
+pet_output = data.frame(
+  "id" = 1:15,
+  "dog" = NA,
+  "cat" = NA,
+  "fish" = NA,
+  "bird" = NA,
+  "reptile" = NA,
+  "rock" = NA,
+  "none" = NA,
+  "other" = NA)
 ```
 
 Now, we need to figure out a way to test if the person listed one of our options in their response. We'll use a new function called `grepl()` to test this. The name itself is a product of very old programmer speak, but practically it will search through a character vector and give us a `TRUE` or `FALSE` if it finds a match for a pattern we give it. Thus, we can run the following on our `pets` column for each of our possible pets. We're going to tell it to ignore case, so that capital and lower case letters don't matter.
@@ -221,19 +223,329 @@ grepl(pattern = "dog", x = survey$pets, ignore.case = TRUE)
 
 </div>
 
-## Solving an *Abstract* Problem
+We can use the same function to test for each of our possible pets, and assign the results to our new dataframe.
 
-argument for colum prefix
+``` r
+pet_output$dog = grepl(pattern = "dog", x = survey$pets, ignore.case = TRUE)
+pet_output$cat = grepl(pattern = "cat", x = survey$pets, ignore.case = TRUE)
+pet_output$fish = grepl(pattern = "fish", x = survey$pets, ignore.case = TRUE)
+pet_output$bird = grepl(pattern = "bird", x = survey$pets, ignore.case = TRUE)
+pet_output$reptile = grepl(pattern = "reptile", x = survey$pets, ignore.case = TRUE)
+pet_output$rock = grepl(pattern = "rock", x = survey$pets, ignore.case = TRUE)
+pet_output$none = grepl(pattern = "none", x = survey$pets, ignore.case = TRUE)
 
-## Functions that "Think"
+pet_output
+```
 
-break days by commas
+       id   dog   cat  fish  bird reptile  rock  none other
+    1   1 FALSE FALSE FALSE FALSE   FALSE FALSE  TRUE    NA
+    2   2 FALSE FALSE FALSE FALSE   FALSE FALSE  TRUE    NA
+    3   3  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE    NA
+    4   4 FALSE FALSE FALSE FALSE   FALSE FALSE  TRUE    NA
+    5   5  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE    NA
+    6   6  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE    NA
+    7   7 FALSE  TRUE FALSE FALSE   FALSE  TRUE FALSE    NA
+    8   8  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE    NA
+    9   9 FALSE FALSE FALSE FALSE   FALSE FALSE FALSE    NA
+    10 10 FALSE  TRUE FALSE FALSE   FALSE FALSE FALSE    NA
+    11 11  TRUE FALSE FALSE FALSE    TRUE FALSE FALSE    NA
+    12 12  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE    NA
+    13 13 FALSE  TRUE FALSE FALSE   FALSE FALSE FALSE    NA
+    14 14 FALSE FALSE FALSE FALSE   FALSE FALSE  TRUE    NA
+    15 15 FALSE FALSE FALSE FALSE    TRUE FALSE FALSE    NA
 
-break anything by commas
+Now, that works for everything except "other."
+
+<div class="question">
+
+Why would we need a different strategy for the "other" cases?
+
+</div>
+
+To resolve our "other" issue, we will need to take another approach. First, we'll make a copy of our `pets` column we can work with.
+
+``` r
+work_pets = survey$pets
+```
+
+Next, we will look through that copy, and remove everything that fits into one of our other categories using `gsub()`, or "general substitution." `gsub()` is similar to `grepl()` in that it asks for a pattern to look for and where to look for it, but also asks what to substitute for that pattern. Let's look at the following example. Here I ask `gsub()` to look in our `work_pets` vector, find all the times "dog" appears, and to replace it with "", or nothing.
+
+``` r
+gsub(pattern = "dog", work_pets, replacement = "", ignore.case = TRUE)
+```
+
+     [1] "None"           "None"           ", Plants (two)" "None"          
+     [5] ""               ""               "Cat, Rock"      ""              
+     [9] "Spider Plant"   "Cat"            ", Reptile"      ""              
+    [13] "Cat"            "None"           "Reptile, Plant"
+
+We can see in the output that now all the instances of "dog" have been removed. We will repeat this process for each of our known categories, each time saving our results back to `work_pets`. We will also remove commas, and use `trimws()`, or "trim white space," to delete extra spaces from the start and end of our characters.
+
+``` r
+work_pets = gsub(pattern = "dog", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "cat", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "fish", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "bird", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "reptile", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "rock", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "none", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = ",", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = trimws(work_pets)
+
+work_pets
+```
+
+     [1] ""             ""             "Plants (two)" ""             ""            
+     [6] ""             ""             ""             "Spider Plant" ""            
+    [11] ""             ""             ""             ""             "Plant"       
+
+If we look at `work_pets` now, all that is left are things not in our pets categories. We can now either turn this into a logical, or assign these values to our new `other` column in `pet_output`. I'll do the latter. I'll also convert our blanks into proper `NA`s.
+
+``` r
+pet_output$other = work_pets
+pet_output[pet_output$other == "", "other"] = NA
+```
+
+If we look at out `pet_output` dataframe now, we can see we have a column for each pet type, a `TRUE` or `FALSE` for each known pet, and the text for other pets. All in all, the code to do this looks like:
+
+``` r
+# create an empty dataframe for our intended output
+pet_output = data.frame(
+  "id" = 1:15,
+  "dog" = NA,
+  "cat" = NA,
+  "fish" = NA,
+  "bird" = NA,
+  "reptile" = NA,
+  "rock" = NA,
+  "none" = NA,
+  "other" = NA)
+
+# get a binary for each known pet type
+pet_output$dog = grepl(pattern = "dog", x = survey$pets, ignore.case = TRUE)
+pet_output$cat = grepl(pattern = "cat", x = survey$pets, ignore.case = TRUE)
+pet_output$fish = grepl(pattern = "fish", x = survey$pets, ignore.case = TRUE)
+pet_output$bird = grepl(pattern = "bird", x = survey$pets, ignore.case = TRUE)
+pet_output$reptile = grepl(pattern = "reptile", x = survey$pets, ignore.case = TRUE)
+pet_output$rock = grepl(pattern = "rock", x = survey$pets, ignore.case = TRUE)
+pet_output$none = grepl(pattern = "none", x = survey$pets, ignore.case = TRUE)
+
+# make a copy of the pets vector to work on
+work_pets = survey$pets
+
+# remove all known pets and clean remaining text
+work_pets = gsub(pattern = "dog", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "cat", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "fish", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "bird", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "reptile", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "rock", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = "none", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = gsub(pattern = ",", work_pets, replacement = "", ignore.case = TRUE)
+work_pets = trimws(work_pets)
+
+# Fill in "other"
+pet_output$other = work_pets
+# Turn blanks into NAs
+pet_output[pet_output$other == "", "other"] = NA
+```
+
+## Make it General
+
+Now that we know what to do, let's get to work converting this into a function. The key advantage of doing so is that we can make out code more *generalizable*. Rather than hard-coding each element, we can instead use variables for stand-ins that can be swapped later on. For example, instead of performing all of these checks on `survey$pets`, we can write the function to look at any `pets` vector we pass as an argument. This means we can re-use the function later!
+
+To start this process, let's write a skeleton for our function. Below I've included a skeleton for a new function I am calling `pet_split`. In this function, I have an argument called `pet_vector`. Now, whenever I use `pet_vector` inside the body of the function, I will be telling R to use whatever is given to the function in the `pet_vector` argument. `pet_vector` is just like an ordinary object in your R environment, **except it only exists within the function**. You can think about it like R opening a little mini-R, running all the code in the function top to bottom, giving you the result, then closing it and deleting everything else inside.
+
+``` r
+pet_split = function(pet_vector) {
+  
+}
+```
+
+Now let's add some substance to this function. I'll start by adding in the code to create a dataframe for our output, and a `return()` at the end. Whatever I put inside `return()` will be the result of the function when it is run, and everything else will be deleted when the mini-R inside the function is closed. I also changed the code of our "id" column a bit. Instead of hard-coding 15 IDs, I made it more generalizable by asking R to make IDs 1 through the number of elements, or the length, of our `pet_vector` argument. That means the dataframe will always have the same number of rows as the `pet_vector` input, no matter how many elements it has.
+
+``` r
+pet_split = function(pet_vector) {
+  
+  # make new dataframe for output
+  pet_output = data.frame(
+  "id" = 1:length(pet_vector),
+  "dog" = NA,
+  "cat" = NA,
+  "fish" = NA,
+  "bird" = NA,
+  "reptile" = NA,
+  "rock" = NA,
+  "none" = NA,
+  "other" = NA)
+  
+  # return
+  return(pet_output)
+}
+
+pet_split(pet_vector = survey$pets)
+```
+
+       id dog cat fish bird reptile rock none other
+    1   1  NA  NA   NA   NA      NA   NA   NA    NA
+    2   2  NA  NA   NA   NA      NA   NA   NA    NA
+    3   3  NA  NA   NA   NA      NA   NA   NA    NA
+    4   4  NA  NA   NA   NA      NA   NA   NA    NA
+    5   5  NA  NA   NA   NA      NA   NA   NA    NA
+    6   6  NA  NA   NA   NA      NA   NA   NA    NA
+    7   7  NA  NA   NA   NA      NA   NA   NA    NA
+    8   8  NA  NA   NA   NA      NA   NA   NA    NA
+    9   9  NA  NA   NA   NA      NA   NA   NA    NA
+    10 10  NA  NA   NA   NA      NA   NA   NA    NA
+    11 11  NA  NA   NA   NA      NA   NA   NA    NA
+    12 12  NA  NA   NA   NA      NA   NA   NA    NA
+    13 13  NA  NA   NA   NA      NA   NA   NA    NA
+    14 14  NA  NA   NA   NA      NA   NA   NA    NA
+    15 15  NA  NA   NA   NA      NA   NA   NA    NA
+
+Next, let's get this function to output something we actually want. I'll copy more of our code from above into the function. You'll notice that I replace any calls for `survey$pets` with our generic argument `pet_vector`. If we run this version, we start to see our desired output!
+
+``` r
+pet_split = function(pet_vector) {
+  
+  # make new dataframe for output
+  pet_output = data.frame(
+  "id" = 1:length(pet_vector),
+  "dog" = NA,
+  "cat" = NA,
+  "fish" = NA,
+  "bird" = NA,
+  "reptile" = NA,
+  "rock" = NA,
+  "none" = NA,
+  "other" = NA)
+  
+  # get a binary for each known pet type
+  pet_output$dog = grepl(pattern = "dog", x = pet_vector, ignore.case = TRUE)
+  pet_output$cat = grepl(pattern = "cat", x = pet_vector, ignore.case = TRUE)
+  pet_output$fish = grepl(pattern = "fish", x = pet_vector, ignore.case = TRUE)
+  pet_output$bird = grepl(pattern = "bird", x = pet_vector, ignore.case = TRUE)
+  pet_output$reptile = grepl(pattern = "reptile", x = pet_vector, ignore.case = TRUE)
+  pet_output$rock = grepl(pattern = "rock", x = pet_vector, ignore.case = TRUE)
+  pet_output$none = grepl(pattern = "none", x = pet_vector, ignore.case = TRUE)
+  
+  # return
+  return(pet_output)
+}
+
+pet_split(pet_vector = survey$pets)
+```
+
+       id   dog   cat  fish  bird reptile  rock  none other
+    1   1 FALSE FALSE FALSE FALSE   FALSE FALSE  TRUE    NA
+    2   2 FALSE FALSE FALSE FALSE   FALSE FALSE  TRUE    NA
+    3   3  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE    NA
+    4   4 FALSE FALSE FALSE FALSE   FALSE FALSE  TRUE    NA
+    5   5  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE    NA
+    6   6  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE    NA
+    7   7 FALSE  TRUE FALSE FALSE   FALSE  TRUE FALSE    NA
+    8   8  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE    NA
+    9   9 FALSE FALSE FALSE FALSE   FALSE FALSE FALSE    NA
+    10 10 FALSE  TRUE FALSE FALSE   FALSE FALSE FALSE    NA
+    11 11  TRUE FALSE FALSE FALSE    TRUE FALSE FALSE    NA
+    12 12  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE    NA
+    13 13 FALSE  TRUE FALSE FALSE   FALSE FALSE FALSE    NA
+    14 14 FALSE FALSE FALSE FALSE   FALSE FALSE  TRUE    NA
+    15 15 FALSE FALSE FALSE FALSE    TRUE FALSE FALSE    NA
+
+To finish it up, let's copy the rest of our code into this function. You'll notice that I don't need to make a new vector `work_pets` as before. That's because I'm working on the `pet_vector` object directly.
+
+``` r
+pet_split = function(pet_vector) {
+  
+  # make new dataframe for output
+  pet_output = data.frame(
+  "id" = 1:length(pet_vector),
+  "dog" = NA,
+  "cat" = NA,
+  "fish" = NA,
+  "bird" = NA,
+  "reptile" = NA,
+  "rock" = NA,
+  "none" = NA,
+  "other" = NA)
+  
+  # get a binary for each known pet type
+  pet_output$dog = grepl(pattern = "dog", x = pet_vector, ignore.case = TRUE)
+  pet_output$cat = grepl(pattern = "cat", x = pet_vector, ignore.case = TRUE)
+  pet_output$fish = grepl(pattern = "fish", x = pet_vector, ignore.case = TRUE)
+  pet_output$bird = grepl(pattern = "bird", x = pet_vector, ignore.case = TRUE)
+  pet_output$reptile = grepl(pattern = "reptile", x = pet_vector, ignore.case = TRUE)
+  pet_output$rock = grepl(pattern = "rock", x = pet_vector, ignore.case = TRUE)
+  pet_output$none = grepl(pattern = "none", x = pet_vector, ignore.case = TRUE)
+  
+  # remove all known pets and clean remaining text
+  pet_vector = gsub(pattern = "dog", pet_vector, replacement = "", ignore.case = TRUE)
+  pet_vector = gsub(pattern = "cat", pet_vector, replacement = "", ignore.case = TRUE)
+  pet_vector = gsub(pattern = "fish", pet_vector, replacement = "", ignore.case = TRUE)
+  pet_vector = gsub(pattern = "bird", pet_vector, replacement = "", ignore.case = TRUE)
+  pet_vector = gsub(pattern = "reptile", pet_vector, replacement = "", ignore.case = TRUE)
+  pet_vector = gsub(pattern = "rock", pet_vector, replacement = "", ignore.case = TRUE)
+  pet_vector = gsub(pattern = "none", pet_vector, replacement = "", ignore.case = TRUE)
+  pet_vector = gsub(pattern = ",", pet_vector, replacement = "", ignore.case = TRUE)
+  pet_vector = trimws(pet_vector)
+  
+  # Fill in "other"
+  pet_output$other = pet_vector
+  # Turn blanks into NAs
+  pet_output[pet_output$other == "", "other"] = NA
+  
+  # return
+  return(pet_output)
+}
+
+pet_split(pet_vector = survey$pets)
+```
+
+       id   dog   cat  fish  bird reptile  rock  none        other
+    1   1 FALSE FALSE FALSE FALSE   FALSE FALSE  TRUE         <NA>
+    2   2 FALSE FALSE FALSE FALSE   FALSE FALSE  TRUE         <NA>
+    3   3  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE Plants (two)
+    4   4 FALSE FALSE FALSE FALSE   FALSE FALSE  TRUE         <NA>
+    5   5  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE         <NA>
+    6   6  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE         <NA>
+    7   7 FALSE  TRUE FALSE FALSE   FALSE  TRUE FALSE         <NA>
+    8   8  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE         <NA>
+    9   9 FALSE FALSE FALSE FALSE   FALSE FALSE FALSE Spider Plant
+    10 10 FALSE  TRUE FALSE FALSE   FALSE FALSE FALSE         <NA>
+    11 11  TRUE FALSE FALSE FALSE    TRUE FALSE FALSE         <NA>
+    12 12  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE         <NA>
+    13 13 FALSE  TRUE FALSE FALSE   FALSE FALSE FALSE         <NA>
+    14 14 FALSE FALSE FALSE FALSE   FALSE FALSE  TRUE         <NA>
+    15 15 FALSE FALSE FALSE FALSE    TRUE FALSE FALSE        Plant
+
+Our new `pet_split` function works! It will create a new dataframe we can combine with our `survey` data to get tidy data about pets. Now we could save this function somewhere, and re-use it on every survey with a question about pets without having to re-code all of those steps each time.
+
+<div class="question">
+
+Take some time to study the above function. Make sure you understand all of the steps it is taking, and how it produces the output that it does.
+
+</div>
+
+## Try it Yourself
+
+Let's try creating a function on your own now.
+
+<div class="question">
+
+Create a function that will intake a **ROW** from the `survey` dataframe, and output a number showing how many total `NA`s there were in there row. The `is.na()` function will come in handy here. An example input and output should look like:
+
+``` r
+total_na(survey_row = survey[1,])
+
+OUTPUT: 2
+```
+
+</div>
 
   [Overview]: #overview
   [The Data]: #the-data
   [Functions Under the Hood]: #functions-under-the-hood
   [Solving a Problem]: #solving-a-problem
-  [Solving an *Abstract* Problem]: #solving-an-abstract-problem
-  [Functions that "Think"]: #functions-that-think
+  [Make it General]: #make-it-general
+  [Try it Yourself]: #try-it-yourself
