@@ -312,6 +312,9 @@ pet_output$reptile = grepl(pattern = "reptile", x = survey$pets, ignore.case = T
 pet_output$rock = grepl(pattern = "rock", x = survey$pets, ignore.case = TRUE)
 pet_output$none = grepl(pattern = "none", x = survey$pets, ignore.case = TRUE)
 
+# make a copy of the pets vector to work on
+work_pets = survey$pets
+
 # remove all known pets and clean remaining text
 work_pets = gsub(pattern = "dog", work_pets, replacement = "", ignore.case = TRUE)
 work_pets = gsub(pattern = "cat", work_pets, replacement = "", ignore.case = TRUE)
@@ -329,10 +332,133 @@ pet_output$other = work_pets
 pet_output[pet_output$other == "", "other"] = NA
 ```
 
+## Make it General
 
+Now that we know what to do, let's get to work converting this into a function. The key advantage of doing so is that we can make out code more *generalizable*. Rather than hard-coding each element, we can instead use variables for stand-ins that can be swapped later on. For example, instead of performing all of these checks on `survey$pets`, we can write the function to look at any `pets` vector we pass as an argument. This means we can re-use the function later!
 
+To start this process, let's write a skeleton for our function. Below I've included a skeleton for a new function I am calling `pet_split`. In this function, I have an argument called `pet_vector`. Now, whenever I use `pet_vector` inside the body of the function, I will be telling R to use whatever is given to the function in the `pet_vector` argument. `pet_vector` is just like an ordinary object in your R environment, **except it only exists within the function**. You can think about it like R opening a little mini-R, running all the code in the function top to bottom, giving you the result, then closing it and deleting everything else inside.
+
+```{r, eval=FALSE}
+pet_split = function(pet_vector) {
+  
+}
+```
+
+Now let's add some substance to this function. I'll start by adding in the code to create a dataframe for our output, and a `return()` at the end. Whatever I put inside `return()` will be the result of the function when it is run, and everything else will be deleted when the mini-R inside the function is closed. I also changed the code of our "id" column a bit. Instead of hard-coding 15 IDs, I made it more generalizable by asking R to make IDs 1 through the number of elements, or the length, of our `pet_vector` argument. That means the dataframe will always have the same number of rows as the `pet_vector` input, no matter how many elements it has.
+
+```{r}
+pet_split = function(pet_vector) {
+  
+  # make new dataframe for output
+  pet_output = data.frame(
+  "id" = 1:length(pet_vector),
+  "dog" = NA,
+  "cat" = NA,
+  "fish" = NA,
+  "bird" = NA,
+  "reptile" = NA,
+  "rock" = NA,
+  "none" = NA,
+  "other" = NA)
+  
+  # return
+  return(pet_output)
+}
+
+pet_split(pet_vector = survey$pets)
+```
+
+Next, let's get this function to output something we actually want. I'll copy more of our code from above into the function. You'll notice that I replace any calls for `survey$pets` with our generic argument `pet_vector`. If we run this version, we start to see our desired output!
+
+```{r}
+pet_split = function(pet_vector) {
+  
+  # make new dataframe for output
+  pet_output = data.frame(
+  "id" = 1:length(pet_vector),
+  "dog" = NA,
+  "cat" = NA,
+  "fish" = NA,
+  "bird" = NA,
+  "reptile" = NA,
+  "rock" = NA,
+  "none" = NA,
+  "other" = NA)
+  
+  # get a binary for each known pet type
+  pet_output$dog = grepl(pattern = "dog", x = pet_vector, ignore.case = TRUE)
+  pet_output$cat = grepl(pattern = "cat", x = pet_vector, ignore.case = TRUE)
+  pet_output$fish = grepl(pattern = "fish", x = pet_vector, ignore.case = TRUE)
+  pet_output$bird = grepl(pattern = "bird", x = pet_vector, ignore.case = TRUE)
+  pet_output$reptile = grepl(pattern = "reptile", x = pet_vector, ignore.case = TRUE)
+  pet_output$rock = grepl(pattern = "rock", x = pet_vector, ignore.case = TRUE)
+  pet_output$none = grepl(pattern = "none", x = pet_vector, ignore.case = TRUE)
+  
+  # return
+  return(pet_output)
+}
+
+pet_split(pet_vector = survey$pets)
+```
+
+To finish it up, let's copy the rest of our code into this function. You'll notice that I don't need to make a new vector `work_pets` as before. That's because I'm working on the `pet_vector` object directly. 
+
+```{r}
+pet_split = function(pet_vector) {
+  
+  # make new dataframe for output
+  pet_output = data.frame(
+  "id" = 1:length(pet_vector),
+  "dog" = NA,
+  "cat" = NA,
+  "fish" = NA,
+  "bird" = NA,
+  "reptile" = NA,
+  "rock" = NA,
+  "none" = NA,
+  "other" = NA)
+  
+  # get a binary for each known pet type
+  pet_output$dog = grepl(pattern = "dog", x = pet_vector, ignore.case = TRUE)
+  pet_output$cat = grepl(pattern = "cat", x = pet_vector, ignore.case = TRUE)
+  pet_output$fish = grepl(pattern = "fish", x = pet_vector, ignore.case = TRUE)
+  pet_output$bird = grepl(pattern = "bird", x = pet_vector, ignore.case = TRUE)
+  pet_output$reptile = grepl(pattern = "reptile", x = pet_vector, ignore.case = TRUE)
+  pet_output$rock = grepl(pattern = "rock", x = pet_vector, ignore.case = TRUE)
+  pet_output$none = grepl(pattern = "none", x = pet_vector, ignore.case = TRUE)
+  
+  # remove all known pets and clean remaining text
+  pet_vector = gsub(pattern = "dog", pet_vector, replacement = "", ignore.case = TRUE)
+  pet_vector = gsub(pattern = "cat", pet_vector, replacement = "", ignore.case = TRUE)
+  pet_vector = gsub(pattern = "fish", pet_vector, replacement = "", ignore.case = TRUE)
+  pet_vector = gsub(pattern = "bird", pet_vector, replacement = "", ignore.case = TRUE)
+  pet_vector = gsub(pattern = "reptile", pet_vector, replacement = "", ignore.case = TRUE)
+  pet_vector = gsub(pattern = "rock", pet_vector, replacement = "", ignore.case = TRUE)
+  pet_vector = gsub(pattern = "none", pet_vector, replacement = "", ignore.case = TRUE)
+  pet_vector = gsub(pattern = ",", pet_vector, replacement = "", ignore.case = TRUE)
+  pet_vector = trimws(pet_vector)
+  
+  # Fill in "other"
+  pet_output$other = pet_vector
+  # Turn blanks into NAs
+  pet_output[pet_output$other == "", "other"] = NA
+  
+  # return
+  return(pet_output)
+}
+
+pet_split(pet_vector = survey$pets)
+```
+
+Our new `pet_split` function works! It will create a new dataframe we can combine with our `survey` data to get tidy data about pets. Now we could save this function somewhere, and re-use it on every survey with a question about pets without having to re-code all of those steps each time.
+
+::: {.question}
+Take some time to study the above function. Make sure you understand all of the steps it is taking, and how it produces the output that it does.
+:::
 
 ## Solving an *Abstract* Problem
+
+
 
 argument for colum prefix
 
