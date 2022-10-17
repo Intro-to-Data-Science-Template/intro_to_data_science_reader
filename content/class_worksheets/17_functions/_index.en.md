@@ -150,7 +150,7 @@ function (..., exclude = if (useNA == "no") c(NA, NaN), useNA = c("no",
 }
 ```
 
-That's pretty complex looking; and it is. However, the point is that *this is the same code that runs when we call `table`*. We could, it we wanted, type this out ourselves and create our own `table` function.
+That's pretty complex looking; and it is. However, the point is that *this is the same code that runs when we call `table`*. We could, it we wanted, type this out ourselves and create our own `table` function using the... `function()` function, like we see at the top the the previous code.
 
 <div class="question">
 
@@ -158,13 +158,13 @@ Copy the code from the `table()` function, and assign it to a new function calle
 
 </div>
 
-Not all functions are as transparent. Try looking at the code behind the `sum()` function, and you may be disappointed. The most basic functions in R are "primitives," and are actually calling a lower level programming language than we can access through R. Looking at `sum` we see:
+Not all functions are as transparent. Try looking at the code behind the `sum()` function and you may be disappointed. The most basic functions in R are "primitives," and are actually calling a lower level programming language than we can access through R. Looking at `sum` we see:
 
 ``` r
 function (..., na.rm = FALSE)  .Primitive("sum")
 ```
 
-You may also be surprised to learn that pretty much everything in R is a function, though often a primitive one. For example, we can look at the + sign as a function by warping it in ticks like so:
+You may also be surprised to learn that pretty much everything in R is a function, though often a primitive one. For example, we can look at the `+` sign as a function by warping it in ticks like so:
 
 ``` r
 `+`
@@ -190,11 +190,11 @@ survey$pets
     [10] "Cat"               "Dog, Reptile"      "Dog"              
     [13] "Cat"               "None"              "Reptile, Plant"   
 
-Here's where a custom function can help us. We're going to write a function that will split those values for us, and create a new pets dataframe that we can then attach to our current `survey` dataframe.
+Here's where a custom function can help us. We know that each of the entries in `pets` is separated by a comma, and we can exploit that structure. We're going to write a function that will split those values for us by commas, and create a new pets dataframe that we can then attach to our current `survey` dataframe.
 
-The first step of creating a good function is clearly defining the key components: the **input**, **output**, and **arguments**. In our case, the input will be our pets column, the output will be a dataframe with one column per pet type, and a value of `TRUE` or `FALSE` depending on if the case had that pet. We won't need any arguments for now.
+The first step of creating a good function is clearly defining the key components: the **input**, **output**, and **arguments**. In our case, the input will be our pets column, the output will be a dataframe with one column per pet type, and a value of `TRUE` or `FALSE` depending on if the case had that pet. We won't need any arguments aside from the input for now.
 
-When I am creating a function, I typically write the code to do what I want first, and then convert it into a function. Let's write some code to create our output dataframe, and then we can work to fill it. I want to stress that this is *one* way to go about solving this problem. There are plenty of other valid options.
+When I am creating a function, I typically write the code to do what I want first, and then convert it into a function. Let's write some code to create our output dataframe, and then we can work to fill it. I want to stress that this is *one* way to go about solving this problem. There are plenty of other valid (and easier, once we learn some more skills) options.
 
 First, we'll create a new dataframe with a column for each of our possible pets, and a row for all 15 of our cases. I'll fill the dataframe with `NA`s for now.
 
@@ -211,7 +211,7 @@ pet_output = data.frame(
   "other" = NA)
 ```
 
-Now, we need to figure out a way to test if the person listed one of our options in their response. We'll use a new function called `grepl()` to test this. The name itself is a product of very old programmer speak, but practically it will search through a character vector and give us a `TRUE` or `FALSE` if it finds a match for a pattern we give it. Thus, we can run the following on our `pets` column for each of our possible pets. We're going to tell it to ignore case, so that capital and lower case letters don't matter.
+Now, we need to figure out a way to test if the person listed one of our options in their response. We'll use a new function called `grepl()` to test this. The name "grepl" is a product of very old programmer speak, but practically it will search through a character vector and give us a `TRUE` or `FALSE` if it finds a match for the pattern we give it. Thus, we can run the following on our `pets` column for each of our possible pets to test if they are included. We're going to tell it to ignore case, so that capital and lower case letters don't matter.
 
 <div class="question">
 
@@ -262,7 +262,7 @@ Why would we need a different strategy for the "other" cases?
 
 </div>
 
-To resolve our "other" issue, we will need to take another approach. First, we'll make a copy of our `pets` column we can work with.
+To resolve our "other" issue, we will need to take another approach. First, we'll make a copy of our `pets` column we can work with, and make sure we don't alter our original data.
 
 ``` r
 work_pets = survey$pets
@@ -304,7 +304,26 @@ If we look at `work_pets` now, all that is left are things not in our pets categ
 ``` r
 pet_output$other = work_pets
 pet_output[pet_output$other == "", "other"] = NA
+
+pet_output
 ```
+
+       id   dog   cat  fish  bird reptile  rock  none        other
+    1   1 FALSE FALSE FALSE FALSE   FALSE FALSE  TRUE         <NA>
+    2   2 FALSE FALSE FALSE FALSE   FALSE FALSE  TRUE         <NA>
+    3   3  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE Plants (two)
+    4   4 FALSE FALSE FALSE FALSE   FALSE FALSE  TRUE         <NA>
+    5   5  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE         <NA>
+    6   6  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE         <NA>
+    7   7 FALSE  TRUE FALSE FALSE   FALSE  TRUE FALSE         <NA>
+    8   8  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE         <NA>
+    9   9 FALSE FALSE FALSE FALSE   FALSE FALSE FALSE Spider Plant
+    10 10 FALSE  TRUE FALSE FALSE   FALSE FALSE FALSE         <NA>
+    11 11  TRUE FALSE FALSE FALSE    TRUE FALSE FALSE         <NA>
+    12 12  TRUE FALSE FALSE FALSE   FALSE FALSE FALSE         <NA>
+    13 13 FALSE  TRUE FALSE FALSE   FALSE FALSE FALSE         <NA>
+    14 14 FALSE FALSE FALSE FALSE   FALSE FALSE  TRUE         <NA>
+    15 15 FALSE FALSE FALSE FALSE    TRUE FALSE FALSE        Plant
 
 If we look at out `pet_output` dataframe now, we can see we have a column for each pet type, a `TRUE` or `FALSE` for each known pet, and the text for other pets. All in all, the code to do this looks like:
 
@@ -356,6 +375,11 @@ Now that we know what to do, let's get to work converting this into a function. 
 
 To start this process, let's write a skeleton for our function. Below I've included a skeleton for a new function I am calling `pet_split`. In this function, I have an argument called `pet_vector`. Now, whenever I use `pet_vector` inside the body of the function, I will be telling R to use whatever is given to the function in the `pet_vector` argument. `pet_vector` is just like an ordinary object in your R environment, **except it only exists within the function**. You can think about it like R opening a little mini-R, running all the code in the function top to bottom, giving you the result, then closing it and deleting everything else inside.
 
+{{% notice info %}}
+I'll say it again because it is so important to understand.</br></br>
+You can think about functions as if they were opening a little mini-R universe, running all the code in the function top to bottom with the arguments you provided as objects, giving you the result, then destroying that universe and deleting everything else inside.
+{{% /notice %}}
+
 ``` r
 pet_split = function(pet_vector) {
   
@@ -363,6 +387,10 @@ pet_split = function(pet_vector) {
 ```
 
 Now let's add some substance to this function. I'll start by adding in the code to create a dataframe for our output, and a `return()` at the end. Whatever I put inside `return()` will be the result of the function when it is run, and everything else will be deleted when the mini-R inside the function is closed. I also changed the code of our "id" column a bit. Instead of hard-coding 15 IDs, I made it more generalizable by asking R to make IDs 1 through the number of elements, or the length, of our `pet_vector` argument. That means the dataframe will always have the same number of rows as the `pet_vector` input, no matter how many elements it has.
+
+{{% notice info %}}
+The only thing that will come out of your function is whatever you put in the `return()` function. Messages (like `print()`) are exceptions.
+{{% /notice %}}
 
 ``` r
 pet_split = function(pet_vector) {
@@ -526,6 +554,8 @@ Our new `pet_split` function works! It will create a new dataframe we can combin
 Take some time to study the above function. Make sure you understand all of the steps it is taking, and how it produces the output that it does.
 
 </div>
+
+Now, we could make this even more general. In reality here we are solving the problem of splitting values by commas; several of our columns have that problem! We will go over how to make this function even better next week when we learn about iteration.
 
 ## Try it Yourself
 
