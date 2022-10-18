@@ -1,0 +1,61 @@
+---
+pre: <b>10/19. </b>
+title: "Functions"
+weight: 18
+summary: "Tools to fix errors and test conditions."
+format:
+    hugo:
+      toc: true
+      output-file: "_index.en.md"
+      reference-links: true
+      code-link: true
+      
+---
+
+```{r, include=FALSE}
+answers = FALSE
+```
+
+## Overview
+
+Code will hardly ever work exactly as you want the first try. Especially early on, coding is an exercise in incremental improvements. Debugging, or identifying and removing "buggy" code that doesn't work as intended, is the skill that lets us identify what is wrong so we can make those improvements.
+
+Today's worksheet is presented as a series of puzzles. Each puzzle will be a function that has something wrong with it. I will provide an input, and the desired output. Your task is to use the debugging tools we learned to figure out what is wrong with the function, and correct it. I will walk through an example first so you get the idea.
+
+## Our Toolbox
+
+We will be using two main tools for debugging, `debugonce()` and `browser()`. Each accomplishes the same thing is slightly different ways. These functions let you pause the execution of code mid-way inside a function, and see what is going inside our mini-R universes. This is very helpful, as opposed to just running code in your global environment, you can't normally run code inside a function line-by-line to see what is happening to the data at each step. `debugonce()` and `browser()` let you do that.
+
+`debugonce()` accepts a function name, and the next time you run a function, it will drop you into the mini universe of that function for you to look around. You can tell it worked because your console will change slightly. Instead of the regular `>` prompt in the R console, you will see 
+
+
+
+
+## Debugging Example
+
+Here is an example function. 
+
+```{r}
+example_vector = c()
+
+example_function = function() {
+  
+  
+  
+}
+```
+
+
+
+Return the wrong value
+
+
+“TRUE”
+
+
+Sum a logical?
+
+
+
+pivot someting so that the long form is all character for value then look for TRUES or do math
+
