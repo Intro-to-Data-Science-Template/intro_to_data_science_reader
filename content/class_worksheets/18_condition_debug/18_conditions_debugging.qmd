@@ -32,22 +32,12 @@ We will be using two main tools for debugging, `debugonce()` and `browser()`. Ea
 
 The figure above shows what the browser window will look like. While in the browser, you can execute R code like normal, but there are a few differences.
 
-1. Instead of the regular `>` prompt in the R console, you will see `Browse[#]>` indicating you are in the *browser*. It still works mostly like the normal console, with a few extra commands.
-  i) You can press `Enter` or enter the letter `n` to go to the next line of code.
-  ii) You can enter `c` to continue to the end of the function
-  iii) you can enter `q` to quit and leave the browser
+1. Instead of the regular `>` prompt in the R console, you will see `Browse[#]>` indicating you are in the *browser*. It still works mostly like the normal console, with a few extra commands.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;a) You can press `Enter` or enter the letter `n` to go to the next line of code.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;b) You can enter `c` to continue to the end of the function</br>
+&nbsp;&nbsp;&nbsp;&nbsp;c) You can enter `q` to quit and leave the browser
 2. The script pane is replaced with a function inspector walking you through the function you are debugging. You normally can't type in this window. The current line, what will be executed next time you press enter or `n` is highlighted.
 3. A few new buttons show up. These are the same as the commands described in #1.
-
-<ol>
-	<li>Instead of the regular `&gt;` prompt in the R console, you will see `Browse[#]&gt;` indicating you are in the *browser*. It still works mostly like the normal console, with a few extra commands.</li>
-	<li>You can press `Enter` or enter the letter `n` to go to the next line of code.</li>
-	<li>You can enter `c` to continue to the end of the function</li>
-	<li>you can enter `q` to quit and leave the browser</li>
-	<li>The script pane is replaced with a function inspector walking you through the function you are debugging. You normally can&#039;t type in this window. The current line, what will be executed next time you press enter or `n` is highlighted.</li>
-	<li>A few new buttons show up. These are the same as the commands described in #1.</li>
-</ol>
-
 
 ## Debugging Example
 
