@@ -12,9 +12,11 @@ format:
       
 ---
 
-```{r, include=FALSE}
-answers = FALSE
-```
+
+
+-   [Overview][]
+-   [Our Toolbox][]
+-   [Debugging Example][]
 
 ## Overview
 
@@ -28,26 +30,43 @@ We will be using two main tools for debugging, `debugonce()` and `browser()`. Ea
 
 `debugonce()` accepts a function name, and the next time you run a function, it will drop you into the mini-universe of that function for you to look around. You can tell it worked because your console will change slightly.
 
-![](img/browser.png)
+![][1]
 
 The figure above shows what the browser window will look like. While in the browser, you can execute R code like normal, but there are a few differences.
 
-1. Instead of the regular `>` prompt in the R console, you will see `Browse[#]>` indicating you are in the *browser*. It still works mostly like the normal console, with a few extra commands.
-  i) You can press `Enter` or enter the letter `n` to go to the next line of code.
-  ii) You can enter `c` to continue to the end of the function
-  iii) you can enter `q` to quit and leave the browser
-2. The script pane is replaced with a function inspector walking you through the function you are debugging. You normally can't type in this window. The current line, what will be executed next time you press enter or `n` is highlighted.
-3. A few new buttons show up. These are the same as the commands described in #1.
+1.  Instead of the regular `>` prompt in the R console, you will see `Browse[#]>` indicating you are in the *browser*. It still works mostly like the normal console, with a few extra commands.
+
+<!-- -->
+
+1)  You can press `Enter` or enter the letter `n` to go to the next line of code.
+2)  You can enter `c` to continue to the end of the function
+3)  you can enter `q` to quit and leave the browser
+
+<!-- -->
+
+2.  The script pane is replaced with a function inspector walking you through the function you are debugging. You normally can't type in this window. The current line, what will be executed next time you press enter or `n` is highlighted.
+3.  A few new buttons show up. These are the same as the commands described in \#1.
 
 <ol>
-	<li>Instead of the regular `&gt;` prompt in the R console, you will see `Browse[#]&gt;` indicating you are in the *browser*. It still works mostly like the normal console, with a few extra commands.</li>
-	<li>You can press `Enter` or enter the letter `n` to go to the next line of code.</li>
-	<li>You can enter `c` to continue to the end of the function</li>
-	<li>you can enter `q` to quit and leave the browser</li>
-	<li>The script pane is replaced with a function inspector walking you through the function you are debugging. You normally can&#039;t type in this window. The current line, what will be executed next time you press enter or `n` is highlighted.</li>
-	<li>A few new buttons show up. These are the same as the commands described in #1.</li>
+<li>
+Instead of the regular `&gt;` prompt in the R console, you will see `Browse[#]&gt;` indicating you are in the *browser*. It still works mostly like the normal console, with a few extra commands.
+</li>
+<li>
+You can press `Enter` or enter the letter `n` to go to the next line of code.
+</li>
+<li>
+You can enter `c` to continue to the end of the function
+</li>
+<li>
+you can enter `q` to quit and leave the browser
+</li>
+<li>
+The script pane is replaced with a function inspector walking you through the function you are debugging. You normally can\'t type in this window. The current line, what will be executed next time you press enter or `n` is highlighted.
+</li>
+<li>
+A few new buttons show up. These are the same as the commands described in \#1.
+</li>
 </ol>
-
 
 ## Debugging Example
 
@@ -55,9 +74,7 @@ Here is an example function that needs some debugging. This one is relatively sh
 
 This function is meant to accept a numeric vector, and then output the mean, median, and mode. Instead, it results in the error shown below.
 
-```{r}
-#| error: true
-
+``` r
 example_vector = c(1, 2, 6, 8, 4, 2, 8, 2, 7, 10, 33)
 
 example_function = function(num_vec) {
@@ -84,27 +101,23 @@ example_function = function(num_vec) {
 example_function(example_vector)
 ```
 
+    Error in example_function(example_vector): Not all values are numeric!
+
 How would we go about fixing this? We only have one function, so we know where things must be going wrong. We'll use `debugonce()` to get a peak inside. Copy the above function code into your console and execute it to add the function to your environment. Run the function on `example_vector` to make sure you are getting the same output as we did here. Once you have done that, run `debugonce(example_function)`, then run `example_function(example_vector)` again. You will be dropped into the debugger.
-
-
-
-
 
 Return the wrong value
 
-
-“TRUE”
-
+"TRUE"
 
 Sum a logical?
 
-
 do something with gsub working on the whoel dataframe rather than a vector
-
 
 pivot someting so that the long form is all character for value then look for TRUES or do math
 
-
 use a conditional to make a function safe
 
-
+  [Overview]: #overview
+  [Our Toolbox]: #our-toolbox
+  [Debugging Example]: #debugging-example
+  [1]: img/browser.png
