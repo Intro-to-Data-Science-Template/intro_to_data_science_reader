@@ -39,9 +39,12 @@ The figure above shows what the browser window will look like. While in the brow
 2. The script pane is replaced with a function inspector walking you through the function you are debugging. You normally can't type in this window. The current line, what will be executed next time you press enter or `n` is highlighted.
 3. A few new buttons show up. These are the same as the commands described in #1.
 
+
+
+
 ## Debugging Example
 
-Here is an example function that needs some debugging. This one is relatively short, and you may be able to figure out the problem without debugging. This will not always be the case, as function will routinely extend for a dozen or several dozen lines, with multiple other function inside of them creating nested mini-universes. The debugging process will always be the same though: figure out what function the problem is in, then go inside and follow the process step-by-step.
+Here is an example function that needs some debugging. This one is relatively short, and you may be able to figure out the problem without debugging. This will not always be the case, as functions will routinely extend for a dozen or several dozen lines with multiple other function inside of them creating nested mini-universes. The debugging process will always be the same though: figure out what function the problem is in, then go inside and follow the process step-by-step.
 
 This function is meant to accept a numeric vector, and then output the mean, median, and mode. Instead, it results in the error shown below.
 
@@ -74,7 +77,7 @@ example_function = function(num_vec) {
 example_function(example_vector)
 ```
 
-How would we go about fixing this? We only have one function, so we know where things must be going wrong. We'll use `debugonce()` to get a peak inside. Copy the above function code into your console and execute it to add the function to your environment. Run the function on `example_vector` to make sure you are getting the same output as we did here. Once you have done that, run `debugonce(example_function)`, then run `example_function(example_vector)` again. You will be dropped into the debugger.
+How would we go about fixing this? We only have one function, so we know where things must be going wrong. We'll use `debugonce()` to get a peak inside. Copy the above function code into your console and execute it to add the function to your environment. Run `example_function()` on `example_vector` to make sure you are getting the same output as we did here. Once you have done that, run `debugonce(example_function)`, then run `example_function(example_vector)` again. You will be dropped into the browser, looking around inside `example_function()`. Step through the code execution one line at a time by pressing the Enter key. Watch the environment pane each step of the way and see if you can catch where the error will happen. Once you get in the spot in the function the error occurs, it will boot you out of the browser back to the global environment.
 
 
 
