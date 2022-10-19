@@ -158,6 +158,14 @@ Copy the code from the `table()` function, and assign it to a new function calle
 
 </div>
 
+<div class="answer">
+
+my_table = table
+
+table(survey$mint_choc) my_table(survey$mint_choc)
+
+</div>
+
 Not all functions are as transparent. Try looking at the code behind the `sum()` function and you may be disappointed. The most basic functions in R are "primitives," and are actually calling a lower level programming language than we can access through R. Looking at `sum` we see:
 
 ``` r
@@ -223,6 +231,12 @@ grepl(pattern = "dog", x = survey$pets, ignore.case = TRUE)
 
 </div>
 
+<div class="answer">
+
+It says `TRUE` if the value included 'dog' and `FALSE` if it did not.
+
+</div>
+
 We can use the same function to test for each of our possible pets, and assign the results to our new dataframe.
 
 ``` r
@@ -259,6 +273,12 @@ Now, that works for everything except "other."
 <div class="question">
 
 Why would we need a different strategy for the "other" cases?
+
+</div>
+
+<div class="answer">
+
+We don't know what will be in 'other' so we can't test explicitly for it.
 
 </div>
 
@@ -570,6 +590,21 @@ total_na(survey_row = survey[1,])
 
 OUTPUT: 2
 ```
+
+</div>
+
+<div class="answer">
+
+total_na = function(survey_row) {
+
+\# get the sum of NAs
+output = sum(is.na(survey_row))
+
+\# output
+return(output)
+}
+
+total_na(survey_row = survey\[1,\])
 
 </div>
 
