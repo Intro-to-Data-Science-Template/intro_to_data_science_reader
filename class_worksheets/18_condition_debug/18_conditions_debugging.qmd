@@ -206,9 +206,6 @@ puzzle_2 = function(survey_dataframe) {
   # pivot the survey data from wide to long
   survey_long = tidyr::pivot_longer(survey_dataframe, cols = -fav_char, values_transform = as.character)
   
-  # convert tibble back to dataframe
-  survey_long = as.data.frame(survey_long)
-  
   # get all the questions people answered TRUE
   all_true = survey_long[survey_long$value == TRUE, ]
   
