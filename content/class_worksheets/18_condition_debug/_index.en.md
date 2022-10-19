@@ -180,7 +180,7 @@ puzzle_1(char_vec)
 
 <div class="question">
 
-The following function will input our survey dataframe, and is meant to output the number of times people responded `TRUE` to a question. The correct output is 37, however it is currently outputting 110. Debug this function to fix the issue.
+The following function will input our survey dataframe, and is meant to output the number of times people responded `TRUE` to a question. The correct output is 33, however it is currently outputting 110. Debug this function to fix the issue.
 
 ``` r
 # load data
@@ -190,9 +190,6 @@ puzzle_2 = function(survey_dataframe) {
   
   # pivot the survey data from wide to long
   survey_long = tidyr::pivot_longer(survey_dataframe, cols = -fav_char, values_transform = as.character)
-  
-  # convert tibble back to dataframe
-  survey_long = as.data.frame(survey_long)
   
   # get all the questions people answered TRUE
   all_true = survey_long[survey_long$value == TRUE, ]
