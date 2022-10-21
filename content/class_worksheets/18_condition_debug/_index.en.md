@@ -176,6 +176,19 @@ puzzle_1(char_vec)
 
 </div>
 
+<div class="answer">
+
+Fix the line:
+
+    # do it again
+    char_df$toss_3 = ifelse(char_df$toss_1 == 'heads',
+    sample(x = c('heads', 'tails'), size = nrow(char_df), replace = TRUE),
+    NA)
+
+So that it looks at toss_2 rather than toss_1.
+
+</div>
+
 ## Puzzle 2
 
 <div class="question">
@@ -203,6 +216,23 @@ puzzle_2 = function(survey_dataframe) {
 
 puzzle_2(survey)
 ```
+
+</div>
+
+<div class="answer">
+
+When we subset using:
+
+    all_true = survey_long[survey_long$value == TRUE, ]
+
+It also includes all NAs. You can either account for the NAs like this:
+
+    all_true = survey_long[survey_long$value == TRUE & !is.na(survey_long$value), ]
+
+Or subset the dataframe again like:
+
+    all_true = survey_long[survey_long$value == TRUE, ]
+    all_true = all_true[!is.na(all_true$value), ]
 
 </div>
 
