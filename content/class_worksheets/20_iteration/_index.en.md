@@ -192,6 +192,19 @@ Using the same principle as above, iterate over each option in `possible_columns
 
 </div>
 
+<div class="answer">
+
+The following code will iterate through `possible_columns` and replace the pattern `grepl()` is looking for with each option. It will test for that option, and save the results in the corresponding column.
+
+    for(option in possible_columns){
+      
+      # fill dataframe iterativly.
+      pet_output[ , option] = grepl(option, pet_vector, ignore.case = TRUE)
+      
+    }
+
+</div>
+
 ### Remove the Known Options to Find "Other"
 
 Once we have our "knowns" taken care of, we can work on the others. The process is nearly identical, just swap `grepl()` with `gsub()` and apply it to `pet_vector` like before.
@@ -199,6 +212,28 @@ Once we have our "knowns" taken care of, we can work on the others. The process 
 <div class="question">
 
 Iterate over each option in `possible_columns` and use `gsub()` to remove all of our known possibilities (and commas) from `pet_vector`. You can then use `trimsws()` to remove the extra spaces. Assign the remaining values to the "other" column of `pet_output`.
+
+</div>
+
+<div class="answer">
+
+The following will remove all known possibilities, clean the remainder, and assign it to the 'other' column.
+
+    for(option in possible_columns){
+      
+      # remove all known options
+      pet_vector = gsub(pattern = option, pet_vector, replacement = '', ignore.case = TRUE)
+      
+    }
+
+    # clear commas and whitespace
+    pet_vector = gsub(pattern = ',', pet_vector, replacement = '', ignore.case = TRUE)
+    pet_vector = trimws(pet_vector)
+
+    # Fill in 'other'
+    pet_output$other = pet_vector
+    # Turn blanks into NAs
+    pet_output[pet_output$other == '', 'other'] = NA
 
 </div>
 
