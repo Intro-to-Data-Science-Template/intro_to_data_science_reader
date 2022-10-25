@@ -266,7 +266,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #CBD5E8 !important;"> 8 </td>
    <td style="text-align:left;"> 10/26/2022 (Wed) </td>
-   <td style="text-align:left;"> Parallelization </td>
+   <td style="text-align:left;"> Lists and Apply </td>
    <td style="text-align:left;"> <ol><li>
 <a href="https://moodle.smith.edu/mod/lti/view.php?id=935416">Peng, R. D. (2022). 24 Parallel Computation. In R Programming for Data Science.</a>
 </li></ol> </td>

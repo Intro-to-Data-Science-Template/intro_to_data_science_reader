@@ -21,7 +21,7 @@ Week,Class,Date,Day,Topic,Readings,Due,Resources
 7,18,10/19/2022,Wed,R Debugging & Conditions,"[Bryan, J., & Hester, J. (2021). Chapter 11 Debugging R code. In What They Forgot to Teach You About R.](https://moodle.smith.edu/mod/lti/view.php?id=935554)",,
 7,19,10/21/2022,Fri,LAB 5,,,
 8,20,10/24/2022,Mon,Iteration,"[Wickham, H., & Grolemund, G. (2017). 21 Iteration. In R for Data Science. O'Reilly.](https://moodle.smith.edu/mod/lti/view.php?id=935418)",,
-8,21,10/26/2022,Wed,Parallelization,"[Peng, R. D. (2022). 24 Parallel Computation. In R Programming for Data Science.](https://moodle.smith.edu/mod/lti/view.php?id=935416)",Lab 5,
+8,21,10/26/2022,Wed,Lists and Apply,"[Peng, R. D. (2022). 24 Parallel Computation. In R Programming for Data Science.](https://moodle.smith.edu/mod/lti/view.php?id=935416)",Lab 5,
 8,22,10/28/2022,Fri,LAB 6/Quiz 2 Open,,Project 1,
 9,23,10/31/2022,Mon,Bash,"[Irizarry, R. A. (2022). Chapter 39 Organizing with Unix. In Introduction to Data Science.](https://moodle.smith.edu/mod/lti/view.php?id=935528)",,https://tldr.ostera.io/;https://devhints.io/bash
 9,24,11/2/2022,Wed,Advanced git/GitHub,"[Turing Way Community. (2022). Git Branches. In The Turing Way: A handbook for reproducible, ethical and collaborative research. Zenodo.](https://moodle.smith.edu/mod/lti/view.php?id=935674);[Turing Way Community. (2022). Merging Branches in Git. In The Turing Way: A handbook for reproducible, ethical and collaborative research. Zenodo.](https://moodle.smith.edu/mod/lti/view.php?id=935673);[Turing Way Community. (2022). Retrieving and Comparing Versions. In The Turing Way: A handbook for reproducible, ethical and collaborative research. Zenodo.](https://moodle.smith.edu/mod/lti/view.php?id=935672)",Lab 6,
