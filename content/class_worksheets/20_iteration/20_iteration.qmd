@@ -1,7 +1,7 @@
 ---
 pre: <b>10/24. </b>
 title: "Iteration"
-weight: 24
+weight: 20
 summary: "Iterate through elements and give our function superpowers."
 format:
     hugo:
