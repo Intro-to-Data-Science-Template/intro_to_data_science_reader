@@ -94,11 +94,11 @@ drink_dfs = lapply(X = survey[, c("coffee_days", "tea_days", "soda.pop_days", "j
 ')
 ```
 
-You will have gotten a list object back. Recall that lists are super-vectors. In this case, our list will be length 5, which each element containing an entire dataframe! 
+You will have gotten a list object of length 5 back. Recall that lists are super-vectors. In this case, each element of our list contains an entire dataframe! 
 
 ## Working with Lists
 
-Working with lists it tricky. Because they can contain *anything* it is hard to have set rules. The only one you can always rely on is that you need to use double square brackets `[[ ]]` to work with the **contents** of a list. For example, in our new `drink_dfs` list, we can ask for the content of the first element either by position (`drink_dfs[[1]]`) or by name (`drink_dfs[["coffee_days"]]`). If you only use a single square bracket with a list (`drink_dfs[1]`) you will get the actual **first element** of a list, which is a list of length 1 with whatever the contents are inside of it. Confusing, I know.
+Working with lists is tricky. Because they can contain *anything* it is hard to have set rules. The only one you can always rely on is that you need to use double square brackets `[[ ]]` to work with the **contents** of a list. For example, in our new `drink_dfs` list, we can ask for the content of the first element either by position (`drink_dfs[[1]]`) or by name (`drink_dfs[["coffee_days"]]`). If you only use a single square bracket with a list (`drink_dfs[1]`) you will get the actual **first element** of a list, which is a list of length 1 with whatever the contents are inside of it. Confusing, I know.
 
 ::: {.question}
 Run `str()` on both of the following:
@@ -146,11 +146,11 @@ lapply(drink_dfs, FUN = function(drink){
 })
 ```
 
-That would have taken so much more typing otherwise. An apply function like this can make our code much cleaner and easier to read. The same could be done with a `for()` loop though, and there are rather minimal differences in most cases. Do whatever makes most sense to you!
+That would have taken so much more typing otherwise. An apply function like this can make our code much cleaner and easier to read. If we did have to type all that out, it also increases the chance we will make a mistake somewhere, and one of our calculations will be different from the others. This way, we know all of them are exactly the same. You could also accomplish the same thing with a `for()` loop, and there are rather minimal differences in most cases. Do whatever makes most sense to you!
 
 ## Read ALL the Files!
 
-I promised I would share how to read multiple files at once and here we are. This is actually a common way I use `lapply()`. First, we have to have a directory of data files with identical structures. For this example, we will use the data from lab 3 (aggregation and merging). First, specify the path to the data folder of lab 3. You will have to find the specific path on your computer.
+I promised I would share how to read multiple files at once and here we are. This is actually a common way I use `lapply()`. First, we need to have a directory of data files with identical structures. For this example, we will use the data from lab 3 (aggregation and merging). First, specify the path to the data folder of lab 3. You have to find the specific path on your computer.
 
 ```{r}
 # change this to match your system
@@ -163,7 +163,7 @@ Next, we will get a vector of all the file paths of the data inside that folder 
 econ_data_paths = list.files(lab_3_data, pattern = "econ_", full.names = TRUE)
 ```
 
-Now, we will use `lapply()` to read in all of the population dataframes from that lab at once.
+Now, we will use `lapply()` to read in all of the econ_X dataframes from that lab at once.
 
 ```{r eval=FALSE}
 all_econ_data = lapply(econ_data_paths, read.csv)
@@ -181,7 +181,7 @@ all_econ_data_wide = lapply(all_econ_data,
       values_from = c("estimate", "moe"))
 ```
 
-Next, we'll use `basename()` to give each dataframe a year identifier (we'll just use the file name for now). I'll do this one in a `for()` loop, as it's easier to match the file names and our data list.
+Next, we'll use `basename()` to give each dataframe a year identifier (we'll just use the file name for now). I'll do this one in a `for()` loop as it's easier to match the file names vector and our data list elements.
 
 ```{r eval=FALSE}
 for(i in 1:6){
