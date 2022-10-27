@@ -373,8 +373,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;"> SQL </td>
    <td style="text-align:left;"> <ol><li>TBD
 </li></ol> </td>
-   <td style="text-align:left;"> <ol><li>Project 2
-</li></ol> </td>
+   <td style="text-align:left;">  </td>
   </tr>
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #FDCDAC !important;font-style: italic;color: #808080 !important;"> 12 </td>
@@ -389,7 +388,7 @@ Below is the tentative schedule for the course. While we will try to keep to thi
    <td style="text-align:left;font-style: italic;color: #808080 !important;"> 11/25/2022 (Fri) </td>
    <td style="text-align:left;font-style: italic;color: #808080 !important;"> No Class </td>
    <td style="text-align:left;font-style: italic;color: #808080 !important;">  </td>
-   <td style="text-align:left;font-style: italic;color: #808080 !important;"> <ol><li>Quiz 3
+   <td style="text-align:left;font-style: italic;color: #808080 !important;"> <ol><li>Project 2 &amp; Quiz 3
 </li></ol> </td>
   </tr>
   <tr>
