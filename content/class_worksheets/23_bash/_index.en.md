@@ -20,7 +20,7 @@ format:
 
 ## Overview
 
-Today's <span style="color: orange;">***spooky***</span> worksheet will (hopefully) be a bit of a fun divergence. To get comfortable navigating around the terminal, we will be playing a video game, [GameShell][]! Or rather the venerable ancestor to modern video games, the text role playing game. You'll be delving into the depths of castle cellars and slaying spiders like a proper Halloween adventure!
+Today's <span style="color: orange;">***spooky***</span> worksheet will (hopefully) be a bit of a fun divergence. To get comfortable navigating around the terminal, we will be playing a video game, [GameShell][]! Or rather the venerable ancestor to modern video games, the text based role playing game. You'll be delving into the depths of castle cellars and slaying spiders like a proper Halloween adventure!
 
 For this worksheet, please complete all the basic missions, \#1 through \#12. Feel free to adventure more though!
 
@@ -32,8 +32,8 @@ Fittingly for a terminal based game, you'll actually download the game through t
 
 If you want to know what this command does:
 
--   sudo (super-user do) elevates this command to admin status so it can install new things, that's why you need the password
--   apt install tells the terminal to install the following programs
+-   `sudo` (super-user do) elevates this command to admin status so it can install new things, that's why you need the password
+-   `apt install` tells the terminal to install the following programs
 -   The rest are programs, most of which you probably already have (gettext man-db procps psmisc nano tree bsdmainutils x11-apps wget)
 
 Next up, you will use `wget` or web-get to download the game file off the internet. It will save the file wherever you currently are in the terminal, so probably best to move back to your user directory if you have moved elsewhere.
