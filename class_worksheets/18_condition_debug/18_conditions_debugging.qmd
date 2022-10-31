@@ -1,6 +1,6 @@
 ---
 pre: <b>10/19. </b>
-title: "Debugging and Conditions"
+title: "Debugging & Conditions"
 weight: 18
 summary: "Tools to fix errors and test conditions."
 format:
