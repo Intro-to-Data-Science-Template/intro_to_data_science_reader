@@ -1,6 +1,6 @@
 ---
 pre: <b>9/26. </b>
-title: "Tidy Data Worksheet"
+title: "Tidy Data"
 weight: 9
 summary: "An intro to tidy data and pivoting."
 format:

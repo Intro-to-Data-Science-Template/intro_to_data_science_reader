@@ -1,6 +1,6 @@
 ---
 pre: <b>9/19. </b>
-title: "git Worksheet"
+title: "git"
 weight: 6
 summary: "Practise some git fundamentals."
 format:

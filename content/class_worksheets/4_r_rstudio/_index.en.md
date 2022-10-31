@@ -1,6 +1,6 @@
 ---
 pre: <b>9/14. </b>
-title: "R/R studio Worksheet"
+title: "R/R studio"
 weight: 4
 summary: "Practise some R fundamentals."
 format:

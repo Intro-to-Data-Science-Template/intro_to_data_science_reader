@@ -1,6 +1,6 @@
 ---
 pre: <b>9/21. </b>
-title: "Exploratory data analyses Worksheet"
+title: "Exploratory data analyses"
 weight: 7
 summary: "Intro to exploratory data analyses."
 format:

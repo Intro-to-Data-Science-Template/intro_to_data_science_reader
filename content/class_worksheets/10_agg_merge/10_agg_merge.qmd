@@ -1,6 +1,6 @@
 ---
 pre: <b>9/28. </b>
-title: "Aggregation and Merging Worksheet"
+title: "Aggregation and Merging"
 weight: 10
 summary: "How to aggregate within datasets and merge across them."
 format:
