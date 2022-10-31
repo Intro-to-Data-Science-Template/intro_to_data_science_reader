@@ -90,6 +90,14 @@ Use `lapply()` to apply `pet_split()` to all of the `<DRINK>_days` columns in ou
 
 </div>
 
+<div class="answer">
+
+drink_dfs = lapply(X = survey\[, c("coffee_days", "tea_days", "soda.pop_days", "juice_days", "none_days")\],
+FUN = pet_split,
+possible_columns = c("monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"))
+
+</div>
+
 You will have gotten a list object of length 5 back. Recall that lists are super-vectors. In this case, each element of our list contains an entire dataframe!
 
 ## Working with Lists
@@ -104,6 +112,12 @@ Run `str()` on both of the following:
 -   drink_dfs\[1\]
 
 What are the differences between the two?
+
+</div>
+
+<div class="answer">
+
+`str(drink_dfs[[1]])` says it is a dataframe, while `str(drink_dfs[1])` is a list of length 1 with a dataframe inside of it.
 
 </div>
 
@@ -207,6 +221,33 @@ merged_econ = do.call(rbind, all_econ_data_wide)
 <div class="question">
 
 Repeat this process with the "pop_acs5_XXXX" CSVs from lab 3.
+
+</div>
+
+<div class="answer">
+
+lab_3\_data = "path/to/lab-3-tidy-agg-merge-NAME/data/"
+
+pop_data_paths = list.files(lab_3\_data, pattern = "pop\_", full.names = TRUE)
+
+all_pop_data = lapply(pop_data_paths, read.csv)
+
+all_pop_data_wide = lapply(all_pop_data,
+FUN = pivot_wider,
+id_cols = c("GEOID", "NAME"),
+names_from = "variable",
+values_from = c("estimate", "moe"))
+
+for(i in 1:6){
+
+\# get the file name I want
+file_name = basename(pop_data_paths\[i\])
+
+\# add that as a column to the matching list element
+all_pop_data_wide\[\[i\]\]\$file_name = file_name
+}
+
+merged_pop = do.call(rbind, all_pop_data_wide)
 
 </div>
 
