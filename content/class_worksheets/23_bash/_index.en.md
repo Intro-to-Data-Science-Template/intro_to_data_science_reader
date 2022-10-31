@@ -16,6 +16,8 @@ format:
 
 -   [Overview][]
 -   [Get the Game][]
+    -   [macOS][]
+    -   [Windows (Windows Subsystem for Linux)][]
 -   [Playing the Game][]
 
 ## Overview
@@ -26,7 +28,29 @@ For this worksheet, please complete all the basic missions, \#1 through \#12. Fe
 
 ## Get the Game
 
-Fittingly for a terminal based game, you'll actually download the game through the terminal! We need to do some prep work first though. To start off, open up a terminal and copy & paste the following command. It will ask you to enter your user password because it is installing new software for the game to run. You **will not** see your password as you enter it, this is normal.
+Fittingly for a terminal based game, you'll actually download the game through the terminal! We need to do some prep work first though. You will need to do different things depending on your operating system.
+
+### macOS
+
+Before you can install the game, you will first need to install the tools get get the dependancies (what the game needs to run). First, install homebrew using the following. It will take a few mins.
+
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+Once that is done, install the game dependencies (the things it needs to run) using:
+
+    brew install nano pstree tree man-db wget
+
+Finally, get the game using:
+
+    wget https://github.com/phyver/GameShell/releases/download/latest/gameshell.sh
+
+You can then start the game as normal using:
+
+    bash gameshell.sh
+
+### Windows (Windows Subsystem for Linux)
+
+To start off, open up a terminal and copy & paste the following command. It will ask you to enter your user password because it is installing new software for the game to run. You **will not** see your password as you enter it, this is normal.
 
     sudo apt install gettext man-db procps psmisc nano tree bsdmainutils x11-apps wget
 
@@ -59,5 +83,7 @@ gsh help
 
   [Overview]: #overview
   [Get the Game]: #get-the-game
+  [macOS]: #macos
+  [Windows (Windows Subsystem for Linux)]: #windows-windows-subsystem-for-linux
   [Playing the Game]: #playing-the-game
   [GameShell]: https://github.com/phyver/GameShell
