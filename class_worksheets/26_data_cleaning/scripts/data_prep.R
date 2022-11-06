@@ -57,6 +57,9 @@ email_df$meet_6 = sample(c(TRUE, FALSE), size = nrow(name_df), replace = TRUE, p
 email_df$meet_7 = sample(c(TRUE, FALSE), size = nrow(name_df), replace = TRUE, prob = c(.3, .7))
 email_df$meet_8 = sample(c(TRUE, FALSE), size = nrow(name_df), replace = TRUE, prob = c(.2, .8))
 
+# randomize order
+name_df = name_df[sample(1:nrow(name_df), 50),]
+
 # save
 write.csv(name_df, "./content/class_worksheets/26_data_cleaning/data/name_df.csv", row.names = FALSE)
 write.csv(email_df, "./content/class_worksheets/26_data_cleaning/data/email_df.csv", row.names = FALSE) 
