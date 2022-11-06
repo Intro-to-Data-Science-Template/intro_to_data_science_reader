@@ -18,6 +18,16 @@ raw_names$last = sapply(str_split(raw_names$name, pattern = " ", n = 2), `[`, 2)
 # make email
 raw_names$email = tolower(paste0(raw_names$finit, raw_names$last, "@smith.edu"))
 
+# have some with multiple initials
+raw_names$init_mult = vector(mode = "character", length = nrow(raw_names))
+for(i in 1:nrow(raw_names)){
+  
+  raw_names$init_mult[i] = tolower(substr(raw_names$first[i], start = 1, stop = sample(2:3, 1, prob = c(.75, .25))))
+  
+}
+
+raw_names$email_mult = tolower(paste0(raw_names$init_mult, raw_names$last, raw_names$nums, "@smith.edu"))
+
 # add nums to some
 raw_names$nums = sample(11:99, nrow(raw_names))
 raw_names$email_n = tolower(paste0(raw_names$finit, raw_names$last, raw_names$nums, "@smith.edu"))
@@ -26,7 +36,7 @@ raw_names$email_n = tolower(paste0(raw_names$finit, raw_names$last, raw_names$nu
 final_email = vector(mode = "character", length = nrow(raw_names))
 for(i in 1:nrow(raw_names)){
   
-  final_email[i] = raw_names[i, sample(c("email", "email", "email_n"), 1)]
+  final_email[i] = raw_names[i, sample(c("email", "email", "email_n", "email_mult"), 1)]
   
 }
 
