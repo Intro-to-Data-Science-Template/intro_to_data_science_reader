@@ -15,9 +15,9 @@ format:
 
 ![](img/open-payments-logo-tm.png "Open Payments program logo")
 
-The [Smith College Museum of Art (SCMA)](https://scma.smith.edu/) staff want to better understand how people use the museum website. Project 1 will focus on real SCMA data spanning from July 2021 to June 2022. Your goal is to create a portfolio of data visualizations which help communicate the usage patterns of the SCMA website to museum staff. You can think of this project as a formalized exploratory data analysis. At the end of Project 1, your visualizations and accompanying reports will be given to the museum staff for them to learn from!
 
-[Click here for the Github Classroom Assignment for Project 2.]()
+
+[Click here for the Github Classroom Assignment for Project 2.](https://moodle.smith.edu/mod/url/view.php?id=963007)
 
 ## Project Description
 
@@ -29,7 +29,7 @@ The [Smith College Museum of Art (SCMA)](https://scma.smith.edu/) staff want to 
 
 ## Technical Details
 
-You have 2 weeks (until start of class !!!) to work on this project, including one full day of class time (!!!). You have full freedom to make the project as simple or intricate as you desire. Each member of the team must make *at least one* data visualization. You can also create tables or other summaries to help explain the data to the reader. Your final submission should include the following:
+You have 2 weeks (until midnight on 11/25) to work on this project, including two full days of class time (11/11 & 11/21). You have full freedom to make the project as simple or intricate as you desire. Each member of the team must make *at least one* data visualization. You can also create tables or other summaries to help explain the data to the reader. Your final submission should include the following:
 
 **In your team Github repo:**
 
@@ -40,7 +40,7 @@ You have 2 weeks (until start of class !!!) to work on this project, including o
   + A textual explanation of what your summaries/tables/visualization mean
   + A summary explanation of what lessons can be learned from your portfolio as a whole
 
-**Through Moodle ([Turn in here]()):**
+**Through Moodle ([Turn in here](https://moodle.smith.edu/mod/assign/view.php?id=963014)):**
 
 * A word pdf (there is a template in the docs folder) explaining your contributions to the project containing:
   + A 1-2 paragraph summary of how you contributed to your team
