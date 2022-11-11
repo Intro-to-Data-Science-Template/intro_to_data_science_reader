@@ -370,9 +370,8 @@ Below is the tentative schedule for the course. While we will try to keep to thi
   <tr>
    <td style="text-align:right;font-weight: bold;background-color: #FDCDAC !important;"> 12 </td>
    <td style="text-align:left;"> 11/21/2022 (Mon) </td>
-   <td style="text-align:left;"> SQL </td>
-   <td style="text-align:left;"> <ol><li>TBD
-</li></ol> </td>
+   <td style="text-align:left;"> Project 2 Day 2 </td>
+   <td style="text-align:left;">  </td>
    <td style="text-align:left;">  </td>
   </tr>
   <tr>
