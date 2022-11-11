@@ -37,15 +37,15 @@ We will be looking at the [Open Payments][] database of payments to medical prof
 
 ## Project Description
 
-You will use the [Open Payments][2] data to investigate the patterns of payments to doctors in the United States. Your goal is to explore the dataset, and come away with **one significant pattern** noticeable in the data per team member. Each member will present their finding as a 600 word write-up with accompanying data visualization(s); these must be presented in such a way that anyone, regardless of their familiarity with data science, could understand them.
+You will use the [Open Payments][2] data to investigate the patterns of payments to doctors in the United States. Your goal is to explore the dataset, and come away with **one significant pattern** noticeable in the data per team member. Each member will present their finding as a 600 word write-up with accompanying data product(s); these must be presented in such a way that anyone, regardless of their familiarity with data science, could understand them.
 
-If you would like some inspiration for your analyses, you can look through the [Dollars for Docs][] series at ProPublica; an archive of all the outputs from this project can be [found here][]. If you would simply like to re-create one of the analyses you find here with updated or expanded data you can, but I encourage you to follow your own curiosity.
+If you would like some inspiration for your analyses, you can look through the [Dollars for Docs][] series at ProPublica which used the same data from earlier years; an archive of all the outputs from this project can be [found here][]. If you would simply like to re-create one of the analyses you find there with updated or expanded data you can, but I encourage you to follow your own curiosity.
 
 To better understand the data, [first watch this video on the dataset][]. Next, download and start studying the [data documentation][]. You should pay special attention to the data dictionary for the open payments dataset that spans pages 22-36 as you select variables for your analysis.
 
 ### A Data Subset
 
-You can use the following code to read in a subset of the 2021 for Massachusetts. You can choose to use this as the sole data source for your project if you would like; this may limit the questions you can ask. Also keep in mind that using the API for this data source could move you into the *Exceeds Standard* proficiency level of *Data Importing* if that is something you want to pursue after we have learned about APIs on 11/16.
+You can use the following code to read in a subset of the 2021 for Massachusetts. You can choose to use this as the sole data source for your project if you would like; this will limit the questions you can ask. The full data set can be accessed on the [Open Payments Data Explorer][]. Once we cover APIs on 11/16, you could also use the Open Payments API to download data and move into the *Exceeds Standard* proficiency level of *Data Importing* if that is something you want to pursue.
 
 ``` r
 op_2021_ma <- read.csv("https://raw.githubusercontent.com/sds-192-intro-fall22/sds-192-public-website-quarto/main/website/data/open_payments_ma.csv")
@@ -59,7 +59,7 @@ Because covered recipients' names are manually entered into a database every tim
 
 ## Technical Details
 
-You have 2 weeks (until midnight on 11/25) to work on this project, including two full days of class time (11/11 & 11/21). The due date occurs over Thanksgiving recess; you are free to turn it in early, and I am providing extra time in class to work on this project. I strongly encourage you to do the necessary prep work to make the most of the second in-class day. Work on your hard coding problems then and I will be available to help.
+You have 2 weeks (until midnight on 11/25) to work on this project, including two full days of class time (11/11 & 11/21). The due date occurs over Thanksgiving recess; you are free to turn it in early, and I am providing extra time in class to work on this project. I strongly encourage you to do the necessary prep work to make the most of the second in-class day. Try to have your minimal viable product finished by that class period, then you can work on taking it to the next level while classmates and myself are available to help.
 
 You have full freedom to make the project as simple or intricate as you desire. Each member of the team must make *at least one* data product, with an associated write-up. This can be a visualization, or some other product like a table, dashboard, or anything else you feel helps tell a story regarding the data set. Regardless of what each member creates, your final team report **must** successfully render. You will include the output in the `docs/` directory of your project.
 
@@ -91,7 +91,7 @@ Keep the directory structure of your project clean. All of your scripts should l
 
 While you project must center on the [Open Payments][] data, you are not restricted to using only it. Say you want to look at payments per capita. You can combine population data from the [Census Bureau][] to do that. Say you wanted to map the hospitals who take the most money? Combine the payment data with spatial data from the [National Historical Geographic Information Systems (NHGIS)][] data.
 
-This project is looking at *how much money our doctors take from drug companies*. Keep a keen eye out for any ethical concerns in the data. *Do you think this data set is portraying an accurate representation of the truth?* If not, voice your concerns and how they amy impact how we interpret the data and your report.
+This project is looking at *how much money our doctors take from drug companies*. Keep a keen eye out for any ethical concerns in the data. *Do you think this data set is portraying an accurate representation of the truth?* If not, voice your concerns and how they may impact how we interpret the data and your report.
 
 ## Tips for Success
 
@@ -116,6 +116,7 @@ This project is looking at *how much money our doctors take from drug companies*
   [found here]: https://www.propublica.org/series/dollars-for-docs
   [first watch this video on the dataset]: https://www.youtube.com/watch?v=47IAP4SSVso
   [data documentation]: https://www.cms.gov/OpenPayments/Downloads/OpenPaymentsDataDictionary.pdf
+  [Open Payments Data Explorer]: https://openpaymentsdata.cms.gov/datasets
   [Turn in here]: https://moodle.smith.edu/mod/assign/view.php?id=963014
   [standards matrix]: https://intro-to-data-science-template.github.io/intro_to_data_science_reader/syllabus/#standards
   [pull request]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
