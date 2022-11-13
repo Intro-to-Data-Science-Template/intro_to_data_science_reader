@@ -45,6 +45,14 @@ Look over each of the dataframes. What are some of the difficulties in merging t
 
 </div>
 
+<div class="answer">
+
+-   Names and emails can't exact match
+-   Some names only use initials
+-   Some emails have numbers
+
+</div>
+
 ## The Mess
 
 We need to figure out a way to standardize our names and emails so that we can match them and get a full attendance count. The goal is to find some sort of consistent rule or structure in the data we can exploit to get matches. I'm going to have us approach the problem as follows:
@@ -111,6 +119,12 @@ Use `gsub()` or something similar to remove the smith domain from all of our ema
 
 </div>
 
+<div class="answer">
+
+email_attend$clean_email = gsub(pattern = "@smith.edu", "", email_attend$email)
+
+</div>
+
 ### Fuzzy Match
 
 Now with our `name_attend$init_last` and `email_attend$clean_email` columns, we have two things which could fuzzy match fairly closely. Here we'll use some fuzzy matching by string distance to combine our dataframes. I'll provide the code to do so below, your task will be explaining how it works. Copy it into your R instance and try to figure it out.
@@ -142,6 +156,12 @@ Sweeeeeeeeeeeet.
 <div class="question">
 
 Explain how the above code works to find the best fuzzy matches.
+
+</div>
+
+<div class="answer">
+
+First it creates a matrix showing the string distance between each `init_last` and `clean_email`. For each row in that matrix, we then find the smallest distance, and what column that distance matched with. Afterwards, we crate a new column in `name_attend` called `best_match` which gives what row in `email_attend` is the best match. We assign a ID to `email_attend` in a column called `best_match` so that we can join on them.
 
 </div>
 
