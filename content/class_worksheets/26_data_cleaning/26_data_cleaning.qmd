@@ -1,7 +1,7 @@
 ---
 pre: <b>11/7. </b>
 title: "Data Cleaning"
-weight: 24
+weight: 26
 summary: "Deal with messy data."
 format:
     hugo:
