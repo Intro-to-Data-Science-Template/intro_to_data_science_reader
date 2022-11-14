@@ -1,0 +1,112 @@
+---
+pre: <b>11/16. </b>
+title: "APIs"
+weight: 30
+summary: "Ask for your data the right way"
+format:
+    hugo:
+      toc: true
+      output-file: "_index.en.md"
+      reference-links: true
+      code-link: true
+      
+---
+
+```{r setup, include=FALSE}
+answers = FALSE
+```
+
+## Overview
+
+APIs allow us access to large amounts of remote data that we wouldn't have access to otherwise. While setting one up can take some time, it is almost always preferable to the alternative of downloading and dealing with with a pile of very large, very slow files. One situation in which this applies is the [Open Payments](https://openpaymentsdata.cms.gov/) data we are using for our project!
+
+Today we'll work through creating API calls for the Open Payments data. This will hopefully make working with the large data sets more approachable. I encourage you to walk through this process *completely* with me first, and then customize it to fit your specific project after.
+
+## The Data
+
+While we are working with the Open Payments data today, we're going to do so in a completely new way. Rather than loading all the data into R first, then sub-setting what we want, we will essentially do the sub-setting in our API call. This will save us the hassle fo loading a *massive* file into R, only to throw a bunch of it away later. It will also make getting data from multiple years much easier, as we can re-use our API calls to get the same data across years.
+
+For the purpose of this worksheet, we're going to be looking at the [2021 General Payment Data](https://openpaymentsdata.cms.gov/dataset/0380bbeb-aea1-58b6-b708-829f92a48202), but the process is the same for any of the Open Payments data. Open up the data page in a browser, as we'll need to reference the API documentation a lot; it's at the bottom of the page.
+
+## Figuring out the Rules 
+
+The first step of using any API is figuring out how it works. Every API is different, so reading the docs is super important. The Open Payments docs could be better, but they'll work.
+
+At the bottom of the [2021 General Payment Data](https://openpaymentsdata.cms.gov/dataset/0380bbeb-aea1-58b6-b708-829f92a48202) page, you will see several colored boxes like the following:
+
+![](img/api_docs_1.png)
+
+We want to use `GET` to "query" (subset) data from this dataset, so click on the arrow in the box corresponding to this single dataset.
+
+![](img/api_docs_2.png)
+
+Once you do that, the box will open up to give us more information about getting data from this dataset. The top part of the box defines the *parameters*, or what you can actually ask for in your API call. The bottom portion explains the *responses*, or what we can expect back given our parameters.
+
+Beyond that, this documentation is... lacking. Unfortunately, that isn't particularly uncommon. Either through lack of expertise on the part of the provider, or the confidence that if you are data-nerd-y enough to be using APIs you can figure it out yourself, sometimes you don't have much else to work from. Yet, I wanted you to learn how to use this API for your project, so I figured it out. I'll walk you through it now.
+
+### API Structure
+
+Recall from lecture that all APIs have a few components in common: 
+
+* The Endpoint - What site we are getting data from
+* The Data Source - What data we want from that site
+* The Data Type - What format are we getting the data in
+* The Query - What specifically we are asking for
+
+The same is true of the Open Payments data, even if they don't really tell us. I figure out that their API call breaks down as follows:
+
+Endpoint
+:   https://openpaymentsdata.cms.gov/
+
+Data Source
+:   api/1/datastore/.../0380bbeb-aea1-58b6-b708-829f92a48202
+
+Data Type
+:   format=json
+
+Query
+:   Everything else.
+
+For example, here is the query string to get data from Massachusetts for 2021. I essentially added the name of the column I wanted, and `=` and then the value I wanted to subset by. If I wanted to filter by multiple things, I would add another `&` sign and then the column name and value. Run the following to try it out.
+
+{{% notice info %}}
+If any part of your API call has a space, you will need to replace it with `%20`. Computers typically don't like spaces in paths, and it will break things. `%20` means the same thing as space to a computer without that danger.
+{{% /notice %}}
+
+```{r}
+library(httr)
+library(jsonlite)
+
+# get the data from API
+op_ma_2021_1 = GET("https://openpaymentsdata.cms.gov/api/1/datastore/query/0380bbeb-aea1-58b6-b708-829f92a48202/0?limit=500&offset=0&count=true&results=true&schema=true&keys=true&format=json&rowIds=false&recipient_state=MA")
+
+# convert to DF
+op_ma_2021_1 = fromJSON(rawToChar(op_ma_2021_1$content))$results
+```
+
+If you look at this dataframe and compare it to the MA data we got on the project page, you will notice some key differences however. One is that everything is a character; that can be fixed. Another is that we only got 500 rows. What gives?! Turns out, you can only get 500 rows at a time with the API; if you try to get any more it will only return an error.
+
+So how do we get our data? We iterate 500 rows at a time. In our API call, we need to pull the first 500 rows, then use the `offset=` parameter to start at row 501, then 1001, then 1501, etc. until we run out of rows to get.
+
+
+
+
+
+
+
+```{r}
+test = GET("https://openpaymentsdata.cms.gov/api/1/datastore/query/0380bbeb-aea1-58b6-b708-829f92a48202/0?limit=501&offset=0&count=true&results=true&schema=true&keys=true&format=json&rowIds=false&recipient_city=Fort%20Wayne")
+
+
+
+test = GET("https://openpaymentsdata.cms.gov/api/1/datastore/query/0380bbeb-aea1-58b6-b708-829f92a48202/0?limit=900&offset=0&count=true&results=true&schema=true&keys=true&format=json&rowIds=false&recipient_city=Northampton")
+test2 = rawToChar(test$content)
+test3 = fromJSON(test2)
+df = test3$results
+```
+
+
+
+
+
+
