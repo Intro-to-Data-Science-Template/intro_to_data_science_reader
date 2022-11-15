@@ -121,33 +121,42 @@ status_return = 200
 # start with 0 offset (so row 1)
 starting_row = 0
 
+# defualt for check if new rows are still coming
+still_data = TRUE
+
 # make empty list for each dataframe of 500 rows
 out_list = list()
 
 # until the API tells me the it has no more rows to give me (a non-200 response), keep offsetting by 500 and GET again
-while(status_return == 200){
+while(status_return == 200 & still_data){
   
   # print current starting row
   print(starting_row)
   
   # get data starting at starting_row, put it in list with element named starting_row + 1 (API starts at 0, R starts at 1)
-  out_list[[as.character(starting_row + 1)]] = GET(paste0("https://openpaymentsdata.cms.gov/api/1/datastore/query/0380bbeb-aea1-58b6-b708-829f92a48202/0?limit=500&offset=", starting_row, "&count=true&results=true&schema=true&keys=true&format=json&rowIds=false&conditions[0][property]=recipient_state&conditions[0][value]=MA&conditions[0][operator]=="))
+  api_return = GET(paste0("https://openpaymentsdata.cms.gov/api/1/datastore/query/0380bbeb-aea1-58b6-b708-829f92a48202/0?limit=500&offset=", starting_row, "&count=true&results=true&schema=true&keys=true&format=json&rowIds=false&conditions[0][property]=recipient_state&conditions[0][value]=MA&conditions[0][operator]=="))
+  
+  # puts results into list as df
+  out_list[[as.character(starting_row + 1)]] = fromJSON(rawToChar(api_return$content))$results
   
   # get status of call (will != 200 if failed)
-  status_return = out_list[[as.character(starting_row + 1)]]$status_code
+  status_return = api_return$status_code
   
   # add 500 to starting row
   starting_row = starting_row + 500
   
+  # test if results are empty
+  still_data = length(out_list[[as.character(starting_row + 1)]]) > 0
+  
 }
 
 # combine all the mini-dataframes into final dataframe
-api_return = lapply(out_list, FUN=function(x){fromJSON(rawToChar(x$content))$results})
-api_return = do.call(api_return, test)
+api_dfs = lapply(out_list, FUN=function(x){fromJSON(rawToChar(x$content))$results})
+api_dfs = do.call(rbind, api_dfs)
 
 ```
 
-My `api_return` is now identical to if I filtered the whole dataset by `recipient_state==MA` in R. The bonus is I could do that *before* loading the whole dataset into R. This is practically required once the dataset gets big enough.
+My `api_dfs` is now identical to if I filtered the whole dataset by `recipient_state==MA` in R. The bonus is I could do that *before* loading the whole dataset into R. This is practically required once the dataset gets big enough.
 
 ### Web Interface
 
