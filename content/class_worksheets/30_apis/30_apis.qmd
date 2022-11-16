@@ -18,13 +18,13 @@ answers = FALSE
 
 ## Overview
 
-APIs allow us access to large amounts of remote data that we wouldn't have access to otherwise. While setting one up can take some time, it is almost always preferable to the alternative of downloading and dealing with with a pile of very large, very slow files. One situation in which this applies is the [Open Payments](https://openpaymentsdata.cms.gov/) data we are using for our project!
+APIs allow us access to large amounts of data that we wouldn't have access to otherwise. While setting one up can take some time, it is almost always preferable to the alternative of downloading and dealing with with a pile of very large, very slow files. One situation in which this applies is the [Open Payments](https://openpaymentsdata.cms.gov/) data we are using for our project!
 
-Today we'll work through creating API calls for the Open Payments data. This will hopefully make working with the large data sets more approachable. I encourage you to read through this process *completely* with me first, and then customize it to fit your specific project after.
+Today we'll work through how you create API calls for the Open Payments data. This will hopefully make working with the large data sets more approachable. I encourage you to read through this process *completely* with me first, and then customize it to fit your specific project after.
 
 ## The Data
 
-While we are working with the Open Payments data today, we're going to do so in a completely new way. Rather than loading all the data into R first, then sub-setting what we want, we will essentially do the sub-setting in our API call. This will save us the hassle fo loading a *massive* file into R, only to throw a bunch of it away later. It will also make getting data from multiple years much easier, as we can re-use our API calls to get the same data across years.
+While we are working with Open Payments data today, we're going to do so in a completely new way. Rather than loading all the data into R first, then sub-setting what we want, we will essentially do the sub-setting in our API call. This will save us the hassle fo loading a *massive* file into R, only to throw a bunch of it away later. It will also make getting data from multiple years much easier, as we can re-use our API calls to get the same data across years.
 
 For the purpose of this worksheet, we're going to be looking at the [2021 General Payment Data](https://openpaymentsdata.cms.gov/dataset/0380bbeb-aea1-58b6-b708-829f92a48202), but the process is the same for any of the Open Payments data. Open up the data page in a browser, as we'll need to reference the API documentation a lot; it's at the bottom of the page.
 
@@ -53,7 +53,7 @@ Recall from lecture that all APIs have a few components in common:
 * The Data Type - What format are we getting the data in
 * The Query - What specifically we are asking for
 
-The same is true of the Open Payments data, even if they don't really tell us. In the API documentation box, there is a button in the upper right that says "Try it out." If you click that, it well let you start modifying the parameters, and unlock the option to execute a test API call. If you do so, it will give you an example API call, and try to run it in your browser. *This will take a fairly long time, and potentially crash your browser.* Instead, I'll provide the example API call here:
+The same is true of the Open Payments data, even if they don't really tell us. In the API documentation box, there is a button in the upper right that says "Try it out." If you click that, it will let you start modifying the parameters, and unlock the option to execute a test API call. If you do so, it will give you an example API call, and try to run it in your browser. *This will take a fairly long time, and potentially crash your browser.* Instead, I'll provide the example API call here:
 
 ```
 https://openpaymentsdata.cms.gov/api/1/datastore/query/0380bbeb-aea1-58b6-b708-829f92a48202/0?offset=0&count=true&results=true&schema=true&keys=true&format=json&rowIds=false
@@ -164,7 +164,7 @@ The Open Payments API isn't particularly easy to use. Rather than using that for
 
 ![](img/api_filter.png)
 
-You can thin add and apply filters to the dataset on the website itself (make sure you actually press the "Apply" button).
+You can then add and apply filters to the dataset on the website itself (make sure you actually press the "Apply" button).
 
 ![](img/filter_2.png)
 
