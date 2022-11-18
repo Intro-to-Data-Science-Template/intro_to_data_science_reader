@@ -255,7 +255,7 @@ You can demonstrate proficiency in any reviewed assignment, **but can only fulfi
    <td style="text-align:left;"> Formats data in a non-programmatic way. </td>
    <td style="text-align:left;"> Can derive new measures from existing data and append it to dataframes. </td>
    <td style="text-align:left;"> Can pivot data between wide and long formats, and can explain the use case of each. </td>
-   <td style="text-align:left;border-right:1px solid;"> Can transition data between data frames and lists, and explain the applications of data in a list format. </td>
+   <td style="text-align:left;border-right:1px solid;"> Can use lists as stores of arbitrary data structures, and subset/combine the data held within them. For example, can use a list to store iteration output, then later combine them. </td>
    <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
   </tr>
   <tr>
@@ -263,7 +263,7 @@ You can demonstrate proficiency in any reviewed assignment, **but can only fulfi
    <td style="text-align:left;"> Transforms data in a non-programmatic way. </td>
    <td style="text-align:left;"> Creates multiple copies of data in several intermediate stages of transformation that are used for different steps of analysis. </td>
    <td style="text-align:left;"> Can combine and split data sets using the appropriate merge or subset techniques. </td>
-   <td style="text-align:left;border-right:1px solid;"> Can split or merge data sets using either SQL-like calls or approximate matching. </td>
+   <td style="text-align:left;border-right:1px solid;"> Can split or merge data sets using either SQL-like calls (such as the x_join() series of functions) or approximate string matching. </td>
    <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
   </tr>
   <tr>
@@ -271,7 +271,7 @@ You can demonstrate proficiency in any reviewed assignment, **but can only fulfi
    <td style="text-align:left;"> Copies-and-pastes similar code with small changes. </td>
    <td style="text-align:left;"> Creates simple functions with consistent inputs. </td>
    <td style="text-align:left;"> Creates simple functions that can handle novel inputs, with logic to handle the data appropriately. </td>
-   <td style="text-align:left;border-right:1px solid;"> Creates complex functions that can handle arbitrary input. Includes built in error checking and warnings. </td>
+   <td style="text-align:left;border-right:1px solid;"> Created functions include conditionals and error checking to test for faulty data and describe the issue. Functions can intake multiple forms of data and handle both appropriately. For an example, see the &lt;93&gt;Make it Flex&lt;94&gt; section of Lab 5. </td>
    <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
   </tr>
   <tr>
@@ -287,7 +287,7 @@ You can demonstrate proficiency in any reviewed assignment, **but can only fulfi
    <td style="text-align:left;"> Selects inappropriate formats for data visualization. </td>
    <td style="text-align:left;"> Selects sub-optimal visualization formats or uses excessive visualizations where a single one would be sufficient. </td>
    <td style="text-align:left;"> Selects suitable formats for data visualization (bar, line, boxplot, etc.) and can explain the reasoning behind that choice. </td>
-   <td style="text-align:left;border-right:1px solid;"> Effectively mixes visualization formats or isolates individual elements to clearly communicate a message. </td>
+   <td style="text-align:left;border-right:1px solid;"> Effectively mixes visualization formats or isolates individual elements to clearly communicate a message. For example, including a miniature table of the most important values within a bar plot. </td>
    <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
   </tr>
   <tr>
@@ -310,7 +310,7 @@ You can demonstrate proficiency in any reviewed assignment, **but can only fulfi
    <td style="text-align:left;font-weight: bold;background-color: #CCEBC5 !important;border-right:1px solid;"> Data Ethics </td>
    <td style="text-align:left;"> Does not consider data ethics or investigate data provenance. </td>
    <td style="text-align:left;"> Can articulate common pitfalls and relate them to the project at hand. Confirms data types and scales using data documentation. </td>
-   <td style="text-align:left;"> Reads data documentation to understand data collection/generation and measurements. Can highlight potential concerns specific to the data or project. </td>
+   <td style="text-align:left;"> Reads data documentation to understand data collection/generation and measurements. Can highlight and explain to readers the potential concerns specific to the data or project. </td>
    <td style="text-align:left;border-right:1px solid;"> Either creates data documentation for used data, or includes notes in code to the data sources and explains potential pitfalls. Considers and articulates relevant concerns related to the current project unprompted throughout the work cycle. </td>
    <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
   </tr>
@@ -318,8 +318,8 @@ You can demonstrate proficiency in any reviewed assignment, **but can only fulfi
    <td style="text-align:left;font-weight: bold;background-color: #CCEBC5 !important;border-right:1px solid;"> Code Style </td>
    <td style="text-align:left;"> Code style is inconsistent and/or lacks documentation. </td>
    <td style="text-align:left;"> Code comments explain the broad strokes of intended behavior. Indentation is consistent and predictable. Uses print statements to track the status of code execution. </td>
-   <td style="text-align:left;"> Consistently comments all code with clearly organized sections. Expected inputs and outputs are clearly explained. Uses error messages or print statements within their code to locate the causes of errors and resolve them. </td>
-   <td style="text-align:left;border-right:1px solid;"> Code is clearly commented, with standardized formatting and indentation. Code contains tests which will check for errors, and report those errors if they arise. </td>
+   <td style="text-align:left;"> Consistently comments all code and makes use of the built-in section headings in R Studio. For user created functions, the inputs and outputs are clearly explained, and examples are provided. </td>
+   <td style="text-align:left;border-right:1px solid;"> Includes &lt;93&gt;sanity checks&lt;94&gt; for data validity in code. For longer scripts or iterations includes print statements to track execution progress. </td>
    <td style="text-align:left;background-color: #A2CD5A !important;"> <i class="fas fa-check-square fa-2x" style="width: 100%; text-align: center;"></i> </td>
   </tr>
   <tr>
