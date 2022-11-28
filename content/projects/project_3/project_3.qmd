@@ -1,0 +1,113 @@
+---
+pre: <b>Project 3. </b>
+title: "Finals"
+weight: 3
+summary: "Project 3: Scope and execute your own data science project."
+format:
+    hugo:
+      toc: true
+      output-file: "_index.en.md"
+      reference-links: true
+      code-link: true
+---
+
+## Overview
+
+Thus far this semester we have been filling your data science toolbox to read, clean, analyze, and report on data. Each lab and project has presented you with a problem or topic to apply those skills to. For the final project, you are free to devise a goal of your own, and apply your new skills to a question that matters to *you*.
+
+Thinking of a project idea can be difficult, and I provide some advice below. Whatever project you work on, remember that this is the **final** opportunity you will have to place yourself on the [standards matrix](https://intro-to-data-science-template.github.io/intro_to_data_science_reader/syllabus/#standards). Keep this in mind as you choose a project or team.
+
+Because of the free-form nature of th projects, each team will need to speak with Dr. Joseph to define what the final output will look like. Try to keep the scope of the project reasonable; you have 2.5 weeks to work on it. Start with your *minimal viable product*, then create stretch goals for yourself.
+
+[Click here for the Github Classroom Assignment for Project 3.](https://moodle.smith.edu/mod/url/view.php?id=967698)
+
+## Picking a Project
+
+Having to pick your own project idea can be an intimidating prospect; there's a lot of freedom! This section will hopefully provide some helpful advice.
+
+### Idea
+
+When considering project ideas, start with something you are interested in already. This can be a hobby, an academic area, or just a general topic. From there, start to think about how you could quantify those topics, and thus how you could analyze those numbers. You don't need to do anything revolutionary; even asking a question you already know the answer to from a new data perspective is totally valid.
+
+* Interested in sports? Do some analysis of the world cup!
+* Interested in corruption? Do some analysis of FIFA!
+* Interested in financial markets? Analyze stock data and prices!
+* English major? Use your text skills to look at an author's body of work!
+* Sociology major? Look at the effect of demographics on inequality!
+* Geology major? Do an analysis of volcanic eruptions! 
+* Computer science major? Look into the prevalence of various coding languages!
+* Curious about your home town? Do an analysis comparing to to other places in the county!
+
+The possibilities are endless. Start with what *you* find interesting, and then combine it with the data skills you have developed this semester.
+
+### Scope
+
+The harder part of this process is adequately scoping a project. This involves finding a data source, figuring out how to use it to ask your question, and estimating how long that will take. You have worked on two projects thus far, so have some idea of how long the process from new data to output takes. Now, you will also need to *find* that data.
+
+I will be available to help you find data sets and scope your project. That said, always plan for a small output that fulfills all your requirements--your **minimal viable product**--and then start making more elaborate stretch goals. This is especially important with this project, as finding and preparing your data will almost certainly take more time that you anticipate. 
+
+### Finding Data
+
+Here are a few places to start your data search. These sources are *not* exhaustive.
+
+* [Our world in data](https://ourworldindata.org/): Food security, migration, climate change, terrorism, and much more global scale data.
+* [US Census data](https://data.census.gov/): Population, employment, demographics, and more about the US.
+* [Pew Research](https://www.pewresearch.org/politics/datasets/): Public opinion polls for the US. Has longitudinal data for decades.
+* [Data.gov](https://data.gov/): Meta-search for a ton of open US governmental data.
+* [Inter-university Consortium for Political and Social Research (ICPSR)](https://www.icpsr.umich.edu/web/pages/ICPSR/index.html): Curated collection of academic data on a wide array of topics.
+* [Google Dataset Search](https://datasetsearch.research.google.com/): A meta search engine for data all over the web.
+
+### Make it Useful
+
+This project is open to allow you to follow your interest, but also hopefully make it useful for you in other ways. While the exact final report from this class is unlikely to be just what you need, it can be used to make progress. For example:
+
+* If you are considering doing any sort of honors thesis, see if you can involve a data component. Use this project as a proof of concept to build on later.
+* If you are part of a student club, is there any way to use data to improve attendance or find more topical meeting subjects?
+* Are you part of any advocacy organizations? Could a data analysis help support some argument you are making?
+* Trying to make a big decision? Would some analysis help with that?
+
+The flexible nature of this project leaves a lot of room to bend it into something that you can use elsewhere. Take advantage if you can.
+
+## Technical Details
+
+You have 2.5 weeks (until midnight on 12/14) to work on this project, including three days of class time (11/28, 12/7, and 12/9). Prior to the final due date, the last day of class (12/12) will consist of each team presenting their final project to the class. Treat these presentations as an outline for your final report; they should convey the key messages from your project, where the final will include the details.
+
+You have full freedom to make the project as simple or intricate as you desire. Each member of the team must make *one significant data contribution* to the project. This does *not* mean every member must make a visualization. One person could be in charge of data collection, while another team member does all the data visualizations, or any other significant task. Just keep in mind you will be evaluated according to the tasks you accomplish.
+
+The final output of your projects will vary by group, and will be decided in consultation with Dr. Joseph. Regardless of what each member creates, your final team report **must** successfully render. You will include the output in the `docs/` directory of your project.
+
+Your final submission should include the following:
+
+**In your team Github repo `docs/` folder:**
+
+* A **RENDERED** Quarto portfolio document (any format) containing:
+  + An introduction to your team's overarching theme and question
+  + A introduction and investigation of your data source(s)
+  + An explanation of all your analyses with references to your code files (code itself does *not* need to be in this report)
+  + All data products you wish to present (or directions on how to find them)
+  + A summary of what lessons your team learned about the data
+
+**Through Moodle ([Turn in here](https://moodle.smith.edu/mod/assign/view.php?id=967691)):**
+
+* A rendered Quarto pdf (there is a template in the docs folder) explaining your contributions to the project containing:
+  + A 1-2 paragraph summary of how you contributed to your team
+  + A list of each standard (per the course syllabus) you *individually* worked with in this project
+  + A justification for each standard describing what proficiency level you demonstrated **per the text in the [standards matrix](https://intro-to-data-science-template.github.io/intro_to_data_science_reader/syllabus/#standards)**.
+
+## Project Strategy 
+
+Finding your own data source is a critical and time consuming part of this project. Plan accordingly. The last thing you want is to half-investigate a data source to find in week 2 that it doesn't contain the data you need for your question. You will also likely need to spend time cleaning whatever data you find. Rather than trying to clean a specific thing for your use-case, I recommend working as a team to define *all* the elements you will need to clean as a team, then assigning a cleaning task to each person. If each person cleans one thing, and you compile those steps into a script to clean your data and save a new *clean* version of your data file, now everyone has access to a higher quality data source to work with.
+
+Keep questions regarding data quality and data ethics in the front of your mind. There are no guard rails regarding data quality in this project. You will need to thoroughly justify the data you use, and clearly illuminate its flaws.
+
+I *highly* recommend you make use of the git project skills we went over in our Advanced git lecture. Work on branches to avoid constant merge conflicts. Work on one task per branch, make a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to integrate those changes into main, have someone else review and integrate those changes, then create a new branch for the next task. Be aware that you may still run into merge conflicts, but it is much easier to resolve one when you merge a branch than one every single time you want to push or pull. If you need a refresher on resolving conflicts, The Turing Way has a fairly [short guide](https://the-turing-way.netlify.app/reproducible-research/vcs/vcs-git-merge.html#merge-conflicts). You can even resolve a conflict [right on Github](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github).
+
+Keep the directory structure of your project clean. All of your scripts should live in the `src/` directory, all data should be in `data/`, etc. Try to name script files based on what they do, not who made them. Establish a clear order of scripts; for example script `01_cleaning.r` creates a clean dataset, `02_analyses.r` creates new measures, and then a series of `03_<XX>_PLOT.r` scripts make individual plots.
+
+## Tips for Success
+
+1. Focus on creating a *minimum viable product* first. This means make something simple that satisfies all of the requirements, then go back and expand on what you have. Don't try to create something ultra-fancy as your first milestone.
+2. Start by spending time understanding all of the variables in the provided data. Include a document in your project explaining what all the variables mean.
+3. Each person should work in a separate R script for each table/summary/visualization you want to create. Make combining them into your finalized portfolio a separate step.
+4. If there is a specific standard you want to raise, look for opportunities to do so. Each part of the data will have different challenges that you can overcome to show your growth.
+5. Don't be afraid to branch out! There is no ceiling for this project. If you want to try a new tool or visualization style we haven't covered in class, give it a go. You can explain how you think it shows your proficiency in your Moodle submission. 
