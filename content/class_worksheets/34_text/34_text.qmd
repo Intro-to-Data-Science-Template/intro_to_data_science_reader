@@ -182,11 +182,17 @@ sherlock_tokens = tokens(sherlock_corpus, remove_punct = TRUE, remove_symbols = 
   tokens_remove(stopwords("en"))
 ```
 
+Lastly, we want to "stem" our words, or reduce them to simpler forms. For example, it would stem "running" to "run" by removing the "ing." This makes it so the code can understand that "running" and "run" mean the same thing. Its not perfect, and can in some cases make things worse, but it makes the data cleaner. If you want to get a better results, look into "lemmatizing" your text instead.
+
+```{r}
+sherlock_tokens = tokens_wordstem(sherlock_tokens)
+```
+
 ## Exploring Text Data
 
 Now that we have our corpus, we can start exploring our texts computationally. There are a few neat things we can do.
 
-## Common Words
+### Common Words
 
 One of the most basic things we can look at is how common some words are. To do that, we first have to get a count of every word per document, we can do that using the `dfm()` function, or "document feature matrix." This object will have a column for every token in our corpus, and a row for every document.
 
@@ -237,6 +243,16 @@ textplot_xray(
   kwic(sherlock_tokens, "sherlock"),
   kwic(sherlock_tokens, "watson")
   )
+```
+
+### Sentiment 
+
+It is also possible to see how positive or negative the emotions in our text are. There are more advanced methods, but for today we will just use a dictionary method, meaning we use a pre-defined list of negative and positive words, and count how often they appear in our text. We can use the following command to do this counting using the "data_dictionary_LSD2015" sentiment dictionary.
+
+```{r}
+sherlock_sentiment = dfm_lookup(sherlock_dfm, dictionary = data_dictionary_LSD2015, exclusive = TRUE)
+
+convert(sherlock_sentiment, to = "data.frame")
 ```
 
 # Conclusion

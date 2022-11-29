@@ -24,8 +24,9 @@ format:
     -   [Building a Corpus][]
     -   [Cleaning our "Tokens"][]
 -   [Exploring Text Data][]
--   [Common Words][]
+    -   [Common Words][]
     -   [Key Words][]
+    -   [Sentiment][]
 -   [Conclusion][]
 
 ## Overview
@@ -159,11 +160,17 @@ sherlock_tokens = tokens(sherlock_corpus, remove_punct = TRUE, remove_symbols = 
   tokens_remove(stopwords("en"))
 ```
 
+Lastly, we want to "stem" our words, or reduce them to simpler forms. For example, it would stem "running" to "run" by removing the "ing." This makes it so the code can understand that "running" and "run" mean the same thing. Its not perfect, and can in some cases make things worse, but it makes the data cleaner. If you want to get a better results, look into "lemmatizing" your text instead.
+
+``` r
+sherlock_tokens = tokens_wordstem(sherlock_tokens)
+```
+
 ## Exploring Text Data
 
 Now that we have our corpus, we can start exploring our texts computationally. There are a few neat things we can do.
 
-## Common Words
+### Common Words
 
 One of the most basic things we can look at is how common some words are. To do that, we first have to get a count of every word per document, we can do that using the `dfm()` function, or "document feature matrix." This object will have a column for every token in our corpus, and a row for every document.
 
@@ -177,7 +184,7 @@ Once we have a dfm, we can do neat things like plot the most common words! We ca
 textplot_wordcloud(sherlock_dfm)
 ```
 
-<img src="34_text_files/figure-gfm/unnamed-chunk-17-1.png" width="768" />
+<img src="34_text_files/figure-gfm/unnamed-chunk-18-1.png" width="768" />
 
 Or we can plot it in a more traditional way.
 
@@ -193,7 +200,7 @@ ggplot(sherlock_most_common, aes(x = reorder(feature, frequency), y = frequency)
   theme_minimal()
 ```
 
-<img src="34_text_files/figure-gfm/unnamed-chunk-18-1.png" width="768" />
+<img src="34_text_files/figure-gfm/unnamed-chunk-19-1.png" width="768" />
 
 ### Key Words
 
@@ -205,74 +212,74 @@ First, we can look at the word in the context of the text using `kwic()` or "key
 kwic(sherlock_tokens, "sherlock")
 ```
 
-    Keyword-in-context with 33 matches.                                                                              
-         [Chapter 1, 2]                                            Mr | Sherlock |
-         [Chapter 1, 5]                         Mr Sherlock Holmes Mr | Sherlock |
-       [Chapter 1, 467] terrier smaller mastiff laughed incredulously | Sherlock |
-       [Chapter 1, 680]                James Mortimer man science ask | Sherlock |
-       [Chapter 1, 833]                great unknown ocean presume Mr | Sherlock |
-       [Chapter 1, 877]         intention fulsome confess covet skull | Sherlock |
-       [Chapter 2, 833]          spectacles forehead stared across Mr | Sherlock |
-      [Chapter 2, 1342]           Charles Baskerville must thank said | Sherlock |
-       [Chapter 3, 194]             small patch gravel discern others | Sherlock |
-        [Chapter 4, 73]                     yes said strange thing Mr | Sherlock |
-       [Chapter 4, 262]                   room Sir Henry promise said | Sherlock |
-       [Chapter 4, 991]           singularly useless thing steal said | Sherlock |
-         [Chapter 5, 4]                          Three Broken Threads | Sherlock |
-       [Chapter 5, 949]           May difficulties vanish easily said | Sherlock |
-      [Chapter 5, 1185]          Shipley's Yard near Waterloo Station | Sherlock |
-      [Chapter 5, 1263]                 mentioned name said cabman Mr | Sherlock |
-      [Chapter 5, 1295]                  home upon prettily time name | Sherlock |
-      [Chapter 5, 1404]                might interest know driving Mr | Sherlock |
-      [Chapter 5, 1415]                  saw went station describe Mr | Sherlock |
-        [Chapter 6, 16]            day started arranged Devonshire Mr | Sherlock |
-       [Chapter 7, 241]           answer might least something report | Sherlock |
-       [Chapter 7, 663]         better explanation come conclusion Mr | Sherlock |
-       [Chapter 7, 700]                 name deny identity follows Mr | Sherlock |
-        [Chapter 8, 13]         course events transcribing letters Mr | Sherlock |
-       [Chapter 10, 12]            quote reports forwarded early days | Sherlock |
-     [Chapter 10, 1253]             craniology rest drive lived years | Sherlock |
-     [Chapter 12, 1729]                 took indicate relief think Mr | Sherlock |
-        [Chapter 13, 8]               Sir Henry pleased surprised see | Sherlock |
-      [Chapter 13, 996]                   pike Mrs Laura Lyons office | Sherlock |
-     [Chapter 13, 1101]                    wife said wife married man | Sherlock |
-     [Chapter 13, 1224]            friend entirely believe madam said | Sherlock |
-     [Chapter 13, 1321]             think whole fortunate escape said | Sherlock |
-        [Chapter 14, 4]                        Hound Baskervilles One | Sherlock |
-                                                  
-     Holmes Mr Sherlock Holmes usually            
-     Holmes usually late mornings save            
-     Holmes leaned back settee blew               
-     Holmes specialist crime Come appearance      
-     Holmes addressing friend Dr Watson           
-     Holmes waved strange visitor chair           
-     Holmes latter yawned tossed end              
-     Holmes calling attention case certainly      
-     Holmes struck hand knee impatient            
-     Holmes friend proposed coming round          
-     Holmes confine present permission interesting
-     Holmes confess share Dr Mortimer's           
-     Holmes remarkable degree power detaching     
-     Holmes singular thing Dr Mortimer            
-     Holmes made note Now Clayton                 
-     Holmes Never seen friend completely          
-     Holmes Yes sir gentleman's name              
-     Holmes come know name see                    
-     Holmes cabman scratched head Well            
-     Holmes drove station gave last               
-     Holmes Sir Henry numerous papers             
-     Holmes words took away breath                
-     Holmes interesting matter naturally curious  
-     Holmes lie table One page                    
-     Holmes Now however arrived point             
-     Holmes nothing one incident record           
-     Holmes friend bowed compliments quick        
-     Holmes days expecting recent events          
-     Holmes opened interview frankness directness 
-     Holmes shrugged shoulders Prove Prove        
-     Holmes recital events must painful           
-     Holmes power knew yet alive                  
-     Holmes's defects indeed one may              
+    Keyword-in-context with 33 matches.                                                                       
+         [Chapter 1, 2]                                     Mr | Sherlock |
+         [Chapter 1, 5]                    Mr Sherlock Holm Mr | Sherlock |
+       [Chapter 1, 467] terrier smaller mastiff laugh incredul | Sherlock |
+       [Chapter 1, 680]             Jame Mortim man scienc ask | Sherlock |
+       [Chapter 1, 833]          great unknown ocean presum Mr | Sherlock |
+       [Chapter 1, 877]      intent fulsom confess covet skull | Sherlock |
+       [Chapter 2, 833]      spectacl forehead stare across Mr | Sherlock |
+      [Chapter 2, 1342]       Charl Baskervill must thank said | Sherlock |
+       [Chapter 3, 194]       small patch gravel discern other | Sherlock |
+        [Chapter 4, 73]               yes said strang thing Mr | Sherlock |
+       [Chapter 4, 262]             room Sir Henri promis said | Sherlock |
+       [Chapter 4, 991]      singular useless thing steal said | Sherlock |
+         [Chapter 5, 4]                    Three Broken Thread | Sherlock |
+       [Chapter 5, 949]      May difficulti vanish easili said | Sherlock |
+      [Chapter 5, 1185]     Shipley Yard near Waterloo Station | Sherlock |
+      [Chapter 5, 1263]            mention name said cabman Mr | Sherlock |
+      [Chapter 5, 1295]           home upon prettili time name | Sherlock |
+      [Chapter 5, 1404]           might interest know drive Mr | Sherlock |
+      [Chapter 5, 1415]            saw went station describ Mr | Sherlock |
+        [Chapter 6, 16]          day start arrang Devonshir Mr | Sherlock |
+       [Chapter 7, 241]       answer might least someth report | Sherlock |
+       [Chapter 7, 663]          better explan come conclus Mr | Sherlock |
+       [Chapter 7, 700]              name deni ident follow Mr | Sherlock |
+        [Chapter 8, 13]        cours event transcrib letter Mr | Sherlock |
+       [Chapter 10, 12]          quot report forward earli day | Sherlock |
+     [Chapter 10, 1253]         craniolog rest drive live year | Sherlock |
+     [Chapter 12, 1729]             took indic relief think Mr | Sherlock |
+        [Chapter 13, 8]            Sir Henri pleas surpris see | Sherlock |
+      [Chapter 13, 996]              pike Mrs Laura Lyon offic | Sherlock |
+     [Chapter 13, 1101]               wife said wife marri man | Sherlock |
+     [Chapter 13, 1224]         friend entir believ madam said | Sherlock |
+     [Chapter 13, 1321]          think whole fortun escap said | Sherlock |
+        [Chapter 14, 4]                   Hound Baskervill One | Sherlock |
+                                         
+     Holm Mr Sherlock Holm usual         
+     Holm usual late morn save           
+     Holm lean back sette blew           
+     Holm specialist crime Come appear   
+     Holm address friend Dr Watson       
+     Holm wave strang visitor chair      
+     Holm latter yawn toss end           
+     Holm call attent case certain       
+     Holm struck hand knee impati        
+     Holm friend propos come round       
+     Holm confin present permiss interest
+     Holm confess share Dr Mortim        
+     Holm remark degre power detach      
+     Holm singular thing Dr Mortim       
+     Holm made note Now Clayton          
+     Holm Never seen friend complet      
+     Holm Yes sir gentleman name         
+     Holm come know name see             
+     Holm cabman scratch head Well       
+     Holm drove station gave last        
+     Holm Sir Henri numer paper          
+     Holm word took away breath          
+     Holm interest matter natur curious  
+     Holm lie tabl One page              
+     Holm Now howev arriv point          
+     Holm noth one incid record          
+     Holm friend bow compliment quick    
+     Holm day expect recent event        
+     Holm open interview frank direct    
+     Holm shrug shoulder Prove Prove     
+     Holm recit event must pain          
+     Holm power knew yet aliv            
+     Holm defect inde one may            
 
 We can then use this information to plot where Sherlock shows up in the story!
 
@@ -280,7 +287,7 @@ We can then use this information to plot where Sherlock shows up in the story!
 textplot_xray(kwic(sherlock_tokens, "sherlock"))
 ```
 
-<img src="34_text_files/figure-gfm/unnamed-chunk-20-1.png" width="768" />
+<img src="34_text_files/figure-gfm/unnamed-chunk-21-1.png" width="768" />
 
 So cool. We can also compare Sherlock to another character, like Watson.
 
@@ -291,7 +298,34 @@ textplot_xray(
   )
 ```
 
-<img src="34_text_files/figure-gfm/unnamed-chunk-21-1.png" width="768" />
+<img src="34_text_files/figure-gfm/unnamed-chunk-22-1.png" width="768" />
+
+### Sentiment
+
+It is also possible to see how positive or negative the emotions in our text are. There are more advanced methods, but for today we will just use a dictionary method, meaning we use a pre-defined list of negative and positive words, and count how often they appear in our text. We can use the following command to do this counting using the "data_dictionary_LSD2015" sentiment dictionary.
+
+``` r
+sherlock_sentiment = dfm_lookup(sherlock_dfm, dictionary = data_dictionary_LSD2015, exclusive = TRUE)
+
+convert(sherlock_sentiment, to = "data.frame")
+```
+
+           doc_id negative positive neg_positive neg_negative
+    1   Chapter 1       48       92            0            0
+    2   Chapter 2      149      116            0            0
+    3   Chapter 3       85       84            0            0
+    4   Chapter 4       94      125            0            0
+    5   Chapter 5       79      107            0            0
+    6   Chapter 6      145      101            0            0
+    7   Chapter 7      178      146            0            0
+    8   Chapter 8       96       78            0            0
+    9   Chapter 9      262      191            0            0
+    10 Chapter 10      138       89            0            0
+    11 Chapter 11      156      138            0            0
+    12 Chapter 12      243      145            0            0
+    13 Chapter 13      101      104            0            0
+    14 Chapter 14      219      107            0            0
+    15 Chapter 15      184      113            0            0
 
 # Conclusion
 
@@ -309,5 +343,6 @@ While this example was just for fun, the utility is huge with text analysis. Say
   [Exploring Text Data]: #exploring-text-data
   [Common Words]: #common-words
   [Key Words]: #key-words
+  [Sentiment]: #sentiment
   [Conclusion]: #conclusion
   [Project Gutenberg]: https://www.gutenberg.org/ebooks/2852
