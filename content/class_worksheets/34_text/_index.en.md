@@ -31,6 +31,8 @@ format:
 
 ## Overview
 
+Today we will be introduced to using text as the focus of our analyses, rather than just a small component. This requires a few new tools, but they unlock a whole new realm of possibilities for study. While this is just a brief introduction, I hope it provides some idea of what can be done. My hope is that in the future, when you encounter a problem well suited to text analysis, you will remember what is possible, and explore to tools more fully.
+
 You will need to install and load the `quanteda` packages:
 
 ``` r
