@@ -260,7 +260,7 @@ convert(sherlock_sentiment, to = "data.frame")
 
 While this example was just for fun, the utility is huge with text analysis. Say you wanted to know how often a certain policy appeared over time? Who said it? What it was talked about in the context of? All of these are valid applications. That is to say nothing of more advanced methods like topic modeling or word2vec! If you are interested in text, there is a whole universe of tools out there.
 
-
+To learn more about what `quanteda` specifically can do, [check out the tutorial site for the package here](https://tutorials.quanteda.io/).
 
 
 
