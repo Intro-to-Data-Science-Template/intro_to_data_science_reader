@@ -44,7 +44,7 @@ You will need the `statnet` and `visNetwork` packages for this worksheet.
 
 ## What is Network Analysis
 
-You are all most likely familiar now with tabular data; rows and columns containing information. It looks like this:
+You are all familiar now with tabular data; rows and columns containing information. It looks like this:
 
 | Person                               | Name | Age | Widgets |
 |--------------------------------------|:-----|:----|:--------|
