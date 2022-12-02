@@ -38,13 +38,17 @@ net_url12 = "https://raw.githubusercontent.com/Epsian/sna_lecture/main/resources
 
 ## Overview
 
+{{% notice info %}}
+Our class network is small, which makes many of the measure we will talk about below seem similar. In larger networks the differences are easier to see.
+{{% /notice %}}
+
 This worksheet will introduce the theoretical and logistical underpinnings of network analysis. It will define what networks are, their limitations, and their use cases. It will then cover some of the most commonly used network measures, what they mean, and how to generate them.
 
 You will need the `statnet` and `visNetwork` packages for this worksheet.
 
 ## What is Network Analysis
 
-You are all most likely familiar now with tabular data; rows and columns containing information. It looks like this:
+You are all familiar now with tabular data; rows and columns containing information. It looks like this:
 
 | Person                               | Name | Age | Widgets |
 |--------------------------------------|:-----|:----|:--------|
@@ -315,18 +319,18 @@ Which of these will be useful to you will likely change from project to project.
 
 ### Density
 
-*Density* is the first real graph level metric that helps you understand what is particular about the network you are looking at. The density of a network is a numerical score showing how many ties exist in a network, given the max possible in that network. Mathematically that is $\frac{Actual Edges}{Possible Edges}$, where actual edges is the number of edges in the network, and possible edges is the number of edges if every single node in the network was connected to every other node.
+*Density* is the first real graph level metric that helps you understand what is particular about the network you are looking at. The density of a network is a numerical score showing how many ties exist in a network, given the max possible in that network. Mathematically that is *Actual Edges*/*Possible Edges*, where actual edges is the number of edges in the network, and possible edges is the number of edges if every single node in the network was connected to every other node.
 
 Networks that are more densely connected are considered to be more cohesive and robust. This means that the removal of any specific edge or node will not have a great effect of the network as a whole. It also typically means that any one node in the network will be more likely to have access to whatever resources are in the network, as there are more potential connections in the network to search for resources.
 
 To calculate the density of a network, we use the `network.density()` function. You can also see it if you use `summary()` on your network object. Below is our toy network and a less dense version to try and visualize the difference. Density is all about how many edges exist in the network. Notice that there are the same number of nodes in both of these networks.
 
 ```{r echo=FALSE}
-visNetwork(toy_attributes, toy_edgelist, main = "High Density") %>% visInteraction(zoomView = FALSE)
+visNetwork(toy_attributes, toy_edgelist, main = "High(er) Density") %>% visInteraction(zoomView = FALSE)
 ```
 
 ```{r echo=FALSE}
-visNetwork(toy_attributes, toy_edgelist[c(1:5,7,10,13,15),1:2], main = "Low Density") %>% visInteraction(zoomView = FALSE)
+visNetwork(toy_attributes, toy_edgelist[c(1:5,7,10,13,15),1:2], main = "Low(er) Density") %>% visInteraction(zoomView = FALSE)
 ```
 
 ### Centralization
@@ -366,7 +370,7 @@ Most node level measures are only helpful within the context of the network they
 
 *Degree* counts how many edges are connected to a node. You can count incoming, outgoing, or total (Freeman) degree. Incoming and outgoing degree only matter in directed networks. In un-directed networks, only total edges are applicable. Degree gives a very rough measure of how popular or central a node is in the network. If a node has more ties, it may indicate that node as being more central or important the network as a whole.
 
-Degree is a raw count of the number of edges a node has, this makes the interpretation of degree highly dependent on the size of the network. In a small network with only 25 total edges, having 10 of them would be significant. In a larger network with 250 total edges, 10 edges could be less impressive. Degree should thus be interpreted in the cortex of other nodes in the network. 
+Degree is a raw count of the number of edges a node has, this makes the interpretation of degree highly dependent on the size of the network. In a small network with only 25 total edges, having 10 of them would be significant. In a larger network with 250 total edges, 10 edges could be less impressive. Degree should thus be interpreted in the context of other nodes in the network. 
 
 Let's scale the node sizes of our toy network based on their total degree numbers. We'll get degree counts for each of our nodes using the `degree()` function. We can save that into our dataframe and network for use later. For now I am naming columns to work specifically with `visNetwork`, we'll make a proper dataframe for analyses later using data we saved in the network object. In our visualization, you can click on any node to highlight only the edges connected to that node.
 
