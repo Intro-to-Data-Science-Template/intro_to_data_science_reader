@@ -39,7 +39,7 @@ net_url12 = "https://raw.githubusercontent.com/Epsian/sna_lecture/main/resources
 ## Overview
 
 {{% notice info %}}
-Our class network is small, which makes many of the measure we will talk about below seem similar. In larger networks the differences are easier to see.
+Our class network is small, which makes many of the measures we will talk about below seem similar. In larger networks the differences are easier to see.
 {{% /notice %}}
 
 This worksheet will introduce the theoretical and logistical underpinnings of network analysis. It will define what networks are, their limitations, and their use cases. It will then cover some of the most commonly used network measures, what they mean, and how to generate them.
