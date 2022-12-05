@@ -28,7 +28,7 @@ library(tmap)
 
 Today we'll be looking at the [Massachusetts Historical Commission Historic Inventory](https://www.mass.gov/info-details/massgis-data-mhc-historic-inventory) data. This data set includes several locations considered "historic assets" of the commonwealth. We're going to see how many of them are close to Smith college, and maybe spark ideas for a few weekend trips.
 
-The zip file containing the data can be [downloaded from here](https://www.mass.gov/info-details/massgis-data-mhc-historic-inventory), under the downloads section. You want the "Download Geodatabase (17 MB)" version. Once you have it downloaded, place it somewhere easy to access. **Do not unzip the file**, we can load it into R as is. You will use `read_sf()` from the `sf` package to load in the data.
+The zip file containing the data can be [downloaded from here](https://www.mass.gov/info-details/massgis-data-mhc-historic-inventory) under the downloads section. You want the "Download Geodatabase (17 MB)" version. Once you have it downloaded, place it somewhere easy to access. **Do not unzip the file**, we can load it into R as is. You will use `read_sf()` from the `sf` package to load in the data.
 
 ```{r include=FALSE}
 ma_hi = read_sf(here::here("content/class_worksheets/36_geospatial/data/MHC_Inventory_GDB.zip"))
@@ -39,7 +39,7 @@ ma_hi = read_sf(here::here("content/class_worksheets/36_geospatial/data/MHC_Inve
 ma_hi = read_sf("Path/to/data/MHC_Inventory_GDB.zip")
 ```
 
-We will also want the boundaries of Massachusetts to serve as a background, so let's use `tidycensus` to grab that. You will need to [register for a census API key](https://api.census.gov/data/key_signup.html), and set it using `census_api_key()`.
+We will also want the boundaries of Massachusetts to serve as a background, so let's use `tidycensus` to grab that. You will need to [register for a census API key](https://api.census.gov/data/key_signup.html), and set it using `census_api_key()`. Once that is done, we can use `get_acs()` to perform an API call for census data, including geospatial data.
 
 ```{r message=FALSE}
 # Set api key if you do not have one.
@@ -54,6 +54,33 @@ ma_counties <- get_acs(geography = "county",
               year = 2020)
 ```
 
+The Census has tons of useful geospatial boundaries. I'll include the most common ones here for reference.
+
+|                                      Geography                                     |                                     Definition                                    |   Available by  |         Available in         |
+|:----------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------:|:---------------:|:----------------------------:|
+| "us"                                                                               | United States                                                                     |                 |  get_acs(), get_decennial()  |
+| "region"                                                                           | Census region                                                                     |                 |  get_acs(), get_decennial()  |
+| "division"                                                                         | Census division                                                                   |                 |  get_acs(), get_decennial()  |
+| "state"                                                                            | State or equivalent                                                               | state           |  get_acs(), get_decennial()  |
+| "county"                                                                           | County or equivalent                                                              | state, county   |  get_acs(), get_decennial()  |
+| "county subdivision"                                                               | County subdivision                                                                | state, county   |  get_acs(), get_decennial()  |
+| "tract"                                                                            | Census tract                                                                      | state, county   |  get_acs(), get_decennial()  |
+| "block group"                                                                      | Census block group                                                                | state, county   |  get_acs(), get_decennial()  |
+| "block"                                                                            | Census block                                                                      | state, county   |  get_decennial()             |
+| "place"                                                                            | Census-designated place                                                           | state           |  get_acs(), get_decennial()  |
+| "metropolitan statistical area/micropolitan statistical area"                      | Core-based statistical area                                                       | state           |  get_acs(), get_decennial()  |
+| "combined statistical area"                                                        | Combined statistical area                                                         | state           |  get_acs(), get_decennial()  |
+| "urban area"                                                                       | Census-defined urbanized areas                                                    |                 |  get_acs(), get_decennial()  |
+| "congressional district"                                                           | Congressional district for the year-appropriate Congress                          | state           |  get_acs(), get_decennial()  |
+| "school district (elementary)"                                                     | Elementary school district                                                        | state           |  get_acs(), get_decennial()  |
+| "school district (secondary)"                                                      | Secondary school district                                                         | state           |  get_acs(), get_decennial()  |
+| "school district (unified)"                                                        | Unified school district                                                           | state           |  get_acs(), get_decennial()  |
+| "zip code tabulation area" OR "zcta"                                               | Zip code tabulation area                                                          |                 |  get_acs(), get_decennial()  |
+| "state legislative district (upper chamber)"                                       | State senate districts                                                            | state           |  get_acs(), get_decennial()  |
+| "state legislative district (lower chamber)"                                       | State house districts                                                             | state           |  get_acs(), get_decennial()  |
+| "voting district"                                                                  | Voting districts (2020 only)                                                      | state           |  get_decennial()             |
+
+
 ### Checking the Coordinate Reference System (CRS)
 
 One of the first steps when working on any spatial data is to check the Coordinate Reference System (CRS). Good documentation will always tell you what the CRS of your data is. The Massachusetts Historical Commission Historic Inventory does not state the CRS on its website. However, more advanced spatial data types include this information in the metadata of the file itself. We can check the CRS using the `st_crs()` function.
@@ -66,33 +93,33 @@ st_crs(ma_hi)
 st_crs(ma_counties)
 ```
 
-Right now our references systems do not match. We need to make sure they do, otherwise any plots we make or analyses we do will be misaligned. We can change once CRS to another using the `st_transform()` function. Here I'll change the `ma_hi` CRS to match the census data.
+Right now our references systems do not match. We need to make sure they do, otherwise any plots we make or analyses we do will be misaligned. We can change once CRS to another using the `st_transform()` function. Here I'll change the `ma_counties` CRS to match the historic sites data.
 
 ```{r}
 # change the crs to match
-ma_counties = st_transform(x = ma_counties, st_crs(ma_hi))
+ma_counties_transform = st_transform(x = ma_counties, st_crs(ma_hi))
 
 # check the crs matches
-st_crs(ma_hi) == st_crs(ma_counties)
+st_crs(ma_hi) == st_crs(ma_counties_transform)
 ```
 
 ## Creating Maps
 
 ### Simple Maps
 
-To start, let's just map our historic sites. We can do that using the `tmap` package. It works in a similar way to ggplot, in that it builds layers on top of each other to create a final visualization. Here I say look at my `ma_counties` data, and draw polygons from that data.
+To start out mapping journey, let's just map our historic sites. We can do that using the `tmap` package. It works in a similar way to ggplot, in that it builds layers on top of each other to create a final visualization. Here I say look at my `ma_counties` data, and draw polygons from that data.
 
 ```{r}
 # plot the basic counties
-tm_shape(ma_counties) +
+tm_shape(ma_counties_transform) +
   tm_polygons()
 ```
 
-If I wanted to shade the counties by population (already included in my county data from out census api call), we just need to tell the polygons to be shaded by some variable. Note that is only works in this case because I have only **one** variable in a long format dataframe.
+If I wanted to shade the counties by population (already included in my county data from our census api call), we just need to tell the polygons to be shaded by some variable. Note that is only works in this case because I have only **one** variable in a long format dataframe. If I had more, I would need to transform to wide first.
 
 ```{r}
 # plot with polygons shaded by population
-tm_shape(ma_counties) +
+tm_shape(ma_counties_transform) +
   tm_polygons(col = "estimate")
 ```
 
@@ -100,7 +127,7 @@ We can change how things are shaded with a few arguments. For example, below I c
 
 ```{r}
 # plot with polygons shaded by population
-tm_shape(ma_counties) +
+tm_shape(ma_counties_transform) +
   tm_polygons(col = "estimate", palette = "viridis", style = "cont")
 ```
 
@@ -108,7 +135,7 @@ We can use `tm_layout()` and `tm_credits()` to add all of our important meta inf
 
 ```{r}
 # plot with metadata
-tm_shape(ma_counties) +
+tm_shape(ma_counties_transform) +
   tm_polygons(col = "estimate", palette = "viridis", style = "cont", title = "Population") +
   tm_layout(title = "Population by county in Massachusetts",
             frame = FALSE) +
@@ -120,12 +147,16 @@ tm_shape(ma_counties) +
 
 The cool thing about `tmap` is that is it super easy to turn your static maps interactive. All you need to do is call `tmap_mode()`, and set the mode to "view" rather than plot. From then on, any maps you plot will be interactive! You can switch back by calling `tmap_mode()` again and setting it to "plot."
 
+{{% notice note %}}
+The polygons in the interactive map show here are slightly misaligned to the base map. This is an issue with this website, and should not be present when making your maps in R.
+{{% /notice %}}
+
 ```{r message=FALSE}
 # change modes
 tmap_mode("view")
 
 # plot the same map as above
-tm_shape(ma_counties) +
+tm_shape(ma_counties_transform) +
   tm_polygons(col = "estimate", palette = "viridis", style = "cont", id = "NAME", title = "Population")
 
 # change back
@@ -140,17 +171,17 @@ To start with, let's quickly plot out historic assets on top of the counties.
 
 ```{r}
 # plot historic sites over the state
-tm_shape(ma_counties) +
+tm_shape(ma_counties_transform) +
   tm_polygons() +
   tm_shape(ma_hi) +
   tm_polygons(col = "blue")
 ```
 
-For the sake of this analysis, let's just subset the data to only look at Hampshire county. We can do that using the following. First I subset Hampshire country out of our full state data. Then, I say give me all the historic sites that are within Hampshire county. 
+For the sake of simplicity, let's subset the data to only look at Hampshire county. We can do that using the following. First I subset Hampshire country out of our full state data. Then, I say give me all the historic sites that are within Hampshire county. I do this using the `st_filter()` function, and for join type I use `st_within`. There are several other comparators, which [you can see here](https://r-spatial.github.io/sf/reference/geos_binary_pred.html), and are explained in some detail [here](https://r-spatial.github.io/sf/articles/sf3.html#affine-transformations).
 
 ```{r}
 # get just Hampshire county
-hampshire_county = ma_counties[ma_counties$NAME == "Hampshire County, Massachusetts", ]
+hampshire_county = ma_counties_transform[ma_counties_transform$NAME == "Hampshire County, Massachusetts", ]
 
 # get only the locations completely within Hampshire county (so if anything is on the boundary, it will be dropped)
 hampshire_sites = st_filter(ma_hi, hampshire_county, join = st_within, left = FALSE)
@@ -164,7 +195,7 @@ tm_shape(hampshire_county) +
 
 We're close, but we still have location that are only partially inside the county. This isn't necessarily bad, but let's trim off all the extra bits for now. We can do that using `st_intersection()`, which will return only the area where both our inputs intersect.
 
-```{r}
+```{r warning=FALSE}
 # Trim the historic sites so that we only have the areas within the county
 trimmed_sites = st_intersection(hampshire_county, hampshire_sites)
 
@@ -175,13 +206,11 @@ tm_shape(hampshire_county) +
   tm_polygons(col = "blue")
 ```
 
-A fill list of the various spatial joins can be found the `sf` [package website](https://r-spatial.github.io/sf/articles/sf3.html#affine-transformations).
-
 ## Geospatial Computations
 
-Now that we have our data in a state that is easier to work with, let's ask some questions of it. First, let's see how many sites are within 10 miles of Smith college. To do this, we'll need the spatial coordinates of the college. You can grab these off of Google maps by right clicking on a location. Smith collage is located at longitude/latitude `42.316643513274755, -72.64027428068538`. Once we have that, we can ask "how many of our historic sites are within X distance of Y?"
+Now that we have our data in a state that is easier to work with, let's ask some questions of it. First, let's see how many sites are within 5 miles of Smith college. To do this, we'll need the spatial coordinates of the college. You can grab these off of Google maps by right clicking on a location. Smith collage is located at longitude/latitude `42.316643513274755, -72.64027428068538`. Once we have that, we can ask "how many of our historic sites are within X distance of Y?"
 
-First we need to turn out latitude and longitude of Smith College into a spatial point. I do that below, and make a quick plot to check it all worked.
+First we need to turn the longitude and latitude of Smith College into a spatial point. I do that below, and make a quick plot to check if it all worked.
 
 ```{r}
 # turn the location of smith college into a spatial point
@@ -199,7 +228,7 @@ tm_shape(hampshire_county) +
   tm_dots(col = "gold", size = 1)
 ```
 
-Now that that is done, we can start making some comparisons. We first need to know what units are geospatial objects use. We can do this using the `st_crs()` function again. I'll subset the results to just get the units used. We see that this object uses meters
+Now that that is done, we can start making some comparisons. We first need to know what units are geospatial objects use. We can do this using the `st_crs()` function again. I'll subset the results to just get the units used. We see that this object uses meters.
 
 ```{r}
 # get the units of length used in this object
@@ -215,6 +244,10 @@ smith_5_mile_sites = trimmed_sites[unlist(close_sites), ]
 ```
 
 We can then make a pretty cool map showing the nearby points of interest! You can click on the areas to get info about them.
+
+{{% notice note %}}
+The polygons in the interactive map show here are slightly misaligned to the base map. This is an issue with this website, and should not be present when making your maps in R.
+{{% /notice %}}
 
 ```{r message=FALSE}
 # filter sites for easier plotting later.
