@@ -105,6 +105,9 @@ Your final submission should include the following:
     -   A 1-2 paragraph summary of how you contributed to your team
     -   A list of each standard (per the course syllabus) you *individually* worked with in this project
     -   A justification for each standard describing what proficiency level you demonstrated **per the text in the [standards matrix][]**.
+-   All data files used as part of your project ([upload here][]).
+    -   I should be able to place these files in the data directory of your project and run your code as-is.
+    -   If your files are too large to uplaod to Moodle, please send me a message and we will find an alternative.
 
 ## Project Strategy
 
@@ -142,6 +145,7 @@ Keep the directory structure of your project clean. All of your scripts should l
   [Inter-university Consortium for Political and Social Research (ICPSR)]: https://www.icpsr.umich.edu/web/pages/ICPSR/index.html
   [Google Dataset Search]: https://datasetsearch.research.google.com/
   [Turn in here]: https://moodle.smith.edu/mod/assign/view.php?id=967691
+  [upload here]: https://moodle.smith.edu/mod/assign/view.php?id=969898
   [pull request]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
   [short guide]: https://the-turing-way.netlify.app/reproducible-research/vcs/vcs-git-merge.html#merge-conflicts
   [right on Github]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github
