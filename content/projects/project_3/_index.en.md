@@ -107,7 +107,8 @@ Your final submission should include the following:
     -   A justification for each standard describing what proficiency level you demonstrated **per the text in the [standards matrix][]**.
 -   All data files used as part of your project ([upload here][]).
     -   I should be able to place these files in the data directory of your project and run your code as-is.
-    -   If your files are too large to uplaod to Moodle, please send me a message and we will find an alternative.
+    -   If your files are too large to upload to Moodle, please send me a message and we will find an alternative.
+    -   You **should not** commit your data in your git repository.
 
 ## Project Strategy
 
