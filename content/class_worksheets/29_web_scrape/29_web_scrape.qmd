@@ -13,7 +13,7 @@ format:
 ---
 
 ```{r setup, include=FALSE}
-answers = FALSE
+answers = TRUE
 ```
 
 ## Overview

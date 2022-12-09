@@ -1,0 +1,271 @@
+---
+pre: <b>12/2. </b>
+title: "Text as Data"
+weight: 34
+summary: "How can text be analyzed computationally?"
+format:
+    hugo:
+      toc: true
+      output-file: "_index.en.md"
+      reference-links: true
+      code-link: true
+      
+---
+
+```{r setup, include=FALSE}
+answers = FALSE
+```
+
+## Overview
+
+Today we will be introduced to using text as the focus of our analyses, rather than just a small component. This requires a few new tools, but they unlock a whole new realm of possibilities for study. While this is just a brief introduction, I hope it provides some idea of what can be done. My hope is that in the future, when you encounter a problem well suited to text analysis, you will remember what is possible, and explore to tools more fully.
+
+You will need to install and load the `quanteda` packages:
+
+```{r warning=FALSE, message=FALSE}
+# install.packages("quanteda")
+# install.packages("quanteda.textplots")
+# install.packages("quanteda.textstats")
+
+library(quanteda)
+library(quanteda.textplots)
+library(quanteda.textstats)
+```
+
+## The Data
+
+Today we will be working with purely textual data. Previously, we have worked with text as a part of data--cutting and cleaning particular strings--but today the focus of our work will be large texts. To practice on, we will be looking at the novel *The Hound of the Baskervilles*, one of the most famous Sherlock Holmes stories by Arthur Conan Doyle. The entire book is available for free through [Project Gutenberg](https://www.gutenberg.org/ebooks/2852).
+
+To load our text into R, we will use the `readLines()` function (not `readline()`!). This is a base R function for loading in text. 
+
+```{r}
+sherlock_raw = readLines("https://www.gutenberg.org/files/2852/2852-0.txt")
+```
+
+If you look at our `sherlock_raw` object, you will see it is a regular character vector of length 7729. It is the same as any other, just pretty long. If we use `head()` to take a look at the first few lines, we can get a sense of how the data is structured.
+
+::: {.question}
+Use the `head()` function to look at the first 100 lines of our `sherlock_raw` object. How is the data organized? Would you consider this data tidy?
+:::
+
+```{r, include=answers, results='asis', echo=FALSE}
+cat("
+::: {.answer}
+The vector starts off with meta data about the book, before getting into the contents. First is the table of contents, then actual story. This isn't very tidy as it is mixing real content and metadata in one object.
+:::
+")
+```
+
+## Preparing Text Data
+
+### Review of Terms
+
+Before we can start working on our story in earnest, we need to review some key terms.
+
+Corpus
+:   A collection of all of our text data. You could think of this like a library.
+
+Document
+:   A unit of observation in our corpus. Think of a single book on a shelf in a library.
+
+Token
+:   The thing that makes up our documents. In our books, this would typically be individual words (but not always!).
+
+Metadata
+:   Data about our data. Important, but not something we want to mix in with our content.
+
+For this worksheet, we will break up our story as follows: our corpus will be the entire book, our documents will be chapters, and our tokens will be words.
+
+### Splitting the Metadata
+
+Our first task will be separating the content of our story (what we want to look at) from the metadata about the story. Thankfully, that's not too difficult in this case. All we need to do is subset our character vector in the right place. Be sure to check both the start and end of `sherlock_raw`, and make sure only the story itself is in `sherlock_content`.
+
+::: {.question}
+Create two new objects, `sherlock_meta` and `sherlock_content`, which contain the metadata and content of our story respectively.
+:::
+
+```{r, include=answers, results='asis', echo=FALSE}
+cat("
+::: {.answer}
+\`\`\`
+sherlock_meta = sherlock_raw[1:81]
+sherlock_content = sherlock_raw[81:7377]
+\`\`\`
+:::
+")
+```
+
+```{r include=FALSE}
+sherlock_meta = sherlock_raw[1:81]
+sherlock_content = sherlock_raw[81:7377]
+```
+
+
+### Some Basic Cleaning
+
+Before we can do much else, we need to clean our character vector a bit. If we look at `sherlock_content`, you will see that there is a lot of extra white space before and after each line. To resolve this, use `trimws()` or "trim white space" to get rid of the extra spaces. 
+
+```{r}
+sherlock_content = trimws(sherlock_content)
+```
+
+Next, we remove all the empty elements in our vector:
+
+```{r}
+sherlock_content = sherlock_content[sherlock_content != ""]
+```
+
+After that, we will want to collapse our many lines into one big text blob. Remember we will be using a computer to look at this text, so it doesn't really care about formatting.
+
+```{r}
+sherlock_content = paste(sherlock_content, collapse = " ")
+```
+
+### Defining our "Documents"
+
+Now that we have our story content separated, we need to work to split our chapters. We can use our old friend `strsplit()` for this. From looking at the content, we know each chapter starts with "Chapter XX.", so we can split on that. We can do so using the following regular expression. I split on the word "Chapter" and either 1 or 2 digits, which is then followed by a period.
+
+```{r}
+sherlock_content = strsplit(sherlock_content, "Chapter \\d{1,2}\\.")
+```
+
+This will give me a list of length 1, with a character vector of length 16 inside it. This is because we split a single character vector, it was just a really big one. I don't really need it in a list though, so I'll use `unlist()` to turn it into a character vector.
+
+```{r}
+sherlock_content = unlist(sherlock_content)
+```
+
+Now I have a character vector of length 16, but I only have 15 chapters in this book? `strsplit()` kept a blank space from before "Chapter 1.", so I need to remove that.
+
+```{r}
+sherlock_content = sherlock_content[2:16]
+```
+
+With that, I'll use `trimws()` again to remove the extra spaces, and I've got the 15 chapters all separated!
+
+```{r}
+sherlock_content = trimws(sherlock_content)
+```
+
+### Building a Corpus
+
+Now that we have our documents clearly defined, we can build our corpus. A corpus is a special object in R which holds all of our documents, and makes looking at all of them at once easier. We can use the tools from `quanteda` for this.
+
+::: {.question}
+Use the `corpus()` function from `quanteda` on our `sherlock_content` object to create a corpus of documents. You can also provide a vector of chapter names as an argument to `docnames` if you would like. Assign the output to a new object, `sherlock_corpus`.
+:::
+
+```{r, include=answers, results='asis', echo=FALSE}
+cat('
+::: {.answer}
+\`\`\`
+sherlock_corpus = corpus(sherlock_content, docnames = c("Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4", "Chapter 5", "Chapter 6", "Chapter 7", "Chapter 8", "Chapter 9", "Chapter 10", "Chapter 11", "Chapter 12", "Chapter 13", "Chapter 14", "Chapter 15"))
+\`\`\`
+:::
+')
+```
+
+```{r, include=FALSE}
+sherlock_corpus = corpus(sherlock_content, docnames = c("Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4", "Chapter 5", "Chapter 6", "Chapter 7", "Chapter 8", "Chapter 9", "Chapter 10", "Chapter 11", "Chapter 12", "Chapter 13", "Chapter 14", "Chapter 15"))
+```
+
+
+Try using the `summary()` command on our new corpus. It already gives us some neat basic info like the number of sentences and words per chapter!
+
+### Cleaning our "Tokens"
+
+The last thing we need to do to have a "clean" text dataset is clean up our tokens, or in this case, words. We want to look at this whole corpus, and try to understand the meaning of the words within. This means we need to get rid of the words without meaning. Things like "the", "a", "to", etc. help us humans understand what we are reading, but they don't contain much meaning themselves. So we are going to remove them. We also want to remove things like punctuation and symbols.
+
+We can thus create a "tokens" object, which contains all the meaningful words from our corpus.
+
+```{r}
+sherlock_tokens = tokens(sherlock_corpus, remove_punct = TRUE, remove_symbols = TRUE, remove_separators = TRUE) |>
+  tokens_remove(stopwords("en"))
+```
+
+Lastly, we want to "stem" our words, or reduce them to simpler forms. For example, it would stem "running" to "run" by removing the "ing." This makes it so the code can understand that "running" and "run" mean the same thing. Its not perfect, and can in some cases make things worse, but it makes the data cleaner. If you want to get a better results, look into "lemmatizing" your text instead.
+
+```{r}
+sherlock_tokens = tokens_wordstem(sherlock_tokens)
+```
+
+## Exploring Text Data
+
+Now that we have our corpus, we can start exploring our texts computationally. There are a few neat things we can do.
+
+### Common Words
+
+One of the most basic things we can look at is how common some words are. To do that, we first have to get a count of every word per document, we can do that using the `dfm()` function, or "document feature matrix." This object will have a column for every token in our corpus, and a row for every document.
+
+```{r}
+sherlock_dfm = dfm(sherlock_tokens)
+```
+
+Once we have a dfm, we can do neat things like plot the most common words! We can do that using a wordcloud, where more common words are larger.
+
+```{r}
+textplot_wordcloud(sherlock_dfm)
+```
+
+Or we can plot it in a more traditional way.
+
+```{r}
+library(ggplot2)
+
+sherlock_most_common = textstat_frequency(sherlock_dfm, n = 10)
+
+ggplot(sherlock_most_common, aes(x = reorder(feature, frequency), y = frequency)) +
+  geom_point() +
+  coord_flip() +
+  labs(x = "Token", y = "Frequency") +
+  theme_minimal()
+```
+
+### Key Words
+
+Say we have one key term we are interested in. We can now look for that specific word across our whole corpus. The most simple way is seeing where it appears. We can do this using an x-ray plot. Say we are interested in the word "Sherlock."
+
+First, we can look at the word in the context of the text using `kwic()` or "key word in context."
+
+```{r}
+kwic(sherlock_tokens, "sherlock")
+```
+
+We can then use this information to plot where Sherlock shows up in the story!
+
+```{r}
+textplot_xray(kwic(sherlock_tokens, "sherlock"))
+```
+
+So cool. We can also compare Sherlock to another character, like Watson.
+
+```{r}
+textplot_xray(
+  kwic(sherlock_tokens, "sherlock"),
+  kwic(sherlock_tokens, "watson")
+  )
+```
+
+### Sentiment 
+
+It is also possible to see how positive or negative the emotions in our text are. There are more advanced methods, but for today we will just use a dictionary method, meaning we use a pre-defined list of negative and positive words, and count how often they appear in our text. We can use the following command to do this counting using the "data_dictionary_LSD2015" sentiment dictionary.
+
+```{r}
+sherlock_sentiment = dfm_lookup(sherlock_dfm, dictionary = data_dictionary_LSD2015, exclusive = TRUE)
+
+convert(sherlock_sentiment, to = "data.frame")
+```
+
+# Conclusion
+
+While this example was just for fun, the utility is huge with text analysis. Say you wanted to know how often a certain policy appeared over time? Who said it? What it was talked about in the context of? All of these are valid applications. That is to say nothing of more advanced methods like topic modeling or word2vec! If you are interested in text, there is a whole universe of tools out there.
+
+To learn more about what `quanteda` specifically can do, [check out the tutorial site for the package here](https://tutorials.quanteda.io/).
+
+
+
+
+
+
+
+

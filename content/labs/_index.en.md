@@ -21,6 +21,8 @@ All labs will be turned in through Github Classroom. You will set up your studen
 -   [Lab 4: Advanced Plotting][]
 -   [Lab 5: Functions and Conditions][]
 -   [Lab 6: Loops and Apply][]
+-   Lav 7: *NA*
+-   [Lab 8: Web Scraping][]
 
   [Lab 0: Problem Solving Mini-Lab]: /intro_to_data_science_reader/labs/lab_0/lab_0.html
   [Lab 1: R Coding]: /intro_to_data_science_reader/labs/lab_1/lab-1-r-coding.html
@@ -29,3 +31,4 @@ All labs will be turned in through Github Classroom. You will set up your studen
   [Lab 4: Advanced Plotting]: /intro_to_data_science_reader/labs/lab_4/lab-4-adv-plotting.html
   [Lab 5: Functions and Conditions]: /intro_to_data_science_reader/labs/lab_5/lab-5-functions-conditions.html
   [Lab 6: Loops and Apply]: /intro_to_data_science_reader/labs/lab_6/lab-6-loops-and-apply.html
+  [Lab 8: Web Scraping]: /intro_to_data_science_reader/labs/lab_8/lab-8-scraping.html

@@ -89,6 +89,12 @@ Look over the page and make sure *only* the names are highlighted. If anything e
 
 </div>
 
+<div class="answer">
+
+The Program Committee header needs to be excluded.
+
+</div>
+
 Look at the `SelectorGadget` grey box in the lower right and you will see a short string starting with `.fac-inset`, that's the HTML section for our names and links. Copy the whole string and keep it somewhere handy.
 
 ## Building our Bot
@@ -102,6 +108,14 @@ Start by loading `rvest`, and scraping the whole SDS page into R. This can be do
 <div class="question">
 
 Scrape the SDS home page into R and store it in an object called `sds_home`.
+
+</div>
+
+<div class="answer">
+
+library(rvest)
+
+sds_page = read_html('https://www.smith.edu/academics/statistics')
 
 </div>
 
@@ -119,6 +133,12 @@ Create a dataframe called `sds_faculty` with a column called `name` for all the 
 
 </div>
 
+<div class="answer">
+
+sds_faculty = data.frame('name' = html_text2(html_elements(sds_page, '.fac-inset h3')))
+
+</div>
+
 ### Positions
 
 Next we want to get the titles for all the faculty. The process is exactly the same as the above, but we need to set a different target using `SelectorGadget`
@@ -126,6 +146,12 @@ Next we want to get the titles for all the faculty. The process is exactly the s
 <div class="question">
 
 Using the same process as before, add the title of each faculty member to our `sds_faculty` dataframe into a new column called `title`.
+
+</div>
+
+<div class="answer">
+
+sds_faculty\$title = html_text2(html_elements(sds_page, '.fac-inset p'))
 
 </div>
 
@@ -138,6 +164,12 @@ In HTML speech, the page a link points to is designated by the `href`, or `Hyper
 <div class="question">
 
 Using `html_elements()` and `html_attr()`, get the links from the faculty names and add them to our dataframe in a column called `link`.
+
+</div>
+
+<div class="answer">
+
+sds_faculty\$link = html_attr(html_elements(sds_page, '.linkopacity'), name = 'href')
 
 </div>
 
